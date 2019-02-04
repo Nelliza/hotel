@@ -1,0 +1,6 @@
+@each $type in black, light, bold, italic, regular {
+  @include font-face(Lato, lato, $type);
+}
+@each $type in light, bold, italic, regular {
+  @include font-face(Source Sans Pro, sourcesanspro, $type);
+}

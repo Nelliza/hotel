@@ -1,0 +1,25 @@
+.page {
+  font-family: "Lato", sans-serif;
+  max-width: 1076.8px;
+  margin: 0;
+  padding: 4.8rem 11.4rem;
+}
+
+.subtitle {
+  font-size: 1.85rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 3.4rem;
+  text-align: center;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+}
+
+.standard-buttons__items {
+  display: flex;
+  padding-top: 3.3rem;
+
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
