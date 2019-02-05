@@ -18,8 +18,49 @@
 .standard-buttons__items {
   display: flex;
   padding-top: 3.3rem;
-
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.arrow {
+  width: 4.81rem;
+  height: 4.81rem;
+  margin-left: 2.1rem;
+  cursor: pointer;
+
+  &--disabled {
+    .arrow__circle {
+      stroke: $color-disabled;
+      fill: $color-disabled;
+    }
+
+    .arrow__polyline {
+      stroke: #fff;
+    }
+  }
+
+  &:hover,
+  &--hovered {
+    .arrow__circle {
+      stroke: $color-primary;
+      fill: $color-primary;
+    }
+
+    .arrow__polyline {
+      stroke: #fff;
+    }
+  }
+}
+
+.arrow__circle {
+  stroke: $color-primary;
+  fill: #fff;
+  stroke-width: .6;
+}
+
+.arrow__polyline {
+  stroke: $color-primary;
+  stroke-width: 0.7;
+  fill: none;
 }

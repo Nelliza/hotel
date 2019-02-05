@@ -3,3 +3,16 @@ mixin buttons(classes)
   button(class=["btn", "btn--primary", classes]) Button
   button(class=["btn", "btn--warning", classes]) Button
   button(class=["btn", "btn--warning", "btn--small", classes]) Button
+
+mixin arrow(direction, condition="")
+  if direction == "left"
+    - points = "5.8,3 3.8,5 5.8,7"
+  else if direction == "right"
+    - points = "4.3,3 6.3,5 4.3,7"
+  - direction = "arrow--" + direction
+  if condition
+    - condition = "arrow--" + condition
+
+  svg(class=["arrow", direction, condition], viewBox = "0 0 10 10")
+    circle(class="arrow__circle", cx="5", cy="5", r="4.7")
+    polyline(class="arrow__polyline", points=points)
