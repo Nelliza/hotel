@@ -1,8 +1,8 @@
 mixin buttons(classes)
-  button(class=["btn", "btn--primary", "btn--small", classes]) Button
-  button(class=["btn", "btn--primary", classes]) Button
-  button(class=["btn", "btn--warning", classes]) Button
-  button(class=["btn", "btn--warning", "btn--small", classes]) Button
+  button(class=["btn", "btn--primary", "btn--small", classes], data-ripple="") Button
+  button(class=["btn", "btn--primary", classes], data-ripple="") Button
+  button(class=["btn", "btn--warning", classes], data-ripple="") Button
+  button(class=["btn", "btn--warning", "btn--small", classes], data-ripple="") Button
 
 mixin arrow(direction, condition="")
   if direction == "left"

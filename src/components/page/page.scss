@@ -61,6 +61,85 @@
 
 .arrow__polyline {
   stroke: $color-primary;
-  stroke-width: 0.7;
+  stroke-width: .7;
   fill: none;
+}
+
+.btn {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  width: 11.3rem;
+  height: 3.1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+  border: .08rem solid;
+  border-bottom: .5rem solid;
+  border-radius: .3rem;
+  outline: none;
+  background-color: #fff;
+
+  &:hover,
+  &.btn--hovered {
+    line-height: 2.8rem;
+    color: #fff;
+  }
+
+  &.btn--pressed {
+    line-height: 3.1rem;
+    color: #fff;
+  }
+
+  &--primary {
+    border-color: $color-primary;
+    color: $color-primary;
+
+    &:hover,
+    &.btn--hovered,
+    &.btn--pressed {
+      line-height: 2.8rem;
+      border-bottom: .3rem solid #28a290;
+      background-color: $color-primary;
+    }
+
+    &.btn--pressed {
+      border-bottom-color: $color-primary;
+    }
+  }
+
+  &--warning {
+    border-color: $color-warning;
+    color: $color-warning;
+
+    &:hover,
+    &.btn--hovered,
+    &.btn--pressed {
+      line-height: 2.8rem;
+      border-bottom: .3rem solid #bf3e1f;
+      background-color: $color-warning;
+    }
+
+    &.btn--pressed {
+      border-bottom-color: $color-warning;
+    }
+  }
+
+  &--small {
+    font-size: .937rem;
+    line-height: 1.8rem;
+    width: 7.5rem;
+    height: 2.1rem;
+    border-bottom: .3rem solid;
+
+    &:hover,
+    &.btn--hovered {
+      line-height: 1.8rem;
+    }
+
+    &.btn--pressed {
+      line-height: 2.1rem;
+    }
+  }
 }
