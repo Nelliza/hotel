@@ -28,3 +28,53 @@
   width: $width;
   height: $height;
 }
+
+@mixin btn-theme($theme, $bd-bottom-color) {
+  $color: "";
+  @if $theme == primary {
+    $color: $color-primary;
+  }
+  @else if $theme == warning {
+    $color: $color-warning;
+  }
+
+  border-color: $color;
+  color: $color;
+
+  &:hover,
+  &.btn--pressed {
+    line-height: 2.8rem;
+    color: #fff;
+    border-bottom: .3rem solid #{$bd-bottom-color};
+    background-color: $color;
+  }
+
+  &.btn--pressed {
+    border-bottom-color: $color;
+  }
+}
+
+@mixin arrow-state($state) {
+  $color: "";
+  @if $state == disabled {
+    $color: $color-disabled;
+  }
+  @else if $state == hover {
+    $color: $color-primary;
+  }
+
+  .arrow__circle {
+    stroke: $color;
+    fill: $color;
+  }
+
+  .arrow__polyline {
+    stroke: #fff;
+  }
+}
+
+@mixin arrow-initial($stroke-width, $fill) {
+  stroke: $color-primary;
+  stroke-width: $stroke-width;
+  fill: $fill;
+}

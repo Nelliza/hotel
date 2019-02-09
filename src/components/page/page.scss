@@ -30,11 +30,10 @@
 }
 
 .btn {
+  @include size(11.3rem, 3.15rem);
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 2.6rem;
-  width: 11.3rem;
-  height: 3.15rem;
   margin-bottom: 2rem;
   cursor: pointer;
   letter-spacing: .05rem;
@@ -45,65 +44,23 @@
   outline: none;
   background-color: #fff;
 
-  &:hover,
-  &.btn--hovered {
-    line-height: 2.8rem;
-    color: #fff;
-  }
-
-  &.btn--pressed {
-    line-height: 3.1rem;
-    color: #fff;
-  }
-
   &--primary {
-    border-color: $color-primary;
-    color: $color-primary;
-
-    &:hover,
-    &.btn--hovered,
-    &.btn--pressed {
-      line-height: 2.8rem;
-      border-bottom: .3rem solid #28a290;
-      background-color: $color-primary;
-    }
-
-    &.btn--pressed {
-      border-bottom-color: $color-primary;
-    }
+    @include btn-theme(primary, #28a290);
   }
 
   &--warning {
-    border-color: $color-warning;
-    color: $color-warning;
-
-    &:hover,
-    &.btn--hovered,
-    &.btn--pressed {
-      line-height: 2.8rem;
-      border-bottom: .3rem solid #bf3e1f;
-      background-color: $color-warning;
-    }
-
-    &.btn--pressed {
-      border-bottom-color: $color-warning;
-    }
+    @include btn-theme(warning, #bf3e1f);
   }
 
   &--small {
+    @include size(7.5rem, 2.15rem);
     font-size: .937rem;
     line-height: 1.8rem;
-    width: 7.5rem;
-    height: 2.15rem;
     border-bottom: .3rem solid;
 
     &:hover,
-    &.btn--hovered {
-      line-height: 1.8rem;
-    }
-
     &.btn--pressed {
-      line-height: 2.1rem;
+      line-height: 1.8rem;
     }
   }
 }
@@ -117,45 +74,25 @@
 }
 
 .arrow {
-  width: 4.81rem;
-  height: 4.81rem;
+  @include size(4.81rem);
   margin-left: 2.1rem;
   cursor: pointer;
 
   &--disabled {
-    .arrow__circle {
-      stroke: $color-disabled;
-      fill: $color-disabled;
-    }
-
-    .arrow__polyline {
-      stroke: #fff;
-    }
+    @include arrow-state(disabled);
   }
 
-  &:hover,
-  &--hovered {
-    .arrow__circle {
-      stroke: $color-primary;
-      fill: $color-primary;
-    }
-
-    .arrow__polyline {
-      stroke: #fff;
-    }
+  &:hover {
+    @include arrow-state(hover);
   }
 }
 
 .arrow__circle {
-  stroke: $color-primary;
-  fill: #fff;
-  stroke-width: .6;
+  @include arrow-initial(.6, #fff);
 }
 
 .arrow__polyline {
-  stroke: $color-primary;
-  stroke-width: .7;
-  fill: none;
+  @include arrow-initial(.7, none);
 }
 
 .percircle {

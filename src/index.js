@@ -16,14 +16,6 @@ $(function(){
     $(this).addClass('btn--pressed');
   });
 
-  for (var i = 0; i < 4; i++) {
-    $('.btn').eq(i).trigger('click');
-  }
-
-  for (var i = 4; i < 8; i++) {
-    $('.btn').eq(i).trigger('hover');
-  }
-
   $('.percircle').percircle({
     progressBarColor: '#e75735'
   });

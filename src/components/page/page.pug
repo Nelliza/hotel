@@ -1,9 +1,8 @@
 section.standard-buttons
   h2.subtitle Standard buttons
   .standard-buttons__items
-    +buttons("btn--pressed")
-    +buttons("btn--hovered")
-    +buttons("")
+    - for (i=0; i<3; i++)
+      +buttons("")
 
 section.arrow-buttons
   h2.subtitle Arrow buttons
@@ -12,8 +11,8 @@ section.arrow-buttons
     +arrow("right")
     +arrow("left", "disabled")
     +arrow("right", "disabled")
-    +arrow("left", "hovered")
-    +arrow("right", "hovered")
+    +arrow("left")
+    +arrow("right")
 
 section.percentages
   h2.subtitle Percentages / Pie chart
