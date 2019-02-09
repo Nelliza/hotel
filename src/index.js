@@ -1,14 +1,15 @@
-import './scss/main.scss';
-
 import $ from 'jquery';
 const jQuery = $;
 window.jQuery = $;
 window.$ = $;
 
+require('webpack-jquery-ui/slider');
 require('percircle');
 
 require('./vendor/Material-Design-Style-Ripple-Effect-On-Click-Touch-Ripple-js/ripple.js');
 require('./vendor/Peity/jquery.peity.min.js');
+
+import './scss/main.scss';
 
 $(function(){
 
@@ -25,5 +26,16 @@ $(function(){
     width: '9.2rem',
     height: '9.2rem',
     innerRadius: 47
+  });
+
+  var handle1 = $('#handle1');
+  $('#slider1').slider({
+    'value': 36,
+    create: function() {
+      handle1.text($(this).slider('value'));
+    },
+    slide: function() {
+      handle1.text($(this).slider('value'));
+    }
   });
 });

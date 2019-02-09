@@ -2,13 +2,14 @@
   font-family: "Lato", sans-serif;
   max-width: 1076.8px;
   margin: 0;
-  padding: 4.5rem;
+  padding: 4.8rem 5.1rem;
+  letter-spacing: .05rem;
 }
 
 .subtitle {
   font-size: 1.8rem;
   font-weight: 900;
-  margin-top: 3.3rem;
+  margin-top: 3.1rem;
   margin-bottom: 2.5rem;
   text-align: center;
   letter-spacing: .08rem;
@@ -17,8 +18,8 @@
 
 .standard-buttons,
 .arrow-buttons {
-  padding-left: 7rem;
-  padding-right: 7rem;
+  padding-left: 6.3rem;
+  padding-right: 6.3rem;
 }
 
 .standard-buttons__items {
@@ -36,7 +37,6 @@
   line-height: 2.6rem;
   margin-bottom: 2rem;
   cursor: pointer;
-  letter-spacing: .05rem;
   text-transform: uppercase;
   border: .08rem solid;
   border-bottom: .5rem solid;
@@ -100,8 +100,53 @@
   margin: 0 .32em .1em 0;
   background-color: #fff;
 
-  & > span {
+  >span {
     font-size: .4em;
     top: 50%;
+  }
+}
+
+.sliders__items {
+  padding-top: 1.8rem;
+}
+
+.slider {
+  @include size(44%, .5rem);
+  float: left;
+  margin-right: 2rem;
+  border-radius: 5rem;
+  background-color: $color-disabled;
+
+  .handle {
+    @include size(3.35rem, 2.2rem);
+    background-color: $color-warning;
+    outline: none;
+    text-align: center;
+    line-height: 1.8;
+    border-radius: .4rem;
+    top: -3.6rem;
+    margin-left: -1.8rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #fff;
+  }
+
+  .handle--with-pointer:before {
+    position: absolute;
+    content: "";
+    bottom: -1rem;
+    left: 1.2rem;
+    border: .5rem solid transparent;
+    border-top: .5rem solid $color-warning;
+  }
+
+  .handle--with-pointer:after {
+    @include size(1.9rem);
+    content: "";
+    background-color: $color-warning;
+    border-radius: 50%;
+    position: absolute;
+    top: 3rem;
+    left: .75rem;
   }
 }
