@@ -65,8 +65,14 @@
     <section class="sliders">
       <h2 class="subtitle">Sliders</h2>
       <div class="sliders__items">
-        <div class="slider slider--with-value" id="slider1">
-          <div class="ui-slider-handle handle handle--with-pointer" id="handle1"></div>
+        <div class="slider" id="slider1">
+          <div class="ui-slider-handle slider__handle slider__handle--with-pointer" id="handle1">
+            <div class="slider__pointer"></div>
+          </div>
+        </div>
+        <div class="slider slider--with-scale" id="slider2">
+          <div class="ui-slider-handle slider__handle" id="handle2"></div>
+          <ul class="slider__scale"></ul>
         </div>
       </div>
     </section>

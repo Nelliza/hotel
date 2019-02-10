@@ -2,7 +2,7 @@
   font-family: "Lato", sans-serif;
   max-width: 1076.8px;
   margin: 0;
-  padding: 4.8rem 5.1rem;
+  padding: 4.8rem 5.5rem 4.8rem 5.2rem;
   letter-spacing: .05rem;
 }
 
@@ -18,13 +18,14 @@
 
 .standard-buttons,
 .arrow-buttons {
-  padding-left: 6.3rem;
-  padding-right: 6.3rem;
+  padding-right: 5.8rem;
+  padding-left: 6rem;
 }
 
 .standard-buttons__items {
   display: flex;
   padding-top: 4.3rem;
+
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
@@ -97,7 +98,7 @@
 
 .percircle {
   font-size: 145px;
-  margin: 0 .32em .1em 0;
+  margin: 0 .3em .1em 0;
   background-color: #fff;
 
   >span {
@@ -113,40 +114,68 @@
 .slider {
   @include size(44%, .5rem);
   float: left;
-  margin-right: 2rem;
   border-radius: 5rem;
   background-color: $color-disabled;
 
-  .handle {
-    @include size(3.35rem, 2.2rem);
-    background-color: $color-warning;
-    outline: none;
-    text-align: center;
-    line-height: 1.8;
-    border-radius: .4rem;
-    top: -3.6rem;
-    margin-left: -1.8rem;
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: #fff;
+  &--with-scale {
+    float: right;
   }
 
-  .handle--with-pointer:before {
-    position: absolute;
-    content: "";
-    bottom: -1rem;
-    left: 1.2rem;
-    border: .5rem solid transparent;
-    border-top: .5rem solid $color-warning;
+  .ui-slider-range {
+    border-radius: 5rem;
+    background-color: $color-primary;
   }
 
-  .handle--with-pointer:after {
+  .slider__handle {
     @include size(1.9rem);
-    content: "";
-    background-color: $color-warning;
+    top: -.7rem;
+    margin-left: -1.4rem;
     border-radius: 50%;
-    position: absolute;
-    top: 3rem;
-    left: .75rem;
+    outline: none;
+    background-color: $color-primary;
+
+    &--with-pointer {
+      position: relative;
+      margin-left: -2rem;
+      background-color: $color-warning;
+    }
   }
+}
+
+.slider__pointer {
+  @include size(3.35rem, 2.3rem);
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1.8;
+  position: absolute;
+  top: -3rem;
+  left: -.8rem;
+  content: "";
+  text-align: center;
+  color: #fff;
+  border-radius: .4rem;
+  background-color: $color-warning;
+}
+
+.slider__pointer:after {
+  position: absolute;
+  bottom: -.8rem;
+  left: 1.3rem;
+  content: "";
+  border: .4rem solid transparent;
+  border-top: .4rem solid $color-warning;
+}
+
+.slider__scale {
+  margin-top: 1.5rem;
+}
+
+.slider__step {
+  font-weight: 900;
+  position: absolute;
+  width: 2rem;
+  margin-left: -1.7rem;
+  list-style: none;
+  text-align: right;
+  color: #d1d1d1;
 }
