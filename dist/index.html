@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="./app.css">
   </head>
   <body class="page">
-    <section class="standard-buttons">
+    <section class="page__item buttons">
       <h2 class="subtitle">Standard buttons</h2>
-      <div class="standard-buttons__items">
+      <div class="page__wrapper-buttons">
         <button class="btn btn--primary btn--small" data-ripple="">Button</button>
         <button class="btn btn--primary" data-ripple="">Button</button>
         <button class="btn btn--warning" data-ripple="">Button</button>
@@ -23,9 +23,9 @@
         <button class="btn btn--warning btn--small" data-ripple="">Button</button>
       </div>
     </section>
-    <section class="arrow-buttons">
+    <section class="page__item arrows">
       <h2 class="subtitle">Arrow buttons</h2>
-      <div class="arrow-buttons__items">
+      <div class="page__wrapper-arrows">
         <svg class="arrow arrow--left" viewBox="0 0 10 10">
           <circle class="arrow__circle" cx="5" cy="5" r="4.7"></circle>
           <polyline class="arrow__polyline" points="5.8,3 3.8,5 5.8,7"></polyline>
@@ -52,19 +52,19 @@
         </svg>
       </div>
     </section>
-    <section class="percentages">
+    <section class="page__item percentages">
       <h2 class="subtitle">Percentages / Pie chart</h2>
-      <div class="percentages__items">
-        <div class="percircle" data-percent="0" data-text="0"></div>
-        <div class="percircle" data-percent="38" data-text="38"></div>
-        <div class="percircle" data-percent="62" data-text="62"></div>
-        <div class="percircle" data-percent="89" data-text="89"></div>
+      <div class="page__wrapper-percentages">
+        <div class="percentage" data-percent="0" data-text="0"></div>
+        <div class="percentage" data-percent="38" data-text="38"></div>
+        <div class="percentage" data-percent="62" data-text="62"></div>
+        <div class="percentage" data-percent="89" data-text="89"></div>
         <div class="pie-chart">10, 25, 30, 35</div>
       </div>
     </section>
-    <section class="sliders">
+    <section class="page__item sliders">
       <h2 class="subtitle">Sliders</h2>
-      <div class="sliders__items">
+      <div class="page__wrapper-sliders">
         <div class="slider" id="slider1">
           <div class="ui-slider-handle slider__handle slider__handle--with-pointer" id="handle1">
             <div class="slider__pointer"></div>
@@ -75,6 +75,10 @@
           <ul class="slider__scale"></ul>
         </div>
       </div>
+    </section>
+    <section class="page__item stages">
+      <h2 class="subtitle">Stages</h2>
+      <div class="page__wrapper-stages"></div>
     </section>
     <script src="./app.js"></script>
   </body>

@@ -2,33 +2,40 @@
   font-family: "Lato", sans-serif;
   max-width: 1076.8px;
   margin: 0;
-  padding: 4.8rem 5.5rem 4.8rem 5.2rem;
+  padding: 5rem;
   letter-spacing: .05rem;
 }
 
 .subtitle {
   font-size: 1.8rem;
   font-weight: 900;
-  margin-top: 3.1rem;
+  margin-top: 3.3rem;
   margin-bottom: 2.5rem;
   text-align: center;
   letter-spacing: .08rem;
   text-transform: uppercase;
 }
 
-.standard-buttons,
-.arrow-buttons {
-  padding-right: 5.8rem;
-  padding-left: 6rem;
-}
-
-.standard-buttons__items {
+.page__wrapper-buttons {
   display: flex;
-  padding-top: 4.3rem;
+  padding: 4.3rem 6.3rem 0 6.3rem;
 
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.page__wrapper-arrows {
+  text-align: center;
+}
+
+.page__wrapper-sliders {
+  padding-top: 1.8rem;
+  padding-bottom: 3.1rem;
+}
+
+.page__wrapper-stages {
+  padding-bottom: 4.5rem;
 }
 
 .btn {
@@ -66,17 +73,9 @@
   }
 }
 
-.arrow-buttons {
-  margin-bottom: 4.2rem;
-}
-
-.arrow-buttons__items {
-  padding-top: .9rem;
-}
-
 .arrow {
   @include size(4.81rem);
-  margin-left: 2.1rem;
+  margin: .9rem;
   cursor: pointer;
 
   &--disabled {
@@ -109,10 +108,6 @@
     font-size: .4em;
     top: 50%;
   }
-}
-
-.sliders__items {
-  padding-top: 1.8rem;
 }
 
 .slider {
@@ -182,4 +177,52 @@
   list-style: none;
   text-align: right;
   color: #d1d1d1;
+}
+
+.stages__list {
+  padding: 0;
+  counter-reset: step;
+}
+
+.stages__item {
+  list-style-type: none;
+  color: $color-disabled;
+  float: left;
+  position: relative;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+
+  &:before {
+    @include size(2.8rem);
+    content: counter(step);
+    counter-increment: step;
+    color: #888;
+    line-height: 2.8rem;
+    border-radius: 50%;
+    display: block;
+    background-color: $color-disabled;
+  }
+
+  &:after {
+    content: "";
+    background-color: $color-disabled;
+    position: absolute;
+    width: 100%;
+    height: .5rem;
+    top: 40%;
+    left: .1rem;
+    z-index: -1;
+  }
+
+  &:last-child:after {
+    content: none;
+  }
+
+  &--done:before,
+  &--done:after,
+  &--current:before {
+    background-color: $color-warning;
+    color: #fff;
+  }
 }

@@ -8,23 +8,24 @@ require('percircle');
 
 require('./vendor/Material-Design-Style-Ripple-Effect-On-Click-Touch-Ripple-js/ripple.js');
 require('./vendor/Peity/jquery.peity.min.js');
+require('./vendor/My-Stages/stages.js');
 
 import './scss/main.scss';
 
-$(function(){
+$(function() {
 
   $('.btn').click(function() {
     $(this).addClass('btn--pressed');
   });
 
-  $('.percircle').percircle({
+  $('.percentage').percircle({
     progressBarColor: '#e75735'
   });
 
   $('.pie-chart').peity('donut', {
     fill: ['#747474', '#e75735', '#4eb7a8', '#e5e5e5'],
-    width: '9.2rem',
-    height: '9.2rem',
+    width: '9rem',
+    height: '9rem',
     innerRadius: 47
   });
 
@@ -57,5 +58,9 @@ $(function(){
       }
       ul.appendTo('#slider2');
     }
+  });
+
+  $('.page__wrapper-stages').stages({
+    steps: 5
   });
 });

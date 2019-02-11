@@ -1,12 +1,12 @@
-section.standard-buttons
+section.page__item.buttons
   h2.subtitle Standard buttons
-  .standard-buttons__items
+  .page__wrapper-buttons
     - for (i=0; i<3; i++)
       +buttons("")
 
-section.arrow-buttons
+section.page__item.arrows
   h2.subtitle Arrow buttons
-  .arrow-buttons__items
+  .page__wrapper-arrows
     +arrow("left")
     +arrow("right")
     +arrow("left", "disabled")
@@ -14,21 +14,25 @@ section.arrow-buttons
     +arrow("left")
     +arrow("right")
 
-section.percentages
+section.page__item.percentages
   h2.subtitle Percentages / Pie chart
-  .percentages__items
-    .percircle(data-percent=0, data-text=0)
-    .percircle(data-percent=38, data-text=38)
-    .percircle(data-percent=62, data-text=62)
-    .percircle(data-percent=89, data-text=89)
+  .page__wrapper-percentages
+    .percentage(data-percent=0, data-text=0)
+    .percentage(data-percent=38, data-text=38)
+    .percentage(data-percent=62, data-text=62)
+    .percentage(data-percent=89, data-text=89)
     .pie-chart 10, 25, 30, 35
 
-section.sliders
+section.page__item.sliders
   h2.subtitle Sliders
-  .sliders__items
+  .page__wrapper-sliders
     #slider1.slider
       #handle1.ui-slider-handle.slider__handle.slider__handle--with-pointer
         .slider__pointer
     #slider2.slider.slider--with-scale
       #handle2.ui-slider-handle.slider__handle
       ul.slider__scale
+
+section.page__item.stages
+  h2.subtitle Stages
+  .page__wrapper-stages
