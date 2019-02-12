@@ -9,13 +9,14 @@ require('percircle');
 require('./vendor/Material-Design-Style-Ripple-Effect-On-Click-Touch-Ripple-js/ripple.js');
 require('./vendor/Peity/jquery.peity.min.js');
 require('./vendor/My-Stages/stages.js');
+require('./vendor/My-Toggles/toggles.js');
 
 import './scss/main.scss';
 
 $(function() {
 
-  $('.btn').click(function() {
-    $(this).addClass('btn--pressed');
+  $('.button').click(function() {
+    $(this).addClass('button--pressed');
   });
 
   $('.percentage').percircle({
@@ -62,5 +63,9 @@ $(function() {
 
   $('.page__wrapper-stages').stages({
     steps: 5
+  });
+
+  $('.toggle').toggles({
+    count: 2
   });
 });
