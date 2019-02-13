@@ -1,0 +1,35 @@
+.checkbox {
+  display: none;
+}
+
+.checkbox__label {
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.checkbox__checkmark {
+  margin: .8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #e5e5e5;
+}
+
+.checkbox:checked + label .checkbox__checkmark {
+  background: #4eb7a8;
+}
+
+.checkbox:checked + label .checkbox__check {
+  -webkit-animation: checked 0.5s ease forwards;
+  animation: checked 0.5s ease forwards;
+  stroke: #fff;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+}
+
+@-webkit-keyframes checked {
+  @include animate-checkbox;
+}
+
+@keyframes checked {
+  @include animate-checkbox;
+}
