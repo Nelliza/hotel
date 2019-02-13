@@ -1,44 +1,6 @@
-section.page__item.buttons
-  h2.subtitle Standard buttons
-  .page__wrapper-buttons
-    - for (i=0; i<3; i++)
-      +buttons("")
-
-section.page__item.arrows
-  h2.subtitle Arrow buttons
-  .page__wrapper-arrows
-    +arrow("left")
-    +arrow("right")
-    +arrow("left", "disabled")
-    +arrow("right", "disabled")
-    +arrow("left")
-    +arrow("right")
-
-section.page__item.percentages
-  h2.subtitle Percentages / Pie chart
-  .page__wrapper-percentages
-    .percentage(data-percent=0, data-text=0)
-    .percentage(data-percent=38, data-text=38)
-    .percentage(data-percent=62, data-text=62)
-    .percentage(data-percent=89, data-text=89)
-    .pie-chart 10, 25, 30, 35
-
-section.page__item.sliders
-  h2.subtitle Sliders
-  .page__wrapper-sliders
-    #slider1.slider
-      #handle1.ui-slider-handle.slider__handle.slider__handle--with-pointer
-        .slider__pointer
-    #slider2.slider.slider--with-scale
-      #handle2.ui-slider-handle.slider__handle
-      ul.slider__scale
-
-section.page__item.stages
-  h2.subtitle Stages
-  .page__wrapper-stages
-
-section.page__item.toggles
-  h2.subtitle Toggles
-  .page__wrapper-toggles
-    - for (i=0; i<2; i++)
-      .toggle
+include ../buttons/buttons
+include ../arrows/arrows
+include ../percentages/percentages
+include ../sliders/sliders
+include ../stages/stages
+include ../toggles/toggles

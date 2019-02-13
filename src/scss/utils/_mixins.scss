@@ -78,3 +78,9 @@
   stroke-width: $stroke-width;
   fill: $fill;
 }
+
+@mixin animate-checkbox {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
