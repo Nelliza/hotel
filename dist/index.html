@@ -80,27 +80,42 @@
       <h2 class="subtitle">Stages</h2>
       <div class="page__wrapper-stages"></div>
     </section>
-    <section class="page__item toggles">
-      <h2 class="subtitle">Toggles</h2>
-      <div class="page__wrapper-toggles">
-        <div class="toggle"></div>
-        <div class="toggle"></div>
-      </div>
-    </section>
-    <section class="page__item tick-boxes">
-      <h2 class="subtitle">Tick Boxes</h2>
-      <input class="checkbox" type="checkbox" id="checkbox1" checked="checked"/>
-      <label class="checkbox__label" for="checkbox1">
-        <svg class="checkbox__checkmark" width="36" height="36">
-          <path class="checkbox__check" d="M10 18 L16 24 L27 12" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-        </svg>
-      </label>
-      <input class="checkbox" type="checkbox" id="checkbox2" checked="checked"/>
-      <label class="checkbox__label" for="checkbox2">
-        <svg class="checkbox__checkmark" width="36" height="36">
-          <path class="checkbox__check" d="M10 18 L16 24 L27 12" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-        </svg>
-      </label>
+    <section class="page__item form-elements">
+      <h2 class="subtitle">Form Elements</h2>
+      <form class="form">
+        <p>
+          <input type="text" name="name" placeholder="Your Name">
+        </p>
+        <p>
+          <input type="text" name="email" placeholder="Your Email">
+        </p>
+        <p>
+          <textarea name="message" cols="30" rows="5" placeholder="Your Message"></textarea>
+        </p>
+        <button class="button button--primary" type="submit">Submit</button>
+      </form>
+      <section class="page__item toggles">
+        <h2 class="subtitle">Toggles</h2>
+        <div class="page__wrapper-toggles">
+          <div class="toggle"></div>
+          <div class="toggle"></div>
+        </div>
+      </section>
+      <section class="page__item tick-boxes">
+        <h2 class="subtitle">Tick Boxes</h2>
+        <input class="checkbox" type="checkbox" id="checkbox1" checked="checked"/>
+        <label class="checkbox__label" for="checkbox1">
+          <svg class="checkbox__checkmark" width="36" height="36">
+            <path class="checkbox__check" d="M10 18 L16 24 L27 12" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+          </svg>
+        </label>
+        <input class="checkbox" type="checkbox" id="checkbox2" checked="checked"/>
+        <label class="checkbox__label" for="checkbox2">
+          <svg class="checkbox__checkmark" width="36" height="36">
+            <path class="checkbox__check" d="M10 18 L16 24 L27 12" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+          </svg>
+        </label>
+      </section>
     </section>
     <script src="./app.js"></script>
   </body>

@@ -1,0 +1,43 @@
+.form input,
+.form textarea {
+  padding: .5rem 1rem;
+  background-color: #e5e5e5;
+  border-radius: .2rem;
+  border: none;
+  outline: none;
+}
+::-webkit-input-placeholder {
+  font-family: 'Source Sans Pro';
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.14px;
+  text-align: left;
+}
+::-moz-placeholder {
+  font-family: 'Source Sans Pro';
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.14px;
+  line-height: 42px;
+  text-align: left;
+}
+:-moz-placeholder {
+  font-family: 'Source Sans Pro';
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.14px;
+  line-height: 42px;
+  text-align: left;
+}
+:-ms-input-placeholder {
+  font-family: 'Source Sans Pro';
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.14px;
+  line-height: 42px;
+  text-align: left;
+}
