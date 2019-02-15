@@ -29,6 +29,12 @@
   height: $height;
 }
 
+@mixin pseudo-elem($width: 100%, $height: $width) {
+  position: absolute;
+  width: $width;
+  height: $height;
+}
+
 @mixin btn-theme($theme, $bd-bottom-color) {
   $color: "";
   @if $theme == primary {

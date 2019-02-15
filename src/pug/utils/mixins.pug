@@ -17,6 +17,12 @@ mixin arrow(direction, condition="")
     circle(class="arrow__circle", cx="5", cy="5", r="4.7")
     polyline(class="arrow__polyline", points=points)
 
+mixin toggle(checked=false)
+  .toggle
+    input.toggle__checkbox(type="checkbox", checked=checked)
+    .toggle__background
+    span.toggle__round
+
 mixin checkbox(ident, size, path)
   input(class="checkbox", type="checkbox", id=ident, checked)
   label(class="checkbox__label", for=ident)
