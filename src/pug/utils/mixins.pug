@@ -23,8 +23,8 @@ mixin toggle(checked=false)
     .toggle__background
     span.toggle__round
 
-mixin checkbox(ident, size, path)
-  input(class="checkbox", type="checkbox", id=ident, checked)
+mixin checkbox(ident, size, path, checked=false)
+  input(class="checkbox", type="checkbox", id=ident, checked=checked)
   label(class="checkbox__label", for=ident)
     svg(class="checkbox__checkmark", width=size, height=size)
       path(class="checkbox__check", d=path, stroke="#c0c0c0", stroke-width="3", fill="none")
