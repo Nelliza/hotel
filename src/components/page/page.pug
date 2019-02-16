@@ -1,6 +1,63 @@
-include ../buttons/buttons
-include ../arrows/arrows
-include ../percentages/percentages
-include ../sliders/sliders
-include ../stages/stages
-include ../form-elements/form-elements
+include ../subtitle/_subtitle
+include ../button/_button
+include ../arrow/_arrow
+include ../percentage/_percentage
+include ../pie-chart/_pie-chart
+include ../slider/_slider
+include ../stages/_stages
+include ../form/_form
+include ../toggle/_toggle
+include ../tick-box/_tick-box
+
+section.page__item
+  +subtitle("Standard buttons")
+  .section-wrapper.section-wrapper--buttons
+    - for (var i = 0; i < 3; i++)
+      +button(["primary", "small"])
+      +button(["primary"])
+      +button(["warning"])
+      +button(["warning", "small"])
+
+section.page__item
+  +subtitle("Arrow buttons")
+  .section-wrapper.section-wrapper--arrows
+    +arrow("left")
+    +arrow("right")
+    +arrow("left", "disabled")
+    +arrow("right", "disabled")
+    +arrow("left")
+    +arrow("right")
+
+section.page__item
+  +subtitle("Percentages / Pie chart")
+  .section-wrapper
+    +percentage()
+    +percentage(38, 38)
+    +percentage(62, 62)
+    +percentage(89, 89)
+    +pie-chart([10, 25, 30, 35])
+
+section.page__item.page__item--sliders
+  +subtitle("Sliders")
+  .section-wrapper.section-wrapper--sliders
+    +sliderWithPointer(1)
+    +sliderWithScale(2)
+
+section.page__item
+  +subtitle("Stages")
+  .section-wrapper
+    +stages(5)
+
+section.page__item
+  +subtitle("Form Elements")
+  +form
+  section.page__item.page__item--toggles
+    +subtitle("Toggles")
+    .section-wrapper
+      +toggle()
+      +toggle(true)
+
+section.page__item.page__item--tick-boxes
+  +subtitle("Tick Boxes")
+  +tickBox(1, 24, true)
+  +tickBox(2, 24)

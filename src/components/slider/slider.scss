@@ -1,0 +1,74 @@
+.slider {
+  @include size(37%, .3rem);
+  float: left;
+  margin-left: 3.4rem;
+  border-radius: 5rem;
+  background-color: $color-disabled;
+  cursor: pointer;
+
+  &--with-scale {
+    float: right;
+    margin-right: 3.6rem;
+  }
+
+  .ui-slider-range {
+    border-radius: 5rem;
+    background-color: $color-primary;
+  }
+
+  .slider__handle {
+    @include size(1.2rem);
+    top: -.4rem;
+    margin-left: -.9rem;
+    border-radius: 50%;
+    outline: none;
+    background-color: $color-primary;
+    cursor: pointer;
+
+    &--with-pointer {
+      position: relative;
+      margin-left: -1.3rem;
+      background-color: $color-warning;
+    }
+  }
+}
+
+.slider__pointer {
+  @include size(2.25rem, 1.5rem);
+  font-size: .8rem;
+  font-weight: 900;
+  line-height: 1.9;
+  position: absolute;
+  top: -2rem;
+  left: -.6rem;
+  content: "";
+  text-align: center;
+  color: #fff;
+  border-radius: .4rem;
+  background-color: $color-warning;
+  cursor: pointer;
+}
+
+.slider__pointer:after {
+  position: absolute;
+  bottom: -.6rem;
+  left: .9rem;
+  content: "";
+  border: .3rem solid transparent;
+  border-top: .3rem solid $color-warning;
+}
+
+.slider__scale {
+  margin-top: 1rem;
+  font-size: .7rem;
+}
+
+.slider__step {
+  font-weight: 900;
+  position: absolute;
+  width: 2rem;
+  margin-left: -1.7rem;
+  list-style: none;
+  text-align: right;
+  color: #d1d1d1;
+}

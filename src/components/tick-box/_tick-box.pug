@@ -1,0 +1,5 @@
+mixin tickBox(id, size, checked=false)
+  input(class="tick-box", type="checkbox", id="tix-box"+id, checked=checked)
+  label(class="tick-box__label", for="tix-box"+id)
+    svg(class="tick-box__checkmark", width=size, height=size)
+      path(class="tick-box__check", d="M6.7 12 L10.7 16 L18 8", stroke="#c0c0c0", stroke-width="3", fill="none")

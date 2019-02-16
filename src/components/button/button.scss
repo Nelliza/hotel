@@ -1,0 +1,39 @@
+@import "./vendor/Material-Design-Style-Ripple-Effect-On-Click-Touch-Ripple-js/ripple.css";
+@import "./components/button/_btn-theme";
+
+.button {
+  @include btn-theme();
+  @include size(7.37rem, 2rem);
+  font-size: .75rem;
+  font-weight: 900;
+  line-height: 1.5rem;
+  margin-top: .7rem;
+  margin-bottom: .7rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: .06rem solid;
+  border-bottom: .3rem solid;
+  border-radius: .2rem;
+  outline: none;
+  background-color: #fff;
+
+  &--primary {
+    @include btn-theme(primary, #28a290);
+  }
+
+  &--warning {
+    @include btn-theme(warning, #bf3e1f);
+  }
+
+  &--small {
+    @include size(4.87rem, 1.37rem);
+    font-size: .62rem;
+    line-height: 1.1rem;
+    border-bottom: .2rem solid;
+
+    &:hover,
+    &.button--pressed {
+      line-height: 1.24rem;
+    }
+  }
+}

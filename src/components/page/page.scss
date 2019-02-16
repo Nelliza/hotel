@@ -1,39 +1,71 @@
-@import "../components/subtitle/subtitle";
-@import "../components/buttons/buttons";
-@import "../components/arrows/arrows";
-@import "../components/percentages/percentages";
-@import "../components/sliders/sliders";
-@import "../components/stages/stages";
-@import "../components/form/form";
-@import "../components/toggles/toggles";
-@import "../components/tick-boxes/tick-boxes";
+@import "./components/page/_vars";
+@import "./components/page/_font-face";
+@import "./components/page/_size";
+@import "./components/page/_pseudo-elem";
+@import "./components/page/_right-blocks";
+
+@import "./components/subtitle/subtitle";
+@import "./components/button/button";
+@import "./components/arrow/arrow";
+@import "./components/percentage/percentage";
+@import "./components/slider/slider";
+@import "./components/stages/stages";
+@import "./components/form/form";
+@import "./components/toggle/toggle";
+@import "./components/tick-box/tick-box";
+
+@each $type in black, light, bold, italic, regular {
+  @include font-face(Lato, lato, $type);
+}
+@each $type in light, bold, italic, regular {
+  @include font-face(Source Sans Pro, sourcesanspro, $type);
+}
 
 .page {
   font-family: "Lato", sans-serif;
-  max-width: 1076.8px;
+  max-width: 700px;
   margin: 0;
-  padding: 5rem;
+  padding: 2.3rem 0;
   letter-spacing: .05rem;
 }
 
-.page__wrapper-buttons {
+.page__item--sliders {
+  .subtitle {
+    margin-top: 2.1rem;
+    margin-bottom: 1.1rem;
+  }
+}
+
+.page__item--toggles {
+  @include right-blocks;
+
+  .subtitle {
+    margin-top: 1.5rem;
+  }
+}
+
+.page__item--tick-boxes {
+  @include right-blocks;
+
+  .subtitle {
+    margin-top: 1.9rem;
+  }
+}
+
+.section-wrapper--buttons {
   display: flex;
-  padding: 4.3rem 6.3rem 0 6.3rem;
+  padding: 2.2rem 7.4rem 0;
 
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
 }
 
-.page__wrapper-arrows {
+.section-wrapper--arrows {
   text-align: center;
 }
 
-.page__wrapper-sliders {
+.section-wrapper--sliders {
   padding-top: 1.8rem;
-  padding-bottom: 3.1rem;
-}
-
-.page__wrapper-stages {
-  padding-bottom: 4.5rem;
+  padding-bottom: 1.3rem;
 }

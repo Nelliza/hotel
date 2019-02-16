@@ -112,7 +112,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/pug/index.pug',
+      template: './src/index.pug',
       filename: 'index.html'
     })
   ]

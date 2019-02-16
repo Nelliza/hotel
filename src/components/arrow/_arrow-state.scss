@@ -1,0 +1,18 @@
+@mixin arrow-state($state) {
+  $color: "";
+  @if $state == disabled {
+    $color: $color-disabled;
+  }
+  @else if $state == hover {
+    $color: $color-primary;
+  }
+
+  .arrow__circle {
+    stroke: $color;
+    fill: $color;
+  }
+
+  .arrow__polyline {
+    stroke: #fff;
+  }
+}

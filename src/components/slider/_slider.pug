@@ -1,0 +1,9 @@
+mixin sliderWithPointer(id)
+  div(id="slider"+id, class=["slider", "slider--with-pointer"])
+    div(class=["ui-slider-handle", "slider__handle", "slider__handle--with-pointer"])
+      .slider__pointer
+
+mixin sliderWithScale(id)
+  div(id="slider"+id, class=["slider", "slider--with-scale"])
+    div(class=["ui-slider-handle", "slider__handle"])
+    ul.slider__scale

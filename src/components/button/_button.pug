@@ -1,0 +1,11 @@
+mixin button(classes=false)
+  - var classNames = ""
+
+  if classes
+    - classNames = []
+
+    each name in classes
+      - var className = "button--" + name
+      - classNames.push(className)
+
+  button(class=["button", classNames], data-ripple="") Button

@@ -1,0 +1,13 @@
+@import "~percircle/dist/css/percircle.css";
+
+.percircle {
+  font-size: 5.9rem;
+  margin: 0 1.3rem;
+  background-color: #fff;
+
+  >span {
+    font-size: .45em;
+    top: 50%;
+    cursor: pointer;
+  }
+}

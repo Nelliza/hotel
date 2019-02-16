@@ -1,0 +1,27 @@
+@mixin btn-theme($theme: false, $bd-bottom-color: #444) {
+  $bg-color: "";
+  @if $theme == primary {
+    $bg-color: $color-primary;
+  }
+  @else if $theme == warning {
+    $bg-color: $color-warning;
+  }
+  @else {
+    $bg-color: #000;
+  }
+
+  border-color: $bg-color;
+  color: $bg-color;
+
+  &:hover,
+  &.button--pressed {
+    line-height: 1.5rem;
+    color: #fff;
+    border-bottom: .2rem solid #{$bd-bottom-color};
+    background-color: $bg-color;
+  }
+
+  &.button--pressed {
+    border-bottom-color: $bg-color;
+  }
+}

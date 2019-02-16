@@ -1,0 +1,75 @@
+.toggle {
+  @include size(3.7rem, 1.5rem);
+  margin:.3rem;
+  display: inline-block;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.toggle__checkbox {
+  @include pseudo-elem();
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+
+  &:checked {
+    ~.toggle__background {
+      background-color: $color-primary;
+    }
+
+    ~.toggle__round {
+      left: auto;
+      right: .2rem;
+
+      &:before {
+        display: inline-block;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.toggle__background {
+  @include pseudo-elem();
+  background-color: $color-disabled;
+  transition: background-color .40s ease-in-out;
+  z-index: -1;
+  border-radius: 3.2rem;
+}
+
+.toggle__round {
+  @include size(1.1rem);
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: .2rem;
+  left: .2rem;
+  transition: all .30s ease-in-out;
+
+  &:before,
+  &:after {
+    @include pseudo-elem(0);
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 900;
+    color: #fff;
+  }
+
+  &:before {
+    content: "on";
+    display: none;
+    right: 2.8rem;
+  }
+
+  &:after {
+    content: "off";
+    left: 1.5rem;
+  }
+}

@@ -1,0 +1,5 @@
+@mixin tick-box-animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

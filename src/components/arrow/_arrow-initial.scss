@@ -1,0 +1,5 @@
+@mixin arrow-initial($stroke-width, $fill) {
+  stroke: $color-primary;
+  stroke-width: $stroke-width;
+  fill: $fill;
+}
