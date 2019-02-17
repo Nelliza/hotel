@@ -1,9 +1,11 @@
-mixin form
-  form.form
-    p
-      input(type="text", name="name", placeholder="Your Name")
-    p
-      input(type="text", name="email", placeholder="Your Email")
-    p
-      textarea(name="message", cols="34", rows="5", placeholder="Your Message")
-    button(class=["button", "button--primary"], type="submit") Submit
+mixin form(id)
+  form(id="form"+id, class="form")
+    .form__field
+      input(type="text", id="login"+id, name="name", placeholder="Your Name")
+      .form__val
+    .form__field
+      input(type="text", id="email"+id, name="email", placeholder="Your Email")
+      .form__val
+    .form__field
+      textarea(id="message"+id, name="message", cols="34", rows="5", placeholder="Your Message")
+    button(type="submit", id="send"+id, class=["button", "button--primary"], name="button") Submit

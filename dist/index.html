@@ -90,17 +90,19 @@
     </section>
     <section class="page__item">
           <h2 class="subtitle">Form Elements</h2>
-          <form class="form">
-            <p>
-              <input type="text" name="name" placeholder="Your Name">
-            </p>
-            <p>
-              <input type="text" name="email" placeholder="Your Email">
-            </p>
-            <p>
-              <textarea name="message" cols="34" rows="5" placeholder="Your Message"></textarea>
-            </p>
-            <button class="button button--primary" type="submit">Submit</button>
+          <form class="form" id="form1">
+            <div class="form__field">
+              <input type="text" id="login1" name="name" placeholder="Your Name">
+              <div class="form__val"></div>
+            </div>
+            <div class="form__field">
+              <input type="text" id="email1" name="email" placeholder="Your Email">
+              <div class="form__val"></div>
+            </div>
+            <div class="form__field">
+              <textarea id="message1" name="message" cols="34" rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <button class="button button--primary" type="submit" id="send1" name="button">Submit</button>
           </form>
       <section class="page__item page__item--toggles">
             <h2 class="subtitle">Toggles</h2>
