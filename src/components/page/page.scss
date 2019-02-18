@@ -3,6 +3,9 @@
 @import "./components/page/_size";
 @import "./components/page/_pseudo-elem";
 @import "./components/page/_right-blocks";
+@import "./components/page/_placeholder";
+@import "./components/page/_inputs";
+@import "./components/page/_search-icon";
 
 @import "./components/subtitle/subtitle";
 @import "./components/button/button";
@@ -13,6 +16,8 @@
 @import "./components/form/form";
 @import "./components/toggle/toggle";
 @import "./components/tick-box/tick-box";
+@import "./components/search/search";
+@import "./components/search-btn/search-btn";
 
 @each $type in black, light, bold, italic, regular {
   @include font-face(Lato, lato, $type);
@@ -23,9 +28,10 @@
 
 .page {
   font-family: "Lato", sans-serif;
+  box-sizing: border-box;
   max-width: 700px;
   margin: 0;
-  padding: 2.3rem 0;
+  padding: 2.3rem 3.5rem 0 3.25rem;
   letter-spacing: .05rem;
 }
 
@@ -52,9 +58,22 @@
   }
 }
 
+.page__item--search {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.page__item--clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding-bottom: .4rem;
+}
+
 .section-wrapper--buttons {
   display: flex;
-  padding: 2.2rem 7.4rem 0;
+  padding: 2.2rem 3.8rem 0 4.15rem;
 
   flex-wrap: wrap;
   align-items: flex-end;

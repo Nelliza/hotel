@@ -1,0 +1,10 @@
+@mixin search-icon {
+  @include size(2rem, 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 .2rem .2rem 0;
+  background: url(./components/page/search-icon.svg) $color-warning center no-repeat;
+}

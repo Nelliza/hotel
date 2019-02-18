@@ -1,10 +1,7 @@
-@import "./components/form/_placeholder-rules";
-
 .form {
   float: left;
-  width: 41%;
+  width: 49%;
   margin-top: .9rem;
-  margin-left: 3.32rem;
   box-sizing: content-box;
 }
 
@@ -13,19 +10,12 @@
 
   input {
     width: 62%;
-    padding: .4rem .9rem;
+    @include inputs;
   }
 
   textarea {
+    @include inputs;
     padding: .6rem .9rem .2rem;
-  }
-
-  input,
-  textarea {
-    border-radius: .2rem;
-    border: none;
-    outline: none;
-    background-color: #e5e5e5;
   }
 }
 
@@ -72,14 +62,14 @@
 }
 
 ::-webkit-input-placeholder {
-  @include placeholder-rules;
+  @include placeholder;
 }
 ::-moz-placeholder {
-  @include placeholder-rules;
+  @include placeholder;
 }
 :-moz-placeholder {
-  @include placeholder-rules;
+  @include placeholder;
 }
 :-ms-input-placeholder {
-  @include placeholder-rules;
+  @include placeholder;
 }

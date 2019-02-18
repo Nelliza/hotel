@@ -88,7 +88,7 @@
             </ul>
       </div>
     </section>
-    <section class="page__item">
+    <section class="page__item page__item--clearfix">
           <h2 class="subtitle">Form Elements</h2>
           <form class="form" id="form1">
             <div class="form__field">
@@ -117,21 +117,29 @@
               </div>
         </div>
       </section>
+      <section class="page__item page__item--tick-boxes">
+            <h2 class="subtitle">Tick Boxes</h2>
+            <input class="tick-box" type="checkbox" id="tix-box1" checked>
+            <label class="tick-box__label" for="tix-box1">
+              <svg class="tick-box__checkmark" width="24" height="24">
+                <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+              </svg>
+            </label>
+            <input class="tick-box" type="checkbox" id="tix-box2">
+            <label class="tick-box__label" for="tix-box2">
+              <svg class="tick-box__checkmark" width="24" height="24">
+                <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+              </svg>
+            </label>
+      </section>
     </section>
-    <section class="page__item page__item--tick-boxes">
-          <h2 class="subtitle">Tick Boxes</h2>
-          <input class="tick-box" type="checkbox" id="tix-box1" checked>
-          <label class="tick-box__label" for="tix-box1">
-            <svg class="tick-box__checkmark" width="24" height="24">
-              <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-            </svg>
-          </label>
-          <input class="tick-box" type="checkbox" id="tix-box2">
-          <label class="tick-box__label" for="tix-box2">
-            <svg class="tick-box__checkmark" width="24" height="24">
-              <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-            </svg>
-          </label>
+    <section class="page__item page__item--search page__item--clearfix">
+          <h2 class="subtitle">Search / Drop Down</h2>
+          <form class="search">
+            <input class="search__input" type="text" placeholder="Search">
+            <button class="search__submit" type="submit"></button>
+          </form>
+          <button class="search-btn" type="submit">I've not found what I'm looking for...</button>
     </section>
     <script src="./app.js"></script>
   </body>

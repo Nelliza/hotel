@@ -9,7 +9,7 @@
         $li.eq(i).css('width', 0);
       }
       else {
-        $li.eq(i).css('width', (100 / ($countItems - 1) - 1.5) + '%');
+        $li.eq(i).css('width', (100 / ($countItems - 1) - 1) + '%');
       }
     }
 

@@ -1,14 +1,12 @@
 .slider {
-  @include size(37%, .3rem);
+  @include size(44%, .3rem);
   float: left;
-  margin-left: 3.4rem;
   border-radius: 5rem;
   background-color: $color-disabled;
   cursor: pointer;
 
   &--with-scale {
     float: right;
-    margin-right: 3.6rem;
   }
 
   .ui-slider-range {

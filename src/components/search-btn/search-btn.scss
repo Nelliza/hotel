@@ -1,0 +1,19 @@
+.search-btn {
+  @include inputs;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 18rem;
+  margin-bottom: .9rem;
+  cursor: pointer;
+  text-align: left;
+  color: #fff;
+  background-color: $color-warning;
+
+  &:after {
+    @include search-icon;
+    line-height: 1.75rem;
+    content: "";
+    text-align: center;
+  }
+}

@@ -1,0 +1,13 @@
+.search {
+  position: relative;
+  width: 18rem;
+  margin-bottom: .9rem;
+}
+.search__input {
+  @include inputs;
+  box-sizing: border-box;
+  width: 100%;
+}
+.search__submit {
+  @include search-icon;
+}

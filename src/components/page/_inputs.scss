@@ -1,0 +1,7 @@
+@mixin inputs {
+  padding: .4rem .9rem;
+  border: none;
+  border-radius: .2rem;
+  outline: none;
+  background-color: $color-disabled;
+}
