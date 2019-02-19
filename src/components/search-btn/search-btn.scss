@@ -4,14 +4,14 @@
   display: block;
   box-sizing: border-box;
   width: 18rem;
-  margin-bottom: .9rem;
+  margin-bottom: 1.1rem;
   cursor: pointer;
   text-align: left;
   color: #fff;
   background-color: $color-warning;
 
   &:after {
-    @include search-icon;
+    @include fieldset-icon("search/search-icon.svg", $color-warning);
     line-height: 1.75rem;
     content: "";
     text-align: center;

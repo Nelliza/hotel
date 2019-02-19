@@ -1,0 +1,17 @@
+.drop-down {
+  @include filedset("select+.ui-selectmenu-button>.ui-selectmenu-text", "select+.ui-selectmenu-button>.ui-selectmenu-icon", "drop-down/arrow-down.svg", $color-primary) {
+    .drop-down__select+.ui-selectmenu-button {
+      @include placeholder;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0;
+      outline: none;
+    }
+  }
+}
+
+.ui-selectmenu-menu.ui-selectmenu-open {
+  @include placeholder;
+  padding: .4rem .9rem;
+  color: #000;
+}

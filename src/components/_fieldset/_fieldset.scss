@@ -1,0 +1,17 @@
+@mixin filedset($input, $btn, $path, $color) {
+  position: relative;
+  width: 18rem;
+  margin-bottom: 1rem;
+
+  &__#{$input} {
+    @include inputs;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  &__#{$btn} {
+    @include fieldset-icon($path, $color);
+  }
+
+  @content;
+}

@@ -1,4 +1,4 @@
-@mixin search-icon {
+@mixin fieldset-icon($path, $color: $color-warning) {
   @include size(2rem, 100%);
   position: absolute;
   top: 0;
@@ -6,5 +6,6 @@
   cursor: pointer;
   border: none;
   border-radius: 0 .2rem .2rem 0;
-  background: url(./components/_search-icon/search-icon.svg) $color-warning center no-repeat;
+  outline: none;
+  background: url(./components/#{$path}) $color center no-repeat;
 }
