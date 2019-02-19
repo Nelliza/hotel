@@ -7,12 +7,14 @@
     $color: $color-primary;
   }
 
-  .arrow__circle {
-    stroke: $color;
-    fill: $color;
-  }
+  .arrow {
+    &__circle {
+      stroke: $color;
+      fill: $color;
+    }
 
-  .arrow__polyline {
-    stroke: #fff;
+    &__polyline {
+      stroke: #fff;
+    }
   }
 }

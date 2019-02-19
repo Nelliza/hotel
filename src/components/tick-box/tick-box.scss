@@ -1,29 +1,29 @@
 .tick-box {
   display: none;
-}
 
-.tick-box__label {
-  font-size: 0;
-  letter-spacing: 0;
-}
+  &__label {
+    font-size: 0;
+    letter-spacing: 0;
+  }
 
-.tick-box__checkmark {
-  margin: .5rem 1rem 0 0;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #e5e5e5;
-}
+  &__checkmark {
+    margin: .5rem 1rem 0 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #e5e5e5;
+  }
 
-.tick-box:checked + label .tick-box__checkmark {
-  background: #4eb7a8;
-}
+  &:checked + label .tick-box__checkmark {
+    background: #4eb7a8;
+  }
 
-.tick-box:checked + label .tick-box__check {
-  -webkit-animation: checked 0.5s ease forwards;
-  animation: checked 0.5s ease forwards;
-  stroke: #fff;
-  stroke-dasharray: 50;
-  stroke-dashoffset: 50;
+  &:checked + label .tick-box__check {
+    -webkit-animation: checked 0.5s ease forwards;
+    animation: checked 0.5s ease forwards;
+    stroke: #fff;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+  }
 }
 
 @-webkit-keyframes checked {

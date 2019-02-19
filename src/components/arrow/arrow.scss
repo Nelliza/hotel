@@ -10,12 +10,12 @@
   &:hover {
     @include arrow-state(hover);
   }
-}
 
-.arrow__circle {
-  @include arrow-initial(.6, #fff);
-}
+  &__circle {
+    @include arrow-initial(.6, #fff);
+  }
 
-.arrow__polyline {
-  @include arrow-initial(.7, none);
+  &__polyline {
+    @include arrow-initial(.7, none);
+  }
 }

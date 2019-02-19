@@ -1,48 +1,48 @@
 .stages {
   padding: .2rem 0 2.4rem 0;
   counter-reset: step;
-}
 
-.stages__item {
-  list-style-type: none;
-  color: $color-disabled;
-  float: left;
-  position: relative;
-  text-align: center;
-  font-size: .88rem;
-  font-weight: 900;
-  line-height: 2;
+  &__item {
+    list-style-type: none;
+    color: $color-disabled;
+    float: left;
+    position: relative;
+    text-align: center;
+    font-size: .88rem;
+    font-weight: 900;
+    line-height: 2;
 
-  &:before {
-    @include size(1.7rem);
-    content: counter(step);
-    counter-increment: step;
-    color: #888;
-    border-radius: 50%;
-    display: block;
-    background-color: $color-disabled;
-    cursor: pointer;
-  }
+    &:before {
+      @include size(1.7rem);
+      content: counter(step);
+      counter-increment: step;
+      color: #888;
+      border-radius: 50%;
+      display: block;
+      background-color: $color-disabled;
+      cursor: pointer;
+    }
 
-  &:after {
-    content: "";
-    background-color: $color-disabled;
-    position: absolute;
-    width: 100%;
-    height: .3rem;
-    top: 40%;
-    left: .1rem;
-    z-index: -1;
-  }
+    &:after {
+      content: "";
+      background-color: $color-disabled;
+      position: absolute;
+      width: 100%;
+      height: .3rem;
+      top: 40%;
+      left: .1rem;
+      z-index: -1;
+    }
 
-  &:last-child:after {
-    content: none;
-  }
+    &:last-child:after {
+      content: none;
+    }
 
-  &--done:before,
-  &--done:after,
-  &--current:before {
-    background-color: $color-warning;
-    color: #fff;
+    &--done:before,
+    &--done:after,
+    &--current:before {
+      background-color: $color-warning;
+      color: #fff;
+    }
   }
 }
