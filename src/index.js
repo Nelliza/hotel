@@ -1,9 +1,19 @@
-import './components/page/page';
-import './components/button/button';
-import './components/percentage/percentage';
-import './components/pie-chart/pie-chart';
-import './components/slider/slider';
-import './components/stages/stages';
-import './components/form/form';
+import './components/page/page.js';
+
+import './vendor/Material-Design-Style-Ripple-Effect-On-Click-Touch-Ripple-js/ripple.js';
+import './vendor/Material-Design-Style-Ripple-Effect-On-Click-Touch-Ripple-js/ripple.css';
+import 'percircle';
+import '../node_modules/percircle/dist/css/percircle.css';
+import './vendor/Peity/jquery.peity.min.js';
+import 'webpack-jquery-ui/slider';
+import './components/stages/_stages.js';
+import './components/form/_validate-form.js';
+
+import './components/button/button.js';
+import './components/percentage/percentage.js';
+import './components/pie-chart/pie-chart.js';
+import './components/slider/slider.js';
+import './components/stages/stages.js';
+import './components/form/form.js';
 
 import './main.scss';

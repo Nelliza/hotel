@@ -1,1 +1,28 @@
-@import "./components/page/page";
+$color-primary: #4eb7a8;
+$color-warning: #e75735;
+$color-disabled: #e5e5e5;
+
+@import "./components/_font-face/_font-face.scss";
+@import "./components/_size/_size.scss";
+@import "./components/_pseudo-elem/_pseudo-elem.scss";
+@import "./components/_right-blocks/_right-blocks.scss";
+@import "./components/_placeholder/_placeholder.scss";
+@import "./components/_inputs/_inputs.scss";
+@import "./components/_search-icon/_search-icon.scss";
+@import "./components/button/_btn-theme.scss";
+@import "./components/arrow/_arrow-state.scss";
+@import "./components/arrow/_arrow-initial.scss";
+@import "./components/tick-box/_tick-box-animate.scss";
+
+@import "./components/page/page.scss";
+@import "./components/subtitle/subtitle.scss";
+@import "./components/button/button.scss";
+@import "./components/arrow/arrow.scss";
+@import "./components/percentage/percentage.scss";
+@import "./components/slider/slider.scss";
+@import "./components/stages/stages.scss";
+@import "./components/form/form.scss";
+@import "./components/toggle/toggle.scss";
+@import "./components/tick-box/tick-box.scss";
+@import "./components/search/search.scss";
+@import "./components/search-btn/search-btn.scss";

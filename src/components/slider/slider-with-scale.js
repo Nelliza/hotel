@@ -1,5 +1,3 @@
-require('webpack-jquery-ui/slider');
-
 $(function() {
   $('.slider--with-scale').slider({
     value: 75,

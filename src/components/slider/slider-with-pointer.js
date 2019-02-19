@@ -1,5 +1,3 @@
-require('webpack-jquery-ui/slider');
-
 $(function() {
   var pointer = $('.slider__pointer');
   $('.slider--with-pointer').slider({

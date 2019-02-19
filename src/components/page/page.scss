@@ -1,24 +1,3 @@
-@import "./components/page/_vars";
-@import "./components/page/_font-face";
-@import "./components/page/_size";
-@import "./components/page/_pseudo-elem";
-@import "./components/page/_right-blocks";
-@import "./components/page/_placeholder";
-@import "./components/page/_inputs";
-@import "./components/page/_search-icon";
-
-@import "./components/subtitle/subtitle";
-@import "./components/button/button";
-@import "./components/arrow/arrow";
-@import "./components/percentage/percentage";
-@import "./components/slider/slider";
-@import "./components/stages/stages";
-@import "./components/form/form";
-@import "./components/toggle/toggle";
-@import "./components/tick-box/tick-box";
-@import "./components/search/search";
-@import "./components/search-btn/search-btn";
-
 @each $type in black, light, bold, italic, regular {
   @include font-face(Lato, lato, $type);
 }
