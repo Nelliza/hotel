@@ -1,4 +1,5 @@
 import './components/page/page.js';
+//import './components/_icons/icons.js';
 
 import './vendor/Material-Design-Style-Ripple-Effect-On-Click-Touch-Ripple-js/ripple.js';
 import './vendor/Material-Design-Style-Ripple-Effect-On-Click-Touch-Ripple-js/ripple.css';

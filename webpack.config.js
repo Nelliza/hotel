@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
   entry: {
@@ -60,7 +61,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/,
+        test: /\.(png|jpe?g|gif)$/,
         use: [
           {
             loader: 'file-loader',
@@ -98,6 +99,30 @@ module.exports = {
             outputPath: 'fonts'
         }
       },
+      {
+        test: /\.svg$/,
+        include: path.resolve(__dirname, './src/components/_icons'),
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              spriteFilename: 'img/icons.svg',
+              esModule: false
+            }
+          },
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                { removeTitle: true },
+                { convertColors: { shorthex: false} },
+                { convertPathData: true }
+              ]
+            }
+          }
+        ]
+      }
     ]
   },
   devServer: {
@@ -112,6 +137,9 @@ module.exports = {
       hash: true,
       template: './src/index.pug',
       filename: 'index.html'
+    }),
+    new SpriteLoaderPlugin({
+
     })
   ]
 }
