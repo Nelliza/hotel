@@ -17,8 +17,8 @@
 
   @font-face {
     font-family: $font-family;
-    src: url("./fonts/#{$font}-#{$type}-webfont.woff2") format("woff2"),
-         url("./fonts/#{$font}-#{$type}-webfont.woff") format("woff");
+    src: url("./components/_fonts/#{$font}-#{$type}-webfont.woff2") format("woff2"),
+         url("./components/_fonts/#{$font}-#{$type}-webfont.woff") format("woff");
     font-weight: $weight;
     font-style: $style;
   }
