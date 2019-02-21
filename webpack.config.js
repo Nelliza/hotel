@@ -1,5 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
@@ -22,7 +21,6 @@ module.exports = {
         test: /\.scss$/,
         use: [
           'style-loader',
-          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: { sourceMap: true }
@@ -41,7 +39,6 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: { sourceMap: true }
@@ -129,17 +126,12 @@ module.exports = {
     overlay: true
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css'
-    }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
       template: './src/index.pug',
       filename: 'index.html'
     }),
-    new SpriteLoaderPlugin({
-
-    })
+    new SpriteLoaderPlugin({})
   ]
 }
