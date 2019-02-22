@@ -140,21 +140,44 @@
         </div>
       </div>
     </section>
-    <section class="page__item page__item--search">
-          <h2 class="subtitle">Search / Drop Down</h2>
-          <form class="search">
-            <input class="search__input" type="text" placeholder="Search">
-            <button class="search__submit" type="submit"></button>
-          </form>
-          <button class="search-btn" type="submit">I've not found what I'm looking for...</button>
-          <form class="drop-down">
-            <select class="drop-down__select">Choose An Option
-              <option selected disabled>Choose An Option</option>
-              <option>Option 1</option>
-              <option>Option 2</option>
-            </select>
-          </form>
-    </section>
+    <div class="flex-container">
+      <section class="page__item">
+            <h2 class="subtitle">Search / Drop Down</h2>
+            <form class="search">
+              <input class="search__input" type="text" placeholder="Search">
+              <button class="search__submit" type="submit"></button>
+            </form>
+            <button class="search-btn" type="submit">I've not found what I'm looking for...</button>
+            <form class="drop-down">
+              <select class="drop-down__select">Choose An Option
+                <option selected disabled>Choose An Option</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+              </select>
+            </form>
+      </section>
+      <section class="page__item">
+            <h2 class="subtitle">User Profile</h2>
+            <div class="user-profile"><img class="user-profile__photo" src="img/John Smith.jpg" alt="John Smith">
+              <div class="user-profile__info"><span class="user-profile__name">John Smith</span><span class="user-profile__profession">UX Designer</span>
+                <ul class="user-profile__social">
+                      <li class="user-profile__social-icon user-profile__social-icon--fb"><a href="#"></a></li>
+                      <li class="user-profile__social-icon user-profile__social-icon--tw"><a href="#"></a></li>
+                      <li class="user-profile__social-icon user-profile__social-icon--dr"><a href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="user-profile"><img class="user-profile__photo" src="img/Sarah Brown.jpg" alt="Sarah Brown">
+              <div class="user-profile__info"><span class="user-profile__name">Sarah Brown</span><span class="user-profile__profession">Developer</span>
+                <ul class="user-profile__social">
+                      <li class="user-profile__social-icon user-profile__social-icon--fb"><a href="#"></a></li>
+                      <li class="user-profile__social-icon user-profile__social-icon--tw"><a href="#"></a></li>
+                      <li class="user-profile__social-icon user-profile__social-icon--dr"><a href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+      </section>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>

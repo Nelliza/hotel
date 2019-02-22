@@ -1,0 +1,10 @@
+include _social-icons
+
+mixin userProfile(name, profession)
+  .user-profile
+    img(class="user-profile__photo", src=require("./components/user-profile/"+name+".jpg"), alt=name)
+    .user-profile__info
+      span.user-profile__name= name
+      span.user-profile__profession= profession
+      ul.user-profile__social
+        +socialIcons(['fb', 'tw', 'dr'])

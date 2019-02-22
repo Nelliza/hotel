@@ -11,6 +11,7 @@ include ../tick-box/_tick-box
 include ../search/_search
 include ../search-btn/_search-btn
 include ../drop-down/_drop-down
+include ../user-profile/_user-profile
 
 section.page__item
   +subtitle("Standard buttons")
@@ -74,3 +75,8 @@ section.page__item
     +search
     +searchBtn
     +dropDown
+
+  section.page__item
+    +subtitle("User Profile")
+    +userProfile("John Smith", "UX Designer")
+    +userProfile("Sarah Brown", "Developer")
