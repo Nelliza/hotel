@@ -3,7 +3,7 @@
 @mixin fieldset($input, $btn, $path, $color) {
   position: relative;
   width: 18rem;
-  margin-bottom: 1rem;
+  margin-bottom: .9rem;
 
   &__#{$input} {
     @include inputs;

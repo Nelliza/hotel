@@ -1,8 +1,5 @@
 .form {
-  float: left;
-  width: 49%;
-  margin-top: .9rem;
-  box-sizing: content-box;
+  margin-top: 1.7rem;
 
   &__field {
     margin-top: .65rem;
@@ -14,7 +11,7 @@
 
     textarea {
       @include inputs;
-      padding: .6rem .9rem .2rem;
+      padding: .8rem .9rem;
     }
   }
 

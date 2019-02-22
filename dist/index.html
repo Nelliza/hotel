@@ -87,52 +87,60 @@
             </ul>
       </div>
     </section>
-    <section class="page__item page__item--clearfix">
+    <section class="page__item">
           <h2 class="subtitle">Form Elements</h2>
-          <form class="form" id="form1">
-            <div class="form__field">
-              <input type="text" id="login1" name="name" placeholder="Your Name">
-              <div class="form__val"></div>
-            </div>
-            <div class="form__field">
-              <input type="text" id="email1" name="email" placeholder="Your Email">
-              <div class="form__val"></div>
-            </div>
-            <div class="form__field">
-              <textarea id="message1" name="message" cols="34" rows="5" placeholder="Your Message"></textarea>
-            </div>
-            <button class="button button--primary" type="submit" id="send1" name="button">Submit</button>
-          </form>
-      <section class="page__item page__item--toggles">
-            <h2 class="subtitle">Toggles</h2>
+      <div class="section-wrapper section-wrapper--form-elements">
         <div class="section-wrapper">
-              <div class="toggle">
-                <input class="toggle__checkbox" type="checkbox">
-                <div class="toggle__background"></div><span class="toggle__round"></span>
-              </div>
-              <div class="toggle">
-                <input class="toggle__checkbox" type="checkbox" checked>
-                <div class="toggle__background"></div><span class="toggle__round"></span>
-              </div>
+              <form class="form" id="form1">
+                <div class="form__field">
+                  <input type="text" id="login1" name="name" placeholder="Your Name">
+                  <div class="form__val"></div>
+                </div>
+                <div class="form__field">
+                  <input type="text" id="email1" name="email" placeholder="Your Email">
+                  <div class="form__val"></div>
+                </div>
+                <div class="form__field">
+                  <textarea id="message1" name="message" cols="34" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button class="button button--primary" type="submit" id="send1" name="button">Submit</button>
+              </form>
         </div>
-      </section>
-      <section class="page__item page__item--tick-boxes">
-            <h2 class="subtitle">Tick Boxes</h2>
-            <input class="tick-box" type="checkbox" id="tix-box1" checked>
-            <label class="tick-box__label" for="tix-box1">
-              <svg class="tick-box__checkmark" width="24" height="24">
-                <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-              </svg>
-            </label>
-            <input class="tick-box" type="checkbox" id="tix-box2">
-            <label class="tick-box__label" for="tix-box2">
-              <svg class="tick-box__checkmark" width="24" height="24">
-                <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-              </svg>
-            </label>
-      </section>
+        <div class="section-wrapper">
+          <section class="page__item page__item--toggles">
+                <h2 class="subtitle">Toggles</h2>
+            <div class="section-wrapper">
+                  <div class="toggle">
+                    <input class="toggle__checkbox" type="checkbox">
+                    <div class="toggle__background"></div><span class="toggle__round"></span>
+                  </div>
+                  <div class="toggle">
+                    <input class="toggle__checkbox" type="checkbox" checked>
+                    <div class="toggle__background"></div><span class="toggle__round"></span>
+                  </div>
+            </div>
+          </section>
+          <section class="page__item page__item--tick-boxes">
+                <h2 class="subtitle">Tick Boxes</h2>
+            <div class="section-wrapper">
+                  <input class="tick-box" type="checkbox" id="tix-box1" checked>
+                  <label class="tick-box__label" for="tix-box1">
+                    <svg class="tick-box__checkmark" width="24" height="24">
+                      <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                    </svg>
+                  </label>
+                  <input class="tick-box" type="checkbox" id="tix-box2">
+                  <label class="tick-box__label" for="tix-box2">
+                    <svg class="tick-box__checkmark" width="24" height="24">
+                      <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                    </svg>
+                  </label>
+            </div>
+          </section>
+        </div>
+      </div>
     </section>
-    <section class="page__item page__item--search page__item--clearfix">
+    <section class="page__item page__item--search">
           <h2 class="subtitle">Search / Drop Down</h2>
           <form class="search">
             <input class="search__input" type="text" placeholder="Search">

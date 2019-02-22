@@ -1,11 +1,11 @@
 .stages {
-  padding: .2rem 0 2.4rem 0;
+  display: flex;
+  padding: .2rem 0 .7rem;
   counter-reset: step;
 
   &__item {
     list-style-type: none;
     color: $color-disabled;
-    float: left;
     position: relative;
     text-align: center;
     font-size: .88rem;

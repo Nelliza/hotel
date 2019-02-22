@@ -51,21 +51,26 @@ section.page__item
   .section-wrapper
     +stages(5)
 
-section.page__item.page__item--clearfix
+section.page__item
   +subtitle("Form Elements")
-  +form(1)
-  section.page__item.page__item--toggles
-    +subtitle("Toggles")
+  .section-wrapper.section-wrapper--form-elements
     .section-wrapper
-      +toggle()
-      +toggle(true)
-  section.page__item.page__item--tick-boxes
-    +subtitle("Tick Boxes")
-    +tickBox(1, 24, true)
-    +tickBox(2, 24)
+      +form(1)
+    .section-wrapper
+      section.page__item.page__item--toggles
+        +subtitle("Toggles")
+        .section-wrapper
+          +toggle()
+          +toggle(true)
+      section.page__item.page__item--tick-boxes
+        +subtitle("Tick Boxes")
+        .section-wrapper
+          +tickBox(1, 24, true)
+          +tickBox(2, 24)
 
-section.page__item.page__item--search.page__item--clearfix
-  +subtitle("Search / Drop Down")
-  +search
-  +searchBtn
-  +dropDown
+.flex-container
+  section.page__item
+    +subtitle("Search / Drop Down")
+    +search
+    +searchBtn
+    +dropDown
