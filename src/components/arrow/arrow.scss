@@ -1,3 +1,6 @@
+@import "./components/arrow/_arrow-state.scss";
+@import "./components/arrow/_arrow-initial.scss";
+
 .arrow {
   @include size(3.2rem);
   margin: .6rem .6rem 0;

@@ -1,3 +1,5 @@
+@import "./components/_fieldset/_fieldset-icon.scss";
+
 @mixin fieldset($input, $btn, $path, $color) {
   position: relative;
   width: 18rem;
