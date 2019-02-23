@@ -1,10 +1,13 @@
-include _social-icons
+include _social-icon
 
-mixin userProfile(name, profession)
+mixin userProfile(name, profession, modifier=false)
+  if modifier == "primary"
+    - modifier = "user-profile__info--primary"
+
   .user-profile
     img(class="user-profile__photo", src=require("./components/user-profile/"+name+".jpg"), alt=name)
-    .user-profile__info
+    div(class=["user-profile__info", modifier])
       span.user-profile__name= name
       span.user-profile__profession= profession
       ul.user-profile__social
-        +socialIcons(['fb', 'tw', 'dr'])
+        +socialIcon(["facebook", "twitter", "dribbble"])

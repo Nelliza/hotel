@@ -1,0 +1,79 @@
+@import "./components/user-profile/_social-icon.scss";
+
+.user-profile {
+  padding: .4rem 0 1.2rem 1.5rem;
+
+  &__photo {
+    @include size(5.3rem);
+    display: inline-block;
+    margin: 0 .5rem 0 0;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: .25rem solid $color-disabled;
+  }
+
+  &__info {
+    display: inline-block;
+    width: 10rem;
+    background-color: $color-disabled;
+    text-align: center;
+    position: relative;
+    border-radius: .4rem;
+    vertical-align: middle;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: .5rem;
+      height: .5rem;
+      top: calc(50% - .25rem);
+      background-color: $color-disabled;
+      left: -.25rem;
+      transform: rotate(45deg);
+      border-radius: .1rem;
+    }
+
+    &--primary {
+      background-color: $color-primary;
+
+      &:before {
+        background-color: $color-primary;
+      }
+
+      .user-profile__name,
+      .user-profile__profession {
+          color: #fff;
+      }
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-top: .7rem;
+    margin-bottom: .2rem;
+    font-size: 1.1rem;
+    color: $color-warning;
+  }
+
+  &__profession {
+    display: block;
+    font-size: .7rem;
+    font-weight: 900;
+    color: #4f4f4f;
+    text-transform: uppercase; 
+  }
+
+  &__social {
+    margin: .4rem 0 .3rem;
+    padding: 0;
+  }
+
+  &__social-icon {
+    display: inline-block;
+    width: 1.56rem;
+    height: 1.25rem;
+    margin: .4rem;
+  }
+  
+  @include social-icon(facebook, twitter, dribbble);
+}
