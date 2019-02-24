@@ -22,15 +22,7 @@
     vertical-align: middle;
 
     &:before {
-      position: absolute;
-      content: '';
-      width: .5rem;
-      height: .5rem;
-      top: calc(50% - .25rem);
-      background-color: $color-disabled;
-      left: -.25rem;
-      transform: rotate(45deg);
-      border-radius: .1rem;
+      @include triangle-tooltip($color-disabled);
     }
 
     &--primary {

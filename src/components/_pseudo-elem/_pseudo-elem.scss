@@ -1,8 +1,9 @@
 @mixin pseudo-elem($content: "", $width: 100%, $height: $width) {
-  position: absolute;
-  width: $width;
-  height: $height;
   @if $content != false {
     content: $content;
   }
+
+  position: absolute;
+  width: $width;
+  height: $height;
 }

@@ -29,18 +29,14 @@
     position: absolute;
 
     &:before {
-      position: absolute;
-      top: .6rem;
-      left: -.6rem;
-      content: "";
-      border: .3rem solid rgba(0,0,0,0);
+      @include triangle-tooltip(#fff, .3rem);
     }
 
     &--correct {
       background-color: $color-primary;
 
       &:before {
-        border-right-color: $color-primary;
+        background-color: $color-primary;
       }
     }
 
@@ -48,7 +44,7 @@
       background-color: $color-warning;
 
       &:before {
-        border-right-color: $color-warning;
+        background-color: $color-warning;
       }
     }
   }

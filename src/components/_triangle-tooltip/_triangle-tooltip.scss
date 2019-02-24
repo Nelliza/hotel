@@ -1,0 +1,16 @@
+@mixin triangle-tooltip($bg-color: transparent, $size: .5rem, $orientation: left) {
+  @if $orientation == left {
+    top: calc(50% - #{$size} / 2);
+    left: calc(-1 * #{$size} / 2);
+  }
+  @else if $orientation == bottom {
+    bottom: calc(-1 * #{$size} / 2);
+    left: calc(50% - #{$size} / 2);
+  }
+
+  @include pseudo-elem("", $size);
+
+  background-color: $bg-color;
+  border-radius: 0 0 0 .2rem;
+  transform: rotate(45deg);
+}
