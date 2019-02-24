@@ -63,7 +63,7 @@
     </section>
     <section class="page__item page__item--sliders">
           <h2 class="subtitle">Sliders</h2>
-      <div class="section-wrapper section-wrapper--sliders">
+      <div class="section-wrapper section-wrapper--sliders two-columns">
             <div class="slider slider--with-pointer" id="slider1">
               <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
                 <div class="slider__pointer"></div>
@@ -89,7 +89,7 @@
     </section>
     <section class="page__item">
           <h2 class="subtitle">Form Elements</h2>
-      <div class="section-wrapper section-wrapper--form-elements">
+      <div class="section-wrapper section-wrapper--form-elements two-columns">
         <div class="section-wrapper">
               <form class="form" id="form1">
                 <div class="form__field">
@@ -103,7 +103,7 @@
                 <div class="form__field">
                   <textarea id="message1" name="message" cols="34" rows="4" placeholder="Your Message"></textarea>
                 </div>
-                <button class="button button--primary" type="submit" id="send1" name="button">Submit</button>
+                <button class="form__button button button--primary" type="submit" id="send1" name="button">Submit</button>
               </form>
         </div>
         <div class="section-wrapper">
@@ -140,7 +140,7 @@
         </div>
       </div>
     </section>
-    <div class="flex-container">
+    <div class="two-columns">
       <section class="page__item">
             <h2 class="subtitle">Search / Drop Down</h2>
             <form class="search">
@@ -178,6 +178,25 @@
             </div>
       </section>
     </div>
+    <section class="page__item page__item--news">
+          <h2 class="subtitle">News &amp; Events</h2>
+      <div class="section-wrapper two-columns">
+            <div class="news"><img class="news__preview" src="img/News1.jpg" alt="Новость 1">
+              <div class="news__description">
+                <h3 class="news__title">It's all going downhill</h3>
+                <p class="news__date">24 august 2013</p>
+                <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+              </div>
+            </div>
+            <div class="news"><img class="news__preview" src="img/News2.jpg" alt="Новость 2">
+              <div class="news__description news__description--primary">
+                <div class="news__short-date"><span class="news__day">24</span><span class="news__month">Aug</span></div>
+                <h3 class="news__title news__title--small">This is the title</h3>
+                <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><a class="news__button button button--primary" href="#calendar">Add to calendar</a>
+              </div>
+            </div>
+      </div>
+    </section>
     <script src="./app.js"></script>
   </body>
 </html>

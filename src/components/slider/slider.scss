@@ -1,5 +1,5 @@
 .slider {
-  @include size(44%, .3rem);
+  height: .3rem;
   border-radius: 5rem;
   background-color: $color-disabled;
   cursor: pointer;

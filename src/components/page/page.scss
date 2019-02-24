@@ -5,6 +5,15 @@
   @include font-face(Source Sans Pro, sourcesanspro, $type);
 }
 
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+
+  >* {
+    width: 49%;
+  }
+}
+
 .page {
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
@@ -41,6 +50,17 @@
         justify-content: center;
       }
     }
+
+    &--news {
+      .subtitle {
+        margin-top: 4.8rem;
+        margin-bottom: 2rem;
+      }
+
+      .news {
+        width: 48.5%;
+      }
+    }
   }
 }
 
@@ -48,7 +68,6 @@
   &--buttons {
     display: flex;
     padding: 2.2rem 3.8rem 0 4.15rem;
-
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
@@ -59,32 +78,19 @@
   }
 
   &--sliders {
-    display: flex;
-    justify-content: space-between;
     padding-top: 1.8rem;
     padding-bottom: 1rem;
+
+    >.slider {
+      width: 44%;
+    }
   }
 
   &--form-elements {
-    display: flex;
-    justify-content: space-between;
     padding-bottom: .6rem;
-
-    >.section-wrapper:first-child {
-      width: 49%;
-    }
 
     >.section-wrapper:last-child {
       width: 47%;
     }
-  }
-}
-
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-
-  >.page__item {
-    width: 49%;
   }
 }

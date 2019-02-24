@@ -1,0 +1,21 @@
+mixin news(id, title, date, text, format=false)
+  if format == "calendar"
+    - var modifierDescr = "news__description--primary"
+    - var modifierTitle = "news__title--small"
+  else
+    - var modifierDescr = false
+    - var modifierTitle = false
+
+  .news
+    img(class="news__preview", src=require("./components/news/News"+id+".jpg"), alt="Новость "+id)
+    div(class=["news__description", modifierDescr])
+      if format == "calendar"
+        .news__short-date
+          span.news__day= date[0]
+          span.news__month= date[1]
+      h3(class=["news__title", modifierTitle])= title
+      if !format
+        p.news__date= date
+      p.news__text= text
+      if format == "calendar"
+        a(href="#calendar", class=["news__button", "button", "button--primary"]) Add to calendar

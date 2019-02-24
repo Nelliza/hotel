@@ -12,6 +12,7 @@ include ../search/_search
 include ../search-btn/_search-btn
 include ../drop-down/_drop-down
 include ../user-profile/_user-profile
+include ../news/_news
 
 section.page__item
   +subtitle("Standard buttons")
@@ -43,7 +44,7 @@ section.page__item
 
 section.page__item.page__item--sliders
   +subtitle("Sliders")
-  .section-wrapper.section-wrapper--sliders
+  .section-wrapper.section-wrapper--sliders.two-columns
     +sliderWithPointer(1)
     +sliderWithScale(2)
 
@@ -54,7 +55,7 @@ section.page__item
 
 section.page__item
   +subtitle("Form Elements")
-  .section-wrapper.section-wrapper--form-elements
+  .section-wrapper.section-wrapper--form-elements.two-columns
     .section-wrapper
       +form(1)
     .section-wrapper
@@ -69,7 +70,7 @@ section.page__item
           +tickBox(1, 24, true)
           +tickBox(2, 24)
 
-.flex-container
+.two-columns
   section.page__item
     +subtitle("Search / Drop Down")
     +search
@@ -80,3 +81,20 @@ section.page__item
     +subtitle("User Profile")
     +userProfile("John Smith", "UX Designer")
     +userProfile("Sarah Brown", "Developer", "primary")
+
+section.page__item.page__item--news
+  +subtitle("News & Events")
+  .section-wrapper.two-columns
+    +news(
+      1,
+      "It's all going downhill",
+      "24 august 2013",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."
+    )
+    +news(
+      2,
+      "This is the title",
+      [24, "Aug"],
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "calendar"
+    )
