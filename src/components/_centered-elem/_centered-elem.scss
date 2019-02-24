@@ -1,0 +1,10 @@
+@mixin centered-elem($margin-top) {
+  .subtitle {
+    margin-top: $margin-top;
+  }
+
+  >.section-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

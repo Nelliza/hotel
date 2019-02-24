@@ -30,25 +30,11 @@
     }
 
     &--toggles {
-      >.subtitle {
-        margin-top: 1.4rem;
-      }
-      
-      >.section-wrapper {
-        display: flex;
-        justify-content: center;
-      }
+      @include centered-elem(1.4rem);
     }
 
     &--tick-boxes {
-      .subtitle {
-        margin-top: 2rem;
-      }
-
-      >.section-wrapper {
-        display: flex;
-        justify-content: center;
-      }
+      @include centered-elem(2rem);
     }
 
     &--news {
