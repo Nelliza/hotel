@@ -27,7 +27,7 @@ module.exports = {
           },
           {
             loader: 'postcss-loader',
-            options: { sourceMap: true, config: { path: './src/js/postcss.config.js' } }
+            options: { sourceMap: true, config: { path: './postcss.config.js' } }
           },
           {
             loader: 'sass-loader',
@@ -45,7 +45,7 @@ module.exports = {
           },
           {
             loader: 'postcss-loader',
-            options: { sourceMap: true, config: { path: './src/js/postcss.config.js' } }
+            options: { sourceMap: true, config: { path: './postcss.config.js' } }
           }
         ]
       },
@@ -92,8 +92,8 @@ module.exports = {
         test: /\.(eot|ttf|woff|woff2)$/,
         loader: 'file-loader',
         options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts'
+          name: '[name].[ext]',
+          outputPath: 'fonts'
         }
       },
       {
