@@ -18,5 +18,6 @@ import './components/slider/slider.js';
 import './components/stages/stages.js';
 import './components/form/form.js';
 import './components/drop-down/drop-down.js';
+import './components/location/location.js';
 
 import './main.scss';

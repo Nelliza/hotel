@@ -1,0 +1,54 @@
+.location {
+  @include size(100%, 17.1rem);
+  background: url(./components/location/Map.jpg) no-repeat center;
+
+  &__text {
+    float: left;
+    margin: .4rem .7rem;
+    color: #fff;
+
+    &--greeting {
+      font-size: 1.88rem;
+      font-weight: 300;
+      line-height: 1.1;
+    }
+
+    &--address {
+      font-size: .78rem;
+      font-weight: 900;
+      line-height: 1.3;
+      text-transform: uppercase;
+      letter-spacing: .04rem;
+    }
+  }
+
+  &__marks {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__mark {
+    @include size(1.69rem);
+    margin: .6rem 0 .6rem 1rem;
+    display: inline-block;
+
+    &--location {
+      background: url(./components/_icons/location-icon.svg) no-repeat center;
+    }
+
+    &--pin {
+      background: url(./components/_icons/pin-icon.svg) no-repeat center;
+    }
+  }
+}
+
+.ymaps-2-1-72-balloon {
+  &__content {
+    height: 2.8rem !important;
+    padding: .8rem 1.1rem .8rem 1rem !important;
+    font-family: Lato, sans-serif !important;
+    background-color: $color-warning !important;
+  }
+}
