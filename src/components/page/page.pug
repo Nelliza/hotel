@@ -45,7 +45,7 @@ section.page__item
 
 section.page__item.page__item--sliders
   +subtitle("Sliders")
-  .section-wrapper.section-wrapper--sliders.two-columns
+  .section-wrapper.section-wrapper--sliders.section-wrapper--two-columns
     +sliderWithPointer(1)
     +sliderWithScale(2)
 
@@ -56,7 +56,7 @@ section.page__item
 
 section.page__item
   +subtitle("Form Elements")
-  .section-wrapper.section-wrapper--form-elements.two-columns
+  .section-wrapper.section-wrapper--form-elements.section-wrapper--two-columns
     .section-wrapper
       +form(1)
     .section-wrapper
@@ -71,7 +71,7 @@ section.page__item
           +tickBox(1, 24, true)
           +tickBox(2, 24)
 
-.two-columns
+.section-wrapper.section-wrapper--two-columns
   section.page__item
     +subtitle("Search / Drop Down")
     +search
@@ -85,7 +85,7 @@ section.page__item
 
 section.page__item.page__item--news
   +subtitle("News & Events")
-  .section-wrapper.two-columns
+  .section-wrapper.section-wrapper--two-columns
     +news(
       1,
       "It's all going downhill",
