@@ -14,6 +14,7 @@ include ../drop-down/_drop-down
 include ../user-profile/_user-profile
 include ../news/_news
 include ../location/_location
+include ../calendar/_calendar
 
 section.page__item
   +subtitle("Standard buttons")
@@ -103,3 +104,8 @@ section.page__item.page__item--news
 section.page__item.page__item--location
   +subtitle("Location")
   +location
+
+.section-wrapper.section-wrapper--two-columns
+  section.page__item.page__item--calendar
+    +subtitle("Calendar")
+    +calendar

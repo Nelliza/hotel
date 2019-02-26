@@ -1,0 +1,11 @@
+.calendar {
+  &__day {
+    text-align: center;
+    background-color: $color-warning;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 300;
+    padding: .9rem 0 .5rem;
+    border-radius: .2rem .2rem 0 0;
+  }
+}
