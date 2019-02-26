@@ -33,6 +33,7 @@
     @include size(1.69rem);
     margin: .6rem 0 .6rem 1rem;
     display: inline-block;
+    cursor: pointer;
 
     &--location {
       background: url(./components/_icons/location-icon.svg) no-repeat center;
