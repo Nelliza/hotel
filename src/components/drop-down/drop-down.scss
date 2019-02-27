@@ -1,5 +1,5 @@
 .drop-down {
-  @include fieldset("select+.ui-selectmenu-button>.ui-selectmenu-text", "select+.ui-selectmenu-button>.ui-selectmenu-icon", "_icons/dropdown-icon.svg", $color-primary) {
+  @include fieldset("select+.ui-selectmenu-button>.ui-selectmenu-text", "select+.ui-selectmenu-button>.ui-selectmenu-icon", "_icons/arrow-down-icon.svg", $color-primary) {
     .drop-down__select+.ui-selectmenu-button {
       @include placeholder;
       box-sizing: border-box;

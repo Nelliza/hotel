@@ -3,7 +3,7 @@
   @include size(7.37rem, 2rem);
   font-size: .75rem;
   font-weight: 900;
-  line-height: 1.5rem;
+  line-height: 1.5;
   margin-top: .7rem;
   margin-bottom: .7rem;
   cursor: pointer;
@@ -25,7 +25,7 @@
   &--small {
     @include size(4.87rem, 1.37rem);
     font-size: .62rem;
-    line-height: 1.1rem;
+    line-height: 1.8;
     border-bottom: .2rem solid;
 
     &:hover,

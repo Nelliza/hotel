@@ -25,7 +25,7 @@ section.page__item
       +button(["warning"])
       +button(["warning", "small"])
 
-section.page__item
+section.page__item.page__item--arrows
   +subtitle("Arrow buttons")
   .section-wrapper.section-wrapper--arrows
     +arrow("left")
@@ -35,7 +35,7 @@ section.page__item
     +arrow("left")
     +arrow("right")
 
-section.page__item
+section.page__item.page__item--percentages
   +subtitle("Percentages / Pie chart")
   .section-wrapper
     +percentage()
@@ -72,8 +72,8 @@ section.page__item
           +tickBox(1, 24, true)
           +tickBox(2, 24)
 
-.section-wrapper.section-wrapper--two-columns
-  section.page__item
+.section-wrapper.section-wrapper--search.section-wrapper--two-columns
+  section.page__item.page__item--search
     +subtitle("Search / Drop Down")
     +search
     +searchBtn
@@ -86,7 +86,7 @@ section.page__item
 
 section.page__item.page__item--news
   +subtitle("News & Events")
-  .section-wrapper.section-wrapper--two-columns
+  .section-wrapper.section-wrapper--news.section-wrapper--two-columns
     +news(
       1,
       "It's all going downhill",

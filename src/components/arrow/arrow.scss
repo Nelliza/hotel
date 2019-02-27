@@ -3,7 +3,7 @@
 
 .arrow {
   @include size(3.2rem);
-  margin: .6rem .6rem 0;
+  margin: .6rem;
   cursor: pointer;
 
   &--disabled {

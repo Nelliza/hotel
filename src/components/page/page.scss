@@ -13,36 +13,58 @@
   padding: 2.3rem 3.5rem 0 3.25rem;
 
   &__item {
+    &--arrows {
+      subtitle {
+        margin-top: 2.7rem;
+      }
+    }
+
+    &--percentages {
+      .subtitle {
+        margin-top: 2.1rem;
+      }
+    }
+
     &--sliders {
       .subtitle {
         margin-top: 2.1rem;
-        margin-bottom: 1.1rem;
+        margin-bottom: 1.2rem;
       }
     }
 
     &--toggles {
-      @include centered-elem(1.4rem);
+      @include centered-elem(1.5rem);
     }
 
     &--tick-boxes {
       @include centered-elem(2rem);
     }
 
+    &--search {
+      .subtitle {
+        margin-bottom: 1.3rem;
+      }
+    }
+
     &--news {
       .subtitle {
-        margin-top: 4.8rem;
-        margin-bottom: 2rem;
-      }
-
-      .news {
-        width: 48.5%;
+        margin-top: 4.7rem;
+        margin-bottom: 2.1rem;
       }
     }
 
     &--location {
       .subtitle {
-        margin-top: 3.1rem;
-        margin-bottom: 1.9rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--calendar {
+      width: 47.5%;
+
+      .subtitle {
+        margin-top: 3rem;
       }
     }
   }
@@ -52,10 +74,6 @@
   &--two-columns {
     display: flex;
     justify-content: space-between;
-
-    >* {
-      width: 49%;
-    }
   }
 
   &--buttons {
@@ -83,7 +101,23 @@
     padding-bottom: .6rem;
 
     >.section-wrapper:last-child {
+      width: 49%;
+    }
+
+    >.section-wrapper:last-child {
       width: 47%;
+    }
+  }
+
+  &--search {
+    >.page__item {
+      width: 49%;
+    }
+  }
+
+  &--news {
+    >.news {
+      width: 48.5%;
     }
   }
 }
