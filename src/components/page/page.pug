@@ -15,6 +15,7 @@ include ../user-profile/_user-profile
 include ../news/_news
 include ../location/_location
 include ../calendar/_calendar
+include ../messaging/_messaging
 
 section.page__item
   +subtitle("Standard buttons")
@@ -109,3 +110,7 @@ section.page__item.page__item--location
   section.page__item.page__item--calendar
     +subtitle("Calendar")
     +calendar
+
+  section.page__item.page__item--messaging
+    +subtitle("Messaging")
+    +messaging("Sarah Brown")

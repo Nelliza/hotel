@@ -1,3 +1,9 @@
+%calendar-and-messaging {
+  .subtitle {
+    margin-top: 3rem;
+  }
+}
+
 @each $type in black, light, bold, italic, regular {
   @include font-face(Lato, lato, $type);
 }
@@ -10,7 +16,7 @@
   box-sizing: border-box;
   max-width: 700px;
   margin: 0;
-  padding: 2.3rem 3.5rem 0 3.25rem;
+  padding: 2.3rem 3.4rem 0 3.25rem;
 
   &__item {
     &--arrows {
@@ -85,9 +91,13 @@
     &--calendar {
       width: 47.5%;
 
-      .subtitle {
-        margin-top: 3rem;
-      }
+      @extend %calendar-and-messaging;
+    }
+
+    &--messaging {
+      width: 48%;
+
+      @extend %calendar-and-messaging;
     }
   }
 }
@@ -100,7 +110,7 @@
 
   &--buttons {
     display: flex;
-    padding: 2.2rem 3.8rem 0 4.15rem;
+    padding: 2.2rem 3.9rem 0 4.1rem;
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;

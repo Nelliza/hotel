@@ -1,0 +1,96 @@
+%buttons {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.messaging {
+  &__header {
+    z-index: 1;
+    height: 7.3rem;
+    position: relative;
+    background-color: #46ab9d;
+    border-radius: .3rem .3rem 0 0;
+  }
+  &__head {
+    padding: 1.3rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color:  #fff;
+    font-size: 2.13rem;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: -.05rem;
+    background-color: $color-primary;
+    border-radius: .3rem .3rem 0 0;
+  }
+
+  &__avatar {
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  &__main {
+    position: relative;
+    padding: 1.5rem 1.4rem;
+    background-color: #f2f2f2;
+    border-radius: 0 0 .3rem .3rem;
+  }
+
+
+  &__chat {
+    @include pseudo-elem(false, 1.4rem);
+    @extend %buttons;
+    top: 1.4rem;
+    left: 1.6rem;
+    background: url(./components/_icons/chat-icon.svg) no-repeat center;
+  }
+
+  &__camera {
+    @include pseudo-elem(false, 1.5rem);
+    @extend %buttons;
+    top: 1.3rem;
+    right: 1.5rem;
+    background: url(./components/_icons/camera-icon.svg) no-repeat center;
+  }
+
+  &__intro {
+    margin-top: 2.5rem;
+    padding: .3rem 2rem .5rem 1.2rem;
+    background-color: #fff;
+    border-radius: .5rem;
+  }
+
+  &__text {
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .04rem;
+    color: #868686;
+  }
+
+  &__form {
+    margin-top: 1.2rem;
+  }
+
+  &__textarea {
+    padding: .9rem 1.2rem .9rem 1rem;
+    font-family: "Lato", sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: .04rem;
+    background-color: #e5e5e5;
+    color: #777;
+    border: .2rem solid #fff;
+    border-radius: .5rem;
+  }
+
+  &__button {
+    float: none;
+    @include size(100%, 2.3rem);
+    margin-top: .8rem;
+    margin-bottom: 0.2rem;
+  }
+}
