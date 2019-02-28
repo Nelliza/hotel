@@ -55,9 +55,9 @@ section.page__item
   .section-wrapper
     +stages(5)
 
-section.page__item
+section.page__item.page__item--form-elements
   +subtitle("Form Elements")
-  .section-wrapper.section-wrapper--form-elements.section-wrapper--two-columns
+  .section-wrapper.section-wrapper--two-columns
     .section-wrapper
       +form(1)
     .section-wrapper
@@ -72,14 +72,14 @@ section.page__item
           +tickBox(1, 24, true)
           +tickBox(2, 24)
 
-.section-wrapper.section-wrapper--search.section-wrapper--two-columns
+.section-wrapper.section-wrapper--two-columns
   section.page__item.page__item--search
     +subtitle("Search / Drop Down")
     +search
     +searchBtn
     +dropDown
 
-  section.page__item
+  section.page__item.page__item--user-profile
     +subtitle("User Profile")
     +userProfile("John Smith", "UX Designer")
     +userProfile("Sarah Brown", "Developer", "primary")
