@@ -1,9 +1,3 @@
-%calendar-and-messaging {
-  .subtitle {
-    margin-top: 3rem;
-  }
-}
-
 @each $type in black, light, bold, italic, regular {
   @include font-face(Lato, lato, $type);
 }
@@ -19,23 +13,12 @@
   padding: 2.3rem 3.4rem 0 3.25rem;
 
   &__item {
-    &--arrows {
-      subtitle {
-        margin-top: 2.7rem;
-      }
-    }
-
     &--percentages {
-      .subtitle {
-        margin-top: 2.1rem;
-      }
+      @include subtitle-margins(2.1rem);
     }
 
     &--sliders {
-      .subtitle {
-        margin-top: 2.1rem;
-        margin-bottom: 1.2rem;
-      }
+      @include subtitle-margins(2.1rem, 1.2rem);
 
       .section-wrapper--two-columns {
         @include two-columns(44%);
@@ -61,9 +44,7 @@
     &--search {
       width: 49%;
 
-      .subtitle {
-        margin-bottom: 1.3rem;
-      }
+      @include subtitle-margins(false, 1.3rem);
     }
 
     &--user-profile {
@@ -71,10 +52,7 @@
     }
 
     &--news {
-      .subtitle {
-        margin-top: 4.7rem;
-        margin-bottom: 2.1rem;
-      }
+      @include subtitle-margins(4.7rem, 2.1rem);
 
       .section-wrapper--two-columns {
         @include two-columns(48.5%);
@@ -82,26 +60,23 @@
     }
 
     &--location {
-      .subtitle {
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-      }
+      @include subtitle-margins(3rem, 2rem);
     }
 
     &--calendar {
       width: 47.5%;
 
-      @extend %calendar-and-messaging;
+      @include subtitle-margins(3rem);
     }
 
     &--messaging {
       width: 48%;
 
-      @extend %calendar-and-messaging;
+      @include subtitle-margins(3rem);
     }
 
     &--video {
-      margin-top: 3.2rem;
+      @include subtitle-margins(3.2rem);
     }
   }
 }
