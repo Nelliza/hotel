@@ -99,6 +99,10 @@
 
       @extend %calendar-and-messaging;
     }
+
+    &--video {
+      margin-top: 3.2rem;
+    }
   }
 }
 
