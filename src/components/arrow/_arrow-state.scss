@@ -7,14 +7,10 @@
     $color: $color-primary;
   }
 
-  .arrow {
-    &__circle {
-      stroke: $color;
-      fill: $color;
-    }
+  border-color: transparent;
+  background-color: $color;
 
-    &__polyline {
-      stroke: #fff;
-    }
+  &:before {
+    background: url(./components/_icons/arrow-next-white-icon.svg);
   }
 }

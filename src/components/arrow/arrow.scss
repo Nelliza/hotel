@@ -1,24 +1,35 @@
 @import "./components/arrow/_arrow-state.scss";
-@import "./components/arrow/_arrow-initial.scss";
 
 .arrow {
   @include size(3.2rem);
-  margin: .6rem;
+  margin: .6rem .72rem;
+  border: .2rem solid $color-primary;
+  outline: none;
+  border-radius: 50%;
+  background-color: #fff;
   cursor: pointer;
-
-  &--disabled {
-    @include arrow-state(disabled);
-  }
 
   &:hover {
     @include arrow-state(hover);
   }
 
-  &__circle {
-    @include arrow-initial(.6, #fff);
+  &:disabled {
+    @include arrow-state(disabled);
+    cursor: default;
   }
 
-  &__polyline {
-    @include arrow-initial(.7, none);
+  &:before {
+    content: "";
+    display: block;
+    width: .9rem;
+    height: 1.6rem;
+    margin: 0 auto;
+    background: url(./components/_icons/arrow-next-icon.svg);
+  }
+
+  &--prev {
+    &:before {
+      transform: rotate(180deg);
+    }
   }
 }
