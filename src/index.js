@@ -1,8 +1,6 @@
 import './components/page/page.js';
 //import './components/_icons/icons.js';
 
-import './vendor/Material-Design-Style-Ripple-Effect-On-Click-Touch-Ripple-js/ripple.js';
-import './vendor/Material-Design-Style-Ripple-Effect-On-Click-Touch-Ripple-js/ripple.css';
 import 'percircle';
 import '../node_modules/percircle/dist/css/percircle.css';
 import './vendor/Peity/jquery.peity.min.js';

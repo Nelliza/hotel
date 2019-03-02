@@ -1,13 +1,10 @@
-@mixin btn-theme($theme: false, $bd-bottom-color: #444) {
+@mixin btn-theme($theme, $bd-bottom-color) {
   $bg-color: "";
   @if $theme == primary {
     $bg-color: $color-primary;
   }
   @else if $theme == warning {
     $bg-color: $color-warning;
-  }
-  @else {
-    $bg-color: #000;
   }
 
   border-color: $bg-color;
@@ -22,6 +19,6 @@
   }
 
   &.button--pressed {
-    border-bottom-color: $bg-color;
+    border: .06rem solid;
   }
 }
