@@ -1,11 +1,32 @@
-.percircle {
-  font-size: 5.9rem;
-  margin: 0 .9rem;
-  background-color: #fff;
+.percentage {
+  @include size(6rem);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  >span {
-    font-size: .45em;
-    top: 50%;
-    cursor: pointer;
+  &__svg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+  }
+
+  &__item {
+    fill: rgba(0,0,0,0);
+    stroke-width: 3;
+  }
+
+  &__center {
+    fill: #fff;
+  }
+
+  &:before {
+    content: attr(data-percent);
+    z-index: 1;
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #9d9d9d;
   }
 }

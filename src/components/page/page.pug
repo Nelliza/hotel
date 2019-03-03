@@ -39,12 +39,29 @@ section.page__item
 
 section.page__item.page__item--percentages
   +subtitle("Percentages / Pie chart")
-  .section-wrapper
-    +percentage()
-    +percentage(38, 38)
-    +percentage(62, 62)
-    +percentage(89, 89)
-    +pie-chart([10, 25, 30, 35])
+  .section-wrapper.section-wrapper--percentages
+    +percentage(0)
+    +percentage(38)
+    +percentage(62)
+    +percentage(89)
+    +pie-chart([
+      {
+        percent: 10,
+        fill: "#747474"
+      },
+      {
+        percent: 25,
+        fill: "#e75735"
+      },
+      {
+        percent: 30,
+        fill: "#4eb7a8"
+      },
+      {
+        percent: 35,
+        fill: "#e5e5e5"
+      }
+    ])
 
 section.page__item.page__item--sliders
   +subtitle("Sliders")

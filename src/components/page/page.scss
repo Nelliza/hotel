@@ -14,7 +14,7 @@
 
   &__item {
     &--percentages {
-      @include subtitle-margins(2.2rem);
+      @include subtitle-margins(2.4rem);
     }
 
     &--sliders {
@@ -98,6 +98,11 @@
   &--arrows {
     display: flex;
     justify-content: center;
+  }
+
+  &--percentages {
+    display: flex;
+    justify-content: space-between;
   }
 
   &--sliders {

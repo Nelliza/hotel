@@ -36,12 +36,40 @@
     </section>
     <section class="page__item page__item--percentages">
           <h2 class="subtitle">Percentages / Pie chart</h2>
-      <div class="section-wrapper">
-            <div class="percentage" data-percent="0" data-text="0"></div>
-            <div class="percentage" data-percent="38" data-text="38"></div>
-            <div class="percentage" data-percent="62" data-text="62"></div>
-            <div class="percentage" data-percent="89" data-text="89"></div>
-            <div class="pie-chart">10,25,30,35</div>
+      <div class="section-wrapper section-wrapper--percentages">
+            <div class="percentage" data-percent="0">
+              <svg class="percentage__svg" viewBox="0 0 32 32">
+                <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 0 100"></circle>
+                <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
+              </svg>
+            </div>
+            <div class="percentage" data-percent="38">
+              <svg class="percentage__svg" viewBox="0 0 32 32">
+                <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 38 100"></circle>
+                <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
+              </svg>
+            </div>
+            <div class="percentage" data-percent="62">
+              <svg class="percentage__svg" viewBox="0 0 32 32">
+                <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 62 100"></circle>
+                <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
+              </svg>
+            </div>
+            <div class="percentage" data-percent="89">
+              <svg class="percentage__svg" viewBox="0 0 32 32">
+                <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 89 100"></circle>
+                <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
+              </svg>
+            </div>
+            <div class="pie-chart">
+              <svg class="pie-chart__svg" viewBox="0 0 32 32">
+                <circle class="pie-chart__item" r="16" cx="16" cy="16" style="stroke: #e5e5e5; stroke-dasharray: 100 100; z-index: 1"></circle>
+                <circle class="pie-chart__item" r="16" cx="16" cy="16" style="stroke: #4eb7a8; stroke-dasharray: 65 100; z-index: 2"></circle>
+                <circle class="pie-chart__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 35 100; z-index: 3"></circle>
+                <circle class="pie-chart__item" r="16" cx="16" cy="16" style="stroke: #747474; stroke-dasharray: 10 100; z-index: 4"></circle>
+                <circle class="pie-chart__center" r="10" cx="16" cy="16"></circle>
+              </svg>
+            </div>
       </div>
     </section>
     <section class="page__item page__item--sliders">
