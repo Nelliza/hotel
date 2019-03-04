@@ -1,11 +1,10 @@
-.search-btn {
+.notfound-btn {
   @include inputs;
   position: relative;
   display: block;
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 1.2rem;
-  cursor: pointer;
   text-align: left;
   color: #fff;
   background-color: $color-warning;

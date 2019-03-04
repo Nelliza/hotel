@@ -13,6 +13,7 @@
   
   &__#{$btn} {
     @include fieldset-icon($path, $color);
+    cursor: pointer;
   }
 
   @content;
