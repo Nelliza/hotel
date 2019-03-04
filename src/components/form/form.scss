@@ -6,11 +6,11 @@
 
     input {
       width: 62%;
-      @include inputs;
+      @include input;
     }
 
     textarea {
-      @include inputs;
+      @include input;
       padding: .8rem .9rem;
     }
   }
