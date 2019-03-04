@@ -1,12 +1,12 @@
-mixin slider(id, option)
-  if option == "pointer"
+mixin slider(options)
+  if options.type == "pointer"
     - var handle = "slider__handle--with-pointer"
-  else if option == "scale"
+  else if options.type == "scale"
     - var handle = ""
 
-  div(id="slider"+id, class=["slider", "slider--with-"+option])
+  div(id="slider"+options.id, class=["slider", "slider--with-"+options.type])
     div(class=["ui-slider-handle", "slider__handle", handle])
-      if option == "pointer"
+      if options.type == "pointer"
         .slider__pointer
-      else if option == "scale"
+      else if options.type == "scale"
         ul.slider__scale

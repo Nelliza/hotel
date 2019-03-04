@@ -1,4 +1,4 @@
-mixin socialIcon(social)
-  each val in social
-    li(class=["user-profile__social-icon", "user-profile__social-icon--" + val])
-      a(href="#")
+mixin socialIcon(options)
+  each val in options
+    li(class=["user-profile__social-icon", "user-profile__social-icon--"+val.name])
+      a(href=val.link)

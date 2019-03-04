@@ -10,4 +10,17 @@ mixin userProfile(name, profession, modifier=false)
       span.user-profile__name= name
       span.user-profile__profession= profession
       ul.user-profile__social
-        +socialIcon(["facebook", "twitter", "dribbble"])
+        +socialIcon([
+          {
+            name: "facebook",
+            link: "#"
+          },
+          {
+            name: "twitter",
+            link: "#"
+          },
+          {
+            name: "dribbble",
+            link: "#"
+          }
+        ])

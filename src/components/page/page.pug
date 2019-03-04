@@ -66,8 +66,14 @@ section.page__item.page__item--percentages
 section.page__item.page__item--sliders
   +subtitle("Sliders")
   .section-wrapper.section-wrapper--sliders.section-wrapper--two-columns
-    +slider(1, "pointer")
-    +slider(2, "scale")
+    +slider({
+        id: 1,
+        type: "pointer"
+      })
+    +slider({
+        id: 2,
+        type: "scale"
+      })
 
 section.page__item
   +subtitle("Stages")
