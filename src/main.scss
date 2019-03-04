@@ -3,17 +3,13 @@ $color-warning: #e75735;
 $color-disabled: #e5e5e5;
 
 @import "./components/_font-face/_font-face.scss";
-@import "./components/_two-columns/_two-columns.scss";
 @import "./components/_size/_size.scss";
 @import "./components/_pseudo-elem/_pseudo-elem.scss";
-@import "./components/_centered-elem/_centered-elem.scss";
 @import "./components/_triangle-tooltip/_triangle-tooltip.scss";
 @import "./components/_placeholder/_placeholder.scss";
-@import "./components/_inputs/_inputs.scss";
+@import "./components/_input/_input.scss";
 @import "./components/_fieldset/_fieldset.scss";
-@import "./components/subtitle/_subtitle-margins.scss";
 @import "./components/button/_btn-theme.scss";
-@import "./components/tick-box/_tick-box-animate.scss";
 
 @import "./components/page/page.scss";
 @import "./components/subtitle/subtitle.scss";

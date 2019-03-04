@@ -1,3 +1,16 @@
+@import "./components/_two-columns/_two-columns.scss";
+@import "./components/subtitle/_subtitle-margins.scss";
+
+%justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+%justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 @each $type in black, light, bold, italic, regular {
   @include font-face(Lato, lato, $type);
 }
@@ -34,11 +47,11 @@
     }
 
     &--toggles {
-      @include centered-elem(1.5rem);
+      @include subtitle-margins(1.5rem);
     }
 
     &--tick-boxes {
-      @include centered-elem(2rem);
+      @include subtitle-margins(2rem);
     }
 
     &--search {
@@ -83,30 +96,34 @@
 
 .section-wrapper {
   &--two-columns {
-    display: flex;
-    justify-content: space-between;
+    @extend %justify-between;
   }
 
   &--buttons {
-    display: flex;
-    padding: 2.2rem 3.9rem 0 4.1rem;
+    @extend %justify-between;
     flex-wrap: wrap;
     align-items: flex-end;
-    justify-content: space-between;
+    padding: 2.2rem 3.9rem 0 4.1rem;
   }
 
   &--arrows {
-    display: flex;
-    justify-content: center;
+    @extend %justify-center;
   }
 
   &--percentages {
-    display: flex;
-    justify-content: space-between;
+    @extend %justify-between;
   }
 
   &--sliders {
     padding-top: 1.8rem;
     padding-bottom: 1rem;
+  }
+
+  &--toggles {
+    @extend %justify-center;
+  }
+
+  &--tick-boxes {
+    @extend %justify-center;
   }
 }
