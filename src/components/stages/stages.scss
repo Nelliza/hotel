@@ -13,7 +13,7 @@
     line-height: 2;
 
     &:before {
-      @include size(1.7rem);
+      @include size(1.8rem);
       content: counter(step);
       counter-increment: step;
       color: #888;

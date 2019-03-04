@@ -65,7 +65,7 @@
     }
 
     &--news {
-      @include subtitle-margins(4.7rem, 2.1rem);
+      @include subtitle-margins(4.6rem, 2.1rem);
 
       .section-wrapper--two-columns {
         @include two-columns(48.5%);
@@ -95,7 +95,8 @@
 }
 
 .section-wrapper {
-  &--two-columns {
+  &--two-columns,
+  &--percentages {
     @extend %justify-between;
   }
 
@@ -106,24 +107,14 @@
     padding: 2.2rem 3.9rem 0 4.1rem;
   }
 
-  &--arrows {
+  &--arrows,
+  &--toggles,
+  &--tick-boxes {
     @extend %justify-center;
-  }
-
-  &--percentages {
-    @extend %justify-between;
   }
 
   &--sliders {
     padding-top: 1.8rem;
     padding-bottom: 1rem;
-  }
-
-  &--toggles {
-    @extend %justify-center;
-  }
-
-  &--tick-boxes {
-    @extend %justify-center;
   }
 }

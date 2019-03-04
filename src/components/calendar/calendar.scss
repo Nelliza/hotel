@@ -49,12 +49,20 @@
       float: left;
       left: .9rem;
       transform: rotate(90deg);
+
+      &:hover {
+        background-color: transparent;
+      }
     }
 
     &-next {
       float: right;
       right: 1rem;
       transform: rotate(270deg);
+
+      &:hover {
+        background-color: transparent;
+      }
     }
 
     &-calendar {
