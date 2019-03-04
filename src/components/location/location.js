@@ -22,7 +22,7 @@ function init() {
       balloonCloseButton: false,
       iconLayout: 'default#image',
       iconImageHref: require('../_icons/marker-icon.svg'),
-      iconImageSize: [60, 86],
+      iconImageSize: [60, 80],
       iconImageOffset: [-20, -34]
     });
 

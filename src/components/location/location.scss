@@ -4,13 +4,13 @@
 
   &__text {
     float: left;
-    margin: .4rem .7rem;
+    margin: .4rem .8rem;
     color: #fff;
 
     &--greeting {
       font-size: 1.88rem;
       font-weight: 300;
-      line-height: 1.1;
+      line-height: .9;
     }
 
     &--address {
@@ -30,8 +30,8 @@
   }
 
   &__mark {
-    @include size(1.69rem);
-    margin: .6rem 0 .6rem 1rem;
+    @include size(1.5rem);
+    margin: .6rem;
     display: inline-block;
     cursor: pointer;
 
@@ -45,10 +45,10 @@
   }
 }
 
-.ymaps-2-1-72-balloon {
+.ymaps-2-1-73-balloon {
   &__content {
     height: 2.8rem !important;
-    padding: .8rem 1.1rem .8rem 1rem !important;
+    padding: .8rem !important;
     font-family: Lato, sans-serif !important;
     background-color: $color-warning !important;
   }
