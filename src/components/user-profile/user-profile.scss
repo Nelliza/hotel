@@ -63,9 +63,9 @@
 
   &__social-icon {
     display: inline-block;
-    width: 1.56rem;
-    height: 1.25rem;
-    margin: .4rem;
+    width: 1.6rem;
+    height: 1.3rem;
+    margin: .3rem .35rem .45rem;
   }
   
   @include social-icon(facebook, twitter, dribbble);
