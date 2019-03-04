@@ -1,5 +1,4 @@
 import './components/page/page.js';
-//import './components/_icons/icons.js';
 
 import './components/stages/_stages.js';
 import './components/form/_validate-form.js';
