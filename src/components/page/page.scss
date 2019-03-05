@@ -1,5 +1,5 @@
 @import "./components/_two-columns/_two-columns.scss";
-@import "./components/subtitle/_subtitle-margins.scss";
+@import "./components/_subtitle-margins/_subtitle-margins.scss";
 
 @each $type in black, light, bold, italic, regular {
   @include font-face(Lato, lato, $type);

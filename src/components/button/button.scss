@@ -1,3 +1,5 @@
+@import "./components/button/_btn-theme.scss";
+
 .button {
   @include size(7.37rem, 2.2rem);
   position: relative;
