@@ -12,9 +12,10 @@
     background-color: #46ab9d;
     border-radius: .3rem .3rem 0 0;
   }
+
   &__head {
     padding: 1.3rem;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     color:  #fff;
     font-size: 2.13rem;
     font-weight: 300;
@@ -75,6 +76,8 @@
   }
 
   &__textarea {
+    width: 100%;
+    box-sizing: border-box;
     padding: .9rem 1.2rem .9rem 1rem;
     font-family: "Lato", sans-serif;
     font-size: .78rem;

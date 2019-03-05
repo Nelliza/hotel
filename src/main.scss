@@ -9,6 +9,7 @@ $color-disabled: #e5e5e5;
 @import "./components/_placeholder/_placeholder.scss";
 @import "./components/_input/_input.scss";
 @import "./components/_fieldset/_fieldset.scss";
+@import "./components/_flex-justify/_flex-justify.scss";
 @import "./components/button/_btn-theme.scss";
 
 @import "./components/page/page.scss";
@@ -30,3 +31,4 @@ $color-disabled: #e5e5e5;
 @import "./components/location/location.scss";
 @import "./components/calendar/calendar.scss";
 @import "./components/messaging/messaging.scss";
+@import "./components/video/video.scss";

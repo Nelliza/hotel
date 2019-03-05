@@ -7,7 +7,7 @@ mixin news(id, title, date, text, format=false)
     - var modifierTitle = false
 
   .news
-    img(class="news__preview", src=require("./components/news/News"+id+".jpg"), alt="Новость "+id)
+    img(class="news__preview", src=require("./components/news/news"+id+".jpg"), alt="Новость "+id)
     div(class=["news__description", modifierDescr])
       if format == "calendar"
         .news__short-date

@@ -1,12 +1,16 @@
 @import "./components/user-profile/_social-icon.scss";
 
 .user-profile {
-  padding: .4rem 0 1.2rem 1.43rem;
+  margin-bottom: .7rem;
+
+  @media screen and (max-width: 580px) {
+    text-align: center;
+  }
 
   &__photo {
     @include size(5.3rem);
     display: inline-block;
-    margin: 0 .5rem 0 0;
+    margin: .5rem;
     vertical-align: middle;
     border-radius: 50%;
     border: .25rem solid $color-disabled;
@@ -14,12 +18,17 @@
 
   &__info {
     display: inline-block;
-    width: 10.2rem;
-    background-color: $color-disabled;
-    text-align: center;
     position: relative;
-    border-radius: .4rem;
+    width: 9.2rem;
+    padding: .5rem;
+    text-align: center;
     vertical-align: middle;
+    background-color: $color-disabled;
+    border-radius: .4rem;
+
+    @media screen and (max-width: 714px) {
+      width: auto;
+    }
 
     &:before {
       @include triangle-tooltip($color-disabled);
@@ -41,8 +50,6 @@
 
   &__name {
     display: block;
-    margin-top: .7rem;
-    margin-bottom: .2rem;
     font-size: 1.1rem;
     color: $color-warning;
   }
@@ -51,13 +58,14 @@
     display: block;
     font-size: .71rem;
     font-weight: 900;
+    line-height: 2;
     letter-spacing: .02rem;
     color: #4f4f4f;
     text-transform: uppercase; 
   }
 
   &__social {
-    margin: .4rem 0 .3rem;
+    margin: 0;
     padding: 0;
   }
 
@@ -65,7 +73,7 @@
     display: inline-block;
     width: 1.6rem;
     height: 1.3rem;
-    margin: .3rem .35rem .45rem;
+    margin: .35rem;
   }
 
   @include social-icon(facebook, twitter, dribbble);

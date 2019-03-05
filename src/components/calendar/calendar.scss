@@ -67,7 +67,6 @@
 
     &-calendar {
       border-collapse: collapse;
-      width: 100%;
       margin: 0;
       background-color: #f2f2f2;
       
@@ -96,6 +95,10 @@
   td {
     padding: .4rem;
     border: .06rem solid #fff;
+
+    @media screen and (max-width: 320px) {
+      padding: .4rem 0;
+    }
   }
 
   td.past {

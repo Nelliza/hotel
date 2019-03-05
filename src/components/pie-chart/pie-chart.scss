@@ -1,6 +1,7 @@
 .pie-chart {
   @include size(6rem);
   position: relative;
+  margin: .5rem;
 
   &__svg {
     width: 100%;

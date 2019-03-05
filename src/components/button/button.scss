@@ -1,11 +1,11 @@
 .button {
-  @include size(7.37rem, 2rem);
+  @include size(7.37rem, 2.2rem);
   position: relative;
   font-size: .75rem;
   font-weight: 900;
   line-height: 1.5;
-  margin-top: .7rem;
-  margin-bottom: .7rem;
+  margin-top: .6rem;
+  margin-bottom: .6rem;
   cursor: pointer;
   text-transform: uppercase;
   border: .06rem solid;

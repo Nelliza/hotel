@@ -1,16 +1,6 @@
 @import "./components/_two-columns/_two-columns.scss";
 @import "./components/subtitle/_subtitle-margins.scss";
 
-%justify-center {
-  display: flex;
-  justify-content: center;
-}
-
-%justify-between {
-  display: flex;
-  justify-content: space-between;
-}
-
 @each $type in black, light, bold, italic, regular {
   @include font-face(Lato, lato, $type);
 }
@@ -18,31 +8,64 @@
   @include font-face(Source Sans Pro, sourcesanspro, $type);
 }
 
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .page__item {
+    &--search,
+    &--user-profile,
+    &--calendar,
+    &--messaging {
+      width: 100%;
+    }
+  }
+}
+
 .page {
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
   max-width: 700px;
   margin: 0;
-  padding: 2.3rem 3.4rem 0 3.25rem;
+  padding: 2.3rem 3.4rem 5.6rem 3.25rem;
 
   &__item {
     &--percentages {
-      @include subtitle-margins(2.4rem);
+      @include subtitle-margins(2.4rem, 1rem);
     }
 
     &--sliders {
-      @include subtitle-margins(2.1rem, 1.2rem);
+      @include subtitle-margins(1.6rem, 1.2rem);
 
       .section-wrapper--two-columns {
         @include two-columns(44%);
       }
+
+      @media screen and (max-width: 580px) {
+        .section-wrapper--two-columns {
+          @include two-columns(100%);
+        }
+      }
+    }
+
+    &--stages {
+      @include subtitle-margins(2rem);
     }
 
     &--form-elements {
       padding-bottom: .6rem;
 
       .section-wrapper--two-columns {
-        @include two-columns(49%, 47%);
+        @include two-columns(48.5%, 47%);
+      }
+
+      @media screen and (max-width: 580px) {
+        .section-wrapper--two-columns {
+          @include two-columns(100%);
+        }
       }
     }
 
@@ -61,7 +84,7 @@
     }
 
     &--user-profile {
-      width: 49%;
+      width: 46.5%;
     }
 
     &--news {
@@ -70,10 +93,16 @@
       .section-wrapper--two-columns {
         @include two-columns(48.5%);
       }
+
+      @media screen and (max-width: 580px) {
+        .section-wrapper--two-columns {
+          @include two-columns(100%);
+        }
+      }
     }
 
     &--location {
-      @include subtitle-margins(3rem, 2rem);
+      @include subtitle-margins(2rem, 2rem);
     }
 
     &--calendar {
@@ -89,32 +118,38 @@
     }
 
     &--video {
-      @include subtitle-margins(3.2rem);
+      @include subtitle-margins(3.2rem, .5rem);
     }
   }
 }
 
 .section-wrapper {
-  &--two-columns,
+  &--two-columns {
+    @include flex-justify(space-between);
+  }
+
   &--percentages {
-    @extend %justify-between;
+    @include flex-justify(space-between);
+
+    @media screen and (max-width: 530px) {
+      justify-content: center;
+    }
   }
 
   &--buttons {
-    @extend %justify-between;
-    flex-wrap: wrap;
+    @include flex-justify(space-between);
     align-items: flex-end;
     padding: 2.2rem 3.9rem 0 4.1rem;
+
+    @media screen and (max-width: 393px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &--arrows,
   &--toggles,
   &--tick-boxes {
-    @extend %justify-center;
-  }
-
-  &--sliders {
-    padding-top: 1.8rem;
-    padding-bottom: 1rem;
+    @include flex-justify(center);
   }
 }

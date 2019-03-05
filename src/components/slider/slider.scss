@@ -1,5 +1,7 @@
 .slider {
   height: .3rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
   border-radius: 5rem;
   background-color: $color-disabled;
   cursor: pointer;
@@ -54,9 +56,13 @@
     font-weight: 900;
     position: absolute;
     width: 2rem;
-    margin-left: -1.7rem;
+    margin-left: -1.9rem;
     list-style: none;
     text-align: right;
     color: #d1d1d1;
+
+    &:first-child {
+      margin-left: -1.7rem;
+    }
   }
 }

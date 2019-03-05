@@ -1,6 +1,7 @@
 .location {
   @include size(100%, 17.1rem);
-  background: url(./components/location/Map.jpg) no-repeat center;
+  background: url(./components/location/map.jpg) no-repeat center;
+  background-size: cover;
 
   &__text {
     float: left;
@@ -10,7 +11,7 @@
     &--greeting {
       font-size: 1.88rem;
       font-weight: 300;
-      line-height: .9;
+      line-height: 1;
     }
 
     &--address {
@@ -47,9 +48,17 @@
 
 .ymaps-2-1-73-balloon {
   &__content {
-    height: 2.8rem !important;
-    padding: .8rem !important;
     font-family: Lato, sans-serif !important;
     background-color: $color-warning !important;
+
+    @media screen and (max-width: 490px) {
+      >ymaps {
+        height: auto !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 472px) {
+    display: none !important;
   }
 }

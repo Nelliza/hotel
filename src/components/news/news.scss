@@ -1,17 +1,24 @@
 .news {
   display: flex;
+  margin-bottom: 1rem;
   font-size: .69rem;
 
   &__preview {
-    @include size(5.94rem, 13.25rem);
+    width: 5.94rem;
+    min-height: 13.25rem;
     border-radius: .2rem 0 0 .2rem;
   }
 
   &__description {
+    width: 100%;
     padding: 0 1rem 0 1.4rem;
     border-radius: 0 .2rem .2rem 0;
     background-color: $color-warning;
     color: #fff;
+
+    @media screen and (max-width: 320px) {
+      padding: 0 .5rem;
+    }
 
     &--primary {
       text-align: center;
@@ -60,7 +67,7 @@
   }
 
   &__text {
-    margin: 0;
+    margin: 0 0 .5rem;
     text-align: left;
     line-height: 1.3;
     letter-spacing: .04rem;
@@ -69,7 +76,6 @@
   &__button {
     @include size(auto);
     display: inline-block;
-    margin-top: 1.1rem;
     padding: 0 .6rem;
     border: none;
     font-family: "Lato", sans-serif;
