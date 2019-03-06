@@ -16,6 +16,7 @@
   &__item {
     fill: rgba(0,0,0,0);
     stroke-width: 3;
+    animation: donut-chart-fill 5s reverse ease-in;
   }
 
   &__center {
