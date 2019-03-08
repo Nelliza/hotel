@@ -33,6 +33,10 @@
   padding: 2.3rem 3.4rem 5.6rem 3.25rem;
 
   &__item {
+    &--arrows {
+      @include subtitle-margins(2.6rem);
+    }
+
     &--percentages {
       @include subtitle-margins(2.4rem, 1rem);
     }
@@ -128,22 +132,22 @@
     @include flex-justify(space-between);
   }
 
+  &--buttons {
+    @include flex-justify(space-between);
+    align-items: flex-end;
+    padding: 2.2rem 3.95rem 0 4.15rem;
+
+    @media screen and (max-width: 393px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   &--percentages {
     @include flex-justify(space-between);
 
     @media screen and (max-width: 530px) {
       justify-content: center;
-    }
-  }
-
-  &--buttons {
-    @include flex-justify(space-between);
-    align-items: flex-end;
-    padding: 2.2rem 3.9rem 0 4.1rem;
-
-    @media screen and (max-width: 393px) {
-      flex-direction: column;
-      align-items: center;
     }
   }
 

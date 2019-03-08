@@ -1,11 +1,10 @@
 @import "./components/button/_btn-theme.scss";
 
 .button {
-  @include size(7.37rem, 2.2rem);
   position: relative;
+  padding: .4rem 1.85rem;
   font-size: .75rem;
   font-weight: 900;
-  line-height: 1.5;
   margin-top: .6rem;
   margin-bottom: .6rem;
   cursor: pointer;
@@ -15,6 +14,7 @@
   border-radius: .2rem;
   outline: none;
   background-color: #fff;
+  text-decoration: none;
 
   &--primary {
     @include btn-theme(primary, #28a290);
@@ -25,9 +25,8 @@
   }
 
   &--small {
-    @include size(4.87rem, 1.37rem);
+    padding: .2rem .9rem;
     font-size: .62rem;
-    line-height: 1.8;
     border-bottom: .2rem solid;
 
     &:hover,
@@ -48,7 +47,7 @@
 @keyframes ripple-animation {
   from {
     transform: scale(1);
-    opacity: 0.7;
+    opacity: .7;
   }
   to {
     transform: scale(10);

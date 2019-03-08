@@ -18,7 +18,7 @@ include ../calendar/_calendar
 include ../messaging/_messaging
 include ../video/_video
 
-section.page__item
+section.page__item.page__item--buttons
   +subtitle("Standard buttons")
   .section-wrapper.section-wrapper--buttons
     - for (var i = 0; i < 3; i++)
@@ -27,7 +27,7 @@ section.page__item
       +button(["warning"])
       +button(["warning", "small"])
 
-section.page__item
+section.page__item.page__item--arrows
   +subtitle("Arrow buttons")
   .section-wrapper.section-wrapper--arrows
     +arrow("prev")
