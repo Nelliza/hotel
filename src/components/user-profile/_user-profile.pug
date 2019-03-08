@@ -5,7 +5,7 @@ mixin userProfile(name, profession, modifier=false)
     - modifier = "user-profile__info--primary"
 
   .user-profile
-    img(class="user-profile__photo", src=require("./components/user-profile/"+name+".jpg"), alt=name)
+    img(class="user-profile__photo", src=require("../../components/user-profile/"+name+".jpg"), alt=name)
     div(class=["user-profile__info", modifier])
       span.user-profile__name= name
       span.user-profile__profession= profession

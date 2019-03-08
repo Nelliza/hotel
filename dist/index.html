@@ -2,251 +2,249 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>UI-Kit</title>
+    <title>Hotel</title>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=aba3cd86-c704-4688-a291-3ec61529513e&amp;lang=en_US" type="text/javascript"></script>
   </head>
   <body class="page">
-    <section class="page__item page__item--buttons">
-          <h2 class="subtitle">Standard buttons</h2>
-      <div class="section-wrapper section-wrapper--buttons">
-            <button class="button button--primary button--small">Button</button>
-            <button class="button button--primary">Button</button>
-            <button class="button button--warning">Button</button>
-            <button class="button button--warning button--small">Button</button>
-            <button class="button button--primary button--small">Button</button>
-            <button class="button button--primary">Button</button>
-            <button class="button button--warning">Button</button>
-            <button class="button button--warning button--small">Button</button>
-            <button class="button button--primary button--small">Button</button>
-            <button class="button button--primary">Button</button>
-            <button class="button button--warning">Button</button>
-            <button class="button button--warning button--small">Button</button>
-      </div>
-    </section>
-    <section class="page__item page__item--arrows">
-          <h2 class="subtitle">Arrow buttons</h2>
-      <div class="section-wrapper section-wrapper--arrows">
-            <button class="arrow arrow--prev" type="button"></button>
-            <button class="arrow arrow--next" type="button"></button>
-            <button class="arrow arrow--prev" type="button" disabled></button>
-            <button class="arrow arrow--next" type="button" disabled></button>
-            <button class="arrow arrow--prev" type="button"></button>
-            <button class="arrow arrow--next" type="button"></button>
-      </div>
-    </section>
-    <section class="page__item page__item--percentages">
-          <h2 class="subtitle">Percentages / Pie chart</h2>
-      <div class="section-wrapper section-wrapper--percentages">
-            <div class="percentage" data-percent="0">
-              <svg class="percentage__svg" viewBox="0 0 32 32">
-                <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 0 100"></circle>
-                <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
-              </svg>
-            </div>
-            <div class="percentage" data-percent="38">
-              <svg class="percentage__svg" viewBox="0 0 32 32">
-                <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 38 100"></circle>
-                <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
-              </svg>
-            </div>
-            <div class="percentage" data-percent="62">
-              <svg class="percentage__svg" viewBox="0 0 32 32">
-                <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 62 100"></circle>
-                <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
-              </svg>
-            </div>
-            <div class="percentage" data-percent="89">
-              <svg class="percentage__svg" viewBox="0 0 32 32">
-                <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 89 100"></circle>
-                <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
-              </svg>
-            </div>
-            <div class="pie-chart">
-              <svg class="pie-chart__svg" viewBox="0 0 32 32">
-                <circle class="pie-chart__item" r="16" cx="16" cy="16" style="stroke: #e5e5e5; stroke-dasharray: 100 100; z-index: 1"></circle>
-                <circle class="pie-chart__item" r="16" cx="16" cy="16" style="stroke: #4eb7a8; stroke-dasharray: 65 100; z-index: 2"></circle>
-                <circle class="pie-chart__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 35 100; z-index: 3"></circle>
-                <circle class="pie-chart__item" r="16" cx="16" cy="16" style="stroke: #747474; stroke-dasharray: 10 100; z-index: 4"></circle>
-                <circle class="pie-chart__center" r="10" cx="16" cy="16"></circle>
-              </svg>
-            </div>
-      </div>
-    </section>
-    <section class="page__item page__item--sliders">
-          <h2 class="subtitle">Sliders</h2>
-      <div class="section-wrapper section-wrapper--sliders section-wrapper--two-columns">
-            <div class="slider slider--with-pointer" id="slider1">
-              <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
-                <div class="slider__pointer"></div>
+    <header class="page__header">
+      <nav class="main-menu"><img src="img/logo.png" alt="">
+        <ul>
+          <li class="active"><a href="./main.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Rooms</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Elements</a></li>
+        </ul><a class="button button--warning" href="#">Make a Reservation</a>
+      </nav>
+    </header>
+    <section class="hero-area">
+      <div class="hero-slides owl-carousel">
+        <div class="single-hero-slide d-flex align-items-center justify-content-center">
+          <div class="slide-img bg-img" style="background-image: url(#)"></div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-9">
+                <div class="hero-slides-content">
+                  <div class="line"></div>
+                  <h2>The Vacation Heaven</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p><a class="button button--warning" href="#">Read More</a>
+                </div>
               </div>
             </div>
-            <div class="slider slider--with-scale" id="slider2">
-              <div class="ui-slider-handle slider__handle">
-                <ul class="slider__scale"></ul>
+          </div>
+        </div>
+        <div class="single-hero-slide d-flex align-items-center justify-content-center">
+          <div class="slide-img bg-img" style="background-image: url(#)"></div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-9">
+                <div class="hero-slides-content">
+                  <div class="line"></div>
+                  <h2>A place to remember</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p><a class="button button--warning" href="#">Read More</a>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="single-hero-slide d-flex align-items-center justify-content-center">
+          <div class="slide-img bg-img" style="background-image: url(#)"></div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-9">
+                <div class="hero-slides-content">
+                  <div class="line"></div>
+                  <h2>Enjoy your life</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p><a class="button button--warning" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="page__item page__item--stages">
-          <h2 class="subtitle">Stages</h2>
-      <div class="section-wrapper">
-            <ul class="stages">
-              <li class="stages__item"></li>
-              <li class="stages__item"></li>
-              <li class="stages__item"></li>
-              <li class="stages__item"></li>
-              <li class="stages__item"></li>
-            </ul>
-      </div>
-    </section>
-    <section class="page__item page__item--form-elements">
-          <h2 class="subtitle">Form Elements</h2>
-      <div class="section-wrapper section-wrapper--two-columns">
-        <div class="section-wrapper">
-              <form class="form" id="form1">
-                <div class="form__field">
-                  <input type="text" id="login1" name="name" placeholder="Your Name">
-                  <div class="form__val"></div>
+    <div class="book-now-area">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="book-now-form">
+              <form action="#">
+                <div class="form-group">
+                  <label for="select1">Check In</label>
+                  <select class="form-control" id="select1">
+                    <option>19 June</option>
+                    <option>20 June</option>
+                    <option>21 June</option>
+                    <option>22 June</option>
+                    <option>23 June</option>
+                    <option>24 June</option>
+                    <option>25 June</option>
+                  </select>
                 </div>
-                <div class="form__field">
-                  <input type="text" id="email1" name="email" placeholder="Your Email">
-                  <div class="form__val"></div>
+                <div class="form-group">
+                  <label for="select2">Check Out</label>
+                  <select class="form-control" id="select2">
+                    <option>20 June</option>
+                    <option>21 June</option>
+                    <option>22 June</option>
+                    <option>23 June</option>
+                    <option>24 June</option>
+                    <option>25 June</option>
+                    <option>26 June</option>
+                    <option>27 June</option>
+                  </select>
                 </div>
-                <div class="form__field">
-                  <textarea id="message1" name="message" rows="4" placeholder="Your Message"></textarea>
+                <div class="form-group">
+                  <label for="select3">Adults</label>
+                  <select class="form-control" id="select3">
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                  </select>
                 </div>
-                <button class="form__button button button--primary" type="submit" id="send1" name="button">Submit</button>
+                <div class="form-group">
+                  <label for="select4">Childrens</label>
+                  <select class="form-control" id="select4">
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                  </select>
+                </div>
+                <button type="submit">Book Now</button>
               </form>
+            </div>
+          </div>
         </div>
-        <div class="section-wrapper">
-          <section class="page__item page__item--toggles">
-                <h2 class="subtitle">Toggles</h2>
-            <div class="section-wrapper section-wrapper--toggles">
-                  <div class="toggle">
-                    <input class="toggle__checkbox" type="checkbox">
-                    <div class="toggle__background"></div><span class="toggle__round"></span>
-                  </div>
-                  <div class="toggle">
-                    <input class="toggle__checkbox" type="checkbox" checked>
-                    <div class="toggle__background"></div><span class="toggle__round"></span>
-                  </div>
+      </div>
+    </div>
+    <section class="about-us-area">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+            <div class="about-text text-center mb-100">
+              <div class="section-heading text-center">
+                <div class="line-"></div>
+                <h2>A place to remember</h2>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+              <div class="about-key-text">
+                <h6><span class="fa fa-check"></span>
+                  <Donec>malesuada lorem maximus mauris sceleri</Donec>
+                </h6>
+                <h6><span class="fa fa-check"></span>
+                  <Malesuada>lorem maximus mauris sceleri</Malesuada>
+                </h6>
+              </div><a class="button button--warning" href="#">Read More</a>
             </div>
-          </section>
-          <section class="page__item page__item--tick-boxes">
-                <h2 class="subtitle">Tick Boxes</h2>
-            <div class="section-wrapper section-wrapper--tick-boxes">
-                  <input class="tick-box" type="checkbox" id="tix-box1" checked>
-                  <label class="tick-box__label" for="tix-box1">
-                    <svg class="tick-box__checkmark" width="24" height="24">
-                      <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-                    </svg>
-                  </label>
-                  <input class="tick-box" type="checkbox" id="tix-box2">
-                  <label class="tick-box__label" for="tix-box2">
-                    <svg class="tick-box__checkmark" width="24" height="24">
-                      <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-                    </svg>
-                  </label>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="about-thumbnail homepage mb-100">
+              <div class="first-img wow fadeInUp" data-wow-delay="100ms"><img src="#" alt=""></div>
+              <div class="second-img wow fadeInUp" data-wow-delay="300ms"><img src="#" alt=""></div>
+              <div class="third-img wow fadeInUp" data-wow-delay="500ms"><img src="#" alt=""></div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </section>
-    <div class="section-wrapper section-wrapper--two-columns">
-      <section class="page__item page__item--search">
-            <h2 class="subtitle">Search / Drop Down</h2>
-            <form class="search">
-              <input class="search__input" type="text" placeholder="Search">
-              <button class="search__submit" type="submit"></button>
-            </form>
-            <button class="notfound-btn" type="submit" disabled>I've not found what I'm looking for...</button>
-            <form class="drop-down">
-              <select class="drop-down__select">Choose An Option
-                <option selected disabled>Choose An Option</option>
-                <option>Option 1</option>
-                <option>Option 2</option>
-              </select>
-            </form>
-      </section>
-      <section class="page__item page__item--user-profile">
-            <h2 class="subtitle">User Profile</h2>
-            <div class="user-profile"><img class="user-profile__photo" src="img/John Smith.jpg" alt="John Smith">
-              <div class="user-profile__info"><span class="user-profile__name">John Smith</span><span class="user-profile__profession">UX Designer</span>
-                <ul class="user-profile__social">
-                      <li class="user-profile__social-icon user-profile__social-icon--facebook"><a href="#"></a></li>
-                      <li class="user-profile__social-icon user-profile__social-icon--twitter"><a href="#"></a></li>
-                      <li class="user-profile__social-icon user-profile__social-icon--dribbble"><a href="#"></a></li>
-                </ul>
-              </div>
+    <section class="rooms-area section-padding-100-0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6">
+            <div class="section-heading text-center">
+              <div class="line-"></div>
+              <h2>Choose a room</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien.</p>
             </div>
-            <div class="user-profile"><img class="user-profile__photo" src="img/Sarah Brown.jpg" alt="Sarah Brown">
-              <div class="user-profile__info user-profile__info--primary"><span class="user-profile__name">Sarah Brown</span><span class="user-profile__profession">Developer</span>
-                <ul class="user-profile__social">
-                      <li class="user-profile__social-icon user-profile__social-icon--facebook"><a href="#"></a></li>
-                      <li class="user-profile__social-icon user-profile__social-icon--twitter"><a href="#"></a></li>
-                      <li class="user-profile__social-icon user-profile__social-icon--dribbble"><a href="#"></a></li>
-                </ul>
-              </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="single-rooms-area wow fadeInUp" data-wow-delay="100ms">
+              <div class="bg-thumbnail bg-img" style="background-image: url(#)"></div>
+              <p class="price-from">From $150/night</p>
+              <div class="rooms-text">
+                <div class="line"></div>
+                <h4>Deluxe Room</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
+              </div><a class="button button--primary" href="#">Book Room</a>
             </div>
-      </section>
-    </div>
-    <section class="page__item page__item--news">
-          <h2 class="subtitle">News &amp; Events</h2>
-      <div class="section-wrapper section-wrapper--news section-wrapper--two-columns">
-            <div class="news"><img class="news__preview" src="img/news1.jpg" alt="Новость 1">
-              <div class="news__description">
-                <h3 class="news__title">It's all going downhill</h3>
-                <p class="news__date">24 august 2013</p>
-                <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
-              </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="single-rooms-area wow fadeInUp" data-wow-delay="300ms">
+              <div class="bg-thumbnail bg-img" style="background-image: url(#)"></div>
+              <p class="price-from">From $150/night</p>
+              <div class="rooms-text">
+                <div class="line"></div>
+                <h4>Double Suite</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
+              </div><a class="button button--primary" href="#">Book Room</a>
             </div>
-            <div class="news"><img class="news__preview" src="img/news2.jpg" alt="Новость 2">
-              <div class="news__description news__description--primary">
-                <div class="news__short-date"><span class="news__day">24</span><span class="news__month">Aug</span></div>
-                <h3 class="news__title news__title--small">This is the title</h3>
-                <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><a class="news__button button button--primary" href="#calendar">Add to calendar</a>
-              </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="single-rooms-area wow fadeInUp" data-wow-delay="500ms">
+              <div class="bg-thumbnail bg-img" style="background-image: url(#)"></div>
+              <p class="price-from">From $100/night</p>
+              <div class="rooms-text">
+                <div class="line"></div>
+                <h4>Single Room</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
+              </div><a class="button button--primary" href="#">Book Room</a>
             </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="page__item page__item--location">
-          <h2 class="subtitle">Location</h2>
-          <div class="location" id="location"></div>
+    <section class="contact-area d-flex flex-wrap align-items-center">
+      <div class="home-map-area"></div>
+      <div class="contact-info">
+        <div class="section-heading wow fadeInUp" data-wow-delay="100ms">
+          <div class="line-"></div>
+          <h2>Contact Info</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+        </div>
+        <h4 class="wow fadeInUp" data-wow-delay="300ms">Los Angeles 1481 Creekside Lane Avila Beach, CA 931</h4>
+        <h5 class="wow fadeInUp" data-wow-delay="400ms">+53 345 7953 32453</h5>
+        <h5 class="wow fadeInUp" data-wow-delay="500ms">yourmail@gmail.com</h5>
+        <div class="social-info mt-50 wow fadeInUp" data-wow-delay="600ms"><a class="fa fa-pinterest" href="#"><i aria-hidden="true"></i></a><a class="fa fa-facebook" href="#"><i aria-hidden="true"></i></a><a class="fa fa-twitter" href="#"><i aria-hidden="true"></i></a><a class="fa fa-dribbble" href="#"><i aria-hidden="true"></i></a><a class="fa fa-behance" href="#"><i aria-hidden="true"></i></a><a class="fa fa-linkedin" href="#"><i aria-hidden="true"></i></a></div>
+      </div>
     </section>
-    <div class="section-wrapper section-wrapper--two-columns">
-      <section class="page__item page__item--calendar">
-            <h2 class="subtitle">Calendar</h2>
-            <div class="calendar" id="calendar">
-              <div class="calendar__day"></div>
-              <div class="calendar__datepicker" id="datepicker"></div>
+    <footer class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-5">
+            <div class="footer-widget-area mt-50"><a class="d-block mb-5" href="#"><img src="img/logo.png" alt=""></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
             </div>
-      </section>
-      <section class="page__item page__item--messaging">
-            <h2 class="subtitle">Messaging</h2>
-            <section class="messaging">
-              <div class="messaging__header">
-                <div class="messaging__head">Sarah Brown</div><img class="messaging__avatar user-profile__photo" src="img/Sarah Brown.jpg" alt="Sarah Brown">
-              </div>
-              <div class="messaging__main">
-                <button class="messaging__chat"></button>
-                <button class="messaging__camera"></button>
-                <div class="messaging__intro">
-                  <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
-                </div>
-                <form class="messaging__form" id="form2">
-                  <div>
-                    <textarea class="messaging__textarea" id="message2" rows="3">Yeah that sounds great. See you then</textarea>
-                    <button class="messaging__button button button--primary" type="submit" id="send2">Reply</button>
-                  </div>
-                </form>
-              </div>
-            </section>
-      </section>
-    </div>
-    <section class="page__item page__item--video">
-          <h2 class="subtitle">Video</h2>
-          <iframe class="video" width="100%" height="336" src="https://www.youtube.com/embed/rPmGtZAUxNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="footer-widget-area mt-50">
+              <h6 class="widget-title mb-5">Find us on the map</h6><img src="#" alt="">
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-widget-area mt-50">
+              <h6 class="widget-title mb-5">Subscribe to our newsletter</h6>
+              <form class="subscribe-form" action="#" method="post">
+                <input id="subscribeemail" type="email" name="subscribe-email" placeholder="Your E-mail">
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="copywrite-text mt-30">
+              <p><a href="#">Copyright &copy; All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i>by<a href="https://colorlib.com" target="_blank">Colorlib</a></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>

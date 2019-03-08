@@ -1,10 +1,27 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const fs = require('fs');
+
+function generateHtmlPlugins(templateDir) {
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  return templateFiles.map(item => {
+    const parts = item.split('.');
+    const name = parts[0];
+    const extension = parts[1];
+    return new HtmlWebpackPlugin({
+      filename: `${name}.html`,
+      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+      inject: false,
+    })
+  })
+}
+
+const htmlPlugins = generateHtmlPlugins('./src/pages/templates');
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    app: './src/main.js'
   },
   output: {
     filename: '[name].js',
@@ -126,12 +143,7 @@ module.exports = {
     overlay: true
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/index.pug',
-      filename: 'index.html'
-    }),
-    new SpriteLoaderPlugin({})
+    new SpriteLoaderPlugin()
   ]
+  .concat(htmlPlugins)
 }
