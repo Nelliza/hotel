@@ -5,123 +5,95 @@
     <title>Hotel</title>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=aba3cd86-c704-4688-a291-3ec61529513e&amp;lang=en_US" type="text/javascript"></script>
   </head>
-  <body class="page">
+  <body class="page page--hotel">
     <header class="page__header">
-      <nav class="main-menu"><img src="img/logo.png" alt="">
-        <ul>
-          <li class="active"><a href="./main.html">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Rooms</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Elements</a></li>
-        </ul><a class="button button--warning" href="#">Make a Reservation</a>
-      </nav>
+          <nav class="main-menu"><img class="logo" src="img/logo.png" alt="">
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a class="main-menu__anchor" href="./index.html">Главная</a></li>
+              <li class="main-menu__item"><a class="main-menu__anchor" href="#">Об отеле</a></li>
+              <li class="main-menu__item"><a class="main-menu__anchor" href="#">Новости</a></li>
+              <li class="main-menu__item"><a class="main-menu__anchor" href="#">Контакты</a></li>
+              <li class="main-menu__item"><a class="main-menu__anchor" href="./main.html">UI-Kit</a></li>
+            </ul><a class="button button--warning" href="#">Забронировать</a>
+          </nav>
     </header>
-    <section class="hero-area">
-      <div class="hero-slides owl-carousel">
-        <div class="single-hero-slide d-flex align-items-center justify-content-center">
-          <div class="slide-img bg-img" style="background-image: url(#)"></div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-lg-9">
-                <div class="hero-slides-content">
-                  <div class="line"></div>
-                  <h2>The Vacation Heaven</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p><a class="button button--warning" href="#">Read More</a>
-                </div>
+        <section class="promo">
+          <div class="owl-carousel">
+            <div class="promo__item">
+              <div class="promo__image" style="background: url(img/promo-1.jpg) no-repeat center"></div>
+              <div class="promo__content">
+                <div class="promo__line"></div>
+                <h2 class="promo__header">Слайд 1</h2>
+                <p class="promo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p><a class="button button--warning" href="#">Подробнее</a>
+              </div>
+            </div>
+            <div class="promo__item">
+              <div class="promo__image" style="background: url(img/promo-2.jpg) no-repeat center"></div>
+              <div class="promo__content">
+                <div class="promo__line"></div>
+                <h2 class="promo__header">Слайд 2</h2>
+                <p class="promo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p><a class="button button--warning" href="#">Подробнее</a>
+              </div>
+            </div>
+            <div class="promo__item">
+              <div class="promo__image" style="background: url(img/promo-3.jpg) no-repeat center"></div>
+              <div class="promo__content">
+                <div class="promo__line"></div>
+                <h2 class="promo__header">Слайд 3</h2>
+                <p class="promo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p><a class="button button--warning" href="#">Подробнее</a>
               </div>
             </div>
           </div>
+        </section>
+    <div class="booking">
+      <form class="drop-down" action="#">
+        <div class="form-group">
+          <label for="select1">Check In</label>
+          <select class="form-control drop-down__select" id="select1">
+            <option>19 June</option>
+            <option>20 June</option>
+            <option>21 June</option>
+            <option>22 June</option>
+            <option>23 June</option>
+            <option>24 June</option>
+            <option>25 June</option>
+          </select>
         </div>
-        <div class="single-hero-slide d-flex align-items-center justify-content-center">
-          <div class="slide-img bg-img" style="background-image: url(#)"></div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-lg-9">
-                <div class="hero-slides-content">
-                  <div class="line"></div>
-                  <h2>A place to remember</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p><a class="button button--warning" href="#">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="form-group">
+          <label for="select2">Check Out</label>
+          <select class="form-control drop-down__select" id="select2">
+            <option>20 June</option>
+            <option>21 June</option>
+            <option>22 June</option>
+            <option>23 June</option>
+            <option>24 June</option>
+            <option>25 June</option>
+            <option>26 June</option>
+            <option>27 June</option>
+          </select>
         </div>
-        <div class="single-hero-slide d-flex align-items-center justify-content-center">
-          <div class="slide-img bg-img" style="background-image: url(#)"></div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-lg-9">
-                <div class="hero-slides-content">
-                  <div class="line"></div>
-                  <h2>Enjoy your life</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p><a class="button button--warning" href="#">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="form-group">
+          <label for="select3">Adults</label>
+          <select class="form-control drop-down__select" id="select3">
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+          </select>
         </div>
-      </div>
-    </section>
-    <div class="book-now-area">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-10">
-            <div class="book-now-form">
-              <form action="#">
-                <div class="form-group">
-                  <label for="select1">Check In</label>
-                  <select class="form-control" id="select1">
-                    <option>19 June</option>
-                    <option>20 June</option>
-                    <option>21 June</option>
-                    <option>22 June</option>
-                    <option>23 June</option>
-                    <option>24 June</option>
-                    <option>25 June</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="select2">Check Out</label>
-                  <select class="form-control" id="select2">
-                    <option>20 June</option>
-                    <option>21 June</option>
-                    <option>22 June</option>
-                    <option>23 June</option>
-                    <option>24 June</option>
-                    <option>25 June</option>
-                    <option>26 June</option>
-                    <option>27 June</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="select3">Adults</label>
-                  <select class="form-control" id="select3">
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
-                    <option>06</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="select4">Childrens</label>
-                  <select class="form-control" id="select4">
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
-                  </select>
-                </div>
-                <button type="submit">Book Now</button>
-              </form>
-            </div>
-          </div>
+        <div class="form-group">
+          <label for="select4">Childrens</label>
+          <select class="form-control drop-down__select" id="select4">
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+          </select>
         </div>
-      </div>
+        <button type="submit">Book Now</button>
+      </form>
     </div>
     <section class="about-us-area">
       <div class="container">
@@ -140,14 +112,14 @@
                 <h6><span class="fa fa-check"></span>
                   <Malesuada>lorem maximus mauris sceleri</Malesuada>
                 </h6>
-              </div><a class="button button--warning" href="#">Read More</a>
+              </div><a class="button button--warning" href="#">Подробнее</a>
             </div>
           </div>
           <div class="col-12 col-lg-6">
             <div class="about-thumbnail homepage mb-100">
-              <div class="first-img wow fadeInUp" data-wow-delay="100ms"><img src="#" alt=""></div>
-              <div class="second-img wow fadeInUp" data-wow-delay="300ms"><img src="#" alt=""></div>
-              <div class="third-img wow fadeInUp" data-wow-delay="500ms"><img src="#" alt=""></div>
+              <div class="first-img wow fadeInUp" data-wow-delay="100ms"><img src="img/5.jpg" alt="" width="200px"></div>
+              <div class="second-img wow fadeInUp" data-wow-delay="300ms"><img src="img/6.jpg" alt="" width="200px"></div>
+              <div class="third-img wow fadeInUp" data-wow-delay="500ms"><img src="img/7.jpg" alt="" width="200px"></div>
             </div>
           </div>
         </div>
@@ -167,7 +139,7 @@
         <div class="row justify-content-center">
           <div class="col-12 col-md-6 col-lg-4">
             <div class="single-rooms-area wow fadeInUp" data-wow-delay="100ms">
-              <div class="bg-thumbnail bg-img" style="background-image: url(#)"></div>
+              <div class="bg-thumbnail bg-img" style="background-image: url(require('../img/1.jpg'))"></div>
               <p class="price-from">From $150/night</p>
               <div class="rooms-text">
                 <div class="line"></div>
@@ -178,7 +150,7 @@
           </div>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="single-rooms-area wow fadeInUp" data-wow-delay="300ms">
-              <div class="bg-thumbnail bg-img" style="background-image: url(#)"></div>
+              <div class="bg-thumbnail bg-img" style="background-image: url(require('../img/8.jpg'))"></div>
               <p class="price-from">From $150/night</p>
               <div class="rooms-text">
                 <div class="line"></div>
@@ -189,7 +161,7 @@
           </div>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="single-rooms-area wow fadeInUp" data-wow-delay="500ms">
-              <div class="bg-thumbnail bg-img" style="background-image: url(#)"></div>
+              <div class="bg-thumbnail bg-img" style="background-image: url(require('../img/9.jpg'))"></div>
               <p class="price-from">From $100/night</p>
               <div class="rooms-text">
                 <div class="line"></div>

@@ -1,0 +1,11 @@
+mixin promo(options)
+  section.promo
+    .owl-carousel
+      each val in options
+        .promo__item
+          .promo__image(style="background: url("+require("../components/promo/"+val.image+".jpg")+") no-repeat center")
+          .promo__content
+            .promo__line
+            h2.promo__header= val.header
+            p.promo__text= val.text
+            a.button.button--warning(href=val.link) Подробнее

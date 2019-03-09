@@ -1,0 +1,8 @@
+mixin mainMenu(options)
+  nav.main-menu
+    img.logo(src=require("../img/logo.png"), alt="")
+    ul.main-menu__list
+      each val in options
+        li.main-menu__item
+          a.main-menu__anchor(href=val.link)= val.name
+    a.button.button--warning(href="#") Забронировать

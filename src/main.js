@@ -16,4 +16,6 @@ import './components/news/news.js';
 import './components/location/location.js';
 import './components/calendar/calendar.js';
 
+import './pages/pages.js';
+
 import './main.scss';

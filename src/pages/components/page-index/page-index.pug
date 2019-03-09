@@ -1,0 +1,202 @@
+include ../main-menu/_main-menu
+include ../promo/_promo
+
+header.page__header
+  +mainMenu([
+    {
+      name: "Главная",
+      link: "./index.html"
+    },
+    {
+      name: "Об отеле",
+      link: "#"
+    },
+    {
+      name: "Новости",
+      link: "#"
+    },
+    {
+      name: "Контакты",
+      link: "#"
+    },
+    {
+      name: "UI-Kit",
+      link: "./main.html"
+    },
+  ])
+
++promo([
+  {
+    image: "promo-1",
+    header: "Слайд 1",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.",
+    link: "#"
+  },
+  {
+    image: "promo-2",
+    header: "Слайд 2",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.",
+    link: "#"
+  },
+  {
+    image: "promo-3",
+    header: "Слайд 3",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.",
+    link: "#"
+  }
+])
+
+.booking
+  form(action="#").drop-down
+    .form-group
+      label(for="select1") Check In
+      select.form-control#select1.drop-down__select
+        option 19 June
+        option 20 June
+        option 21 June
+        option 22 June
+        option 23 June
+        option 24 June
+        option 25 June
+    .form-group
+      label(for="select2") Check Out
+      select.form-control#select2.drop-down__select
+        option 20 June
+        option 21 June
+        option 22 June
+        option 23 June
+        option 24 June
+        option 25 June
+        option 26 June
+        option 27 June
+    .form-group
+      label(for="select3") Adults
+      select.form-control#select3.drop-down__select
+        option 02
+        option 03
+        option 04
+        option 05
+        option 06
+    .form-group
+      label(for="select4") Childrens
+      select.form-control#select4.drop-down__select
+        option 01
+        option 02
+        option 03
+        option 04
+        option 05
+    button(type="submit") Book Now
+
+section.about-us-area
+  .container
+    .row.align-items-center
+      .col-12.col-lg-6
+        .about-text.text-center.mb-100
+          .section-heading.text-center
+            .line-
+            h2 A place to remember
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
+          .about-key-text
+            h6
+              span.fa.fa-check
+              Donec malesuada lorem maximus mauris sceleri
+            h6
+              span.fa.fa-check
+              Malesuada lorem maximus mauris sceleri
+          a.button.button--warning(href="#") Подробнее
+
+      .col-12.col-lg-6
+        .about-thumbnail.homepage.mb-100
+          .first-img.wow.fadeInUp(data-wow-delay="100ms")
+            img(src=require("../img/5.jpg"), alt="", width="200px")
+          .second-img.wow.fadeInUp(data-wow-delay="300ms")
+            img(src=require("../img/6.jpg"), alt="", width="200px")
+          .third-img.wow.fadeInUp(data-wow-delay="500ms")
+            img(src=require("../img/7.jpg"), alt="", width="200px")
+
+section.rooms-area.section-padding-100-0
+  .container
+    .row.justify-content-center
+      .col-12.col-lg-6
+        .section-heading.text-center
+          .line-
+          h2 Choose a room
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien.
+    .row.justify-content-center
+      .col-12.col-md-6.col-lg-4
+        .single-rooms-area.wow.fadeInUp(data-wow-delay="100ms")
+          .bg-thumbnail.bg-img(style="background-image: url(require('../img/1.jpg'))")
+          p.price-from From $150/night
+          .rooms-text
+            .line
+            h4 Deluxe Room
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.
+          a.button.button--primary(href="#") Book Room
+      .col-12.col-md-6.col-lg-4
+        .single-rooms-area.wow.fadeInUp(data-wow-delay="300ms")
+          .bg-thumbnail.bg-img(style="background-image: url(require('../img/8.jpg'))")
+          p.price-from From $150/night
+          .rooms-text
+            .line
+            h4 Double Suite
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.
+          a.button.button--primary(href="#") Book Room
+      .col-12.col-md-6.col-lg-4
+        .single-rooms-area.wow.fadeInUp(data-wow-delay="500ms")
+          .bg-thumbnail.bg-img(style="background-image: url(require('../img/9.jpg'))")
+          p.price-from From $100/night
+          .rooms-text
+            .line
+            h4 Single Room
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.
+          a.button.button--primary(href="#") Book Room
+
+section.contact-area.d-flex.flex-wrap.align-items-center
+  .home-map-area
+  .contact-info
+    .section-heading.wow.fadeInUp(data-wow-delay="100ms")
+      .line-
+      h2 Contact Info
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing.
+    h4.wow.fadeInUp(data-wow-delay="300ms") Los Angeles 1481 Creekside Lane Avila Beach, CA 931
+    h5.wow.fadeInUp(data-wow-delay="400ms") +53 345 7953 32453
+    h5.wow.fadeInUp(data-wow-delay="500ms") yourmail@gmail.com
+    .social-info.mt-50.wow.fadeInUp(data-wow-delay="600ms")
+      a.fa.fa-pinterest(href="#")
+        i(aria-hidden="true")
+      a.fa.fa-facebook(href="#")
+        i(aria-hidden="true")
+      a.fa.fa-twitter(href="#")
+        i(aria-hidden="true")
+      a.fa.fa-dribbble(href="#")
+        i(aria-hidden="true")
+      a.fa.fa-behance(href="#")
+        i(aria-hidden="true")
+      a.fa.fa-linkedin(href="#")
+        i(aria-hidden="true")
+
+footer.footer-area
+  .container
+    .row
+      .col-12.col-lg-5
+        .footer-widget-area.mt-50
+          a.d-block.mb-5(href="#")
+            img(src=require("../img/logo.png"), alt="")
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
+      .col-12.col-md-6.col-lg-4
+        .footer-widget-area.mt-50
+          h6.widget-title.mb-5 Find us on the map
+          img(src="#", alt="")
+      .col-12.col-md-6.col-lg-3
+        .footer-widget-area.mt-50
+          h6.widget-title.mb-5 Subscribe to our newsletter
+          form.subscribe-form(action="#", method="post")
+            input#subscribeemail(type="email", name="subscribe-email", placeholder="Your E-mail")
+            button(type="submit") Subscribe
+      .col-12
+        .copywrite-text.mt-30
+          p
+            a(href="#") Copyright &copy; All rights reserved | This template is made with 
+              i.fa.fa-heart-o(aria-hidden="true")
+              | by
+              a(href="https://colorlib.com", target="_blank") Colorlib

@@ -32,6 +32,12 @@
   margin: 0;
   padding: 2.3rem 3.4rem 5.6rem 3.25rem;
 
+  &--hotel {
+    max-width: 100%;
+    margin: 0;
+    padding: 6rem 0 0;
+  }
+
   &__item {
     &--arrows {
       @include subtitle-margins(2.6rem);
