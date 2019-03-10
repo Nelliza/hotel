@@ -4,5 +4,5 @@ mixin mainMenu(options)
     ul.main-menu__list
       each val in options
         li.main-menu__item
-          a.main-menu__anchor(href=val.link)= val.name
+          a.main-menu__link(href=val.link)= val.name
     a.button.button--warning(href="#") Забронировать

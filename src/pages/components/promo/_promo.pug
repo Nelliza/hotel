@@ -1,11 +1,10 @@
-mixin promo(options)
+mixin promo(options, btnColor)
   section.promo
     .owl-carousel
       each val in options
         .promo__item
-          .promo__image(style="background: url("+require("../components/promo/"+val.image+".jpg")+") no-repeat center")
+          .promo__img(style="background: url("+require("../components/promo/"+val.image+".jpg")+") no-repeat center")
           .promo__content
-            .promo__line
-            h2.promo__header= val.header
+            h3.promo__header= val.header
             p.promo__text= val.text
-            a.button.button--warning(href=val.link) Подробнее
+            +buttonLink(btnColor, "Подробнее")

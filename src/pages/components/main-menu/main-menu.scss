@@ -4,12 +4,13 @@
   top: 0;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   padding: .5rem 1.5rem;
   box-sizing: border-box;
   background-color: $color-primary;
-  box-shadow: 0 .5rem 3rem 1rem rgba(0, 0, 0, .2);
-  border-bottom: 2px solid rgba(231, 87, 53, .3);
+  box-shadow: 0 .5rem 3rem 1rem rgba(0,0,0,.2);
+  border-bottom: 2px solid rgba(231,87,53,.3);
 
   &__list {
     display: flex;
@@ -30,7 +31,7 @@
     }
   }
 
-  &__anchor {
+  &__link {
     color: #fff;
     text-decoration: none;
   }

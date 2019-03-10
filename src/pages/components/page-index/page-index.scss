@@ -1,0 +1,12 @@
+.page {
+  &--hotel {
+    max-width: 100%;
+    margin: 0;
+    padding: 6rem 0 0;
+  }
+
+  &__wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
