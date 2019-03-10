@@ -12,12 +12,11 @@
 
   &:hover,
   &.button--pressed {
-    color: #fff;
-    border-bottom: .2rem solid #{$bd-bottom-color};
     background-color: $bg-color;
+    color: #fff;
   }
 
-  &.button--pressed {
-    border: .06rem solid;
+  &:hover {
+    border-bottom-color: $bd-bottom-color;
   }
 }
