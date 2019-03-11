@@ -1,31 +1,23 @@
-include ../subtitle/_subtitle
-include ../button/_button
-include ../arrow/_arrow
-include ../percentage/_percentage
-include ../pie-chart/_pie-chart
-include ../slider/_slider
-include ../stages/_stages
-include ../form/_form
-include ../toggle/_toggle
-include ../tick-box/_tick-box
-include ../search/_search
-include ../notfound-btn/_notfound-btn
-include ../drop-down/_drop-down
-include ../user-profile/_user-profile
-include ../news/_news
-include ../location/_location
-include ../calendar/_calendar
-include ../messaging/_messaging
-include ../video/_video
-
 section.page__item.page__item--buttons
   +subtitle("Standard buttons")
   .section-wrapper.section-wrapper--buttons
     - for (var i = 0; i < 3; i++)
-      +button(["primary", "small"])
-      +button(["primary"])
-      +button(["warning"])
-      +button(["warning", "small"])
+      +button({
+        modifiers: ["primary", "small"],
+        tag: "button"
+      })
+      +button({
+        modifiers: "primary",
+        tag: "button"
+      })
+      +button({
+        modifiers: "warning",
+        tag: "button"
+      })
+      +button({
+        modifiers: ["warning", "small"],
+        tag: "button"
+      })
 
 section.page__item.page__item--arrows
   +subtitle("Arrow buttons")
@@ -137,7 +129,10 @@ section.page__item.page__item--location
 
   section.page__item.page__item--messaging
     +subtitle("Messaging")
-    +messaging("Sarah Brown")
+    +messaging({
+      name: "Sarah Brown",
+      id: 2
+    })
 
 section.page__item.page__item--video
   +subtitle("Video")
