@@ -8,4 +8,10 @@ mixin form(id)
       .form__val
     .form__field
       textarea(id="message"+id, name="message", rows="4", placeholder="Your Message")
-    button(class=["form__button", "button", "button--primary"], type="submit", id="send"+id, name="button") Submit
+    +button({
+      classes: "form__button",
+      modifiers: "primary",
+      text: "Submit",
+      tag: "button",
+      btnType: "submit"
+    })

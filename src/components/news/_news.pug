@@ -18,4 +18,9 @@ mixin news(id, title, date, text, format=false)
         p.news__date= date
       p.news__text= text
       if format == "calendar"
-        a(href="#calendar", class=["news__button", "button", "button--primary"]) Add to calendar
+        +button({
+          classes: "news__button",
+          modifiers: "primary",
+          text: "Add to calendar",
+          link: "#calendar"
+        })

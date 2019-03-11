@@ -1,11 +1,27 @@
-mixin button(classes=false)
-  - var classNames = ""
+mixin button(options)
+  - options.classes = options.classes || false
+  - options.modifiers = options.modifiers || false
+  - options.text = options.text || "Button"
+  - options.tag = options.tag || "a"
+  - options.link = options.link || "#"
+  - options.btnType = options.btnType || "button"
 
-  if classes
-    - classNames = []
+  - var classNames = []
+  each val in [options.classes, options.modifiers]
+    if val
+      if Array.isArray(val)
+        each name in val
+          if val == options.modifiers
+            - classNames.push("button--" + name)
+          else
+            - classNames.push(name)
+      else
+        if val == options.modifiers
+          - classNames.push("button--" + val)
+        else
+          - classNames.push(val)
 
-    each name in classes
-      - var className = "button--" + name
-      - classNames.push(className)
-
-  button(class=["button", classNames]) Button
+  if options.tag == "button"
+    button(class=["button", classNames], type=options.btnType)= options.text
+  else
+    a(class=["button", classNames], href=options.link)= options.text
