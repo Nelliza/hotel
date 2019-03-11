@@ -1,0 +1,37 @@
+.about {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__text {
+    flex-shrink: 5;
+  }
+
+  &__images {
+    flex-shrink: 4;
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+    width: 50%;
+    box-shadow: 0 .5rem 2rem 0 rgba(0,0,0,.15);
+
+    &:nth-child(1) {
+      margin-left: auto;
+    }
+    &:nth-child(2) {
+      z-index: 1;
+      margin-top: -50%;
+    }
+    &:nth-child(3) {
+      z-index: 1;
+      margin: 0 auto;
+      margin-top: -30%;
+    }
+  }
+}
