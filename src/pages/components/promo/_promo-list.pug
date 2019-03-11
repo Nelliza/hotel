@@ -1,0 +1,12 @@
+mixin promoList(options, btnColor)
+  each val in options
+    .promo__item
+      .promo__img(style="background: url("+require("../components/promo/"+val.image+".jpg")+") no-repeat center")
+      .promo__content
+        h3.promo__header= val.header
+        p.promo__text= val.text
+        +button({
+          modifiers: btnColor,
+          text: "Подробнее",
+          link: val.link
+        })

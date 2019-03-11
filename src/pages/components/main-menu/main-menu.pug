@@ -1,0 +1,16 @@
+include ./_menu-list
+
+nav.main-menu
+  img.logo(src=require("../components/logo/logo.png"), alt="")
+  ul.main-menu__list
+    +menuList([
+      { name: "Главная" },
+      { name: "Об отеле" },
+      { name: "Новости" },
+      { name: "Контакты" },
+      { name: "UI-Kit" }
+    ])
+  +button({
+    modifiers: "warning",
+    text: "Забронировать"
+  })

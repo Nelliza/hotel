@@ -1,78 +1,11 @@
-include ../_button-link/_button-link
-
-include ../main-menu/_main-menu
-include ../promo/_promo
-include ../rooms/_rooms
-
 header.page__header
-  +mainMenu([
-    {
-      name: "Главная",
-      link: "./index.html"
-    },
-    {
-      name: "Об отеле",
-      link: "#"
-    },
-    {
-      name: "Новости",
-      link: "#"
-    },
-    {
-      name: "Контакты",
-      link: "#"
-    },
-    {
-      name: "UI-Kit",
-      link: "./main.html"
-    },
-  ])
+  include ../main-menu/main-menu
 
-+promo([
-  {
-    image: "promo-1",
-    header: "Слайд 1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.",
-    link: "#"
-  },
-  {
-    image: "promo-2",
-    header: "Слайд 2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.",
-    link: "#"
-  },
-  {
-    image: "promo-3",
-    header: "Слайд 3",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.",
-    link: "#"
-  }
-], "primary")
+include ../promo/promo
 
-.page__wrapper
-  +rooms([
-    {
-      image: "room-1",
-      price: "150",
-      header: "Номер Делюкс",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.",
-      link: "#"
-    },
-    {
-      image: "room-2",
-      price: "150",
-      header: "Двухместный Люкс",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.",
-      link: "#"
-    },
-    {
-      image: "room-3",
-      price: "100",
-      header: "Одноместный номер",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.",
-      link: "#"
-    }
-  ])
+include ../about/about
+
+include ../rooms/rooms
 
 footer.footer-area
   .container
@@ -80,7 +13,7 @@ footer.footer-area
       .col-12.col-lg-5
         .footer-widget-area.mt-50
           a.d-block.mb-5(href="#")
-            img(src=require("../img/logo.png"), alt="")
+            img(src=require("../components/logo/logo.png"), alt="")
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
       .col-12.col-md-6.col-lg-3
         .footer-widget-area.mt-50

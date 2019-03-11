@@ -1,0 +1,5 @@
+mixin menuList(options)
+  each val in options
+    - val.link = val.link || "#"
+    li.main-menu__item
+      a.main-menu__link(href=val.link)= val.name

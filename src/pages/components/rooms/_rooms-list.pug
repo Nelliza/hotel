@@ -1,10 +1,13 @@
 mixin roomsList(options, btnColor)
-  ul.rooms__list
-    each val in options
-      li.rooms__item
-        .rooms__img(style="background: url("+require("../components/rooms/"+val.image+".jpg")+") no-repeat center")
-        span.rooms__price От $#{val.price}/сутки
-        .rooms__content
-          h3.rooms__header= val.header
-          p.rooms__text= val.text
-        +buttonLink(btnColor)
+  each val in options
+    li.rooms__item
+      .rooms__img(style="background: url("+require("../components/rooms/"+val.image+".jpg")+") no-repeat center")
+      span.rooms__price От $#{val.price}/сутки
+      .rooms__content
+        h3.rooms__header= val.header
+        p.rooms__text= val.text
+      +button({
+        modifiers: btnColor,
+        text: "Забронировать",
+        link: val.link
+      })

@@ -1,0 +1,29 @@
+include ./_rooms-list
+
+section.page--hotel__item.rooms
+  +subtitle("Выбор комнаты")
+  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam tempore asperiores consectetur officia facilis corrupti aut minima accusamus et porro numquam, nisi, reprehenderit natus, corporis voluptate mollitia quis deleniti tempora quo repellat non, ullam placeat! Id ea, quaerat harum sapiente provident autem quidem minima similique! Aperiam aut ratione in dolores.
+  ul.rooms__list
+    +roomsList([
+      {
+        image: "room-1",
+        price: "150",
+        header: "Номер Делюкс",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.",
+        link: "#"
+      },
+      {
+        image: "room-2",
+        price: "150",
+        header: "Двухместный Люкс",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.",
+        link: "#"
+      },
+      {
+        image: "room-3",
+        price: "100",
+        header: "Одноместный номер",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.",
+        link: "#"
+      }
+    ], "warning")
