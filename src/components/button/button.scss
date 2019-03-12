@@ -8,12 +8,13 @@
   margin-top: .6rem;
   margin-bottom: .6rem;
   cursor: pointer;
-  text-transform: uppercase;
   border: .06rem solid;
   border-bottom: .3rem solid;
   border-radius: .2rem;
   outline: none;
   background-color: #fff;
+  text-transform: uppercase;
+  text-align: center;
   text-decoration: none;
 
   &:hover,
