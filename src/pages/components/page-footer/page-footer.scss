@@ -1,0 +1,33 @@
+.page-footer {
+  padding: 4rem;
+  background-color: #363636;
+  color: #fff;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    margin-right: 3rem;
+    flex-basis: 55%;
+  }
+
+  &__search {
+    flex-basis: 40%;
+  }
+
+  &__copyright {
+    margin-top: 3rem;
+    font-style: italic;
+    text-align: center;
+
+    >a {
+      color: #fff;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

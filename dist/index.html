@@ -6,14 +6,14 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=aba3cd86-c704-4688-a291-3ec61529513e&amp;lang=en_US" type="text/javascript"></script>
   </head>
   <body class="page page--hotel">
-    <header class="page__header">
-      <nav class="main-menu"><img class="logo" src="img/logo.png" alt="">
+    <header class="page-header"><img class="logo" src="img/logo.png" alt="">
+      <nav class="main-menu">
         <ul class="main-menu__list">
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Главная</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Об отеле</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Новости</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Контакты</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">UI-Kit</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#">Главная</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#">Об отеле</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#">Новости</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#">Контакты</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="./main.html">UI-Kit</a></li>
         </ul><a class="button button--warning" href="#">Забронировать</a>
       </nav>
     </header>
@@ -47,36 +47,36 @@
       <div class="about__wrapper">
         <div class="about__text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-          <h3>Отель в цифрах</h3>
-          <div class="about__list">
-            <div class="about__item">
-              <div class="percentage" data-percent="80">
-                <svg class="percentage__svg" viewBox="0 0 32 32">
-                  <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 80 100"></circle>
-                  <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
-                </svg>
+          <h3 class="page--hotel__subtitle">Отель в цифрах</h3>
+              <div class="about__list">
+                <div class="about__item">
+                  <div class="percentage" data-percent="80">
+                    <svg class="percentage__svg" viewBox="0 0 32 32">
+                      <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 80 100"></circle>
+                      <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
+                    </svg>
+                  </div>
+                  <p class="about__level">Оценка качества услуг постояльцами</p>
+                </div>
+                <div class="about__item">
+                  <div class="percentage" data-percent="75">
+                    <svg class="percentage__svg" viewBox="0 0 32 32">
+                      <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 75 100"></circle>
+                      <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
+                    </svg>
+                  </div>
+                  <p class="about__level">Порекомендуют наш отель своим друзьям</p>
+                </div>
+                <div class="about__item">
+                  <div class="percentage" data-percent="57">
+                    <svg class="percentage__svg" viewBox="0 0 32 32">
+                      <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 57 100"></circle>
+                      <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
+                    </svg>
+                  </div>
+                  <p class="about__level">Планируют вернуться сюда в будущем</p>
+                </div>
               </div>
-              <p>Оценка качества услуг постояльцами</p>
-            </div>
-            <div class="about__item">
-              <div class="percentage" data-percent="75">
-                <svg class="percentage__svg" viewBox="0 0 32 32">
-                  <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 75 100"></circle>
-                  <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
-                </svg>
-              </div>
-              <p>Порекомендуют наш отель своим друзьям</p>
-            </div>
-            <div class="about__item">
-              <div class="percentage" data-percent="57">
-                <svg class="percentage__svg" viewBox="0 0 32 32">
-                  <circle class="percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 57 100"></circle>
-                  <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
-                </svg>
-              </div>
-              <p>Планируют вернуться сюда в будущем</p>
-            </div>
-          </div>
         </div>
         <div class="about__images"><img class="about__image" src="img/about-1.jpg" alt=""><img class="about__image" src="img/about-2.jpg" alt=""><img class="about__image" src="img/about-3.jpg" alt="">
         </div>
@@ -109,30 +109,20 @@
             </li>
       </ul>
     </section>
-    <footer class="footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-5">
-            <div class="footer-widget-area mt-50"><a class="d-block mb-5" href="#"><img src="img/logo.png" alt=""></a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="footer-widget-area mt-50">
-              <h6 class="widget-title mb-5">Subscribe to our newsletter</h6>
-              <form class="subscribe-form" action="#" method="post">
-                <input id="subscribeemail" type="email" name="subscribe-email" placeholder="Your E-mail">
-                <button type="submit">Subscribe</button>
-              </form>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="copywrite-text mt-30">
-              <p><a href="#">Copyright &copy; All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i>by<a href="https://colorlib.com" target="_blank">Colorlib</a></a></p>
-            </div>
-          </div>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__text"><img src="img/logo.png" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+        </div>
+        <div class="page-footer__search">
+          <h3 class="page--hotel__subtitle">Поиск на сайте</h3>
+          <form class="search">
+            <input class="search__input" type="text" placeholder="Search">
+            <button class="search__submit" type="submit"></button>
+          </form>
         </div>
       </div>
+      <p class="page-footer__copyright">Copyright &copy; All rights reserved | This template is made with by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
     </footer>
     <script src="./app.js"></script>
   </body>

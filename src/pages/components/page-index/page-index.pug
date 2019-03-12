@@ -1,5 +1,4 @@
-header.page__header
-  include ../main-menu/main-menu
+include ../page-header/page-header
 
 include ../promo/promo
 
@@ -7,24 +6,4 @@ include ../about/about
 
 include ../rooms/rooms
 
-footer.footer-area
-  .container
-    .row
-      .col-12.col-lg-5
-        .footer-widget-area.mt-50
-          a.d-block.mb-5(href="#")
-            img(src=require("../components/logo/logo.png"), alt="")
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
-      .col-12.col-md-6.col-lg-3
-        .footer-widget-area.mt-50
-          h6.widget-title.mb-5 Subscribe to our newsletter
-          form.subscribe-form(action="#", method="post")
-            input#subscribeemail(type="email", name="subscribe-email", placeholder="Your E-mail")
-            button(type="submit") Subscribe
-      .col-12
-        .copywrite-text.mt-30
-          p
-            a(href="#") Copyright &copy; All rights reserved | This template is made with 
-              i.fa.fa-heart-o(aria-hidden="true")
-              | by
-              a(href="https://colorlib.com", target="_blank") Colorlib
+include ../page-footer/page-footer
