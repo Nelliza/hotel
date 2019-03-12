@@ -1,0 +1,6 @@
+mixin aboutList(options)
+  .about__list
+    each val in options
+      .about__item
+        +percentage(val.percent)
+        p.about__level= val.text
