@@ -6,8 +6,8 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=aba3cd86-c704-4688-a291-3ec61529513e&amp;lang=en_US" type="text/javascript"></script>
   </head>
   <body class="page page--hotel">
-    <header class="page-header"><img class="logo" src="img/logo.png" alt="">
-      <nav class="main-menu">
+    <header class="page-header">
+      <nav class="main-menu"><img class="logo" src="img/logo.png" alt="">
         <ul class="main-menu__list">
               <li class="main-menu__item"><a class="main-menu__link" href="#">Главная</a></li>
               <li class="main-menu__item"><a class="main-menu__link" href="#">Об отеле</a></li>
@@ -124,6 +124,26 @@
       </div>
       <p class="page-footer__copyright">Copyright &copy; All rights reserved | This template is made with by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
     </footer>
+    <div class="callback"></div>
+    <section class="messaging">
+      <div class="messaging__header">
+        <div class="messaging__head">Sarah Brown</div><img class="messaging__avatar user-profile__photo" src="img/Sarah Brown.jpg" alt="Sarah Brown">
+      </div>
+      <div class="messaging__main">
+        <button class="messaging__chat"></button>
+        <button class="messaging__camera"></button>
+        <div class="messaging__intro">
+          <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+        </div>
+        <form class="messaging__form" id="form2">
+          <div>
+            <textarea class="messaging__textarea" id="message2" rows="3">Yeah that sounds great. See you then</textarea>
+            <button class="button messaging__button button--primary" type="button">Reply</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <div class="overlay"></div>
     <script src="./app.js"></script>
   </body>
 </html>

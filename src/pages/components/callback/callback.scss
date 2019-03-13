@@ -1,0 +1,41 @@
+.callback {
+  @include size(5rem);
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: block;
+  background: url("./components/_icons/call-icon.svg") #fff;
+  border: .15rem solid #4eb7a8;
+  border-radius: 50%;
+  cursor: pointer;
+
+  +.messaging {
+    z-index: 20;
+    visibility: hidden;
+    position: fixed;
+    width: 18rem !important;
+    bottom: 1rem;
+    left: calc(50%-9rem);
+  }
+
+  +.messaging--visible {
+    visibility: visible;
+
+    +.overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.overlay {
+  @include size(100%);
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(30,30,30,.8);
+  transition: .3s;
+}
