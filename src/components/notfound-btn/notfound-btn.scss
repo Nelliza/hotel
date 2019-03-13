@@ -3,11 +3,15 @@
   position: relative;
   display: block;
   box-sizing: border-box;
-  width: 100%;
+  width: 18.1rem;
   margin-bottom: 1.1rem;
   text-align: left;
   color: #fff;
   background-color: $color-warning;
+
+  @media screen and (max-width: 580px) {
+    width: 100%;
+  }
 
   &:after {
     @include fieldset-icon("_icons/search-icon.svg", $color-warning);

@@ -1,10 +1,14 @@
 .slider {
-  height: .3rem;
+  @include size(16.2rem, .3rem);
   margin-top: 1.8rem;
   margin-bottom: 1.8rem;
   border-radius: 5rem;
   background-color: $color-disabled;
   cursor: pointer;
+
+  @media screen and (max-width: 580px) {
+    width: 100%;
+  }
 
   .ui-slider-range {
     border-radius: 5rem;

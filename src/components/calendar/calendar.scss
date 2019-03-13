@@ -1,4 +1,10 @@
 .calendar {
+  width: 17.5rem;
+  
+  @media screen and (max-width: 580px) {
+    width: 100%;
+  }
+
   &__day {
     height: 6.9rem;
     padding: .9rem 0 .5rem;

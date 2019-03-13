@@ -6,24 +6,24 @@ section.page--hotel__item.about
   .about__wrapper
     .about__text
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
-      h3.page--hotel__subtitle Отель в цифрах
-      +aboutList([
-        {
-          percent: 80,
-          text: "Оценка качества услуг постояльцами"
-        },
-        {
-          percent: 75,
-          text: "Порекомендуют наш отель своим друзьям"
-        },
-        {
-          percent: 57,
-          text: "Планируют вернуться сюда в будущем"
-        }
-      ])
     .about__images
       +imagesList([
         { src: "about-1" },
         { src: "about-2" },
         { src: "about-3" }
       ])
+  h3.page--hotel__subtitle Отель в цифрах
+  +aboutList([
+    {
+      percent: 80,
+      text: "Оценка качества услуг постояльцами"
+    },
+    {
+      percent: 75,
+      text: "Порекомендуют наш отель своим друзьям"
+    },
+    {
+      percent: 57,
+      text: "Планируют вернуться сюда в будущем"
+    }
+  ])

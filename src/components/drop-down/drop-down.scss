@@ -1,4 +1,10 @@
 .drop-down {
+  width: 18.1rem;
+
+  @media screen and (max-width: 580px) {
+    width: 100%;
+  }
+
   @include fieldset("select+.ui-selectmenu-button>.ui-selectmenu-text", "select+.ui-selectmenu-button>.ui-selectmenu-icon", "_icons/arrow-down-icon.svg", $color-primary) {
     .drop-down__select+.ui-selectmenu-button {
       @include placeholder;

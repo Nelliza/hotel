@@ -1,8 +1,14 @@
 .form {
-  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+
+  @media screen and (max-width: 580px) {
+    width: 100%;
+  }
 
   &__field {
-    margin-top: .75rem;
+    margin: .45rem 0;
     display: flex;
 
     input {
@@ -19,18 +25,17 @@
   }
 
   &__val {
-    width: 3.4rem;
-    height: 1.75rem;
+    @include size(3.4rem, 1.75rem);
+    position: relative;
+    margin-left: .5rem;
     padding: 0 .5rem;
     font-size: .63rem;
     font-weight: 900;
-    margin-left: .5rem;
     text-align: center;
     text-transform: uppercase;
+    line-height: 1.75rem;
     color:  #fff;
     border-radius: .2rem;
-    line-height: 1.75rem;
-    position: relative;
 
     &:before {
       @include triangle-tooltip(#fff, .3rem);
@@ -52,12 +57,11 @@
       }
     }
   }
-}
 
-.form__button {
-  float: right;
-  margin-top: .7rem;
-  margin-bottom: .7rem;
+  &__button {
+    align-self: flex-end;
+    margin-top: .2rem;
+  }
 }
 
 ::-webkit-input-placeholder {

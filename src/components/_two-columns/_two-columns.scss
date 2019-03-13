@@ -1,9 +1,0 @@
-@mixin two-columns($width1, $width2: $width1) {
-  >*:first-child {
-    width: $width1;
-  }
-
-  >*:last-child {
-    width: $width2;
-  }
-}

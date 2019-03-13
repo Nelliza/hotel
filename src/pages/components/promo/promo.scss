@@ -3,7 +3,7 @@
 
   &__item {
     position: relative;
-    width: 80%;
+    width: 79%;
     margin: auto;
   }
 
@@ -12,6 +12,10 @@
   }
 
   @include block-content(3rem);
+}
+
+.owl-carousel {
+  z-index: 0;
 }
 
 .owl-nav {

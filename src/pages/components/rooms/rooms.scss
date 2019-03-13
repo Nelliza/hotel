@@ -1,5 +1,4 @@
 .rooms {
-  text-align: center;
 
   &__list {
     display: flex;
@@ -28,7 +27,6 @@
 
   &__price {
     position: absolute;
-    z-index: 1;
     top: -1rem;
     left: 50%;
     transform: translateX(-50%);

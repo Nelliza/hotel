@@ -57,7 +57,7 @@ section.page__item.page__item--percentages
 
 section.page__item.page__item--sliders
   +subtitle("Sliders")
-  .section-wrapper.section-wrapper--sliders.section-wrapper--two-columns
+  .section-wrapper.section-wrapper--sliders
     +slider({
         id: 1,
         type: "pointer"
@@ -74,9 +74,8 @@ section.page__item.page__item--stages
 
 section.page__item.page__item--form-elements
   +subtitle("Form Elements")
-  .section-wrapper.section-wrapper--two-columns
-    .section-wrapper
-      +form(1)
+  .section-wrapper.section-wrapper--form-elements
+    +form(1)
     .section-wrapper
       section.page__item.page__item--toggles
         +subtitle("Toggles")
@@ -89,7 +88,7 @@ section.page__item.page__item--form-elements
           +tickBox(1, 24, true)
           +tickBox(2, 24)
 
-.section-wrapper.section-wrapper--two-columns
+.section-wrapper.section-wrapper--flex
   section.page__item.page__item--search
     +subtitle("Search / Drop Down")
     +search
@@ -103,7 +102,7 @@ section.page__item.page__item--form-elements
 
 section.page__item.page__item--news
   +subtitle("News & Events")
-  .section-wrapper.section-wrapper--news.section-wrapper--two-columns
+  .section-wrapper.section-wrapper--news
     +news(
       1,
       "It's all going downhill",
@@ -122,7 +121,7 @@ section.page__item.page__item--location
   +subtitle("Location")
   +location
 
-.section-wrapper.section-wrapper--two-columns
+.section-wrapper.section-wrapper--flex
   section.page__item.page__item--calendar
     +subtitle("Calendar")
     +calendar

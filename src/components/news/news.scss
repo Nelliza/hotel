@@ -1,7 +1,12 @@
 .news {
   display: flex;
+  width: 18rem;
   margin-bottom: 1rem;
   font-size: .69rem;
+
+  @media screen and (max-width: 580px) {
+    width: 100%;
+  }
 
   &__preview {
     width: 5.94rem;

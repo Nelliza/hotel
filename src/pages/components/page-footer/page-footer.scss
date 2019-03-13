@@ -6,15 +6,28 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 580px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__text {
-    margin-right: 3rem;
     flex-basis: 55%;
+    margin-right: 2rem;
+
+    @media screen and (max-width: 580px) {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
   }
 
   &__search {
-    flex-basis: 40%;
+    flex-basis: 30%;
+
+    @media screen and (max-width: 580px) {
+      flex-basis: 100%;
+    }
   }
 
   &__copyright {

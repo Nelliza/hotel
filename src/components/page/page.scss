@@ -1,4 +1,3 @@
-@import "./components/_two-columns/_two-columns.scss";
 @import "./components/_subtitle-margins/_subtitle-margins.scss";
 
 @each $type in black, light, bold, italic, regular {
@@ -14,29 +13,12 @@
   }
 }
 
-@media screen and (max-width: 580px) {
-  .page__item {
-    &--search,
-    &--user-profile,
-    &--calendar,
-    &--messaging {
-      width: 100%;
-    }
-  }
-}
-
 .page {
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
   max-width: 700px;
   margin: 0;
   padding: 2.3rem 3.4rem 5.6rem 3.25rem;
-
-  &--hotel {
-    max-width: 100%;
-    margin: 0;
-    padding: 6rem 0 0;
-  }
 
   &__item {
     &--arrows {
@@ -49,16 +31,6 @@
 
     &--sliders {
       @include subtitle-margins(1.6rem, 1.2rem);
-
-      .section-wrapper--two-columns {
-        @include two-columns(44%);
-      }
-
-      @media screen and (max-width: 580px) {
-        .section-wrapper--two-columns {
-          @include two-columns(100%);
-        }
-      }
     }
 
     &--stages {
@@ -66,64 +38,31 @@
     }
 
     &--form-elements {
-      padding-bottom: .6rem;
-
-      .section-wrapper--two-columns {
-        @include two-columns(48.5%, 47%);
-      }
-
-      @media screen and (max-width: 580px) {
-        .section-wrapper--two-columns {
-          @include two-columns(100%);
-        }
-      }
+      @include subtitle-margins(false, 2.4rem);
     }
 
     &--toggles {
-      @include subtitle-margins(1.5rem);
+      @include subtitle-margins(.5rem, 1.5rem);
     }
 
     &--tick-boxes {
-      @include subtitle-margins(2rem);
+      @include subtitle-margins(2rem, 1.5rem);
     }
 
     &--search {
-      width: 49%;
-
       @include subtitle-margins(false, 1.3rem);
-    }
-
-    &--user-profile {
-      width: 46.5%;
     }
 
     &--news {
       @include subtitle-margins(4.6rem, 2.1rem);
-
-      .section-wrapper--two-columns {
-        @include two-columns(48.5%);
-      }
-
-      @media screen and (max-width: 580px) {
-        .section-wrapper--two-columns {
-          @include two-columns(100%);
-        }
-      }
     }
 
     &--location {
       @include subtitle-margins(2rem, 2rem);
     }
 
-    &--calendar {
-      width: 47.5%;
-
-      @include subtitle-margins(3rem);
-    }
-
+    &--calendar,
     &--messaging {
-      width: 48%;
-
       @include subtitle-margins(3rem);
     }
 
@@ -134,10 +73,6 @@
 }
 
 .section-wrapper {
-  &--two-columns {
-    @include flex-justify(space-between);
-  }
-
   &--buttons {
     @include flex-justify(space-between);
     align-items: flex-end;
@@ -157,9 +92,28 @@
     }
   }
 
+  &--form-elements {
+    margin-bottom: .65rem;
+
+    >.section-wrapper {
+      width: 18rem;
+
+      @media screen and (max-width: 580px) {
+        width: 100%;
+      }
+    }
+  }
+
   &--arrows,
   &--toggles,
   &--tick-boxes {
     @include flex-justify(center);
+  }
+
+  &--sliders,
+  &--form-elements,
+  &--news,
+  &--flex {
+    @include flex-justify(space-between);
   }
 }
