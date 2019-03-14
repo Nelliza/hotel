@@ -24,7 +24,7 @@
   }
 
   &__text {
-    flex-basis: 50%;
+    flex-basis: 60%;
     
     @media screen and (max-width: 580px) {
       flex-basis: auto;
@@ -32,7 +32,7 @@
   }
 
   &__images {
-    flex-basis: 50%;
+    flex-basis: 40%;
     padding: 0 2rem;
 
     @media screen and (max-width: 580px) {

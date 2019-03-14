@@ -1,11 +1,11 @@
 import './components/page/page.js';
 
-import './components/stages/_stages.js';
-import './components/form/_validate-form.js';
-
 import 'webpack-jquery-ui/slider';
 import 'webpack-jquery-ui/selectmenu';
 import 'webpack-jquery-ui/datepicker';
+
+import './components/stages/_stages.js';
+import './components/form/_validate-form.js';
 
 import './components/button/button.js';
 import './components/slider/slider.js';
