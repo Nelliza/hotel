@@ -1,0 +1,10 @@
+@mixin flex($justify: space-between, $is-wrap: true) {
+  @if $is-wrap {
+    $is-wrap: wrap;
+  }
+
+  display: flex;
+  flex-wrap: $is-wrap;
+  justify-content: $justify;
+  @content;
+}

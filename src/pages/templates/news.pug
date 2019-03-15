@@ -1,20 +1,7 @@
 include ../../components/subtitle/_subtitle
 include ../../components/button/_button
-include ../../components/arrow/_arrow
-include ../../components/percentage/_percentage
-include ../../components/pie-chart/_pie-chart
-include ../../components/slider/_slider
-include ../../components/stages/_stages
-include ../../components/form/_form
-include ../../components/toggle/_toggle
-include ../../components/tick-box/_tick-box
 include ../../components/search/_search
-include ../../components/notfound-btn/_notfound-btn
-include ../../components/drop-down/_drop-down
-include ../../components/user-profile/_user-profile
 include ../../components/news/_news
-include ../../components/location/_location
-include ../../components/calendar/_calendar
 include ../../components/messaging/_messaging
 include ../../components/video/_video
 
@@ -22,8 +9,49 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Hotel
+    title Новости
     script(src="https://api-maps.yandex.ru/2.1/?apikey=aba3cd86-c704-4688-a291-3ec61529513e&lang=en_US", type="text/javascript")
   body.page.page--hotel
-    include ../components/page-news/page-news
+    include ../components/header/header
+
+    section.page--hotel__item
+      +subtitle("Новости отеля")
+      .section-wrapper.section-wrapper--news-list
+        +news({
+          id: 1,
+          title: "It's all going downhill",
+          date: "24 august 2013",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
+          image: "news1"
+        })
+        +news({
+          id: 2,
+          title: "This is the title",
+          date: [24, "Aug"],
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          image: "news2",
+          modifier: "primary",
+          isCalendar: true
+        })
+        +news({
+          id: 3,
+          title: "News number 3",
+          date: "11 march 2014",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
+          image: "news2",
+          modifier: "primary"
+        })
+        +news({
+          id: 2,
+          title: "It's all going downhill",
+          date: "24 march 2014",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
+          image: "news1"
+        })
+        +videoFrame("rPmGtZAUxNs")
+
+    include ../components/footer/footer
+
+    include ../components/callback/callback
+
     script(src="./app.js")

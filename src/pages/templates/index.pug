@@ -9,8 +9,19 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Hotel
+    title Главная
     script(src="https://api-maps.yandex.ru/2.1/?apikey=aba3cd86-c704-4688-a291-3ec61529513e&lang=en_US", type="text/javascript")
   body.page.page--hotel
-    include ../components/page-index/page-index
+    include ../components/header/header
+
+    include ../components/promo/promo
+
+    include ../components/about/about
+
+    include ../components/rooms/rooms
+
+    include ../components/footer/footer
+
+    include ../components/callback/callback
+
     script(src="./app.js")

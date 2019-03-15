@@ -9,7 +9,7 @@
   }
 
   &__preview {
-    width: 5.94rem;
+    width: 33%;
     min-height: 13.25rem;
     border-radius: .2rem 0 0 .2rem;
   }
@@ -50,6 +50,7 @@
   &__date {
     font-weight: 900;
     text-transform: uppercase;
+    text-align: left;
     line-height: 1;
     letter-spacing: .07rem;
   }

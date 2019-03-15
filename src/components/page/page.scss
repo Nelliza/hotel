@@ -74,8 +74,9 @@
 
 .section-wrapper {
   &--buttons {
-    @include flex-justify(space-between);
-    align-items: flex-end;
+    @include flex() {
+      align-items: flex-end;
+    };
     padding: 2.2rem 3.95rem 0 4.15rem;
 
     @media screen and (max-width: 393px) {
@@ -85,7 +86,7 @@
   }
 
   &--percentages {
-    @include flex-justify(space-between);
+    @include flex();
 
     @media screen and (max-width: 530px) {
       justify-content: center;
@@ -107,13 +108,14 @@
   &--arrows,
   &--toggles,
   &--tick-boxes {
-    @include flex-justify(center);
+    $flex-map: (justify: center); 
+    @include flex($flex-map...);
   }
 
   &--sliders,
   &--form-elements,
   &--news,
-  &--flex {
-    @include flex-justify(space-between);
+  &--two-section {
+    @include flex();
   }
 }
