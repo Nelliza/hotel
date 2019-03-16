@@ -1,5 +1,5 @@
 mixin form(id)
-  form(id="form"+id, class="form")
+  form(id="form"+id, class="form", data-id=id)
     .form__field
       input(type="text", id="login"+id, name="name", placeholder="Your Name")
       .form__val

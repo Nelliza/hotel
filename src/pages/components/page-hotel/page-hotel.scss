@@ -33,4 +33,14 @@
       margin: 1rem 2rem;
     }
   }
+
+  &--contact-us {
+    $flex-map: (justify: space-evenly);
+    @include flex($flex-map...);
+
+    .page--hotel__item {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
 }

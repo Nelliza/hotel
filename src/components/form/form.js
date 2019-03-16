@@ -1,6 +1,6 @@
 $(function() {
-  $('#form1').on('submit', function(e) {
+  $('.form').on('submit', function(e) {
     e.preventDefault();
-    $(this).validateForm();
+    $(this).validateForm($(this).data('id'));
   });
 });
