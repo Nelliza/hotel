@@ -1,10 +1,15 @@
+.center-layer {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
 .page--hotel {
   max-width: 100%;
   margin: 0;
   padding: 6rem 0 0;
 
   &__item {
-    margin: 0 7rem 6rem;
+    margin-bottom: 4rem;
   }
 
   &__subtitle {
@@ -14,16 +19,18 @@
   }
 }
 
-.section-wrapper--news-list {
-  $flex-map: (justify: space-evenly);
-  @include flex($flex-map...);
+.section-wrapper {
+  &--news-list {
+    $flex-map: (justify: space-evenly);
+    @include flex($flex-map...);
 
-  >.news {
-    flex-grow: 1;
-    margin: 1rem 2rem;
-  }
+    >.news {
+      flex-grow: 1;
+    }
 
-  >.video {
-    margin: 1rem 2rem;
+    >.news,
+    >.video {
+      margin: 1rem 2rem;
+    }
   }
 }
