@@ -2,7 +2,7 @@
   $.fn.validateForm = function(id) {
     $('.form__val').removeClass().text('');
 
-    var login = $('#login'+id);
+    var login = $('#name'+id);
     if (!login.val() || login.val().length < 3 ) {
       var val_login = true;
       login.next().addClass('form__val form__val--error').text('Error');

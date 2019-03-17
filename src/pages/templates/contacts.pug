@@ -19,11 +19,38 @@ html(lang="en")
       .section-wrapper.section-wrapper--contact-us
         section.page--hotel__item
           +subtitle("Связаться с нами")
-          +form(2)
+          +form({
+            id: 2,
+            inputs: [
+              {
+                name: "name",
+                placeholder: "Ваше имя"
+              },
+              {
+                name: "email",
+                placeholder: "Ваш email"
+              }
+            ],
+            textarea: {
+              name: "message",
+              placeholder: "Введите текст сообщения"
+            },
+            btnText: "Отправить"
+          })
         section.page--hotel__item
-          +subtitle("Наши менеджеры")
-          +userProfile("John Smith", "UX Designer")
-          +userProfile("Sarah Brown", "Developer", "primary")
+          +subtitle("Наши специалисты")
+          +userProfile({
+            name: "Петров Петр",
+            photo: "John Smith",
+            profession: "менеджер по бронированию",
+            modifier: "primary"
+          })
+          +userProfile({
+            name: "Иванова Наталья",
+            photo: "Sarah Brown",
+            profession: "менеджер по туризму",
+            modifier: "additional"
+          })
 
       section.page--hotel__item.page--hotel__item--location
         +subtitle("Как нас найти")

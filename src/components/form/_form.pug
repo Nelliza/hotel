@@ -1,17 +1,35 @@
-mixin form(id)
-  form(id="form"+id, class="form", data-id=id)
+mixin form(options)
+  -
+    var defaultInputs = [
+      {
+        name: "name",
+        placeholder: "Your Name"
+      },
+      {
+        name: "email",
+        placeholder: "Your Email"
+      }
+    ]
+  -
+    var inputs = options.inputs || defaultInputs
+  - options.textarea = options.textarea || {}
+  - options.textarea.name = options.textarea.name || "message"
+  - options.textarea.placeholder = options.textarea.placeholder || "Your Message"
+  - options.textarea.rows = options.textarea.rows || 4
+  - options.btnText = options.btnText || "Submit"
+  - options.btnStyle = options.btnStyle || "primary"
+
+  form(id="form"+options.id, class="form", data-id=options.id)
+    each input in inputs
+      .form__field
+        input(type="text", id=""+input.name+options.id, name=input.name, placeholder=input.placeholder)
+        .form__val
     .form__field
-      input(type="text", id="login"+id, name="name", placeholder="Your Name")
-      .form__val
-    .form__field
-      input(type="text", id="email"+id, name="email", placeholder="Your Email")
-      .form__val
-    .form__field
-      textarea(id="message"+id, name="message", rows="4", placeholder="Your Message")
+      textarea(id="message"+options.id, name=options.textarea.name, rows=options.textarea.rows, placeholder=options.textarea.placeholder)
     +button({
       classes: "form__button",
-      modifiers: "primary",
-      text: "Submit",
+      modifiers: options.btnStyle,
+      text: options.btnText,
       tag: "button",
       btnType: "submit"
     })

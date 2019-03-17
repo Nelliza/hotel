@@ -1,4 +1,6 @@
 mixin socialIcon(options)
   each val in options
+    - val.link = val.link || "#"
+
     li(class=["user-profile__social-icon", "user-profile__social-icon--"+val.name])
       a(href=val.link)

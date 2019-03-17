@@ -1,26 +1,15 @@
 include _social-icon
 
-mixin userProfile(name, profession, modifier=false)
-  if modifier == "primary"
-    - modifier = "user-profile__info--primary"
+mixin userProfile(options)
+  - options.photo = options.photo || options.name
+  - options.social = options.social || self.htmlWebpackPlugin.options.social
+  - options.modifier = options.modifier || false
+  - var modifier = options.modifier ? "user-profile__info--"+options.modifier : false
 
   .user-profile
-    img(class="user-profile__photo", src=require("../../components/user-profile/"+name+".jpg"), alt=name)
+    img(class="user-profile__photo", src=require("../../components/user-profile/"+options.photo+".jpg"), alt=options.name)
     div(class=["user-profile__info", modifier])
-      span.user-profile__name= name
-      span.user-profile__profession= profession
+      span.user-profile__name= options.name
+      span.user-profile__profession= options.profession
       ul.user-profile__social
-        +socialIcon([
-          {
-            name: "facebook",
-            link: "#"
-          },
-          {
-            name: "twitter",
-            link: "#"
-          },
-          {
-            name: "dribbble",
-            link: "#"
-          }
-        ])
+        +socialIcon(options.social)

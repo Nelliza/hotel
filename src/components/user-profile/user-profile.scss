@@ -23,7 +23,6 @@
     padding: .5rem;
     text-align: center;
     vertical-align: middle;
-    background-color: $color-disabled;
     border-radius: .4rem;
 
     @media screen and (max-width: 714px) {
@@ -31,16 +30,20 @@
     }
 
     &:before {
-      @include triangle-tooltip($color-disabled);
+      @include triangle-tooltip();
+    }
+
+    &--additional,
+    &--additional::before {
+      background-color: $color-disabled;
+    }
+
+    &--primary,
+    &--primary:before {
+      background-color: $color-primary;
     }
 
     &--primary {
-      background-color: $color-primary;
-
-      &:before {
-        background-color: $color-primary;
-      }
-
       .user-profile__name,
       .user-profile__profession {
           color: #fff;
