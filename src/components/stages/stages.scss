@@ -3,6 +3,16 @@
   padding: .2rem 0 .6rem;
   counter-reset: step;
 
+  &--primary {
+    .stages__item {
+      &--done:before,
+      &--done:after,
+      &--current:before {
+        background-color: $color-primary;
+      }
+    }
+  }
+
   &__item {
     list-style-type: none;
     color: $color-disabled;

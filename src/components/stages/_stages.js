@@ -1,5 +1,5 @@
 (function($) {
-  $.fn.stages = function() {
+  $.fn.stages = function(options) {
 
     var $li = $(this).children('li');
     var $countItems = $li.length;
@@ -15,14 +15,18 @@
 
     var currentIdx = 0;
 
-    $('.stages__item').click(function(){
-      $('.stages__item').removeClass('stages__item--current stages__item--done');
+    $li.click(function(){
+      $li.removeClass('stages__item--current stages__item--done');
       $(this).addClass('stages__item--current');
       currentIdx = $(this).index();
 
       for (var i = 0; i < currentIdx; i++) {
-        $('.stages__item').eq(i).addClass('stages__item--done');
+        $li.eq(i).addClass('stages__item--done');
       }
     });
+
+    if (options.current) {
+      $li.eq(options.current - 1).trigger('click');
+    }
   }
 })(jQuery);

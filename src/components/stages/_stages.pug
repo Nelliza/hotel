@@ -1,4 +1,7 @@
-mixin stages(count)
-  ul.stages
-    - for (var i = 0; i < count; i++)
+mixin stages(options)
+  - options.count = options.count || 5
+  - var modifier = options.color ? "stages--"+options.color : false
+
+  ul(class=["stages", modifier], id="stages"+options.id)
+    - for (var i = 0; i < options.count; i++)
       li.stages__item

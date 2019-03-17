@@ -1,3 +1,5 @@
 $(function() {
-  $('.stages').stages();
+  $('#stages1').stages({
+    current: 3
+  });
 });
