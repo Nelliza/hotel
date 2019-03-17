@@ -70,7 +70,10 @@ section.page__item.page__item--sliders
 section.page__item.page__item--stages
   +subtitle("Stages")
   .section-wrapper
-    +stages(5)
+    +stages({
+      id: 1,
+      count: 5
+    })
 
 section.page__item.page__item--form-elements
   +subtitle("Form Elements")
@@ -95,7 +98,8 @@ section.page__item.page__item--form-elements
     +subtitle("Search / Drop Down")
     +search()
     +notfoundBtn
-    +dropDown("primary")
+    form.drop-down
+      +dropDown("primary")
 
   section.page__item.page__item--user-profile
     +subtitle("User Profile")

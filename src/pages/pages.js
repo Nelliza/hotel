@@ -3,3 +3,4 @@ import 'owl.carousel';
 
 import './components/promo/promo.js';
 import './components/callback/callback.js';
+import './components/reservation/reservation.js';

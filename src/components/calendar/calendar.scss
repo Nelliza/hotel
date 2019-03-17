@@ -19,6 +19,7 @@
 }
 
 .ui-datepicker {
+  z-index: 10 !important;
   width: auto;
   padding: 0;
   color: #868686;

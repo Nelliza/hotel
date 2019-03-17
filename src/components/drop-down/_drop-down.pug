@@ -1,8 +1,7 @@
 mixin dropDown(bgColor=false)
   - var modifier = bgColor ? "drop-down__select--"+bgColor : false
 
-  form.drop-down
-    select(class=["drop-down__select", modifier]) Choose An Option
-      option(selected, disabled) Choose An Option
-      option Option 1
-      option Option 2
+  select(class=["drop-down__select", modifier]) Choose An Option
+    option(selected, disabled) Choose An Option
+    option Option 1
+    option Option 2

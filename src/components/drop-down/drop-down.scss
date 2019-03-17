@@ -5,15 +5,15 @@
     width: 100%;
   }
 
-  @include fieldset("select+.ui-selectmenu-button>.ui-selectmenu-text", "select+.ui-selectmenu-button>.ui-selectmenu-icon", "_icons/arrow-down-icon.svg") {
-    .drop-down__select+.ui-selectmenu-button {
-      @include placeholder;
-      box-sizing: border-box;
-      width: 100%;
-      padding: 0;
-      outline: none;
-    }
-  }
+  @include fieldset("select+.ui-selectmenu-button>.ui-selectmenu-text", "select+.ui-selectmenu-button>.ui-selectmenu-icon", "_icons/arrow-down-icon.svg");
+}
+
+.drop-down__select+.ui-selectmenu-button {
+  @include placeholder;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  outline: none;
 }
 
 .ui-button {
