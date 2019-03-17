@@ -14,7 +14,7 @@
   }
 
   &:after {
-    @include fieldset-icon("_icons/search-icon.svg", $color-warning);
+    @include fieldset-icon("_icons/search-icon.svg");
     line-height: 1.75rem;
     content: "";
     text-align: center;

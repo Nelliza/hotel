@@ -1,6 +1,6 @@
 @import "./components/_fieldset/_fieldset-icon.scss";
 
-@mixin fieldset($input, $btn, $path, $color) {
+@mixin fieldset($input, $btn, $path) {
   position: relative;
   margin-bottom: 1rem;
 
@@ -11,8 +11,12 @@
   }
   
   &__#{$btn} {
-    @include fieldset-icon($path, $color);
+    @include fieldset-icon($path);
     cursor: pointer;
+
+    &--primary {
+      background-color: $color-primary;
+    }
   }
 
   @content;

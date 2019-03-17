@@ -1,4 +1,4 @@
-@mixin fieldset-icon($path, $color: $color-warning) {
+@mixin fieldset-icon($path) {
   @include size(2.1rem, 100%);
   position: absolute;
   top: 0;
@@ -6,6 +6,6 @@
   border: none;
   border-radius: 0 .2rem .2rem 0;
   outline: none;
-  background: url(./components/#{$path}) $color center no-repeat;
+  background: url(./components/#{$path}) $color-warning center no-repeat;
   background-size: 50%;
 }

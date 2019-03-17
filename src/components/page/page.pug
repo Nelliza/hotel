@@ -75,7 +75,9 @@ section.page__item.page__item--stages
 section.page__item.page__item--form-elements
   +subtitle("Form Elements")
   .section-wrapper.section-wrapper--form-elements
-    +form(1)
+    +form({
+      id: 1
+    })
     .section-wrapper
       section.page__item.page__item--toggles
         +subtitle("Toggles")
@@ -91,14 +93,22 @@ section.page__item.page__item--form-elements
 .section-wrapper.section-wrapper--two-section
   section.page__item.page__item--search
     +subtitle("Search / Drop Down")
-    +search
+    +search()
     +notfoundBtn
-    +dropDown
+    +dropDown("primary")
 
   section.page__item.page__item--user-profile
     +subtitle("User Profile")
-    +userProfile("John Smith", "UX Designer")
-    +userProfile("Sarah Brown", "Developer", "primary")
+    +userProfile({
+      name: "John Smith",
+      profession: "UX Designer",
+      modifier: "additional"
+    })
+    +userProfile({
+      name: "Sarah Brown",
+      profession: "Developer",
+      modifier: "primary"
+    })
 
 section.page__item.page__item--news
   +subtitle("News & Events")

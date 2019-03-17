@@ -1,4 +1,6 @@
-mixin search
+mixin search(bgColor=false)
+  - var modifier = bgColor ? "search__submit--"+bgColor : false
+
   form.search
     input(type="text", class="search__input", placeholder="Search")
-    button(type="submit", class="search__submit")
+    button(type="submit", class=["search__submit", modifier])

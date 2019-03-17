@@ -5,7 +5,7 @@
     width: 100%;
   }
 
-  @include fieldset("select+.ui-selectmenu-button>.ui-selectmenu-text", "select+.ui-selectmenu-button>.ui-selectmenu-icon", "_icons/arrow-down-icon.svg", $color-primary) {
+  @include fieldset("select+.ui-selectmenu-button>.ui-selectmenu-text", "select+.ui-selectmenu-button>.ui-selectmenu-icon", "_icons/arrow-down-icon.svg") {
     .drop-down__select+.ui-selectmenu-button {
       @include placeholder;
       box-sizing: border-box;
@@ -24,4 +24,8 @@
   @include placeholder;
   padding: .4rem .9rem;
   color: #000;
+}
+
+.drop-down__select--primary+.ui-selectmenu-button>.ui-selectmenu-icon {
+  background-color: $color-primary;
 }

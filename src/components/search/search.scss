@@ -1,5 +1,5 @@
 .search {
-  @include fieldset("input", "submit", "_icons/search-icon.svg", $color-warning);
+  @include fieldset("input", "submit", "_icons/search-icon.svg");
   width: 18.1rem;
 
   @media screen and (max-width: 580px) {
