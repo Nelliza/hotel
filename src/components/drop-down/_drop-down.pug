@@ -1,7 +1,9 @@
-mixin dropDown(bgColor=false)
-  - var modifier = bgColor ? "drop-down__select--"+bgColor : false
+mixin dropDown(options)
+  - options.modifier = "drop-down__select--"+options.modifier || ""
+  - options.title = options.title || "Choose An Option"
+  - options.values = options.values || []
 
-  select(class=["drop-down__select", modifier]) Choose An Option
-    option(selected, disabled) Choose An Option
-    option Option 1
-    option Option 2
+  select(class=["drop-down__select", options.modifier])
+    option(selected, disabled, style="display: none")= options.title
+    - for (var i = 0; i < options.values.length; i++)
+      option= options.values[i]

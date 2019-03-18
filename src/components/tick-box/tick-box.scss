@@ -3,11 +3,6 @@
 .tick-box {
   display: none;
 
-  &__label {
-    font-size: 0;
-    letter-spacing: 0;
-  }
-
   &__checkmark {
     margin: .5rem;
     cursor: pointer;

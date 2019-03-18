@@ -26,6 +26,10 @@
   color: #000;
 }
 
+.ui-state-disabled {
+  display: none;
+}
+
 .drop-down__select--primary+.ui-selectmenu-button>.ui-selectmenu-icon {
   background-color: $color-primary;
 }
