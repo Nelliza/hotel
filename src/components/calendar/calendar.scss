@@ -136,6 +136,10 @@
     background-color: $color-warning;
   }
 
+  .ui-state-disabled {
+    display: table-cell;
+  }
+
   .ui-state-highlight {
     color: $color-warning;
     background-color: #f2f2f2;

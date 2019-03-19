@@ -1,11 +1,11 @@
 @mixin fieldset-icon($path) {
-  @include size(2.1rem, 100%);
+  @include size(2.1rem, 1.75rem);
   position: absolute;
   top: 0;
   right: 0;
   border: none;
   border-radius: 0 .2rem .2rem 0;
   outline: none;
-  background: url(./components/#{$path}) $color-warning center no-repeat;
+  background: url(./components/#{$path}) $color-primary center no-repeat;
   background-size: 50%;
 }

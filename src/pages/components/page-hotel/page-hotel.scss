@@ -3,20 +3,20 @@
   margin-right: 6rem;
 }
 
-.page--hotel {
+.page-hotel {
   max-width: 100%;
   margin: 0;
-  padding: 6rem 0 0;
-
-  &__item {
-    margin-bottom: 4rem;
-  }
+  padding: 5rem 0 0;
 
   &__subtitle {
     margin: 2rem 0;
     text-transform: uppercase;
     text-align: center;
   }
+}
+
+.page__item--hotel {
+  margin-bottom: 4rem;
 }
 
 .section-wrapper {
@@ -38,7 +38,7 @@
     $flex-map: (justify: space-evenly);
     @include flex($flex-map...);
 
-    .page--hotel__item {
+    >section {
       margin-left: 1rem;
       margin-right: 1rem;
     }

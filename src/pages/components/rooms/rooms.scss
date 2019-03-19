@@ -1,4 +1,7 @@
 .rooms {
+  @include block-content(1rem 1rem .5rem, $color-warning) {
+    min-height: 14.7rem;
+  }
 
   &__list {
     display: flex;
@@ -35,9 +38,5 @@
     background-color: #181818;
     color: #fff;
     border: .13rem solid $color-warning;
-  }
-
-  @include block-content(1rem 1rem .5rem, $color-warning) {
-    min-height: 14.7rem;
   }
 }

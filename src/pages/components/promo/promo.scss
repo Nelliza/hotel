@@ -1,39 +1,36 @@
 .promo {
+  @include block-content(3rem);
   position: relative;
-
-  &__item {
-    position: relative;
-    width: 79%;
-    margin: auto;
-  }
 
   &__img {
     height: 30rem;
   }
+}
 
-  @include block-content(3rem);
+.carousel__item {
+  position: relative;
+  width: 80%;
+  margin: auto;
 }
 
 .owl-carousel {
   z-index: 0;
 }
 
-.owl-nav {
-  .arrow {
-    position: absolute;
-    top: 50%;
+.arrow--carousel {
+  position: absolute;
+  top: 50%;
 
-    &--prev {
-      left: 1%;
-    }
+  &.arrow--prev {
+    left: 1%;
+  }
 
-    &--next {
-      right: 1%;
-    }
-  
-    &.disabled {
-      @include arrow-state(disabled);
-      cursor: default;
-    }
+  &.arrow--next {
+    right: 1%;
+  }
+
+  &.disabled {
+    @include arrow-state(disabled);
+    cursor: default;
   }
 }

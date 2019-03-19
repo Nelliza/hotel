@@ -1,5 +1,5 @@
 $(function() {
-  $('.owl-carousel').owlCarousel({
+  $('#carousel1').owlCarousel({
     items: 1,
     nav: true,
     navText: false,
@@ -7,6 +7,6 @@ $(function() {
     autoplay: true
   });
 
-  $('.owl-prev').attr('class', 'arrow arrow--prev');
-  $('.owl-next').attr('class', 'arrow arrow--next');
+  $('.owl-prev').attr('class', 'arrow arrow--prev arrow--carousel');
+  $('.owl-next').attr('class', 'arrow arrow--next arrow--carousel');
 });

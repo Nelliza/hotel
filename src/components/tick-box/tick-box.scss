@@ -7,7 +7,17 @@
     margin: .5rem;
     cursor: pointer;
     border-radius: 50%;
-    background: #e5e5e5;
+    background: $color-disabled;
+  }
+
+  &:checked + label {
+    .tick-box__checkmark {
+      background: $color-primary;
+
+      &.tick-box__checkmark--warning {
+        background: $color-warning;
+      }
+    }
   }
 
   &:checked + label .tick-box__checkmark {

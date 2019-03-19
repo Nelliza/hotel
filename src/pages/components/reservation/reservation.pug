@@ -1,0 +1,78 @@
+section.page__item--hotel.reservation
+  .bookmarks
+    +stages({
+      modifier: "primary",
+      id: 2,
+      count: 3
+    })
+
+  .carousel.carousel--reservation.owl-carousel#carousel2
+    .reservation__slide.reservation__slide--checkin
+      h3.reservation__header Выберите планируемую дату отдыха
+      .reservation__item.reservation__item--checkin
+        .calendar
+          .form__fieldset
+            label.calendar__datepicker(for="from") Дата заезда
+            input(type="text", id="from", name="from")
+        .calendar
+          .form__fieldset
+            label.calendar__datepicker(for="to") Дата выезда
+            input(type="text", id="to", name="to")
+    .reservation__slide.reservation__slide--basic
+      h3.reservation__header Основная информация
+      .reservation__item
+        p Количество взрослых
+        +slider({
+          id: 3,
+          type: "pointer"
+        })
+      .reservation__item
+        p Количество детей
+        +slider({
+          id: 4,
+          type: "pointer"
+        })
+      .reservation__item
+        p Количество комнат
+        +slider({
+          id: 5,
+          type: "scale"
+        })
+      .reservation__item
+        +toggle({
+          id: 3,
+          text: "Проживание с домашним питомцем"
+        })
+    .reservation__slide.reservation__slide--additional
+      h3.reservation__header Дополнительная информация
+      .reservation__item
+        +dropDown({
+          title: "Питание",
+          values: ["Только завтрак", "Завтрак и ужин", "Трехразовое питание"]
+        })
+      .reservation__item
+        +tickBox({
+          id: 3,
+          text: "Собственная ванная комната"
+        })
+      .reservation__item
+        +tickBox({
+          id: 4,
+          text: "Наличие кухни в номере"
+        })
+      .reservation__item
+        tickBox({
+          id: 5,
+          text: "Наличие детской площадки"
+        })
+      .reservation__item
+        +tickBox({
+          id: 6,
+          text: "Первая береговая линия"
+        })
+      +button({
+        modifiers: "primary",
+        text: "Подобрать номер",
+        tag: "button",
+        btnType: "submit"
+      })

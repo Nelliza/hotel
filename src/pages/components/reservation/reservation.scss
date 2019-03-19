@@ -1,0 +1,76 @@
+.carousel__item--reservation {
+  width: 60%;
+  @include flex(center);
+}
+
+.reservation {
+  .stages {
+    width: 60%;
+    margin: auto;
+
+    &__item:after {
+      height: .5rem;
+    }
+  }
+
+  &__slide {
+    width: 60%;
+    margin: auto;
+
+    &--additional {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+
+      label {
+        flex-grow: 1;
+      }
+
+      >.button {
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__item {
+    display: flex;
+
+    &--checkin {
+      justify-content: space-evenly;
+    }
+
+    >p,
+    .toggle__label {
+      width: 50%;
+    }
+
+    .ui-selectmenu-button {
+      margin-bottom: .5rem;
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-top: 1rem;
+
+      &__wrapper {
+        margin-left: -.1rem;
+      }
+    }
+
+    >.slider {
+      width: 50%;
+    }
+
+    >label {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
