@@ -22,12 +22,26 @@ section.page__item.page__item--buttons
 section.page__item.page__item--arrows
   +subtitle("Arrow buttons")
   .section-wrapper.section-wrapper--arrows
-    +arrow("prev")
-    +arrow("next")
-    +arrow("prev", "disabled")
-    +arrow("next", "disabled")
-    +arrow("prev")
-    +arrow("next")
+    +arrow({
+      orientation: "prev"
+    })
+    +arrow({
+      orientation: "next"
+    })
+    +arrow({
+      orientation: "prev",
+      disabled: "disabled"
+    })
+    +arrow({
+      orientation: "next",
+      disabled: "disabled"
+    })
+    +arrow({
+      orientation: "prev"
+    })
+    +arrow({
+      orientation: "next"
+    })
 
 section.page__item.page__item--percentages
   +subtitle("Percentages / Pie chart")
@@ -59,13 +73,14 @@ section.page__item.page__item--sliders
   +subtitle("Sliders")
   .section-wrapper.section-wrapper--sliders
     +slider({
-        id: 1,
-        type: "pointer"
-      })
+      id: 1,
+      modifier: "warning",
+      type: "pointer"
+    })
     +slider({
-        id: 2,
-        type: "scale"
-      })
+      id: 2,
+      type: "scale"
+    })
 
 section.page__item.page__item--stages
   +subtitle("Stages")
@@ -85,21 +100,33 @@ section.page__item.page__item--form-elements
       section.page__item.page__item--toggles
         +subtitle("Toggles")
         .section-wrapper.section-wrapper--toggles
-          +toggle()
-          +toggle(true)
+          +toggle({
+            id: 1
+          })
+          +toggle({
+            id: 2,
+            checked: true
+          })
       section.page__item.page__item--tick-boxes
         +subtitle("Tick Boxes")
         .section-wrapper.section-wrapper--tick-boxes
-          +tickBox(1, 24, true)
-          +tickBox(2, 24)
+          +tickBox({
+            id: 1,
+            checked: true
+          })
+          +tickBox({
+            id: 2
+          })
 
 .section-wrapper.section-wrapper--two-section
   section.page__item.page__item--search
     +subtitle("Search / Drop Down")
-    +search()
+    +search({
+      btnColor: "warning"
+    })
     +notfoundBtn
     form.drop-down
-      +dropDown("primary")
+      +dropDown({})
 
   section.page__item.page__item--user-profile
     +subtitle("User Profile")

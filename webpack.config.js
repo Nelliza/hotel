@@ -157,7 +157,7 @@ module.exports = {
     overlay: true
   },
   plugins: [
-    new SpriteLoaderPlugin()
+    new SpriteLoaderPlugin({})
   ]
   .concat(htmlPlugins)
 }

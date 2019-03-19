@@ -1,14 +1,10 @@
-@mixin arrow-state($state) {
-  $color: "";
+@mixin arrow-state($state, $bg-color: $color-primary) {
   @if $state == disabled {
-    $color: $color-disabled;
-  }
-  @else if $state == hover {
-    $color: $color-primary;
+    $bg-color: $color-disabled;
   }
 
   border-color: transparent;
-  background-color: $color;
+  background-color: $bg-color;
 
   &:before {
     background: url(./components/_icons/arrow-next-white-icon.svg);

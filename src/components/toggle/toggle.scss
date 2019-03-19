@@ -1,9 +1,11 @@
 .toggle {
-  @include size(3.7rem, 1.5rem);
-  margin: .4rem;
-  display: inline-block;
-  position: relative;
-  font-size: 1.1rem;
+  &__wrapper {
+    @include size(3.7rem, 1.5rem);
+    margin: .4rem;
+    display: inline-block;
+    position: relative;
+    font-size: 1.1rem;
+  }
 
   &__checkbox {
     @include pseudo-elem(false);
@@ -16,6 +18,10 @@
     &:checked {
       ~.toggle__background {
         background-color: $color-primary;
+
+        &--warning {
+          background-color: $color-warning;
+        }
       }
 
       ~.toggle__round {

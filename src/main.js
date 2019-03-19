@@ -4,6 +4,7 @@ import 'webpack-jquery-ui/slider';
 import 'webpack-jquery-ui/selectmenu';
 import 'webpack-jquery-ui/datepicker';
 
+import './components/slider/_slider.js';
 import './components/stages/_stages.js';
 import './components/form/_validate-form.js';
 

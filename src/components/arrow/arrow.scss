@@ -1,13 +1,18 @@
 @import "./components/arrow/_arrow-state.scss";
 
 .arrow {
-  @include size(3.2rem);
   margin: .6rem .72rem;
   border: .2rem solid $color-primary;
   outline: none;
   border-radius: 50%;
   background-color: #fff;
   cursor: pointer;
+
+  &--prev {
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
 
   &:hover {
     @include arrow-state(hover);
@@ -18,6 +23,14 @@
     cursor: default;
   }
 
+  &--warning {
+    border-color: $color-warning;
+
+    &:hover {
+      @include arrow-state(hover, $color-warning);
+    }
+  }
+
   &:before {
     content: "";
     display: block;
@@ -25,11 +38,5 @@
     height: 1.6rem;
     margin: 0 auto;
     background: url(./components/_icons/arrow-next-icon.svg);
-  }
-
-  &--prev {
-    &:before {
-      transform: rotate(180deg);
-    }
   }
 }

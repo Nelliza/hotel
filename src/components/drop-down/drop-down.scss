@@ -22,7 +22,7 @@
 
 .ui-selectmenu-menu.ui-selectmenu-open {
   @include placeholder;
-  padding: .4rem .9rem;
+  background-color: #fff;
   color: #000;
 }
 
@@ -30,6 +30,6 @@
   display: none;
 }
 
-.drop-down__select--primary+.ui-selectmenu-button>.ui-selectmenu-icon {
-  background-color: $color-primary;
+.drop-down__select--warning+.ui-selectmenu-button>.ui-selectmenu-icon {
+  background-color: $color-warning;
 }
