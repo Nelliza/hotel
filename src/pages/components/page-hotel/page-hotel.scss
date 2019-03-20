@@ -1,6 +1,16 @@
 .center-layer {
   margin-left: 6rem;
   margin-right: 6rem;
+
+  @media screen and (max-width: 580px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  @media screen and (max-width: 390px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 .page-hotel {
@@ -24,13 +34,10 @@
     $flex-map: (justify: space-evenly);
     @include flex($flex-map...);
 
-    >.news {
-      flex-grow: 1;
-    }
-
     >.news,
-    >.video {
-      margin: 1rem 2rem;
+    >.video-wrapper {
+      margin: 1rem;
+      flex-grow: 1;
     }
   }
 

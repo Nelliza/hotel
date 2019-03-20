@@ -1,24 +1,27 @@
 @mixin block-content($padding: 1rem, $border-color: $color-primary) {
-  &__content {
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    bottom: 10%;
-    padding: $padding;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,.6);
-    color: #fff;
-    border: .13rem solid $border-color;
-    text-align: center;
-    @content;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  padding: $padding;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,.6);
+  color: #fff;
+  border: .13rem solid $border-color;
+  text-align: center;
+  @content;
 
-    &:before {
-      content: "";
-      position: absolute;
-      left: 35%;
-      right: 35%;
-      height: 2px;
-      background-color: $border-color;
-    }
+  @media screen and (max-width: 390px) {
+    left: 5%;
+    right: 5%;
+    padding: 1rem;
   }
-}
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 35%;
+    right: 35%;
+    height: 2px;
+    background-color: $border-color;
+  }}

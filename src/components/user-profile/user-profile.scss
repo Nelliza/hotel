@@ -1,6 +1,8 @@
 @import "./components/user-profile/_social-icon.scss";
 
 .user-profile {
+  display: flex;
+  align-items: center;
   margin-bottom: .7rem;
 
   @media screen and (max-width: 580px) {
@@ -27,6 +29,7 @@
 
     @media screen and (max-width: 714px) {
       width: auto;
+      flex-grow: 1;
     }
 
     &:before {

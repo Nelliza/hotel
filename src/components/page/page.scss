@@ -64,6 +64,10 @@
     &--calendar,
     &--messaging {
       @include subtitle-margins(3rem);
+
+      @media screen and (max-width: 580px) {
+        flex-grow: 1;
+      }
     }
 
     &--video {

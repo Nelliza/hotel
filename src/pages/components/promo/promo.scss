@@ -1,6 +1,9 @@
 .promo {
-  @include block-content(3rem);
   position: relative;
+
+  &__content {
+    @include block-content(3rem);
+  }
 
   &__img {
     height: 30rem;
