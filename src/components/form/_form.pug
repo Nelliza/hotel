@@ -11,7 +11,7 @@ mixin form(options)
       }
     ]
   -
-    var inputs = options.inputs || defaultInputs
+    options.inputs = options.inputs || defaultInputs
   - options.textarea = options.textarea || {}
   - options.textarea.name = options.textarea.name || "message"
   - options.textarea.placeholder = options.textarea.placeholder || "Your Message"
@@ -20,7 +20,7 @@ mixin form(options)
   - options.btnStyle = options.btnStyle || "primary"
 
   form(id="form"+options.id, class="form", data-id=options.id)
-    each input in inputs
+    each input in options.inputs
       .form__fieldset
         input(type="text", id=""+input.name+options.id, name=input.name, placeholder=input.placeholder)
         .form__val

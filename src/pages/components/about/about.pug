@@ -1,5 +1,5 @@
-include ./_about-list
-include ./_images-list
+include ./_about-items
+include ./_images-items
 
 section.page__item--hotel.about
   +subtitle("Об отеле")
@@ -7,23 +7,45 @@ section.page__item--hotel.about
     .about__text
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
     .about__images
-      +imagesList([
+      +imagesItems([
         { src: "about-1" },
         { src: "about-2" },
         { src: "about-3" }
       ])
   h3.page-hotel__subtitle Отель в цифрах
-  +aboutList([
-    {
-      percent: 80,
-      text: "Оценка качества услуг постояльцами"
-    },
-    {
-      percent: 75,
-      text: "Порекомендуют наш отель своим друзьям"
-    },
-    {
-      percent: 57,
-      text: "Планируют вернуться сюда в будущем"
-    }
-  ])
+  .about__list
+    +aboutItems([
+      {
+        percent: 80,
+        text: "Оценка качества услуг постояльцами"
+      },
+      {
+        percent: 75,
+        text: "Порекомендуют наш отель своим друзьям"
+      },
+      {
+        percent: 57,
+        text: "Планируют вернуться сюда в будущем"
+      }
+    ])
+    .about__item
+      +pie-chart({
+        items: [
+          {
+            percent: 35,
+            fill: "#747474",
+            name: "Мужчины"
+          },
+          {
+            percent: 45,
+            fill: "#e75735",
+            name: "Женщины"
+          },
+          {
+            percent: 20,
+            fill: "#4eb7a8",
+            name: "Дети"
+          }
+        ],
+        withLegend: true
+      })

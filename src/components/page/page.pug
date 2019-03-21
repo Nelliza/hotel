@@ -50,24 +50,26 @@ section.page__item.page__item--percentages
     +percentage(38)
     +percentage(62)
     +percentage(89)
-    +pie-chart([
-      {
-        percent: 10,
-        fill: "#747474"
-      },
-      {
-        percent: 25,
-        fill: "#e75735"
-      },
-      {
-        percent: 30,
-        fill: "#4eb7a8"
-      },
-      {
-        percent: 35,
-        fill: "#e5e5e5"
-      }
-    ])
+    +pie-chart({
+      items: [
+        {
+          percent: 10,
+          fill: "#747474"
+        },
+        {
+          percent: 25,
+          fill: "#e75735"
+        },
+        {
+          percent: 30,
+          fill: "#4eb7a8"
+        },
+        {
+          percent: 35,
+          fill: "#e5e5e5"
+        }
+      ]
+    })
 
 section.page__item.page__item--sliders
   +subtitle("Sliders")

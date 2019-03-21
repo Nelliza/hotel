@@ -1,0 +1,5 @@
+mixin aboutItems(items)
+  each item in items
+    .about__item
+      +percentage(item.percent)
+      p.about__level= item.text
