@@ -1,28 +1,2 @@
-include ./_menu-list
-
 header.page-header
-  nav.main-menu
-    img.logo(src=require("../components/logo/logo.png"), alt="")
-    ul.main-menu__list
-      +menuList([
-        {
-          name: "Главная",
-          link: "./index.html"
-        },
-        {
-          name: "Снять номер",
-          link: "./reservation.html"
-        },
-        {
-          name: "Новости",
-          link: "./news.html"
-        },
-        {
-          name: "Контакты",
-          link: "./contacts.html"
-        },
-        {
-          name: "UI-Kit",
-          link: "./main.html"
-        }
-      ])
+  include ./main-menu/main-menu

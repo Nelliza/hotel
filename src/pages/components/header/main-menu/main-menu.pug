@@ -1,0 +1,32 @@
+include ./_menu-list
+
+nav.main-menu
+  img.logo(src=require("../components/logo/logo.png"), alt="")
+  .main-menu__btn
+      span
+      span
+      span
+      span
+  ul.main-menu__list
+    +menuList([
+      {
+        name: "Главная",
+        link: "./index.html"
+      },
+      {
+        name: "Снять номер",
+        link: "./reservation.html"
+      },
+      {
+        name: "Новости",
+        link: "./news.html"
+      },
+      {
+        name: "Контакты",
+        link: "./contacts.html"
+      },
+      {
+        name: "UI-Kit",
+        link: "./main.html"
+      }
+    ])

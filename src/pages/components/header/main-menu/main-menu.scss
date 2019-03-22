@@ -1,0 +1,118 @@
+.main-menu {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background-color: $color-primary;
+  box-shadow: 0 .5rem 3rem 1rem rgba(0,0,0,.2);
+  border-bottom: 2px solid rgba(231,87,53,.3);
+
+  &__btn {
+    @include size(2.4rem, 1.4rem);
+    position: relative;
+    display: none;
+    cursor: pointer;
+
+    @media screen and (max-width: 600px) {
+      display: inline-block;
+    }
+
+    span {
+      @include size(100%, .2rem);
+      position: absolute;
+      display: block;
+      border-radius: .3rem;
+      background-color: #fff;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: calc(50%-.1rem);
+      }
+
+      &:last-child {
+        bottom: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media screen and (max-width: 600px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      margin-top: 3rem;
+      background-color: $color-primary;
+      overflow: auto;
+    }
+  }
+
+  &__item {
+    &:hover,
+    &--active {
+      >a {
+        color: $color-warning;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      text-align: center;
+      border-top: .1rem solid rgba(0,0,0,.1);
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &--open {
+    .main-menu {
+      &__btn span {
+        &:first-child,
+        &:last-child {
+          opacity: 0;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+
+      &__list {
+        display: flex;
+      }
+
+      &__item {
+        padding: .7rem 0;
+      }
+    }
+  }
+}
