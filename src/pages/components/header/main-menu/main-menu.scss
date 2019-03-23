@@ -70,13 +70,6 @@
   }
 
   &__item {
-    &:hover,
-    &--active {
-      >a {
-        color: $color-warning;
-      }
-    }
-
     @media screen and (max-width: 600px) {
       width: 100%;
       text-align: center;
@@ -87,6 +80,11 @@
   &__link {
     color: #fff;
     text-decoration: none;
+
+    &:hover,
+    &--active {
+      color: $color-warning;
+    }
   }
 
   &--open {
