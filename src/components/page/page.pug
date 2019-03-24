@@ -46,10 +46,18 @@ section.page__item.page__item--arrows
 section.page__item.page__item--percentages
   +subtitle("Percentages / Pie chart")
   .section-wrapper.section-wrapper--percentages
-    +percentage(0)
-    +percentage(38)
-    +percentage(62)
-    +percentage(89)
+    +percentage({
+      percent: 0
+    })
+    +percentage({
+      percent: 38
+    })
+    +percentage({
+      percent: 62
+    })
+    +percentage({
+      percent: 89
+    })
     +pie-chart({
       items: [
         {
@@ -151,14 +159,14 @@ section.page__item.page__item--news
       title: "It's all going downhill",
       date: "24 august 2013",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
-      image: "news1"
+      image: "news-1"
     })
     +news({
       id: 2,
       title: "This is the title",
       date: [24, "Aug"],
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "news2",
+      image: "news-2",
       modifier: "primary",
       isCalendar: true
     })

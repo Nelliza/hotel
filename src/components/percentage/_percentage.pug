@@ -1,5 +1,8 @@
-mixin percentage(percent, fill="#e75735")
-  div(class="percentage", data-percent=percent)
-    svg(class="percentage__svg", viewBox="0 0 32 32")
-      circle(class="percentage__item", r="16", cx="16", cy="16", style="stroke: "+fill+"; stroke-dasharray: "+percent+" 100")
-      circle(class="percentage__center", r="10", cx="16", cy="16")
+mixin percentage(options)
+  - options.size = options.size || "6rem"
+  - options.strokeColor = options.strokeColor || "#e75735"
+
+  .percentage(data-percent=options.percent, style="width: " + options.size + "; height: " + options.size + "; font-size: " + options.size)
+    svg.percentage__svg(viewBox="0 0 32 32")
+      circle.percentage__item(r="16", cx="16", cy="16", style="stroke: " + options.strokeColor + "; stroke-dasharray: " + options.percent + " 100")
+      circle.percentage__center(r="10", cx="16", cy="16")

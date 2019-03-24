@@ -1,8 +1,9 @@
 mixin pie-chart(options)
+  - options.size = options.size || "6rem"
   - options.withLegend = options.withLegend || false
   - options.legendUnit = options.legendUnit || "%"
 
-  .pie-chart
+  .pie-chart(style="width: " + options.size + "; height: " + options.size)
     svg.pie-chart__svg(viewBox="0 0 32 32")
       - var percent = 100
       - var sumPercent = 0
