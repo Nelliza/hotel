@@ -1,4 +1,4 @@
 mixin imagesItems(options)
   - for (var i = 0; i < 3; i++)
     - options[i].alt = options[i].alt || ""
-    img.about__image(src=require("../components/about/"+options[i].src+".jpg"), alt=options[i].alt)
+    img.about__image(src=require("../components/about/" + options[i].src + ".jpg"), alt=options[i].alt)

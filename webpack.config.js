@@ -15,16 +15,16 @@ function generateHtmlPlugins(templateDir) {
       inject: false,
       social: [
         {
-          name: "facebook",
-          link: "#"
+          name: 'facebook',
+          link: '#'
         },
         {
-          name: "twitter",
-          link: "#"
+          name: 'twitter',
+          link: '#'
         },
         {
-          name: "dribbble",
-          link: "#"
+          name: 'dribbble',
+          link: '#'
         }
       ]
     })

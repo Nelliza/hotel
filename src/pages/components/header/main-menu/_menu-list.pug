@@ -1,5 +1,6 @@
 mixin menuList(options)
-  each val in options
-    - val.link = val.link || "#"
+  each option in options
+    - option.link = option.link || "#"
+
     li.main-menu__item
-      a.main-menu__link(href=val.link)= val.name
+      a.main-menu__link(href=option.link)= option.name

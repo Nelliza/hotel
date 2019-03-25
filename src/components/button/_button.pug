@@ -7,19 +7,19 @@ mixin button(options)
   - options.btnType = options.btnType || "button"
 
   - var classNames = []
-  each val in [options.classes, options.modifiers]
-    if val
-      if Array.isArray(val)
-        each name in val
-          if val == options.modifiers
-            - classNames.push("button--" + name)
+  each modifiers in [options.classes, options.modifiers]
+    if modifiers
+      if Array.isArray(modifiers)
+        each modifier in modifiers
+          if modifiers == options.modifiers
+            - classNames.push("button--" + modifier)
           else
-            - classNames.push(name)
+            - classNames.push(modifier)
       else
-        if val == options.modifiers
-          - classNames.push("button--" + val)
+        if modifiers == options.modifiers
+          - classNames.push("button--" + modifiers)
         else
-          - classNames.push(val)
+          - classNames.push(modifiers)
 
   if options.tag == "button"
     button(class=["button", classNames], type=options.btnType)= options.text

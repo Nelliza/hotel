@@ -1,11 +1,11 @@
 mixin tickBox(options)
-  - options.modifier = options.modifier ? "tick-box__checkmark--"+options.modifier : false
+  - options.modifier = options.modifier ? "tick-box__checkmark--" + options.modifier : false
   - options.size = options.size || 24
   - options.checked = options.checked || false
   - options.text = options.text || ""
 
-  input.tick-box(type="checkbox", id="tix-box"+options.id, checked=options.checked)
-  label.tick-box__label(for="tix-box"+options.id)
+  input.tick-box(type="checkbox", id="tix-box" + options.id, checked=options.checked)
+  label.tick-box__label(for="tix-box" + options.id)
     svg(class=["tick-box__checkmark", options.modifier], width=options.size, height=options.size)
-      path(class="tick-box__check", d="M6.7 12 L10.7 16 L18 8", stroke="#c0c0c0", stroke-width="3", fill="none")
+      path.tick-box__check(d="M6.7 12 L10.7 16 L18 8", stroke="#c0c0c0", stroke-width=3, fill="none")
     span= options.text

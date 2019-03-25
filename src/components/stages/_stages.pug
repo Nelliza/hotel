@@ -1,7 +1,7 @@
 mixin stages(options)
-  - options.modifier = options.modifier ? "stages--"+options.modifier : false
+  - options.modifier = options.modifier ? "stages--" + options.modifier : false
   - options.count = options.count || 5
 
-  ul(class=["stages", options.modifier], id="stages"+options.id)
+  ul(class=["stages", options.modifier], id="stages" + options.id)
     - for (var i = 0; i < options.count; i++)
       li.stages__item
