@@ -1,0 +1,1 @@
+This site is published at https://nelliza.github.io/hotel/
