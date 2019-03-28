@@ -1,21 +1,6 @@
-.center-layer {
-  margin-left: 6rem;
-  margin-right: 6rem;
-
-  @media screen and (max-width: 580px) {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
-  @media screen and (max-width: 390px) {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
-
 .page-hotel {
-  max-width: 100%;
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 5rem 0 0;
 
   &__subtitle {
@@ -49,5 +34,20 @@
       margin-left: 1rem;
       margin-right: 1rem;
     }
+  }
+}
+
+.center-layer {
+  margin-left: 6rem;
+  margin-right: 6rem;
+
+  @media screen and (max-width: 580px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  @media screen and (max-width: 390px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
