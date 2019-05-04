@@ -1,14 +1,5 @@
-mixin promoList(options)
-  - options.btnColor = options.btnColor || "primary"
+mixin promoList(items)
 
-  each item in options.items
+  each item in items
     .carousel__item
-      .promo__img(style="background: url(" + require("../components/promo/" + item.image + ".jpg") + ") no-repeat center")
-      .promo__content
-        h3.promo__header= item.header
-        p.promo__text= item.text
-        +button({
-          modifiers: options.btnColor,
-          text: "Подробнее",
-          link: item.link
-        })
+      .promo__img(style="background: url(" + require("../components/promo/" + item + ".jpg") + ") no-repeat")
