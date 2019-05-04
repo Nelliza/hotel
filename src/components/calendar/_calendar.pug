@@ -1,4 +1,4 @@
-mixin calendar(options)
+mixin calendar(options={})
   - options.modifier = options.modifier ? "calendar--" + options.modifier : false
 
   div(class=["calendar", options.modifier])

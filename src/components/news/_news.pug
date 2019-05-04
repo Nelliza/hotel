@@ -1,4 +1,4 @@
-mixin news(options)
+mixin news(options={})
   - options.modifier = options.modifier || false
   - options.isCalendar = options.isCalendar || false
   - var modifierDescr = options.modifier ? "news__description--" + options.modifier : false

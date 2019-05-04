@@ -1,6 +1,6 @@
 include _social-icon
 
-mixin userProfile(options)
+mixin userProfile(options={})
   - options.photo = options.photo || options.name
   - options.social = options.social || self.htmlWebpackPlugin.options.social
   - options.modifier = options.modifier || false

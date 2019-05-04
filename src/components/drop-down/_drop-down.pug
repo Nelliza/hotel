@@ -1,4 +1,4 @@
-mixin dropDown(options)
+mixin dropDown(options={})
   - options.modifier = options.modifier ? "drop-down__select--" + options.modifier : false
   - options.title = options.title || "Choose An Option"
   - options.values = options.values || ["Option 1", "Option 2"]

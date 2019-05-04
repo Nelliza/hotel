@@ -1,5 +1,6 @@
 mixin roomsList(options)
   - options.btnColor = options.btnColor || "primary"
+  - options.btnText = options.btnText || "Забронировать"
 
   each item in options.items
     li.rooms__item
@@ -10,6 +11,6 @@ mixin roomsList(options)
         p.rooms__text= item.text
       +button({
         modifiers: options.btnColor,
-        text: "Забронировать",
+        text: options.btnText,
         link: item.link
       })
