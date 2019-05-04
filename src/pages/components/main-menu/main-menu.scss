@@ -2,12 +2,13 @@
   z-index: 10;
   position: fixed;
   top: 0;
+  left: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 1200px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1920px;
   padding: 0 1.5rem;
   box-sizing: border-box;
   background-color: $color-primary;

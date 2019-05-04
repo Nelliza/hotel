@@ -1,7 +1,9 @@
 .page-hotel {
-  max-width: 1200px;
+  width: auto;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 5rem 0 0;
+  font-size: 1.3rem;
 
   &__subtitle {
     margin: 2rem 0;
@@ -20,7 +22,7 @@
     @include flex($flex-map...);
 
     >.news,
-    >.video-wrapper {
+    >.video {
       margin: 1rem;
       flex-grow: 1;
     }
