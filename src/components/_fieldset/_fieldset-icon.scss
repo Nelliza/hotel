@@ -7,6 +7,6 @@
   border: none;
   border-radius: 0 .2rem .2rem 0;
   outline: none;
-  background: url(./components/#{$path}) $color-primary center no-repeat;
+  background: url(./assets/icons/#{$path}) $color-primary center no-repeat;
   background-size: 50%;
 }

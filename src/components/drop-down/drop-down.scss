@@ -5,7 +5,7 @@
     width: 100%;
   }
 
-  @include fieldset("select+.ui-selectmenu-button>.ui-selectmenu-text", "select+.ui-selectmenu-button>.ui-selectmenu-icon", "_icons/arrow-down-icon.svg");
+  @include fieldset("select+.ui-selectmenu-button>.ui-selectmenu-text", "select+.ui-selectmenu-button>.ui-selectmenu-icon", "arrow-down-icon.svg");
 }
 
 .drop-down__select+.ui-selectmenu-button {

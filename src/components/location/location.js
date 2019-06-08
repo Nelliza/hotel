@@ -20,7 +20,7 @@
         balloonPanelMaxMapArea: Infinity,
         balloonCloseButton: false,
         iconLayout: 'default#image',
-        iconImageHref: require('../_icons/marker-icon.svg'),
+        iconImageHref: require('../../assets/icons/marker-icon.svg'),
         iconImageSize: [60, 80],
         iconImageOffset: [-20, -34]
       });

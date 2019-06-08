@@ -129,7 +129,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        include: path.resolve(__dirname, './src/components/_icons'),
+        include: path.resolve(__dirname, './src/assets/icons'),
         use: [
           {
             loader: 'svg-sprite-loader',
