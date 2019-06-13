@@ -17,3 +17,8 @@ $ npm run build
 ```
 $ npm run dev
 ```
+
+## Publication
+```
+$ npm run deploy
+```
