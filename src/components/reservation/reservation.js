@@ -1,6 +1,6 @@
 $(function() {
   var dateFormat = 'mm/dd/yy',
-    from = $('#from')
+    from = $('.calendar input[name="from"]')
       .datepicker({
         defaultDate: '+1w',
         firstDay: 1,
@@ -9,7 +9,7 @@ $(function() {
       .on('change', function() {
         to.datepicker('option', 'minDate', getDate(this));
       }),
-    to = $('#to')
+    to = $('.calendar input[name="to"]')
       .datepicker({
         defaultDate: '+1w',
         firstDay: 1,
@@ -31,36 +31,29 @@ $(function() {
     return $date;
   }
 
-  $('#stages2').stages({
+  $('.reservation__stages > .stages').stages({
     current: 1
   });
 
-  $('#carousel2').owlCarousel({
+  $('.carousel--reservation').owlCarousel({
     items: 1,
     dots: true,
-    dotsContainer: '#stages2',
+    dotsContainer: '.reservation__stages > .stages',
     mouseDrag: false
   });
 
   $('.stages__item').click(function(){
-    $('#carousel2').trigger('to.owl.carousel', [$(this).index(), 300]);  
+    $('.carousel--reservation').trigger('to.owl.carousel', [$(this).index(), 300]);  
   });
 
-  $('#slider3').slider({
+  $('.reservation__item:not(:last-child) > .slider').slider({
     min: 1,
     max: 10,
     create: sliderPointerInitial,
     slide: sliderPointer
   });
 
-  $('#slider4').slider({
-    min: 1,
-    max: 10,
-    create: sliderPointerInitial,
-    slide: sliderPointer
-  });
-
-  $('#slider5').slider({
+  $('.reservation__item:last-child > .slider').slider({
     min: 1,
     max: 5,
     step: 1,

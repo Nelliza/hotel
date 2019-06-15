@@ -1,8 +1,8 @@
 (function($) {
-  $.fn.validateForm = function(id) {
+  $.fn.validateForm = function() {
     $('.form__val').removeClass().text('');
 
-    var login = $('#name'+id);
+    var login = this.find('input[name="name"]');
     if (!login.val() || login.val().length < 3 ) {
       var val_login = true;
       login.next().addClass('form__val form__val--error').text('Error');
@@ -12,7 +12,7 @@
     }
 
     var reg = /^\w+([\.-]?\w+)*@(((([a-z0-9]{2,})|([a-z0-9][-][a-z0-9]+))[\.][a-z0-9])|([a-z0-9]+[-]?))+[a-z0-9]+\.([a-z]{2}|(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum))$/i;
-    var email = $('#email'+id);
+    var email = this.find('input[name="email"]');
     var val_email = !email.val() || !reg.test(email.val());
 
     if (val_email) {

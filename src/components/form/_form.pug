@@ -19,13 +19,13 @@ mixin form(options={})
   - options.btnText = options.btnText || "Submit"
   - options.btnStyle = options.btnStyle || "primary"
 
-  form.form(id="form" + options.id, data-id=options.id)
+  form.form(action="handler.php")
     each input in options.inputs
       .form__fieldset
-        input(type="text", id="" + input.name + options.id, name=input.name, placeholder=input.placeholder)
+        input(type="text", name=input.name, placeholder=input.placeholder)
         .form__val
     .form__fieldset
-      textarea(id="message" + options.id, name=options.textarea.name, rows=options.textarea.rows, placeholder=options.textarea.placeholder)
+      textarea(name=options.textarea.name, rows=options.textarea.rows, placeholder=options.textarea.placeholder)
     +button({
       classes: "form__button",
       modifiers: options.btnStyle,

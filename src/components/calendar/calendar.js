@@ -1,7 +1,7 @@
 $(function() {
   currentDay();
 
-  $('#datepicker').datepicker({
+  $('.calendar__datepicker').datepicker({
     showButtonPanel: true,
     firstDay: 1,
     showOtherMonths: true,

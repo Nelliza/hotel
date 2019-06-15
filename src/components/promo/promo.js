@@ -1,5 +1,5 @@
 $(function() {
-  $('#carousel1').owlCarousel({
+  $('.promo > .carousel').owlCarousel({
     items: 1,
     nav: true,
     navText: false,

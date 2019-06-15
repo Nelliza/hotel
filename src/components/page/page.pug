@@ -83,12 +83,10 @@ section.page__item.page__item--sliders
   +subtitle("Sliders")
   .section-wrapper.section-wrapper--sliders
     +slider({
-      id: 1,
       modifier: "warning",
       type: "pointer"
     })
     +slider({
-      id: 2,
       type: "scale"
     })
 
@@ -96,16 +94,13 @@ section.page__item.page__item--stages
   +subtitle("Stages")
   .section-wrapper
     +stages({
-      id: 1,
       count: 5
     })
 
 section.page__item.page__item--form-elements
   +subtitle("Form Elements")
   .section-wrapper.section-wrapper--form-elements
-    +form({
-      id: 1
-    })
+    +form()
     .section-wrapper
       section.page__item.page__item--toggles
         +subtitle("Toggles")
@@ -155,14 +150,12 @@ section.page__item.page__item--news
   +subtitle("News & Events")
   .section-wrapper.section-wrapper--news
     +news({
-      id: 1,
       title: "It's all going downhill",
       date: "24 august 2013",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
       image: "news-1"
     })
     +news({
-      id: 2,
       title: "This is the title",
       date: [24, "Aug"],
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -183,8 +176,7 @@ section.page__item.page__item--location
   section.page__item.page__item--messaging
     +subtitle("Messaging")
     +messaging({
-      name: "Sarah Brown",
-      id: 2
+      name: "Sarah Brown"
     })
 
 section.page__item.page__item--video

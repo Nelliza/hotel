@@ -2,40 +2,36 @@ section.page__item--hotel.reservation
   .reservation__stages
     +stages({
       modifier: "primary",
-      id: 2,
       count: 3
     })
 
-  .carousel.carousel--reservation.owl-carousel#carousel2
+  .carousel.carousel--reservation.owl-carousel
     .reservation__slide.reservation__slide--checkin
       h3.reservation__header Выберите планируемую дату отдыха
       .reservation__item.reservation__item--checkin
         .calendar()
           .form__fieldset
             label.calendar__label(for="from") Дата заезда
-            input(type="text", id="from", name="from")
+              input(type="text", name="from")
         .calendar()
           .form__fieldset
             label.calendar__label(for="to") Дата выезда
-            input(type="text", id="to", name="to")
+              input(type="text", name="to")
     .reservation__slide.reservation__slide--basic
       h3.reservation__header Основная информация
       .reservation__item
         p Количество взрослых
         +slider({
-          id: 3,
           type: "pointer"
         })
       .reservation__item
         p Количество детей
         +slider({
-          id: 4,
           type: "pointer"
         })
       .reservation__item
         p Количество комнат
         +slider({
-          id: 5,
           type: "scale"
         })
       .reservation__item
