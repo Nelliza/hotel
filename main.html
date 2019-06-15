@@ -84,12 +84,12 @@
     <section class="page__item page__item--sliders">
       <h2 class="subtitle">Sliders</h2>
       <div class="section-wrapper section-wrapper--sliders">
-        <div class="slider slider--with-pointer slider--warning" id="slider1">
+        <div class="slider slider--with-pointer slider--warning">
           <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
             <div class="slider__pointer"></div>
           </div>
         </div>
-        <div class="slider slider--with-scale" id="slider2">
+        <div class="slider slider--with-scale">
           <div class="ui-slider-handle slider__handle">
           </div>
           <ul class="slider__scale"></ul>
@@ -99,7 +99,7 @@
     <section class="page__item page__item--stages">
       <h2 class="subtitle">Stages</h2>
       <div class="section-wrapper">
-        <ul class="stages" id="stages1">
+        <ul class="stages">
           <li class="stages__item"></li>
           <li class="stages__item"></li>
           <li class="stages__item"></li>
@@ -111,17 +111,17 @@
     <section class="page__item page__item--form-elements">
       <h2 class="subtitle">Form Elements</h2>
       <div class="section-wrapper section-wrapper--form-elements">
-        <form class="form" id="form1" data-id="1">
+        <form class="form" action="handler.php">
           <div class="form__fieldset">
-            <input type="text" id="name1" name="name" placeholder="Your Name">
+            <input type="text" name="name" placeholder="Your Name">
             <div class="form__val"></div>
           </div>
           <div class="form__fieldset">
-            <input type="text" id="email1" name="email" placeholder="Your Email">
+            <input type="text" name="email" placeholder="Your Email">
             <div class="form__val"></div>
           </div>
           <div class="form__fieldset">
-            <textarea id="message1" name="message" rows="4" placeholder="Your Message"></textarea>
+            <textarea name="message" rows="4" placeholder="Your Message"></textarea>
           </div>
           <button class="button form__button button--primary" type="submit">Submit</button>
         </form>
@@ -148,14 +148,14 @@
           <section class="page__item page__item--tick-boxes">
             <h2 class="subtitle">Tick Boxes</h2>
             <div class="section-wrapper section-wrapper--tick-boxes">
-              <input class="tick-box" type="checkbox" id="tix-box1" checked>
-              <label class="tick-box__label" for="tix-box1">
+              <input class="tick-box" type="checkbox" id="tick-box1" checked>
+              <label class="tick-box__label" for="tick-box1">
                 <svg class="tick-box__checkmark" width="24" height="24">
                   <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
                 </svg><span></span>
               </label>
-              <input class="tick-box" type="checkbox" id="tix-box2">
-              <label class="tick-box__label" for="tix-box2">
+              <input class="tick-box" type="checkbox" id="tick-box2">
+              <label class="tick-box__label" for="tick-box2">
                 <svg class="tick-box__checkmark" width="24" height="24">
                   <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
                 </svg><span></span>
@@ -206,14 +206,14 @@
     <section class="page__item page__item--news">
       <h2 class="subtitle">News &amp; Events</h2>
       <div class="section-wrapper section-wrapper--news">
-        <div class="news"><img class="news__preview" src="img/news-1.jpg" alt="Новость 1">
+        <div class="news"><img class="news__preview" src="img/news-1.jpg" alt="It's all going downhill">
           <div class="news__description">
             <h3 class="news__title">It's all going downhill</h3>
             <p class="news__date">24 august 2013</p>
             <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
           </div>
         </div>
-        <div class="news"><img class="news__preview" src="img/news-2.jpg" alt="Новость 2">
+        <div class="news"><img class="news__preview" src="img/news-2.jpg" alt="This is the title">
           <div class="news__description news__description--primary">
             <div class="news__short-date"><span class="news__day">24</span><span class="news__month">Aug</span></div>
             <h3 class="news__title news__title--small">This is the title</h3>
@@ -231,7 +231,7 @@
         <h2 class="subtitle">Calendar</h2>
         <div class="calendar">
           <div class="calendar__day"></div>
-          <div class="calendar__datepicker" id="datepicker"></div>
+          <div class="calendar__datepicker"></div>
         </div>
       </section>
       <section class="page__item page__item--messaging">
@@ -246,9 +246,9 @@
             <div class="messaging__intro">
               <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
             </div>
-            <form class="messaging__form" id="form2">
+            <form class="messaging__form" action="handler.php">
               <div>
-                <textarea class="messaging__textarea" id="message2" rows="3">Yeah that sounds great. See you then</textarea>
+                <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
                 <button class="button messaging__button button--primary" type="button">Reply</button>
               </div>
             </form>

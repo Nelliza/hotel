@@ -29,26 +29,28 @@
     </header>
     <section class="page__item--hotel reservation">
       <div class="reservation__stages">
-        <ul class="stages stages--primary" id="stages2">
+        <ul class="stages stages--primary">
           <li class="stages__item"></li>
           <li class="stages__item"></li>
           <li class="stages__item"></li>
         </ul>
       </div>
-      <div class="carousel carousel--reservation owl-carousel" id="carousel2">
+      <div class="carousel carousel--reservation owl-carousel">
         <div class="reservation__slide reservation__slide--checkin">
           <h3 class="reservation__header">Выберите планируемую дату отдыха</h3>
           <div class="reservation__item reservation__item--checkin">
             <div class="calendar">
               <div class="form__fieldset">
-                <label class="calendar__label" for="from">Дата заезда</label>
-                <input type="text" id="from" name="from">
+                <label class="calendar__label" for="from">Дата заезда
+                  <input type="text" name="from">
+                </label>
               </div>
             </div>
             <div class="calendar">
               <div class="form__fieldset">
-                <label class="calendar__label" for="to">Дата выезда</label>
-                <input type="text" id="to" name="to">
+                <label class="calendar__label" for="to">Дата выезда
+                  <input type="text" name="to">
+                </label>
               </div>
             </div>
           </div>
@@ -57,7 +59,7 @@
           <h3 class="reservation__header">Основная информация</h3>
           <div class="reservation__item">
             <p>Количество взрослых</p>
-            <div class="slider slider--with-pointer" id="slider3">
+            <div class="slider slider--with-pointer">
               <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
                 <div class="slider__pointer"></div>
               </div>
@@ -65,7 +67,7 @@
           </div>
           <div class="reservation__item">
             <p>Количество детей</p>
-            <div class="slider slider--with-pointer" id="slider4">
+            <div class="slider slider--with-pointer">
               <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
                 <div class="slider__pointer"></div>
               </div>
@@ -73,7 +75,7 @@
           </div>
           <div class="reservation__item">
             <p>Количество комнат</p>
-            <div class="slider slider--with-scale" id="slider5">
+            <div class="slider slider--with-scale">
               <div class="ui-slider-handle slider__handle">
               </div>
               <ul class="slider__scale"></ul>
@@ -100,16 +102,16 @@
             </select>
           </div>
           <div class="reservation__item">
-            <input class="tick-box" type="checkbox" id="tix-box3">
-            <label class="tick-box__label" for="tix-box3">
+            <input class="tick-box" type="checkbox" id="tick-box3">
+            <label class="tick-box__label" for="tick-box3">
               <svg class="tick-box__checkmark" width="24" height="24">
                 <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
               </svg><span>Собственная ванная комната</span>
             </label>
           </div>
           <div class="reservation__item">
-            <input class="tick-box" type="checkbox" id="tix-box4">
-            <label class="tick-box__label" for="tix-box4">
+            <input class="tick-box" type="checkbox" id="tick-box4">
+            <label class="tick-box__label" for="tick-box4">
               <svg class="tick-box__checkmark" width="24" height="24">
                 <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
               </svg><span>Наличие кухни в номере</span>
@@ -119,8 +121,8 @@
             <tickBox { id: 5 text: Наличие детской площадки }></tickBox>
           </div>
           <div class="reservation__item">
-            <input class="tick-box" type="checkbox" id="tix-box6">
-            <label class="tick-box__label" for="tix-box6">
+            <input class="tick-box" type="checkbox" id="tick-box6">
+            <label class="tick-box__label" for="tick-box6">
               <svg class="tick-box__checkmark" width="24" height="24">
                 <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
               </svg><span>Первая береговая линия</span>
@@ -156,9 +158,9 @@
         <div class="messaging__intro">
           <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
         </div>
-        <form class="messaging__form" id="form2">
+        <form class="messaging__form" action="handler.php">
           <div>
-            <textarea class="messaging__textarea" id="message2" rows="3">Yeah that sounds great. See you then</textarea>
+            <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
             <button class="button messaging__button button--primary" type="button">Reply</button>
           </div>
         </form>
