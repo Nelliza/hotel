@@ -5,7 +5,7 @@ mixin news(options={})
   - var modifierTitle = options.isCalendar ? "news__title--small" : false
 
   .news
-    img.news__preview(src=require("../../components/news/" + options.image + ".jpg"), alt="Новость " + options.id)
+    img.news__preview(src=require("../components/news/" + options.image + ".jpg"), alt="Новость " + options.id)
     div(class=["news__description", modifierDescr])
       if options.isCalendar
         .news__short-date

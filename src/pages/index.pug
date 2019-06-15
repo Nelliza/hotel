@@ -1,0 +1,14 @@
+extends ../templates/template
+
+block include
+  include ../components/subtitle/_subtitle
+  include ../components/arrow/_arrow
+  include ../components/percentage/_percentage
+  include ../components/pie-chart/_pie-chart
+
+block page-content
+  include ../components/promo/promo
+
+  .center-layer
+    include ../components/about/about
+    include ../components/rooms/rooms

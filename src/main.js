@@ -17,5 +17,12 @@ import './components/drop-down/drop-down.js';
 import './components/news/news.js';
 import './components/location/location.js';
 import './components/calendar/calendar.js';
-import './pages/pages.js';
+
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+import './components/main-menu/main-menu.js';
+import './components/promo/promo.js';
+import './components/callback/callback.js';
+import './components/reservation/reservation.js';
+
 import './main.scss';

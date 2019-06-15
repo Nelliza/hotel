@@ -7,7 +7,7 @@ mixin userProfile(options={})
   - var modifier = options.modifier ? "user-profile__info--" + options.modifier : false
 
   .user-profile
-    img.user-profile__photo(src=require("../../components/user-profile/" + options.photo + ".jpg"), alt=options.name)
+    img.user-profile__photo(src=require("../components/user-profile/" + options.photo + ".jpg"), alt=options.name)
     div(class=["user-profile__info", modifier])
       span.user-profile__name= options.name
       span.user-profile__profession= options.profession

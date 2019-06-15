@@ -31,7 +31,7 @@ function generateHtmlPlugins(templateDir) {
   })
 }
 
-const htmlPlugins = generateHtmlPlugins('./src/pages/templates');
+const htmlPlugins = generateHtmlPlugins('./src/pages');
 
 module.exports = {
   entry: {

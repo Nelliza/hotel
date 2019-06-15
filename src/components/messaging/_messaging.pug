@@ -2,7 +2,7 @@ mixin messaging(options={})
   section.messaging
     .messaging__header
       .messaging__head= options.name
-      img(class=["messaging__avatar", "user-profile__photo"], src=require("../../components/user-profile/" + options.name + ".jpg"), alt=options.name)
+      img(class=["messaging__avatar", "user-profile__photo"], src=require("../components/user-profile/" + options.name + ".jpg"), alt=options.name)
 
     .messaging__main
       button.messaging__chat
@@ -11,7 +11,7 @@ mixin messaging(options={})
         p.messaging__text Hey! So are we cool to meet at the art gallery? Say 8pm
       form.messaging__form(id="form" + options.id)
         div
-          textarea.messaging__textarea(id="message" + options.id, rows=3) Yeah that sounds great. See you then
+          textarea.messaging__textarea(id="message" + options.id, rows="3") Yeah that sounds great. See you then
           +button({
             classes: "messaging__button",
             modifiers: "primary",

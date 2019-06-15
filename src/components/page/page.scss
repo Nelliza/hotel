@@ -24,6 +24,20 @@ a {
   margin: 0;
   padding: 2.3rem 3.4rem 5.6rem 3.25rem;
 
+  &--hotel {
+    width: auto;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 5rem 0 0;
+    font-size: 1.3rem;
+
+    &__subtitle {
+      margin: 2rem 0;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
   &__item {
     &--arrows {
       @include subtitle-margins(2.6rem);
@@ -77,6 +91,10 @@ a {
     &--video {
       @include subtitle-margins(3.2rem, .5rem);
     }
+
+    &--hotel {
+      margin-bottom: 4rem;
+    }
   }
 }
 
@@ -125,5 +143,41 @@ a {
   &--news,
   &--two-section {
     @include flex();
+  }
+
+  &--news-list {
+    $flex-map: (justify: space-evenly);
+    @include flex($flex-map...);
+
+    >.news,
+    >.video {
+      margin: 1rem;
+      flex-grow: 1;
+    }
+  }
+
+  &--contact-us {
+    $flex-map: (justify: space-evenly);
+    @include flex($flex-map...);
+
+    >section {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.center-layer {
+  margin-left: 6rem;
+  margin-right: 6rem;
+
+  @media screen and (max-width: 580px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  @media screen and (max-width: 390px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
