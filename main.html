@@ -128,7 +128,7 @@
         <div class="section-wrapper">
           <section class="page__item page__item--toggles">
             <h2 class="subtitle">Toggles</h2>
-            <div class="section-wrapper section-wrapper--toggles">
+            <form class="section-wrapper section-wrapper--toggles" action="./handler.php">
               <div class="toggle">
                 <label class="toggle__label" for="toggle1"><span></span></label>
                 <div class="toggle__button" width="3.7rem" height="1.5rem">
@@ -143,11 +143,11 @@
                   <div class="toggle__background"></div><span class="toggle__round"></span>
                 </div>
               </div>
-            </div>
+            </form>
           </section>
           <section class="page__item page__item--tick-boxes">
             <h2 class="subtitle">Tick Boxes</h2>
-            <div class="section-wrapper section-wrapper--tick-boxes">
+            <form class="section-wrapper section-wrapper--tick-boxes" action="./handler.php">
               <input class="tick-box" type="checkbox" id="tick-box1" checked>
               <label class="tick-box__label" for="tick-box1">
                 <svg class="tick-box__checkmark" width="24" height="24">
@@ -160,7 +160,7 @@
                   <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
                 </svg><span></span>
               </label>
-            </div>
+            </form>
           </section>
         </div>
       </div>
@@ -168,12 +168,12 @@
     <div class="section-wrapper section-wrapper--two-section">
       <section class="page__item page__item--search">
         <h2 class="subtitle">Search / Drop Down</h2>
-        <form class="search">
+        <form class="search" action="./handler.php">
           <input class="search__input" type="text" placeholder="Search">
           <button class="search__submit search__submit--warning" type="submit"></button>
         </form>
         <button class="notfound-btn" type="submit" disabled>I've not found what I'm looking for...</button>
-        <form class="drop-down">
+        <form class="drop-down" action="./handler.php">
           <select class="drop-down__select">
             <option selected disabled style="display: none">Choose An Option</option>
             <option>Option 1</option>
