@@ -2,9 +2,23 @@ include _social-icon
 
 mixin userProfile(options={})
   - options.photo = options.photo || options.name
-  - options.social = options.social || self.htmlWebpackPlugin.options.social
   - options.modifier = options.modifier || false
   - var modifier = options.modifier ? "user-profile__info--" + options.modifier : false
+  -
+    var social = options.social || [
+      {
+        name: 'facebook',
+        link: 'https://facebook.com'
+      },
+      {
+        name: 'twitter',
+        link: 'https://twitter.com'
+      },
+      {
+        name: 'dribbble',
+        link: 'https://dribbble.com'
+      }
+    ];
 
   .user-profile
     img.user-profile__photo(src=require("../components/user-profile/" + options.photo + ".jpg"), alt=options.name)
@@ -12,4 +26,4 @@ mixin userProfile(options={})
       span.user-profile__name= options.name
       span.user-profile__profession= options.profession
       ul.user-profile__social
-        +socialIcon(options.social)
+        +socialIcon(social)

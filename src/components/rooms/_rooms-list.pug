@@ -3,6 +3,9 @@ mixin roomsList(options)
   - options.btnText = options.btnText || "Забронировать"
 
   each item in options.items
+    - item.link = item.link || "./handler.php"
+    - item.text = item.text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque."
+
     li.rooms__item
       .rooms__img(style="background: url(" + require("../components/rooms/" + item.image + ".jpg") + ") no-repeat center")
       span.rooms__price От $#{item.price}/сутки

@@ -19,7 +19,7 @@ mixin form(options={})
   - options.btnText = options.btnText || "Submit"
   - options.btnStyle = options.btnStyle || "primary"
 
-  form.form(action="handler.php")
+  form.form(action="./handler.php")
     each input in options.inputs
       .form__fieldset
         input(type="text", name=input.name, placeholder=input.placeholder)
