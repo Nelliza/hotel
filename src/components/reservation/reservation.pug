@@ -6,7 +6,7 @@ section.page__item--hotel.reservation
     })
 
   .carousel.carousel--reservation.owl-carousel
-    .reservation__slide.reservation__slide--checkin
+    form.reservation__slide.reservation__slide--checkin(action="./handler.php")
       h3.reservation__header Выберите планируемую дату отдыха
       .reservation__item.reservation__item--checkin
         .calendar()
@@ -17,7 +17,7 @@ section.page__item--hotel.reservation
           .form__fieldset
             label.calendar__label(for="to") Дата выезда
               input(type="text", name="to")
-    .reservation__slide.reservation__slide--basic
+    form.reservation__slide.reservation__slide--basic(action="./handler.php")
       h3.reservation__header Основная информация
       .reservation__item
         p.reservation__text Количество взрослых
@@ -39,7 +39,7 @@ section.page__item--hotel.reservation
           id: 3,
           text: "Проживание с домашним питомцем"
         })
-    .reservation__slide.reservation__slide--additional
+    form.reservation__slide.reservation__slide--additional(action="./handler.php")
       h3.reservation__header Дополнительная информация
       .reservation__item
         +dropDown({
@@ -57,7 +57,7 @@ section.page__item--hotel.reservation
           text: "Наличие кухни в номере"
         })
       .reservation__item
-        tickBox({
+        +tickBox({
           id: 5,
           text: "Наличие детской площадки"
         })

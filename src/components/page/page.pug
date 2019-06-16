@@ -104,7 +104,7 @@ section.page__item.page__item--form-elements
     .section-wrapper
       section.page__item.page__item--toggles
         +subtitle("Toggles")
-        .section-wrapper.section-wrapper--toggles
+        form.section-wrapper.section-wrapper--toggles(action="./handler.php")
           +toggle({
             id: 1
           })
@@ -114,7 +114,7 @@ section.page__item.page__item--form-elements
           })
       section.page__item.page__item--tick-boxes
         +subtitle("Tick Boxes")
-        .section-wrapper.section-wrapper--tick-boxes
+        form.section-wrapper.section-wrapper--tick-boxes(action="./handler.php")
           +tickBox({
             id: 1,
             checked: true
@@ -130,7 +130,7 @@ section.page__item.page__item--form-elements
       btnColor: "warning"
     })
     +notfoundBtn
-    form.drop-down
+    form.drop-down(action="./handler.php")
       +dropDown()
 
   section.page__item.page__item--user-profile

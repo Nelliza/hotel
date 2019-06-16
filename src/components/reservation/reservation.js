@@ -43,7 +43,7 @@ $(function() {
   });
 
   $('.stages__item').click(function(){
-    $('.carousel--reservation').trigger('to.owl.carousel', [$(this).index(), 300]);  
+    $('.carousel--reservation').trigger('to.owl.carousel', [$(this).index(), 300]);
   });
 
   $('.reservation__item:not(:last-child) > .slider').slider({
