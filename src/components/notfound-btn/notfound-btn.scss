@@ -14,10 +14,10 @@
   }
 
   &:after {
-    @include fieldset-icon("search-icon.svg");
+    @include fieldset-icon('search-icon.svg');
     background-color: $color-warning;
     line-height: 1.75rem;
-    content: "";
+    content: '';
     text-align: center;
   }
 }

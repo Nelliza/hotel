@@ -1,24 +1,24 @@
 @mixin social-icon($social...) {
   @each $val in $social {
     &__social-icon--#{$val} {
-      >a {
+      > a {
         @include size(100%);
         display: block;
-        background: url("./assets/icons/#{$val}-icon.svg");
+        background: url(./assets/icons/#{$val}-icon.svg);
 
         &:hover {
-          background: url("./assets/icons/#{$val}-hover-icon.svg");
+          background: url(./assets/icons/#{$val}-hover-icon.svg);
         }
       }
     }
 
     &__info--primary {
       .user-profile__social-icon--#{$val} {
-        >a {
-          background: url("./assets/icons/#{$val}-white-icon.svg");
+        > a {
+          background: url(./assets/icons/#{$val}-white-icon.svg);
 
           &:hover {
-            background: url("./assets/icons/#{$val}-hover-icon.svg");
+            background: url(./assets/icons/#{$val}-hover-icon.svg);
           }
         }
       }

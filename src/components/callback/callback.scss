@@ -9,7 +9,7 @@
   border-radius: 50%;
   cursor: pointer;
 
-  +.messaging {
+  + .messaging {
     z-index: 20;
     visibility: hidden;
     position: fixed;
@@ -18,10 +18,10 @@
     left: calc(50%-9rem);
   }
 
-  +.messaging--visible {
+  + .messaging--visible {
     visibility: visible;
 
-    +.overlay {
+    + .overlay {
       visibility: visible;
       opacity: 1;
     }

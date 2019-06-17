@@ -1,7 +1,6 @@
 include _social-icon
 
 mixin userProfile(options={})
-  - options.photo = options.photo || options.name
   - options.modifier = options.modifier || false
   - var modifier = options.modifier ? "user-profile__info--" + options.modifier : false
   -

@@ -1,4 +1,4 @@
-@import "./components/arrow/_arrow-state.scss";
+@import './components/arrow/_arrow-state.scss';
 
 .arrow {
   margin: .6rem .72rem;
@@ -32,7 +32,7 @@
   }
 
   &:before {
-    content: "";
+    content: '';
     display: block;
     width: .9rem;
     height: 1.6rem;

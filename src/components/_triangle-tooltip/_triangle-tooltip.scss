@@ -8,7 +8,7 @@
     left: calc(50% - #{$size} / 2);
   }
 
-  @include pseudo-elem("", $size);
+  @include pseudo-elem('', $size);
   background-color: $bg-color;
   border-radius: 0 0 0 .2rem;
   transform: rotate(45deg);

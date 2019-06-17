@@ -2,7 +2,7 @@ mixin messaging(options={})
   section.messaging
     .messaging__header
       .messaging__head= options.name
-      img(class=["messaging__avatar", "user-profile__photo"], src=require("../components/user-profile/" + options.name + ".jpg"), alt=options.name)
+      img(class=["messaging__avatar", "user-profile__photo"], src=require("../components/user-profile/" + options.photo + ".jpg"), alt=options.name)
 
     .messaging__main
       button.messaging__chat

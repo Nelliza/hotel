@@ -1,4 +1,4 @@
-@mixin pseudo-elem($content: "", $width: 100%, $height: $width) {
+@mixin pseudo-elem($content: '', $width: 100%, $height: $width) {
   @if $content != false {
     content: $content;
   }

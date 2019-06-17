@@ -34,7 +34,7 @@
     }
 
     &:after {
-      @include pseudo-elem("", 100%, .3rem);
+      @include pseudo-elem('', 100%, .3rem);
       background-color: $color-disabled;
       top: 40%;
       left: .1rem;

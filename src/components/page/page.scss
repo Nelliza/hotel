@@ -1,10 +1,10 @@
-@import "./components/subtitle/_subtitle-margins.scss";
+@import './components/subtitle/_subtitle-margins.scss';
 
 @each $type in black, light, bold, italic, regular {
-  @include font-face(Lato, lato, $type);
+  @include font-face('Lato', 'lato', $type);
 }
 @each $type in light, bold, italic, regular {
-  @include font-face(Source Sans Pro, sourcesanspro, $type);
+  @include font-face('Source Sans Pro', 'sourcesanspro', $type);
 }
 
 @media screen and (max-width: 650px) {
@@ -18,7 +18,7 @@ a {
 }
 
 .page {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   box-sizing: border-box;
   max-width: 700px;
   margin: 0;
@@ -122,7 +122,7 @@ a {
   &--form-elements {
     margin-bottom: .65rem;
 
-    >.section-wrapper {
+    > .section-wrapper {
       width: 18rem;
 
       @media screen and (max-width: 580px) {
@@ -149,8 +149,8 @@ a {
     $flex-map: (justify: space-evenly);
     @include flex($flex-map...);
 
-    >.news,
-    >.video {
+    > .news,
+    > .video {
       margin: 1rem;
       flex-grow: 1;
     }
@@ -160,7 +160,7 @@ a {
     $flex-map: (justify: space-evenly);
     @include flex($flex-map...);
 
-    >section {
+    > section {
       margin-left: 1rem;
       margin-right: 1rem;
     }

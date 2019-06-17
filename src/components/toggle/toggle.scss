@@ -16,7 +16,7 @@
     cursor: pointer;
 
     &:checked {
-      ~.toggle__background {
+      ~ .toggle__background {
         background-color: $color-primary;
 
         &--warning {
@@ -24,7 +24,7 @@
         }
       }
 
-      ~.toggle__round {
+      ~ .toggle__round {
         left: auto;
         right: .2rem;
 
@@ -68,13 +68,13 @@
     }
 
     &:before {
-      content: "on";
+      content: 'on';
       display: none;
       right: 2.8rem;
     }
 
     &:after {
-      content: "off";
+      content: 'off';
       left: 1.5rem;
     }
   }
