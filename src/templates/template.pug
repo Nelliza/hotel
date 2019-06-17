@@ -26,12 +26,14 @@ html(lang="en")
 
   block body
     body.page.page--hotel
-      include ../components/header/header
+      .page__wrapper
+        .page__content
+          include ../components/header/header
 
-      block page-content
+          block page-content
 
-      include ../components/footer/footer
-      include ../components/callback/callback
+          include ../components/callback/callback
+        include ../components/footer/footer
+
       script(src="./app.js")
-
       block scripts
