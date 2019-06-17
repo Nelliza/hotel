@@ -15,163 +15,167 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body class="page page--hotel">
-    <header class="page-header">
-      <nav class="main-menu"><img class="logo" src="img/logo.png" alt="logo">
-        <div class="main-menu__btn"><span></span><span></span><span></span><span></span></div>
-        <ul class="main-menu__list">
-                <li class="main-menu__item"><a class="main-menu__link" href="./index.html">Главная</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="./reservation.html">Снять номер</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="./news.html">Новости</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="./contacts.html">Контакты</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="./main.html">UI-Kit</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section class="page__item--hotel reservation">
-      <div class="reservation__stages">
-        <ul class="stages stages--primary">
-          <li class="stages__item"></li>
-          <li class="stages__item"></li>
-          <li class="stages__item"></li>
-        </ul>
-      </div>
-      <div class="carousel carousel--reservation owl-carousel">
-        <form class="reservation__slide reservation__slide--checkin" action="./handler.php">
-          <h3 class="reservation__header">Выберите планируемую дату отдыха</h3>
-          <div class="reservation__item reservation__item--checkin">
-            <div class="calendar">
-              <div class="form__fieldset">
-                <label class="calendar__label" for="from">Дата заезда
-                  <input type="text" name="from">
+    <div class="page__wrapper">
+      <div class="page__content">
+        <header class="page-header">
+          <nav class="main-menu"><img class="logo" src="img/logo.png" alt="logo">
+            <div class="main-menu__btn"><span></span><span></span><span></span><span></span></div>
+            <ul class="main-menu__list">
+                        <li class="main-menu__item"><a class="main-menu__link" href="./index.html">Главная</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="./reservation.html">Снять номер</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="./news.html">Новости</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="./contacts.html">Контакты</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="./main.html">UI-Kit</a></li>
+            </ul>
+          </nav>
+        </header>
+        <section class="page__item--hotel reservation">
+          <div class="reservation__stages">
+            <ul class="stages stages--primary">
+              <li class="stages__item"></li>
+              <li class="stages__item"></li>
+              <li class="stages__item"></li>
+            </ul>
+          </div>
+          <div class="carousel carousel--reservation owl-carousel">
+            <form class="reservation__slide reservation__slide--checkin" action="./handler.php">
+              <h3 class="reservation__header">Выберите планируемую дату отдыха</h3>
+              <div class="reservation__item reservation__item--checkin">
+                <div class="calendar">
+                  <div class="form__fieldset">
+                    <label class="calendar__label" for="from">Дата заезда
+                      <input type="text" name="from">
+                    </label>
+                  </div>
+                </div>
+                <div class="calendar">
+                  <div class="form__fieldset">
+                    <label class="calendar__label" for="to">Дата выезда
+                      <input type="text" name="to">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <form class="reservation__slide reservation__slide--basic" action="./handler.php">
+              <h3 class="reservation__header">Основная информация</h3>
+              <div class="reservation__item">
+                <p class="reservation__text">Количество взрослых</p>
+                <div class="slider slider--with-pointer">
+                  <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
+                    <div class="slider__pointer"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="reservation__item">
+                <p class="reservation__text">Количество детей</p>
+                <div class="slider slider--with-pointer">
+                  <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
+                    <div class="slider__pointer"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="reservation__item">
+                <p class="reservation__text">Количество комнат</p>
+                <div class="slider slider--with-scale">
+                  <div class="ui-slider-handle slider__handle">
+                  </div>
+                  <ul class="slider__scale"></ul>
+                </div>
+              </div>
+              <div class="reservation__item">
+                <div class="toggle">
+                  <label class="toggle__label" for="toggle3"><span>Проживание с домашним питомцем</span></label>
+                  <div class="toggle__button" width="3.7rem" height="1.5rem">
+                    <input class="toggle__checkbox" type="checkbox" id="toggle3">
+                    <div class="toggle__background"></div><span class="toggle__round"></span>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <form class="reservation__slide reservation__slide--additional" action="./handler.php">
+              <h3 class="reservation__header">Дополнительная информация</h3>
+              <div class="reservation__item">
+                <select class="drop-down__select">
+                  <option selected disabled style="display: none">Питание</option>
+                  <option>Только завтрак</option>
+                  <option>Завтрак и ужин</option>
+                  <option>Трехразовое питание</option>
+                </select>
+              </div>
+              <div class="reservation__item">
+                <input class="tick-box" type="checkbox" id="tick-box3">
+                <label class="tick-box__label" for="tick-box3">
+                  <svg class="tick-box__checkmark" width="24" height="24">
+                    <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                  </svg><span>Собственная ванная комната</span>
                 </label>
               </div>
-            </div>
-            <div class="calendar">
-              <div class="form__fieldset">
-                <label class="calendar__label" for="to">Дата выезда
-                  <input type="text" name="to">
+              <div class="reservation__item">
+                <input class="tick-box" type="checkbox" id="tick-box4">
+                <label class="tick-box__label" for="tick-box4">
+                  <svg class="tick-box__checkmark" width="24" height="24">
+                    <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                  </svg><span>Наличие кухни в номере</span>
                 </label>
               </div>
-            </div>
-          </div>
-        </form>
-        <form class="reservation__slide reservation__slide--basic" action="./handler.php">
-          <h3 class="reservation__header">Основная информация</h3>
-          <div class="reservation__item">
-            <p class="reservation__text">Количество взрослых</p>
-            <div class="slider slider--with-pointer">
-              <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
-                <div class="slider__pointer"></div>
+              <div class="reservation__item">
+                <input class="tick-box" type="checkbox" id="tick-box5">
+                <label class="tick-box__label" for="tick-box5">
+                  <svg class="tick-box__checkmark" width="24" height="24">
+                    <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                  </svg><span>Наличие детской площадки</span>
+                </label>
               </div>
-            </div>
-          </div>
-          <div class="reservation__item">
-            <p class="reservation__text">Количество детей</p>
-            <div class="slider slider--with-pointer">
-              <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
-                <div class="slider__pointer"></div>
+              <div class="reservation__item">
+                <input class="tick-box" type="checkbox" id="tick-box6">
+                <label class="tick-box__label" for="tick-box6">
+                  <svg class="tick-box__checkmark" width="24" height="24">
+                    <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                  </svg><span>Первая береговая линия</span>
+                </label>
               </div>
-            </div>
+              <button class="button button--primary" type="submit">Подобрать номер</button>
+            </form>
           </div>
-          <div class="reservation__item">
-            <p class="reservation__text">Количество комнат</p>
-            <div class="slider slider--with-scale">
-              <div class="ui-slider-handle slider__handle">
+        </section>
+        <div class="callback"></div>
+        <section class="messaging">
+          <div class="messaging__header">
+            <div class="messaging__head">Sarah Brown</div><img class="messaging__avatar user-profile__photo" src="img/sarah-brown.jpg" alt="Sarah Brown">
+          </div>
+          <div class="messaging__main">
+            <button class="messaging__chat"></button>
+            <button class="messaging__camera"></button>
+            <div class="messaging__intro">
+              <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+            </div>
+            <form class="messaging__form" action="./handler.php">
+              <div class="messaging__block">
+                <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
+                <button class="button messaging__button button--primary" type="button">Reply</button>
               </div>
-              <ul class="slider__scale"></ul>
-            </div>
+            </form>
           </div>
-          <div class="reservation__item">
-            <div class="toggle">
-              <label class="toggle__label" for="toggle3"><span>Проживание с домашним питомцем</span></label>
-              <div class="toggle__button" width="3.7rem" height="1.5rem">
-                <input class="toggle__checkbox" type="checkbox" id="toggle3">
-                <div class="toggle__background"></div><span class="toggle__round"></span>
-              </div>
-            </div>
-          </div>
-        </form>
-        <form class="reservation__slide reservation__slide--additional" action="./handler.php">
-          <h3 class="reservation__header">Дополнительная информация</h3>
-          <div class="reservation__item">
-            <select class="drop-down__select">
-              <option selected disabled style="display: none">Питание</option>
-              <option>Только завтрак</option>
-              <option>Завтрак и ужин</option>
-              <option>Трехразовое питание</option>
-            </select>
-          </div>
-          <div class="reservation__item">
-            <input class="tick-box" type="checkbox" id="tick-box3">
-            <label class="tick-box__label" for="tick-box3">
-              <svg class="tick-box__checkmark" width="24" height="24">
-                <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-              </svg><span>Собственная ванная комната</span>
-            </label>
-          </div>
-          <div class="reservation__item">
-            <input class="tick-box" type="checkbox" id="tick-box4">
-            <label class="tick-box__label" for="tick-box4">
-              <svg class="tick-box__checkmark" width="24" height="24">
-                <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-              </svg><span>Наличие кухни в номере</span>
-            </label>
-          </div>
-          <div class="reservation__item">
-            <input class="tick-box" type="checkbox" id="tick-box5">
-            <label class="tick-box__label" for="tick-box5">
-              <svg class="tick-box__checkmark" width="24" height="24">
-                <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-              </svg><span>Наличие детской площадки</span>
-            </label>
-          </div>
-          <div class="reservation__item">
-            <input class="tick-box" type="checkbox" id="tick-box6">
-            <label class="tick-box__label" for="tick-box6">
-              <svg class="tick-box__checkmark" width="24" height="24">
-                <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-              </svg><span>Первая береговая линия</span>
-            </label>
-          </div>
-          <button class="button button--primary" type="submit">Подобрать номер</button>
-        </form>
+        </section>
+        <div class="overlay"></div>
       </div>
-    </section>
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__description"><img src="img/logo.png" alt="logo">
-          <p class="page-footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+      <footer class="page-footer">
+        <div class="page-footer__wrapper">
+          <div class="page-footer__description"><img src="img/logo.png" alt="logo">
+            <p class="page-footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+          </div>
+          <div class="page-footer__search">
+            <h3 class="page--hotel__subtitle">Поиск на сайте</h3>
+            <form class="search" action="./handler.php">
+              <input class="search__input" type="text" placeholder="Search">
+              <button class="search__submit" type="submit"></button>
+            </form>
+          </div>
         </div>
-        <div class="page-footer__search">
-          <h3 class="page--hotel__subtitle">Поиск на сайте</h3>
-          <form class="search" action="./handler.php">
-            <input class="search__input" type="text" placeholder="Search">
-            <button class="search__submit" type="submit"></button>
-          </form>
-        </div>
-      </div>
-      <p class="page-footer__copyright">Copyright &copy; All rights reserved | This template is made with by <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a></p>
-    </footer>
-    <div class="callback"></div>
-    <section class="messaging">
-      <div class="messaging__header">
-        <div class="messaging__head">Sarah Brown</div><img class="messaging__avatar user-profile__photo" src="img/sarah-brown.jpg" alt="Sarah Brown">
-      </div>
-      <div class="messaging__main">
-        <button class="messaging__chat"></button>
-        <button class="messaging__camera"></button>
-        <div class="messaging__intro">
-          <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
-        </div>
-        <form class="messaging__form" action="./handler.php">
-          <div class="messaging__block">
-            <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
-            <button class="button messaging__button button--primary" type="button">Reply</button>
-          </div>
-        </form>
-      </div>
-    </section>
-    <div class="overlay"></div>
+        <p class="page-footer__copyright">Copyright &copy; All rights reserved | This template is made with by <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a></p>
+      </footer>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
