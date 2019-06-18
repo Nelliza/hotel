@@ -23,7 +23,6 @@
 }
 
 .ui-datepicker {
-  z-index: 10 !important;
   width: auto;
   padding: 0;
   color: #868686;
@@ -148,20 +147,20 @@
     color: $color-warning;
     background-color: #f2f2f2;
   }
+}
 
-  button.ui-datepicker-current {
-    width: 100% !important;
-    margin: 0;
-    padding: .8rem 1.3rem;
-    font-size: .8rem;
-    font-weight: 700;
-    text-align: left;
-    text-transform: uppercase;
-    line-height: 2.2;
-    letter-spacing: .08rem;
-    border: none;
-    outline: none;
-    border-radius: 0 0 .3rem .3rem;
-    color: #868686;
-  }
+.calendar__datepicker .ui-datepicker button.ui-datepicker-current {
+  width: 100%;
+  margin: 0;
+  padding: .8rem 1.3rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 2.2;
+  letter-spacing: .08rem;
+  border: none;
+  outline: none;
+  border-radius: 0 0 .3rem .3rem;
+  color: #868686;
 }

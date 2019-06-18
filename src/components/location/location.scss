@@ -51,19 +51,19 @@
   }
 }
 
-.ymaps-2-1-73-balloon {
+.ymaps-2-1-74-balloon-panel .ymaps-2-1-74-balloon {
   &__content {
-    font-family: 'Lato', sans-serif !important;
-    background-color: $color-warning !important;
+    font-family: 'Lato', sans-serif;
+    background-color: $color-warning;
 
     @media screen and (max-width: 490px) {
       > ymaps {
-        height: auto !important;
+        height: auto;
       }
     }
   }
 
-  @media screen and (max-width: 472px) {
-    display: none !important;
+  @media screen and (max-width: 490px) {
+    display: none;
   }
 }
