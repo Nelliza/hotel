@@ -46,14 +46,14 @@ $(function() {
     $('.carousel--reservation').trigger('to.owl.carousel', [$(this).index(), 300]);
   });
 
-  $('.reservation__item:not(:last-child) > .slider').slider({
+  $('.reservation__item:not(:nth-child(4)) > .slider').slider({
     min: 1,
     max: 10,
     create: sliderPointerInitial,
     slide: sliderPointer
   });
 
-  $('.reservation__item:last-child > .slider').slider({
+  $('.reservation__item:nth-child(4) > .slider').slider({
     min: 1,
     max: 5,
     step: 1,

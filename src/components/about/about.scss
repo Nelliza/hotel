@@ -32,8 +32,8 @@
     margin-left: 1rem;
   }
 
-  &__description {
-    flex-basis: 60%;
+  &__text {
+    flex-basis: 50%;
     
     @media screen and (max-width: 580px) {
       flex-basis: auto;
@@ -41,6 +41,8 @@
   }
 
   &__images {
+    position: relative;
+    min-height: 32rem;
     flex-basis: 40%;
     padding: 0 2rem;
 
@@ -50,20 +52,23 @@
   }
 
   &__image {
-    position: relative;
+    position: absolute;
     display: block;
     width: 50%;
     box-shadow: 0 .5rem 2rem 0 rgba(0,0,0,.15);
 
     &:nth-child(1) {
-      margin-left: auto;
+      top: 10%;
     }
+
     &:nth-child(2) {
-      margin-top: -50%;
+      top: 0;
+      right: 0;
     }
+
     &:nth-child(3) {
-      margin: 0 auto;
-      margin-top: -30%;
+      top: 40%;
+      right: 20%;
     }
   }
 }

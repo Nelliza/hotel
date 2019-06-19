@@ -9,7 +9,7 @@
       ul.append($('<li>', {
         class: 'slider__step',
         text: step,
-        style: 'left: ' + left + '%'
+        style: 'left: ' + (left - 1) + '%'
       }));
       step += $(this).slider('option', 'step');
       left += distance;
