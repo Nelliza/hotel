@@ -2,7 +2,7 @@
   @each $val in $social {
     &__social-icon--#{$val} {
       > a {
-        @include size(100%);
+        @include size(1.6rem, 1.3rem);
         display: block;
         background: url(./assets/icons/#{$val}-icon.svg);
 
