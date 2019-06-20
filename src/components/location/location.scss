@@ -53,7 +53,7 @@
 
 .ymaps-2-1-74-balloon-panel .ymaps-2-1-74-balloon {
   &__content {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', 'Arial', sans-serif;
     background-color: $color-warning;
 
     @media screen and (max-width: 490px) {
