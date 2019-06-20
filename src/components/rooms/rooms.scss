@@ -9,7 +9,7 @@
   &__item {
     flex-grow: 1;
     position: relative;
-    height: 30rem;
+    min-height: 30rem;
     margin: 3rem 1rem;
     list-style: none;
     text-align: center;
@@ -25,7 +25,7 @@
   }
 
   &__content {
-    @include block-content(1rem 1rem .5rem, $color-warning) {
+    @include promo-block(1rem 1rem .5rem, $color-warning) {
       min-height: 14.7rem;
     }
   }

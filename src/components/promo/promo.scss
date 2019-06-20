@@ -2,11 +2,11 @@
   position: relative;
 
   &__content {
-    @include block-content(3rem);
+    @include promo-block(3rem);
   }
 
   &__img {
-    height: 30rem;
+    min-height: 30rem;
   }
 }
 
