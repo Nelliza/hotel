@@ -10,7 +10,7 @@
   }
 
   &__photo {
-    @include size(5.3rem);
+    width: 5.3rem;
     display: inline-block;
     margin: .5rem;
     vertical-align: middle;
@@ -22,6 +22,7 @@
     display: inline-block;
     position: relative;
     width: 9.2rem;
+    margin-left: .25rem;
     padding: .5rem;
     text-align: center;
     vertical-align: middle;
