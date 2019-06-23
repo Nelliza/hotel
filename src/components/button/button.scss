@@ -25,6 +25,7 @@
 
   &.button--pressed {
     border-bottom-width: .06rem;
+    outline: none;
   }
 
   &--primary {
