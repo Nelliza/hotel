@@ -17,100 +17,124 @@
   <body class="page page--hotel">
     <div class="page__wrapper">
       <div class="page__content">
-        <header class="page-header">
-          <nav class="main-menu"><img class="logo" src="img/logo.png" alt="logo">
-            <div class="main-menu__btn"><span></span><span></span><span></span><span></span></div>
-            <ul class="main-menu__list">
-                        <li class="main-menu__item"><a class="main-menu__link" href="./index.html">Главная</a></li>
-                        <li class="main-menu__item"><a class="main-menu__link" href="./reservation.html">Снять номер</a></li>
-                        <li class="main-menu__item"><a class="main-menu__link" href="./news.html">Новости</a></li>
-                        <li class="main-menu__item"><a class="main-menu__link" href="./contacts.html">Контакты</a></li>
-                        <li class="main-menu__item"><a class="main-menu__link" href="./main.html">UI-Kit</a></li>
-            </ul>
-          </nav>
+        <header class="header">
+          <div class="header__main-menu">
+            <nav class="main-menu"><img class="logo" src="img/logo.png" alt="logo">
+              <div class="main-menu__btn"><span></span><span></span><span></span><span></span></div>
+              <ul class="main-menu__list">
+                          <li class="main-menu__item"><a class="main-menu__link" href="./index.html">Главная</a></li>
+                          <li class="main-menu__item"><a class="main-menu__link" href="./reservation.html">Снять номер</a></li>
+                          <li class="main-menu__item"><a class="main-menu__link" href="./news.html">Новости</a></li>
+                          <li class="main-menu__item"><a class="main-menu__link" href="./contacts.html">Контакты</a></li>
+                          <li class="main-menu__item"><a class="main-menu__link" href="./main.html">UI-Kit</a></li>
+              </ul>
+            </nav>
+          </div>
         </header>
         <div class="center-layer">
-          <div class="section-wrapper section-wrapper--contact-us">
-            <section class="contact-us">
-              <h2 class="subtitle">Связаться с нами</h2>
-              <form class="form" action="./handler.php">
-                <div class="form__fieldset">
-                  <input type="text" name="name" placeholder="Ваше имя">
-                  <div class="form__val"></div>
+          <div class="page__item">
+            <div class="page__contact-us-wrapper">
+              <section class="contact-us">
+                <div class="page__subtitle">
+                  <h2 class="subtitle">Связаться с нами</h2>
                 </div>
-                <div class="form__fieldset">
-                  <input type="text" name="email" placeholder="Ваш email">
-                  <div class="form__val"></div>
+                <div class="page__form">
+                  <form class="form" action="./handler.php">
+                    <div class="form__fieldset">
+                      <input type="text" name="name" placeholder="Ваше имя">
+                      <div class="form__val"></div>
+                    </div>
+                    <div class="form__fieldset">
+                      <input type="text" name="email" placeholder="Ваш email">
+                      <div class="form__val"></div>
+                    </div>
+                    <div class="form__fieldset">
+                      <textarea name="message" rows="4" placeholder="Введите текст сообщения"></textarea>
+                    </div>
+                    <div class="page__button page__button--form">
+                      <button class="button button--primary button--form" type="submit">Отправить</button>
+                    </div>
+                  </form>
                 </div>
-                <div class="form__fieldset">
-                  <textarea name="message" rows="4" placeholder="Введите текст сообщения"></textarea>
+              </section>
+              <section class="team">
+                <div class="page__subtitle">
+                  <h2 class="subtitle">Наши специалисты</h2>
                 </div>
-                <button class="button form__button button--primary" type="submit">Отправить</button>
-              </form>
-            </section>
-            <section class="team">
-              <h2 class="subtitle">Наши специалисты</h2>
-              <div class="user-profile"><img class="user-profile__photo" src="img/john-smith.jpg" alt="Петров Петр">
-                <div class="user-profile__info user-profile__info--primary"><span class="user-profile__name">Петров Петр</span><span class="user-profile__profession">менеджер по бронированию</span>
-                  <ul class="user-profile__social">
-                    <li class="user-profile__social-icon user-profile__social-icon--facebook"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
-                    <li class="user-profile__social-icon user-profile__social-icon--twitter"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
-                    <li class="user-profile__social-icon user-profile__social-icon--dribbble"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
-                  </ul>
+                <div class="page__user-profile">
+                  <div class="user-profile"><img class="user-profile__photo" src="img/john-smith.jpg" alt="Петров Петр">
+                    <div class="user-profile__info user-profile__info--primary"><span class="user-profile__name">Петров Петр</span><span class="user-profile__profession">менеджер по бронированию</span>
+                      <ul class="user-profile__social">
+                        <li class="user-profile__social-icon user-profile__social-icon--facebook"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li class="user-profile__social-icon user-profile__social-icon--twitter"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li class="user-profile__social-icon user-profile__social-icon--dribbble"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="user-profile"><img class="user-profile__photo" src="img/sarah-brown.jpg" alt="Иванова Наталья">
-                <div class="user-profile__info user-profile__info--additional"><span class="user-profile__name">Иванова Наталья</span><span class="user-profile__profession">менеджер по туризму</span>
-                  <ul class="user-profile__social">
-                    <li class="user-profile__social-icon user-profile__social-icon--facebook"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
-                    <li class="user-profile__social-icon user-profile__social-icon--twitter"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
-                    <li class="user-profile__social-icon user-profile__social-icon--dribbble"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
-                  </ul>
+                <div class="page__user-profile">
+                  <div class="user-profile"><img class="user-profile__photo" src="img/sarah-brown.jpg" alt="Иванова Наталья">
+                    <div class="user-profile__info user-profile__info--additional"><span class="user-profile__name">Иванова Наталья</span><span class="user-profile__profession">менеджер по туризму</span>
+                      <ul class="user-profile__social">
+                        <li class="user-profile__social-icon user-profile__social-icon--facebook"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li class="user-profile__social-icon user-profile__social-icon--twitter"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li class="user-profile__social-icon user-profile__social-icon--dribbble"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
           </div>
-          <section class="page__item--hotel">
-            <h2 class="subtitle">Как нас найти</h2>
+          <section class="page__item">
+            <div class="page__subtitle">
+              <h2 class="subtitle">Как нас найти</h2>
+            </div>
             <div class="location" id="location"></div>
           </section>
         </div>
-        <div class="callback"></div>
-        <section class="messaging">
-          <div class="messaging__header">
-            <div class="messaging__head">Sarah Brown</div><img class="messaging__avatar" src="img/sarah-brown.jpg" alt="Sarah Brown">
-          </div>
-          <div class="messaging__main">
-            <button class="messaging__chat"></button>
-            <button class="messaging__camera"></button>
-            <div class="messaging__intro">
-              <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+        <div class="page__callback">
+          <div class="callback"></div>
+          <section class="messaging">
+            <div class="messaging__header">
+              <div class="messaging__head">Sarah Brown</div><img class="messaging__avatar" src="img/sarah-brown.jpg" alt="Sarah Brown">
             </div>
-            <form class="messaging__form" action="./handler.php">
-              <div class="messaging__block">
-                <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
-                <button class="button messaging__button button--primary" type="button">Reply</button>
+            <div class="messaging__main">
+              <button class="messaging__chat"></button>
+              <button class="messaging__camera"></button>
+              <div class="messaging__intro">
+                <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
               </div>
-            </form>
-          </div>
-        </section>
-        <div class="overlay"></div>
-      </div>
-      <footer class="page-footer">
-        <div class="page-footer__wrapper">
-          <div class="page-footer__description"><img src="img/logo.png" alt="logo">
-            <p class="page-footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-          </div>
-          <div class="page-footer__search">
-            <h3 class="page--hotel__subtitle">Поиск на сайте</h3>
-            <form class="search" action="./handler.php">
-              <input class="search__input" type="text" placeholder="Search">
-              <button class="search__submit" type="submit"></button>
-            </form>
-          </div>
+              <form class="messaging__form" action="./handler.php">
+                <div class="messaging__block">
+                  <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
+                  <div class="page__button page__button--messaging">
+                    <button class="button button--primary button--messaging" type="button">Reply</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <div class="overlay"></div>
         </div>
-        <p class="page-footer__copyright">Copyright &copy; All rights reserved | This template is made with by <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a></p>
-      </footer>
+      </div>
+      <div class="page__footer">
+        <footer class="footer">
+          <div class="footer__wrapper">
+            <div class="footer__description"><img src="img/logo.png" alt="logo">
+              <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+            </div>
+            <div class="footer__search">
+              <h3 class="page--hotel__subtitle">Поиск на сайте</h3>
+              <form class="search search--footer" action="./handler.php">
+                <input class="search__input" type="text" placeholder="Search">
+                <button class="search__submit" type="submit"></button>
+              </form>
+            </div>
+          </div>
+          <p class="footer__copyright">Copyright &copy; All rights reserved | This template is made with by <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a></p>
+        </footer>
+      </div>
     </div>
     <script src="./app.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=aba3cd86-c704-4688-a291-3ec61529513e&amp;lang=en_US" type="text/javascript"></script>
