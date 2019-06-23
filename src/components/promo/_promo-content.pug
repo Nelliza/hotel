@@ -9,7 +9,7 @@ mixin promoContent(options={})
     h3.promo__header= options.header
     p.promo__text= options.text
     +button({
-      modifiers: options.btnColor,
+      modifier: options.btnColor,
       text: options.btnText,
       link: options.btnlink
     })

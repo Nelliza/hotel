@@ -32,8 +32,11 @@ html(lang="en")
 
           block page-content
 
-          include ../components/callback/callback
-        include ../components/footer/footer
+          .page__callback
+            include ../components/callback/callback
+            .overlay
+        .page__footer
+          include ../components/footer/footer
 
       script(src="./app.js")
       block scripts

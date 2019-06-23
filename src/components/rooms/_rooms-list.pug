@@ -13,7 +13,8 @@ mixin roomsList(options)
         h3.rooms__header= item.header
         p.rooms__text= item.text
       +button({
-        modifiers: options.btnColor,
+        wrapperModifier: "rooms",
+        modifier: options.btnColor,
         text: options.btnText,
         link: item.link
       })

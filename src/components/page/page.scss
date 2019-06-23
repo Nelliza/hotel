@@ -1,4 +1,5 @@
-@import './components/subtitle/_subtitle-margins.scss';
+@import './components/_placeholder/_placeholder.scss';
+@import './components/page/_subtitle-margins.scss';
 
 @each $type in black, light, bold, italic, regular {
   @include font-face('Lato', 'lato', $type);
@@ -27,7 +28,7 @@ html {
   box-sizing: border-box;
   max-width: 700px;
   margin: 0;
-  padding: 2.3rem 3.4rem 5.6rem 3.25rem;
+  padding: 2.5rem 3.4rem 5.6rem 3.25rem;
 
   &--hotel {
     width: auto;
@@ -35,11 +36,6 @@ html {
     margin: 0 auto;
     padding: 5rem 0 0;
     font-size: 1.3rem;
-
-    &__subtitle {
-      margin: 2rem 0;
-      text-align: center;
-    }
   }
 
   &__wrapper {
@@ -53,67 +49,81 @@ html {
   }
 
   &__item {
-    &--arrows {
-      @include subtitle-margins(2.6rem);
-    }
+    margin-bottom: 4rem;
+  }
 
-    &--percentages {
-      @include subtitle-margins(2.4rem, 1rem);
-    }
+  &__subtitle {
+    margin-top: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
 
-    &--sliders {
-      @include subtitle-margins(1.6rem, 1.2rem);
-    }
+  &__arrows {
+    @include subtitle-margins(2.6rem);
+  }
 
-    &--stages {
-      @include subtitle-margins(2rem);
-    }
+  &__percentages {
+    @include subtitle-margins(2.4rem, 1rem);
+  }
 
-    &--form-elements {
-      @include subtitle-margins(false, 2.4rem);
-    }
+  &__sliders {
+    @include subtitle-margins(1.6rem, 1.2rem);
+  }
 
-    &--toggles {
-      @include subtitle-margins(.5rem, 1.5rem);
-    }
+  &__stages {
+    @include subtitle-margins(2rem);
+    margin-bottom: 3.4rem;
+  }
 
-    &--tick-boxes {
-      @include subtitle-margins(2rem, 1.5rem);
-    }
+  &__form-elements {
+    @include subtitle-margins(false, 2rem);
+  }
 
-    &--search {
-      @include subtitle-margins(false, 1.3rem);
-    }
+  &__toggles {
+    @include subtitle-margins(.5rem, 1.5rem);
+  }
 
-    &--news {
-      @include subtitle-margins(4.6rem, 2.1rem);
-    }
+  &__tick-boxes {
+    @include subtitle-margins(1.8rem, 1.5rem);
+  }
 
-    &--location {
-      @include subtitle-margins(2rem, 2rem);
-    }
+  &__search {
+    @include subtitle-margins(false, 1.3rem);
+  }
 
-    &--calendar,
-    &--messaging {
-      @include subtitle-margins(3rem);
+  &__news-list {
+    @include subtitle-margins(3.8rem, 2.1rem);
+  }
 
-      @media screen and (max-width: 580px) {
-        flex-grow: 1;
-      }
-    }
+  &__location {
+    @include subtitle-margins(1.9rem, 1.9rem);
+  }
 
-    &--video {
-      @include subtitle-margins(3.2rem, .5rem);
-    }
+  &__calendar,
+  &__messaging {
+    @include subtitle-margins(3rem);
 
-    &--hotel {
-      margin-bottom: 4rem;
+    @media screen and (max-width: 580px) {
+      flex-grow: 1;
     }
   }
-}
 
-.section-wrapper {
-  &--buttons {
+  &__video {
+    @include subtitle-margins(3.2rem, .5rem);
+  }
+
+  &__callback {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  &__footer {
+    padding: 4rem;
+    flex: 0 0 auto;
+    background-color: #363636;
+  }
+
+  &__buttons-wrapper {
     @include flex() {
       align-items: flex-end;
     };
@@ -125,7 +135,7 @@ html {
     }
   }
 
-  &--percentages {
+  &__percentages-wrapper {
     @include flex();
 
     @media screen and (max-width: 530px) {
@@ -133,10 +143,10 @@ html {
     }
   }
 
-  &--form-elements {
+  &__form-elements-wrapper {
     margin-bottom: .65rem;
 
-    > .section-wrapper {
+    > .page__fieldset-wrapper {
       width: 18rem;
 
       @media screen and (max-width: 580px) {
@@ -145,31 +155,37 @@ html {
     }
   }
 
-  &--arrows,
-  &--toggles,
-  &--tick-boxes {
+  &__arrows-wrapper,
+  &__toggles-wrapper,
+  &__tick-boxes-wrapper {
     $flex-map: (justify: center); 
     @include flex($flex-map...);
   }
 
-  &--sliders,
-  &--form-elements,
-  &--news,
-  &--two-section {
+  &__sliders-wrapper,
+  &__form-elements-wrapper,
+  &__news-list-wrapper,
+  &__two-sections-wrapper {
     @include flex();
   }
 
-  &--news-list {
-    $flex-map: (justify: space-evenly);
+  &__video-wrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__hotel-news-wrapper {
+    $flex-map: (justify: space-evenly); 
     @include flex($flex-map...);
 
     > .news,
     > .video {
+      width: 22rem;
       margin: 1rem;
     }
   }
 
-  &--contact-us {
+  &__contact-us-wrapper {
     $flex-map: (justify: space-evenly);
     @include flex($flex-map...);
 
@@ -177,6 +193,73 @@ html {
       margin-left: 1rem;
       margin-right: 1rem;
     }
+  }
+
+  &__button {
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+
+    &--form {
+      align-self: flex-end;
+      margin-top: 0;
+    }
+
+    &--messaging {
+      float: none;
+      margin-top: .8rem;
+      margin-bottom: 0.2rem;
+    }
+
+    &--rooms {
+      position: relative;
+      bottom: 1.5rem;
+    }
+  }
+
+  &__arrow {
+    margin: .6rem .72rem;
+
+    &--carousel {
+      position: absolute;
+      top: 50%;
+      width: 2rem;
+    }
+
+    &--prev {
+      left: 1%;
+    }
+
+    &--next {
+      right: 1%;
+    }
+  }
+
+  &__percentage {
+    margin: .5rem;
+  }
+
+  &__pie-chart {
+    margin: .5rem;
+
+    &--flex {
+      display: flex;
+    }
+  }
+
+  &__slider {
+    margin: 1.8rem 0;
+  }
+
+  &__form {
+    margin-top: .6rem;
+  }
+
+  &__user-profile {
+    margin-bottom: .7rem;
+  }
+
+  &__news {
+    margin-bottom: 1rem;
   }
 }
 
@@ -193,4 +276,8 @@ html {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+}
+
+::placeholder {
+  @include placeholder;
 }

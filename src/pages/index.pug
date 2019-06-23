@@ -7,8 +7,11 @@ block include
   include ../components/pie-chart/_pie-chart
 
 block page-content
-  include ../components/promo/promo
+  .page__item
+    include ../components/promo/promo
 
   .center-layer
-    include ../components/about/about
-    include ../components/rooms/rooms
+    .page__item
+      include ../components/about/about
+    .page__item
+      include ../components/rooms/rooms

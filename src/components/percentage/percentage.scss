@@ -3,8 +3,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: .5rem;
-  
+
+  &:before {
+    content: attr(data-percent);
+    z-index: 1;
+    position: absolute;
+    font-size: .4em;
+    font-weight: 300;
+    color: #9d9d9d;
+  }
+
   &__svg {
     @include size(100%);
     border-radius: 50%;
@@ -22,14 +30,5 @@
 
   &__center {
     fill: transparent;
-  }
-
-  &:before {
-    content: attr(data-percent);
-    z-index: 1;
-    position: absolute;
-    font-size: .4em;
-    font-weight: 300;
-    color: #9d9d9d;
   }
 }

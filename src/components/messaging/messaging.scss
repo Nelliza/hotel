@@ -7,7 +7,7 @@
 
   &__header {
     z-index: 1;
-    min-height: 7.3rem;
+    min-height: 7.2rem;
     position: relative;
     background-color: #46ab9d;
     border-radius: .3rem .3rem 0 0;
@@ -42,7 +42,7 @@
 
   &__main {
     position: relative;
-    padding: 1.5rem 1.4rem;
+    padding: 1.4rem;
     background-color: #f2f2f2;
     border-radius: 0 0 .3rem .3rem;
   }
@@ -98,12 +98,5 @@
     color: #777;
     border: .2rem solid #fff;
     border-radius: .5rem;
-  }
-
-  &__button {
-    @include size(100%, 2.3rem);
-    float: none;
-    margin-top: .8rem;
-    margin-bottom: 0.2rem;
   }
 }

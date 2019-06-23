@@ -1,10 +1,12 @@
-footer.page-footer
-  .page-footer__wrapper
-    .page-footer__description
+footer.footer
+  .footer__wrapper
+    .footer__description
       img(src=require("../components/logo/logo.png"), alt="logo")
-      p.page-footer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
-    .page-footer__search
+      p.footer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
+    .footer__search
       h3.page--hotel__subtitle Поиск на сайте
-      +search()
-  p.page-footer__copyright Copyright &copy; All rights reserved | This template is made with by 
+      +search({
+        modifier: "footer"
+      })
+  p.footer__copyright Copyright &copy; All rights reserved | This template is made with by 
     a(href="https://colorlib.com", target="_blank", rel="noopener noreferrer") Colorlib

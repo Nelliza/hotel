@@ -1,13 +1,59 @@
 .slider {
-  @include size(16.2rem, .3rem);
+  width: 16.2rem;
   height: .3rem;
-  margin: 1.8rem 0;
   border-radius: 5rem;
   background-color: $color-disabled;
   cursor: pointer;
 
   @media screen and (max-width: 580px) {
     width: 100%;
+  }
+
+  &__pointer {
+    @include size(2.25rem, 1.5rem);
+    font-size: .8rem;
+    font-weight: 900;
+    line-height: 1.9;
+    position: absolute;
+    top: -1.9rem;
+    left: -.5rem;
+    content: '';
+    text-align: center;
+    color: #fff;
+    border-radius: .4rem;
+    background-color: $color-primary;
+    cursor: pointer;
+
+    &:after {
+      @include triangle-tooltip($color-primary, .3rem, bottom);
+    }
+  }
+
+  &__scale {
+    margin: 0;
+    padding-top: 1rem;
+    font-size: .7rem;
+  }
+
+  &__step {
+    font-weight: 900;
+    position: absolute;
+    width: 2rem;
+    list-style: none;
+    color: #d1d1d1;
+  }
+
+  &__handle {
+    width: 1.2rem;
+    height: 1.2rem;
+    top: -.4rem;
+    border-radius: 50%;
+    background-color: $color-primary;
+    cursor: pointer;
+
+    &--with-pointer {
+      position: relative;
+    }
   }
 
   &.slider--warning {
@@ -25,50 +71,5 @@
   .ui-slider-range {
     border-radius: 5rem;
     background-color: $color-primary;
-  }
-
-  .slider__handle {
-    @include size(1.2rem);
-    top: -.4rem;
-    border-radius: 50%;
-    background-color: $color-primary;
-    cursor: pointer;
-
-    &--with-pointer {
-      position: relative;
-    }
-  }
-
-  &__pointer {
-    @include size(2.25rem, 1.5rem);
-    font-size: .8rem;
-    font-weight: 900;
-    line-height: 1.9;
-    position: absolute;
-    top: -2rem;
-    left: -.6rem;
-    content: '';
-    text-align: center;
-    color: #fff;
-    border-radius: .4rem;
-    background-color: $color-primary;
-    cursor: pointer;
-
-    &:after {
-      @include triangle-tooltip($color-primary, .3rem, bottom);
-    }
-  }
-
-  &__scale {
-    margin-top: 1rem;
-    font-size: .7rem;
-  }
-
-  &__step {
-    font-weight: 900;
-    position: absolute;
-    width: 2rem;
-    list-style: none;
-    color: #d1d1d1;
   }
 }

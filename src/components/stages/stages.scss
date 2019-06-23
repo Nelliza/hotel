@@ -1,7 +1,8 @@
 .stages {
   display: flex;
-  padding: .2rem 0 .6rem;
   counter-reset: step;
+  margin: 0;
+  padding: 0;
 
   &--primary {
     .stages__item {

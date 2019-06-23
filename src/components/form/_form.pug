@@ -27,8 +27,8 @@ mixin form(options={})
     .form__fieldset
       textarea(name=options.textarea.name, rows=options.textarea.rows, placeholder=options.textarea.placeholder)
     +button({
-      classes: "form__button",
-      modifiers: options.btnStyle,
+      wrapperModifier: "form",
+      modifier: [options.btnStyle, "form"],
       text: options.btnText,
       tag: "button",
       btnType: "submit"

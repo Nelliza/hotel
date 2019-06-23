@@ -3,13 +3,6 @@
 .tick-box {
   display: none;
 
-  &__checkmark {
-    margin: .5rem;
-    cursor: pointer;
-    border-radius: 50%;
-    background: $color-disabled;
-  }
-
   &:checked + label {
     .tick-box__checkmark {
       background: $color-primary;
@@ -30,6 +23,13 @@
     stroke: #fff;
     stroke-dasharray: 50;
     stroke-dashoffset: 50;
+  }
+
+  &__checkmark {
+    margin: .5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    background: $color-disabled;
   }
 }
 

@@ -1,27 +1,20 @@
 mixin button(options={})
-  - options.classes = options.classes || false
-  - options.modifiers = options.modifiers || false
+  - options.wrapperModifier = options.wrapperModifier ? "page__button--" + options.wrapperModifier : false
   - options.text = options.text || "Button"
   - options.tag = options.tag || "a"
   - options.link = options.link || "#"
   - options.btnType = options.btnType || "button"
+  - var modifiers = []
 
-  - var classNames = []
-  each modifiers in [options.classes, options.modifiers]
-    if modifiers
-      if Array.isArray(modifiers)
-        each modifier in modifiers
-          if modifiers == options.modifiers
-            - classNames.push("button--" + modifier)
-          else
-            - classNames.push(modifier)
-      else
-        if modifiers == options.modifiers
-          - classNames.push("button--" + modifiers)
-        else
-          - classNames.push(modifiers)
+  if options.modifier
+    if Array.isArray(options.modifier)
+      each modifier in options.modifier
+        - modifiers.push("button--" + modifier)
+    else
+      - modifiers.push("button--" + options.modifier)
 
-  if options.tag == "button"
-    button(class=["button", classNames], type=options.btnType)= options.text
-  else
-    a(class=["button", classNames], href=options.link)= options.text
+  div(class=["page__button", options.wrapperModifier])
+    if options.tag == "button"
+      button(class=["button", modifiers], type=options.btnType)= options.text
+    else
+      a(class=["button", modifiers], href=options.link)= options.text

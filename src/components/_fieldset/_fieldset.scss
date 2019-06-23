@@ -9,7 +9,7 @@
     box-sizing: border-box;
     width: 100%;
   }
-  
+
   &__#{$btn} {
     @include fieldset-icon($path);
     cursor: pointer;

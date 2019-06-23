@@ -10,9 +10,10 @@ block title
 
 block page-content
   .center-layer
-    section.page__item--hotel
-      +subtitle("Новости отеля")
-      .section-wrapper.section-wrapper--news-list
+    section.page__item
+      .page__subtitle
+        +subtitle("Новости отеля")
+      .page__hotel-news-wrapper
         +news({
           title: "It's all going downhill",
           date: "24 august 2013",
@@ -27,6 +28,7 @@ block page-content
           modifier: "primary",
           isCalendar: true
         })
+      .page__hotel-news-wrapper
         +news({
           title: "News number 3",
           date: "11 march 2014",
@@ -40,11 +42,14 @@ block page-content
           text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
           image: "news-1"
         })
-        +video({
-          modifier: "video--news",
-          source: "rPmGtZAUxNs"
-        })
-        +video({
-          modifier: "video--news",
-          source: "rPmGtZAUxNs"
-        })
+      .page__hotel-news-wrapper
+        .page__video-wrapper
+          +video({
+            modifier: "video--news",
+            source: "rPmGtZAUxNs"
+          })
+        .page__video-wrapper
+          +video({
+            modifier: "video--news",
+            source: "rPmGtZAUxNs"
+          })

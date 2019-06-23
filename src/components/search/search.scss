@@ -5,4 +5,18 @@
   @media screen and (max-width: 580px) {
     width: 100%;
   }
+
+  &--notfound {
+    > .search__input {
+      background-color: $color-warning;
+    }
+
+    > .search__input::placeholder {
+      color: #fff;
+    }
+  }
+
+  &--footer {
+    width: 100%;
+  }
 }

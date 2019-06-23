@@ -1,4 +1,4 @@
-section.page__item--hotel.reservation
+section.reservation
   .reservation__stages
     +stages({
       modifier: "primary",
@@ -21,19 +21,22 @@ section.page__item--hotel.reservation
       h3.reservation__header Основная информация
       .reservation__item
         p.reservation__text Количество взрослых
-        +slider({
-          type: "pointer"
-        })
+        .page__slider
+          +slider({
+            type: "pointer"
+          })
       .reservation__item
         p.reservation__text Количество детей
-        +slider({
-          type: "pointer"
-        })
+        .page__slider
+          +slider({
+            type: "pointer"
+          })
       .reservation__item
         p.reservation__text Количество комнат
-        +slider({
-          type: "scale"
-        })
+        .page__slider
+          +slider({
+            type: "scale"
+          })
       .reservation__item
         +toggle({
           id: 3,

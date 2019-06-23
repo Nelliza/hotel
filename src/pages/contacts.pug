@@ -11,44 +11,51 @@ block title
 
 block page-content
   .center-layer
-    .section-wrapper.section-wrapper--contact-us
-      section.contact-us
-        +subtitle("Связаться с нами")
-        +form({
-          id: 2,
-          inputs: [
-            {
-              name: "name",
-              placeholder: "Ваше имя"
-            },
-            {
-              name: "email",
-              placeholder: "Ваш email"
-            }
-          ],
-          textarea: {
-            name: "message",
-            placeholder: "Введите текст сообщения"
-          },
-          btnText: "Отправить"
-        })
-      section.team
-        +subtitle("Наши специалисты")
-        +userProfile({
-          name: "Петров Петр",
-          photo: "john-smith",
-          profession: "менеджер по бронированию",
-          modifier: "primary"
-        })
-        +userProfile({
-          name: "Иванова Наталья",
-          photo: "sarah-brown",
-          profession: "менеджер по туризму",
-          modifier: "additional"
-        })
+    .page__item
+      .page__contact-us-wrapper
+        section.contact-us
+          .page__subtitle
+            +subtitle("Связаться с нами")
+          .page__form
+            +form({
+              id: 2,
+              inputs: [
+                {
+                  name: "name",
+                  placeholder: "Ваше имя"
+                },
+                {
+                  name: "email",
+                  placeholder: "Ваш email"
+                }
+              ],
+              textarea: {
+                name: "message",
+                placeholder: "Введите текст сообщения"
+              },
+              btnText: "Отправить"
+            })
+        section.team
+          .page__subtitle
+            +subtitle("Наши специалисты")
+          .page__user-profile
+            +userProfile({
+              name: "Петров Петр",
+              photo: "john-smith",
+              profession: "менеджер по бронированию",
+              modifier: "primary"
+            })
+          .page__user-profile
+            +userProfile({
+              name: "Иванова Наталья",
+              photo: "sarah-brown",
+              profession: "менеджер по туризму",
+              modifier: "additional"
+            })
 
-    section.page__item--hotel
-      +subtitle("Как нас найти")
+    section.page__item
+      .page__subtitle
+        +subtitle("Как нас найти")
       +location
 
 block scripts

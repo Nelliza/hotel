@@ -1,8 +1,5 @@
 .callback {
   @include size(4rem);
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
   display: block;
   background: url(./assets/icons/call-icon.svg) #fff;
   border: .15rem solid #4eb7a8;

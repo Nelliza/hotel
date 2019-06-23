@@ -13,6 +13,7 @@ mixin pie-chart(options={})
         circle.pie-chart__item(r="16", cx="16", cy="16", style="stroke: " + options.items[i].fill + "; stroke-dasharray: " + percent + " 100; z-index: " + (options.items.length - i))
         - percent = percent - (options.items[i].percent * 100 / sumPercent)
       circle.pie-chart__center(r="10", cx="16", cy="16")
+
   if options.withLegend
     ul.pie-chart__legend
       each item in options.items

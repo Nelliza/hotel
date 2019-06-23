@@ -1,25 +1,33 @@
 @import './components/arrow/_arrow-state.scss';
 
 .arrow {
-  margin: .6rem .72rem;
   border: .2rem solid $color-primary;
   border-radius: 50%;
   background-color: #fff;
   cursor: pointer;
 
-  &--prev {
-    &:before {
-      transform: rotate(180deg);
-    }
-  }
-
   &:hover {
     @include arrow-state(hover);
   }
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     @include arrow-state(disabled);
     cursor: default;
+  }
+
+  &:before {
+    @include size(.9rem, 1.6rem);
+    content: '';
+    display: block;
+    margin: 0 auto;
+    background: url(./assets/icons/arrow-next-icon.svg);
+  }
+
+  &--prev {
+    &:before {
+      transform: rotate(180deg);
+    }
   }
 
   &--warning {
@@ -28,13 +36,5 @@
     &:hover {
       @include arrow-state(hover, $color-warning);
     }
-  }
-
-  &:before {
-    content: '';
-    display: block;
-    @include size(.9rem, 1.6rem);
-    margin: 0 auto;
-    background: url(./assets/icons/arrow-next-icon.svg);
   }
 }

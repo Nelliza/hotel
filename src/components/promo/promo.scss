@@ -17,21 +17,3 @@
 .owl-stage-outer {
   margin: 0 8px;
 }
-
-.arrow--carousel {
-  position: absolute;
-  top: 50%;
-
-  &.arrow--prev {
-    left: 1%;
-  }
-
-  &.arrow--next {
-    right: 1%;
-  }
-
-  &.disabled {
-    @include arrow-state(disabled);
-    cursor: default;
-  }
-}

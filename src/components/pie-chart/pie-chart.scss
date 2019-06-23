@@ -1,6 +1,5 @@
 .pie-chart {
   position: relative;
-  margin: .5rem;
 
   &__svg {
     @size(100%);
@@ -23,7 +22,6 @@
 
   &__legend {
     margin: 0;
-    padding: 1rem;
     list-style-type: none;
   }
 

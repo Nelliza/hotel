@@ -17,8 +17,7 @@ mixin news(options={})
       p.news__text= options.text
       if options.isCalendar
         +button({
-          classes: "news__button",
-          modifiers: "primary",
+          modifier: ["primary", "news"],
           text: "Add to calendar",
           link: "#calendar"
         })

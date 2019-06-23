@@ -1,8 +1,7 @@
 include _social-icon
 
 mixin userProfile(options={})
-  - options.modifier = options.modifier || false
-  - var modifier = options.modifier ? "user-profile__info--" + options.modifier : false
+  - options.modifier = options.modifier ? "user-profile__info--" + options.modifier : false
   -
     var social = options.social || [
       {
@@ -21,7 +20,7 @@ mixin userProfile(options={})
 
   .user-profile
     img.user-profile__photo(src=require("../components/user-profile/" + options.photo + ".jpg"), alt=options.name)
-    div(class=["user-profile__info", modifier])
+    div(class=["user-profile__info", options.modifier])
       span.user-profile__name= options.name
       span.user-profile__profession= options.profession
       ul.user-profile__social

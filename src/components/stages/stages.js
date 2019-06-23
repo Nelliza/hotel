@@ -1,5 +1,5 @@
 $(function() {
-  $('.page__item--stages .stages').stages({
+  $('.page__stages .stages').stages({
     current: 3
   });
 });
