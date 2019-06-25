@@ -41,6 +41,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "eslint": "^6.0.0",
     "owl.carousel": "^2.3.4",
     "webpack-jquery-ui": "^2.0.1"
   }

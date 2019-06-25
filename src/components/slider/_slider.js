@@ -21,7 +21,7 @@
     pointer.text($(this).slider('option', 'value') || $(this).slider('option', 'min'));
   }
 
-  function sliderPointer(event, ui) {
+  function sliderPointer(e, ui) {
     var pointer = $(this).find('.slider__pointer');
     pointer.text(ui.value);
   }

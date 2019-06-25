@@ -1,6 +1,5 @@
 (function($) {
   $.fn.stages = function(options) {
-
     var $li = $(this).children('li');
     var $countItems = $li.length;
 
@@ -15,10 +14,10 @@
 
     var currentIdx = 0;
 
-    $li.click(function(){
+    $li.click(function(e) {
       $li.removeClass('stages__item--current stages__item--done');
-      $(this).addClass('stages__item--current');
-      currentIdx = $(this).index();
+      $(e.currentTarget).addClass('stages__item--current');
+      currentIdx = $(e.currentTarget).index();
 
       for (var i = 0; i < currentIdx; i++) {
         $li.eq(i).addClass('stages__item--done');
