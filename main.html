@@ -246,8 +246,8 @@
           <input class="search__input" type="text" placeholder="I've not found what I'm looking for...">
           <button class="search__submit search__submit--warning" type="submit"></button>
         </form>
-        <form class="drop-down" action="./handler.php">
-          <select class="drop-down__select">
+        <form class="dropdown" action="./handler.php">
+          <select class="dropdown__select">
             <option selected disabled style="display: none">Choose An Option</option>
             <option>Option 1</option>
             <option>Option 2</option>
@@ -320,7 +320,7 @@
         <div class="page__subtitle">
           <h2 class="subtitle">Calendar</h2>
         </div>
-        <div class="calendar">
+        <div class="calendar" id="calendar">
           <div class="calendar__day"></div>
           <div class="calendar__datepicker"></div>
         </div>
@@ -363,6 +363,6 @@
     </section>
     <script src="./app.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=aba3cd86-c704-4688-a291-3ec61529513e&amp;lang=en_US" type="text/javascript"></script>
-    <script>ymaps.ready(init);</script>
+    <script>ymaps.ready(window.init);</script>
   </body>
 </html>
