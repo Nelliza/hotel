@@ -1,4 +1,5 @@
 mixin button(options={})
+  - options.modifier = options.modifier || "primary"
   - options.wrapperModifier = options.wrapperModifier ? "page__button--" + options.wrapperModifier : false
   - options.text = options.text || "Button"
   - options.tag = options.tag || "a"
@@ -6,12 +7,11 @@ mixin button(options={})
   - options.btnType = options.btnType || "button"
   - var modifiers = []
 
-  if options.modifier
-    if Array.isArray(options.modifier)
-      each modifier in options.modifier
-        - modifiers.push("button--" + modifier)
-    else
-      - modifiers.push("button--" + options.modifier)
+  if Array.isArray(options.modifier)
+    each modifier in options.modifier
+      - modifiers.push("button--" + modifier)
+  else
+    - modifiers.push("button--" + options.modifier)
 
   div(class=["page__button", options.wrapperModifier])
     if options.tag == "button"

@@ -1,23 +1,41 @@
-$(function() {
-  $('.button').on('click', function (event) {
-    var $div = $('<div/>'),
-      btnOffset = $(this).offset(),
-      xPos = event.pageX - btnOffset.left,
-      yPos = event.pageY - btnOffset.top;
+class Button {
+  constructor(button) {
+    this.$button = button;
+    this.init();
+  }
 
-    $(this).addClass('button--pressed');
+  init() {
+    this.$button.on('click', this._handleButtonClick.bind(this));
+  }
+
+  _handleButtonClick(event) {
+    let $div = $('<div>'),
+        btnOffset = $(event.currentTarget).offset(),
+        xPos = event.pageX - btnOffset.left,
+        yPos = event.pageY - btnOffset.top;
+
+    $(event.currentTarget).addClass('button--pressed');
     $div.addClass('button__ripple');
 
-    $div
-      .css({
-        top: yPos,
-        left: xPos
-      }) 
-      .appendTo($(this));
+    $div.css({
+          top: yPos,
+          left: xPos
+        })
+        .appendTo($(event.currentTarget));
 
-    window.setTimeout(function() {
+    window.setTimeout(() => {
       $div.remove();
-      $('.button').removeClass('button--pressed');
+      this.$button.removeClass('button--pressed');
     }, 1000);
-  });
-});
+
+    let anchor = $(event.currentTarget).attr('href');
+
+    if (anchor) {
+      $('html').animate({ 
+        scrollTop: $(anchor).offset().top
+      }, 1000);
+    }
+  }
+}
+
+export default Button;

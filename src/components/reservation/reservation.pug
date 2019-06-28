@@ -5,7 +5,7 @@ section.reservation
       count: 3
     })
 
-  .carousel.carousel--reservation.owl-carousel
+  .carousel.owl-carousel
     form.reservation__slide.reservation__slide--checkin(action="./handler.php")
       h3.reservation__header Выберите планируемую дату отдыха
       .reservation__item.reservation__item--checkin
@@ -45,7 +45,7 @@ section.reservation
     form.reservation__slide.reservation__slide--additional(action="./handler.php")
       h3.reservation__header Дополнительная информация
       .reservation__item
-        +dropDown({
+        +dropdown({
           title: "Питание",
           values: ["Только завтрак", "Завтрак и ужин", "Трехразовое питание"]
         })

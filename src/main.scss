@@ -10,7 +10,6 @@ $color-disabled: #e5e5e5;
 @import './components/_input/_input.scss';
 @import './components/_fieldset/_fieldset.scss';
 @import './components/_flex/_flex.scss';
-@import './components/_animations/_animations.scss';
 @import './components/_promo-block/_promo-block.scss';
 
 @import './components/page/page.scss';
@@ -25,7 +24,7 @@ $color-disabled: #e5e5e5;
 @import './components/toggle/toggle.scss';
 @import './components/tick-box/tick-box.scss';
 @import './components/search/search.scss';
-@import './components/drop-down/drop-down.scss';
+@import './components/dropdown/dropdown.scss';
 @import './components/user-profile/user-profile.scss';
 @import './components/news/news.scss';
 @import './components/location/location.scss';

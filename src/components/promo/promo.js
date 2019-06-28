@@ -1,14 +1,26 @@
-$(function() {
-  $('.promo > .carousel').owlCarousel({
-    items: 1,
-    nav: true,
-    navText: false,
-    dots: false,
-    autoplay: true
-  });
+class Promo {
+  constructor(carousel) {
+    this.$carousel = carousel;
+    this.init();
+  }
 
-  $('.owl-prev').addClass('page__arrow--carousel page__arrow--prev');
-  $('.owl-next').addClass('page__arrow--carousel page__arrow--next');
-  $('.owl-prev').append('<div class="arrow arrow--prev">');
-  $('.owl-next').append('<div class="arrow arrow--next">');
-});
+  init() {
+    this.$carousel.owlCarousel({
+      items: 1,
+      nav: true,
+      navText: false,
+      dots: false,
+      autoplay: true
+    });
+
+    let $prevBtn = this.$carousel.find('.owl-prev');
+    $prevBtn.addClass('page__arrow--carousel page__arrow--prev');
+    $prevBtn.append('<div class="arrow arrow--prev">');
+
+    let $nextBtn = this.$carousel.find('.owl-next');
+    $nextBtn.addClass('page__arrow--carousel page__arrow--next');
+    $nextBtn.append('<div class="arrow arrow--next">');
+  }
+}
+
+export default Promo;

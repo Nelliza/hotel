@@ -32,3 +32,9 @@
     fill: transparent;
   }
 }
+
+@keyframes donut-chart-fill {
+  to {
+    stroke-dasharray: 0 100;
+  }
+}
