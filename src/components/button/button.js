@@ -9,30 +9,30 @@ class Button {
   }
 
   _handleButtonClick(event) {
-    let $div = $('<div>'),
-        btnOffset = $(event.currentTarget).offset(),
-        xPos = event.pageX - btnOffset.left,
-        yPos = event.pageY - btnOffset.top;
+    const $div = $('<div>');
+    const btnOffset = $(event.currentTarget).offset();
+    const xPos = event.pageX - btnOffset.left;
+    const yPos = event.pageY - btnOffset.top;
 
     $(event.currentTarget).addClass('button--pressed');
     $div.addClass('button__ripple');
 
     $div.css({
-          top: yPos,
-          left: xPos
-        })
-        .appendTo($(event.currentTarget));
+      top: yPos,
+      left: xPos,
+    })
+      .appendTo($(event.currentTarget));
 
     window.setTimeout(() => {
       $div.remove();
       this.$button.removeClass('button--pressed');
     }, 1000);
 
-    let anchor = $(event.currentTarget).attr('href');
+    const anchor = $(event.currentTarget).attr('href');
 
     if (anchor) {
-      $('html').animate({ 
-        scrollTop: $(anchor).offset().top
+      $('html').animate({
+        scrollTop: $(anchor).offset().top,
       }, 1000);
     }
   }

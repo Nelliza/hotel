@@ -6,10 +6,10 @@ class Calendar {
   }
 
   init() {
-    $.datepicker._gotoToday = function(id) {
-      let date,
-        $target = $(id),
-        inst = this._getInst($target[0]);
+    $.datepicker._gotoToday = function (id) {
+      let date;
+      const $target = $(id);
+      const inst = this._getInst($target[0]);
 
       if (this._get(inst, 'gotoCurrent') && inst.currentDay) {
         inst.selectedDay = inst.currentDay;
@@ -26,7 +26,7 @@ class Calendar {
 
       this._notifyChange(inst);
       this._adjustDate($target);
-    }
+    };
 
     this.$calendar.datepicker({
       showButtonPanel: true,
@@ -35,19 +35,19 @@ class Calendar {
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
       prevText: '',
       nextText: '',
-      onSelect: this._selectedDay.bind(this)
+      onSelect: this._selectedDay.bind(this),
     });
 
     this._currentDay();
   }
 
   _currentDay() {
-    let dayText = $.datepicker.formatDate('dd', new Date());
+    const dayText = $.datepicker.formatDate('dd', new Date());
     this.$day.text(dayText);
   }
 
   _selectedDay() {
-    let dayText = $.datepicker.formatDate('dd', this.$calendar.datepicker('getDate'));
+    const dayText = $.datepicker.formatDate('dd', this.$calendar.datepicker('getDate'));
     this.$day.text(dayText);
   }
 }

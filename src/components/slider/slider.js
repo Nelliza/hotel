@@ -6,19 +6,18 @@ class Slider {
   }
 
   init() {
-    let optionsSliderWithPointer = {
-          create: this._createSliderWithPointer,
-          slide: this._slideSliderWithPointer
-        },
-        optionsSliderWithScale = {
-          create: this._createSliderWithScale
-        },
-        options = {};
+    const optionsSliderWithPointer = {
+      create: this._createSliderWithPointer,
+      slide: this._slideSliderWithPointer,
+    };
+    const optionsSliderWithScale = {
+      create: this._createSliderWithScale,
+    };
+    let options = {};
 
     if (this.$slider.hasClass('slider--with-pointer')) {
       options = $.extend(this.options, optionsSliderWithPointer);
-    }
-    else {
+    } else {
       options = $.extend(this.options, optionsSliderWithScale);
     }
 
@@ -26,27 +25,27 @@ class Slider {
   }
 
   _createSliderWithPointer() {
-    let pointer = $(this).find('.slider__pointer');
+    const pointer = $(this).find('.slider__pointer');
     pointer.text($(this).slider('option', 'value') || $(this).slider('option', 'min'));
   }
 
   _slideSliderWithPointer(event, ui) {
-    let pointer = $(this).find('.slider__pointer');
+    const pointer = $(this).find('.slider__pointer');
     pointer.text(ui.value);
   }
 
   _createSliderWithScale() {
-    let ul = $(this).find('.slider__scale'),
-        count = ($(this).slider('option', 'max') - $(this).slider('option', 'min')) / $(this).slider('option', 'step'),
-        step = $(this).slider('option', 'min'),
-        distance = 100 / count,
-        left = 0;
+    const ul = $(this).find('.slider__scale');
+    const count = ($(this).slider('option', 'max') - $(this).slider('option', 'min')) / $(this).slider('option', 'step');
+    const distance = 100 / count;
+    let step = $(this).slider('option', 'min');
+    let left = 0;
 
     for (let i = 0; i <= count; i += 1) {
       ul.append($('<li>', {
         class: 'slider__step',
         text: step,
-        style: 'left: ' + (left - 1) + '%'
+        style: `left: ${(left - 1)}%`,
       }));
       step += $(this).slider('option', 'step');
       left += distance;

@@ -7,7 +7,7 @@ $(() => {
   $chart.each((index, elem) => {
     new ChartAnimation({
       className,
-      chart: $(elem)
+      chart: $(elem),
     });
   });
 });

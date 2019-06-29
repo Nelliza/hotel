@@ -8,10 +8,10 @@ class Reservation {
   }
 
   init() {
-    let $carousel = this.$reservation.find('.carousel'),
-        $stages = this.$reservation.find('.stages'),
-        $datepicker = this.$reservation.find('.calendar'),
-        $slider = this.$reservation.find('.slider');
+    const $carousel = this.$reservation.find('.carousel');
+    const $stages = this.$reservation.find('.stages');
+    const $datepicker = this.$reservation.find('.calendar');
+    const $slider = this.$reservation.find('.slider');
 
     this._initCarousel($carousel);
     this._initStages($stages);
@@ -24,10 +24,10 @@ class Reservation {
       items: 1,
       dots: true,
       dotsContainer: '.reservation__stages > .stages',
-      mouseDrag: false
+      mouseDrag: false,
     });
 
-    let $stage = this.$reservation.find('.stages__item');
+    const $stage = this.$reservation.find('.stages__item');
     $stage.on('click', this._handleStageClick.bind(this, $carousel));
   }
 
@@ -39,28 +39,28 @@ class Reservation {
     $stages.each((index, elem) => {
       new Stages({
         stages: $(elem),
-        current: 1
+        current: 1,
       });
     });
   }
 
   _initDatepicker($datepicker) {
-    let $from = $datepicker.find('input[name="from"]'),
-        $to = $datepicker.find('input[name="to"]');
+    const $from = $datepicker.find('input[name="from"]');
+    const $to = $datepicker.find('input[name="to"]');
 
     $from.datepicker({
-            defaultDate: '+1w',
-            firstDay: 1,
-            dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
-          })
-         .on('change', this._handleFromChange.bind(this, $to));
+      defaultDate: '+1w',
+      firstDay: 1,
+      dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+    })
+      .on('change', this._handleFromChange.bind(this, $to));
 
     $to.datepicker({
-          defaultDate: '+1w',
-          firstDay: 1,
-          dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
-        })
-        .on('change', this._handleToChange.bind(this, $from));
+      defaultDate: '+1w',
+      firstDay: 1,
+      dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+    })
+      .on('change', this._handleToChange.bind(this, $from));
   }
 
   _handleFromChange($to, event) {
@@ -72,13 +72,12 @@ class Reservation {
   }
 
   _getDate(elem) {
-    let dateFormat = 'mm/dd/yy',
-        date;
+    const dateFormat = 'mm/dd/yy';
+    let date;
 
     try {
       date = $.datepicker.parseDate(dateFormat, elem.val());
-    }
-    catch(error) {
+    } catch (error) {
       date = null;
     }
 
@@ -86,16 +85,16 @@ class Reservation {
   }
 
   _initSlider($slider) {
-    let $sliderWithPointer = $slider.filter('.slider--with-pointer'),
-        $sliderWithScale = $slider.filter('.slider--with-scale');
+    const $sliderWithPointer = $slider.filter('.slider--with-pointer');
+    const $sliderWithScale = $slider.filter('.slider--with-scale');
 
     $sliderWithPointer.each((index, elem) => {
       new Slider({
         slider: $(elem),
         options: {
           min: 1,
-          max: 10
-        }
+          max: 10,
+        },
       });
     });
 
@@ -106,8 +105,8 @@ class Reservation {
           min: 1,
           max: 5,
           step: 1,
-          range: 'min'
-        }
+          range: 'min',
+        },
       });
     });
   }

@@ -16,10 +16,10 @@ class ChartAnimation {
   }
 
   _isScrolledIntoView(elem) {
-    let TopViewPort = $(window).scrollTop();
-    let BottomViewPort = TopViewPort + $(window).height();
-    let TopOfElement = $(elem).offset().top;
-    let BottomOfElement = TopOfElement + $(elem).height();
+    const TopViewPort = $(window).scrollTop();
+    const BottomViewPort = TopViewPort + $(window).height();
+    const TopOfElement = $(elem).offset().top;
+    const BottomOfElement = TopOfElement + $(elem).height();
     return ((BottomOfElement <= BottomViewPort) && (TopOfElement >= TopViewPort));
   }
 }

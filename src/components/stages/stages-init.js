@@ -6,7 +6,7 @@ $(() => {
   $stages.each((index, elem) => {
     new Stages({
       stages: $(elem),
-      current: 3
+      current: 3,
     });
   });
 });

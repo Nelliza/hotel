@@ -7,7 +7,7 @@ $(() => {
   $callback.each((index, elem) => {
     new Callback({
       callback: $(elem),
-      overlay: $overlay
+      overlay: $overlay,
     });
   });
 });

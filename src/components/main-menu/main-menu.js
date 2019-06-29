@@ -6,7 +6,7 @@ class MainMenu {
   }
 
   init() {
-    let url = document.location.href;
+    const url = document.location.href;
 
     for (let i = 0; i < this.$link.length; i += 1) {
       if (url === this.$link.get(i).href) {
