@@ -1,5 +1,5 @@
-import Slider from '../slider/slider';
-import Stages from '../stages/stages';
+import Slider from '../slider/Slider';
+import Stages from '../stages/Stages';
 
 class Reservation {
   constructor(reservation) {

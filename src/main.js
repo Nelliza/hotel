@@ -1,23 +1,24 @@
+import './components/page/page';
 import 'webpack-jquery-ui/slider';
 import 'webpack-jquery-ui/selectmenu';
 import 'webpack-jquery-ui/datepicker';
-import './components/page/page';
-import './assets/favicons/favicons';
-import './components/button/button-init';
-import './components/percentage/percentage-init';
-import './components/pie-chart/pie-chart-init';
-import './components/slider/slider-init';
-import './components/stages/stages-init';
-import './components/form/form-init';
-import './components/dropdown/dropdown';
-import './components/location/location';
-import './components/calendar/calendar-init';
-
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
-import './components/main-menu/main-menu-init';
-import './components/promo/promo-init';
-import './components/callback/callback-init';
-import './components/reservation/reservation-init';
+
+import './assets/favicons/favicons';
+import './components/location/location';
+import './components/button/buttonInit';
+import './components/percentage/percentageInit';
+import './components/pie-chart/pieChartInit';
+import './components/slider/sliderInit';
+import './components/stages/stagesInit';
+import './components/form/formInit';
+import './components/dropdown/dropdownInit';
+import './components/calendar/calendarInit';
+
+import './components/main-menu/mainMenuInit';
+import './components/promo/promoInit';
+import './components/callback/callbackInit';
+import './components/reservation/reservationInit';
 
 import './main.scss';

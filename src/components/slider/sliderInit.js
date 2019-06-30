@@ -1,4 +1,4 @@
-import Slider from './slider';
+import Slider from './Slider';
 
 $(() => {
   const $slider = $('.page__sliders .slider');

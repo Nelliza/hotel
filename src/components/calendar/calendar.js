@@ -13,13 +13,17 @@ class Calendar {
 
       if (this._get(inst, 'gotoCurrent') && inst.currentDay) {
         inst.selectedDay = inst.currentDay;
-        inst.drawMonth = inst.selectedMonth = inst.currentMonth;
-        inst.drawYear = inst.selectedYear = inst.currentYear;
+        inst.drawMonth = inst.currentMonth;
+        inst.selectedMonth = inst.drawMonth;
+        inst.drawYear = inst.currentYear;
+        inst.selectedYear = inst.drawYear;
       } else {
         date = new Date();
         inst.selectedDay = date.getDate();
-        inst.drawMonth = inst.selectedMonth = date.getMonth();
-        inst.drawYear = inst.selectedYear = date.getFullYear();
+        inst.drawMonth = date.getMonth();
+        inst.selectedMonth = inst.drawMonth;
+        inst.drawYear = date.getFullYear();
+        inst.selectedYear = inst.drawYear;
         this._setDateDatepicker($target, date);
         this._selectDate(id, this._getDateDatepicker($target));
       }

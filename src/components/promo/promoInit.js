@@ -1,4 +1,4 @@
-import Promo from './promo';
+import Promo from './Promo';
 
 $(() => {
   const $carousel = $('.promo > .carousel');

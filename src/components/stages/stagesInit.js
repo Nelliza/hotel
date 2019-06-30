@@ -1,4 +1,4 @@
-import Stages from './stages';
+import Stages from './Stages';
 
 $(() => {
   const $stages = $('.page__stages .stages');

@@ -1,4 +1,4 @@
-import Callback from './callback';
+import Callback from './Callback';
 
 $(() => {
   const $callback = $('.callback');

@@ -1,7 +1,8 @@
+const webpack = require('webpack');
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-const fs = require('fs');
 
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
@@ -21,18 +22,18 @@ const htmlPlugins = generateHtmlPlugins('./src/pages');
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, './dist')
+    path: path.resolve(__dirname, './dist'),
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: '/node_modules'
+        exclude: '/node_modules',
       },
       {
         test: /\.scss$/,
@@ -40,16 +41,16 @@ module.exports = {
           'style-loader',
           {
             loader: 'css-loader',
-            options: { sourceMap: true }
+            options: { sourceMap: true },
           },
           {
             loader: 'postcss-loader',
-            options: { sourceMap: true, config: { path: './postcss.config.js' } }
+            options: { sourceMap: true, config: { path: './postcss.config.js' } },
           },
           {
             loader: 'sass-loader',
-            options: { sourceMap: true }
-          }
+            options: { sourceMap: true },
+          },
         ]
       },
       {
@@ -58,12 +59,12 @@ module.exports = {
           'style-loader',
           {
             loader: 'css-loader',
-            options: { sourceMap: true }
+            options: { sourceMap: true },
           },
           {
             loader: 'postcss-loader',
-            options: { sourceMap: true, config: { path: './postcss.config.js' } }
-          }
+            options: { sourceMap: true, config: { path: './postcss.config.js' } },
+          },
         ]
       },
       {
@@ -71,8 +72,8 @@ module.exports = {
         loader: 'pug-loader',
         options: {
           pretty: true,
-          self: true
-        }
+          self: true,
+        },
       },
       {
         test: /\.(png|jpe?g|gif)$/,
@@ -81,28 +82,28 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'img'
-            }
+              outputPath: 'img',
+            },
           },
           {
             loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
                 progressive: true,
-                quality: 70
+                quality: 70,
               },
               optipng: {
                 enabled: false,
               },
               pngquant: {
                 quality: '65-90',
-                speed: 4
+                speed: 4,
               },
               gifsicle: {
                 interlaced: false,
-              }
-            }
-          }
+              },
+            },
+          },
         ]
       },
       {
@@ -110,8 +111,8 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: 'fonts'
-        }
+          outputPath: 'fonts',
+        },
       },
       {
         test: /\.svg$/,
@@ -122,8 +123,8 @@ module.exports = {
             options: {
               extract: true,
               spriteFilename: 'img/icons.svg',
-              esModule: false
-            }
+              esModule: false,
+            },
           },
           {
             loader: 'svgo-loader',
@@ -131,19 +132,23 @@ module.exports = {
               plugins: [
                 { removeTitle: true },
                 { convertColors: { shorthex: false} },
-                { convertPathData: true }
+                { convertPathData: true },
               ]
-            }
-          }
+            },
+          },
         ]
-      }
+      },
     ]
   },
   devServer: {
-    overlay: true
+    overlay: true,
   },
   plugins: [
-    new SpriteLoaderPlugin({})
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
+    new SpriteLoaderPlugin({}),
   ]
   .concat(htmlPlugins)
 }

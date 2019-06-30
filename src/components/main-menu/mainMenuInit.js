@@ -1,4 +1,4 @@
-import MainMenu from './main-menu';
+import MainMenu from './MainMenu';
 
 $(() => {
   const $menu = $('.main-menu');
