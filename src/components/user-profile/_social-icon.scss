@@ -1,13 +1,15 @@
+@import '../_size/_size.scss';
+
 @mixin social-icon($social...) {
   @each $val in $social {
     &__social-icon--#{$val} {
       > a {
         @include size(1.6rem, 1.3rem);
         display: block;
-        background: url(./assets/icons/#{$val}-icon.svg) no-repeat center;
+        background: url(../../assets/icons/#{$val}-icon.svg) no-repeat center;
 
         &:hover {
-          background: url(./assets/icons/#{$val}-hover-icon.svg) no-repeat center;
+          background: url(../../assets/icons/#{$val}-hover-icon.svg) no-repeat center;
         }
       }
     }
@@ -15,10 +17,10 @@
     &__info--primary {
       .user-profile__social-icon--#{$val} {
         > a {
-          background: url(./assets/icons/#{$val}-white-icon.svg) no-repeat center;
+          background: url(../../assets/icons/#{$val}-white-icon.svg) no-repeat center;
 
           &:hover {
-            background: url(./assets/icons/#{$val}-hover-icon.svg) no-repeat center;
+            background: url(../../assets/icons/#{$val}-hover-icon.svg) no-repeat center;
           }
         }
       }

@@ -1,3 +1,6 @@
+@import '../_colors/_colors.scss';
+@import '../_pseudo-elem/_pseudo-elem.scss';
+
 .messaging {
   width: 18rem;
 
@@ -51,14 +54,14 @@
     @include pseudo-elem(false, 1.4rem);
     top: 1.4rem;
     left: 1.6rem;
-    background: url(./assets/icons/chat-icon.svg) no-repeat center;
+    background: url(../../assets/icons/chat-icon.svg) no-repeat center;
   }
 
   &__camera {
     @include pseudo-elem(false, 1.5rem);
     top: 1.3rem;
     right: 1.5rem;
-    background: url(./assets/icons/camera-icon.svg) no-repeat center;
+    background: url(../../assets/icons/camera-icon.svg) no-repeat center;
   }
 
   &__chat,

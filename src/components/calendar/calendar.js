@@ -1,3 +1,5 @@
+import 'webpack-jquery-ui/datepicker';
+
 class Calendar {
   constructor(calendar) {
     this.$calendar = calendar.find('.calendar__datepicker');

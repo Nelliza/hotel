@@ -1,3 +1,5 @@
+import 'webpack-jquery-ui/slider';
+
 class Slider {
   constructor(options) {
     this.$slider = options.slider;

@@ -1,4 +1,5 @@
-@import './components/tick-box/_tick-box-animate.scss';
+@import './_tick-box-animate.scss';
+@import '../_colors/_colors.scss';
 
 .tick-box {
   display: none;

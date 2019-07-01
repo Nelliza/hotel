@@ -1,3 +1,5 @@
+@import '../_fieldset/_fieldset.scss';
+
 .search {
   @include fieldset('input', 'submit', 'search-icon.svg');
   width: 18.1rem;

@@ -1,6 +1,9 @@
+@import '../_size/_size.scss';
+@import '../_colors/_colors.scss';
+
 .location {
   @include size(100%, 17.1rem);
-  background: url(./components/location/map.jpg) no-repeat center;
+  background: url(../location/map.jpg) no-repeat center;
   background-size: cover;
 
   &__text {
@@ -43,11 +46,11 @@
     }
 
     &--location > a {
-      background: url(./assets/icons/location-icon.svg) no-repeat center;
+      background: url(../../assets/icons/location-icon.svg) no-repeat center;
     }
 
     &--pin > a {
-      background: url(./assets/icons/pin-icon.svg) no-repeat center;
+      background: url(../../assets/icons/pin-icon.svg) no-repeat center;
     }
   }
 }

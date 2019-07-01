@@ -1,4 +1,5 @@
-@import './components/button/_btn-theme.scss';
+@import './_btn-theme.scss';
+@import '../_size/_size.scss';
 
 .button {
   padding: .4rem 1.85rem;

@@ -1,4 +1,5 @@
-@import './components/_fieldset/_fieldset-icon.scss';
+@import './_fieldset-icon.scss';
+@import '../_input/_input.scss';
 
 @mixin fieldset($input, $btn, $path) {
   position: relative;

@@ -1,5 +1,7 @@
-@import './components/_placeholder/_placeholder.scss';
-@import './components/page/_subtitle-margins.scss';
+@import './_subtitle-margins.scss';
+@import '../_font-face/_font-face.scss';
+@import '../_flex/_flex.scss';
+@import '../_placeholder/_placeholder.scss';
 
 @each $type in black, light, bold, italic, regular {
   @include font-face('Lato', 'lato', $type);

@@ -1,4 +1,6 @@
-@import './components/user-profile/_social-icon.scss';
+@import './_social-icon.scss';
+@import '../_colors/_colors.scss';
+@import '../_triangle-tooltip/_triangle-tooltip.scss';
 
 .user-profile {
   display: flex;

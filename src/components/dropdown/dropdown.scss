@@ -1,3 +1,6 @@
+@import '../_fieldset/_fieldset.scss';
+@import '../_placeholder/_placeholder.scss';
+
 .dropdown {
   width: 18.1rem;
 
@@ -8,7 +11,7 @@
   @include fieldset('select + .ui-selectmenu-button > .ui-selectmenu-text', 'select + .ui-selectmenu-button > .ui-selectmenu-icon', 'arrow-down-icon.svg');
 }
 
-.dropdown__select + .ui-selectmenu-button {
+.dropdown__select + .ui-selectmenu-button.ui-button {
   @include placeholder;
   box-sizing: border-box;
   width: 100%;

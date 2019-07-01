@@ -1,7 +1,9 @@
+@import '../_size/_size.scss';
+
 .callback {
   @include size(4rem);
   display: block;
-  background: url(./assets/icons/call-icon.svg) #fff;
+  background: url(../../assets/icons/call-icon.svg) #fff;
   border: .15rem solid #4eb7a8;
   border-radius: 50%;
   cursor: pointer;

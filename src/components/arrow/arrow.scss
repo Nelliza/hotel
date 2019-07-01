@@ -1,4 +1,6 @@
-@import './components/arrow/_arrow-state.scss';
+@import './_arrow-state.scss';
+@import '../_colors/_colors.scss';
+@import '../_size/_size.scss';
 
 .arrow {
   border: .2rem solid $color-primary;
@@ -21,7 +23,7 @@
     content: '';
     display: block;
     margin: 0 auto;
-    background: url(./assets/icons/arrow-next-icon.svg);
+    background: url(../../assets/icons/arrow-next-icon.svg);
   }
 
   &--prev {

@@ -1,3 +1,7 @@
+@import '../_size/_size.scss';
+@import '../_pseudo-elem/_pseudo-elem.scss';
+@import '../_colors/_colors.scss';
+
 .toggle {
   &__button {
     @include size(3.7rem, 1.5rem);

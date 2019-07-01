@@ -1,3 +1,6 @@
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+
 class Promo {
   constructor(carousel) {
     this.$carousel = carousel;
