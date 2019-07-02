@@ -1,21 +1,22 @@
 class Callback {
   constructor(options) {
-    this.$callback = options.callback;
+    this.$callback = options.elem;
     this.$overlay = options.overlay;
+    this.index = options.index;
     this.init();
   }
 
   init() {
-    this.$callback.on('click', this._handleCallbackClick.bind(this));
-    this.$overlay.on('click', this._handleOverlayClick.bind(this));
+    this.$callback.on(`click.callback${this.index}`, this._handleCallbackClick.bind(this));
+    this.$overlay.on(`click.overlay${this.index}`, this._handleOverlayClick.bind(this));
   }
 
   _handleCallbackClick(event) {
-    $(event.currentTarget).next('.messaging').toggleClass('messaging--visible');
+    $(event.currentTarget).next('.js-messaging').toggleClass('messaging--visible');
   }
 
   _handleOverlayClick(event) {
-    $(event.currentTarget).prev('.messaging').toggleClass('messaging--visible');
+    $(event.currentTarget).prev('.js-messaging').toggleClass('messaging--visible');
   }
 }
 

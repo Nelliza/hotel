@@ -15,6 +15,6 @@ mixin button(options={})
 
   div(class=["page__button", options.wrapperModifier])
     if options.tag == "button"
-      button(class=["button", modifiers], type=options.btnType)= options.text
+      button(class=["button", "js-button", modifiers], type=options.btnType)= options.text
     else
-      a(class=["button", modifiers], href=options.link)= options.text
+      a(class=["button", "js-button", modifiers], href=options.link)= options.text

@@ -1,11 +1,12 @@
 class Button {
-  constructor(button) {
-    this.$button = button;
+  constructor(options) {
+    this.$button = options.elem;
+    this.index = options.index;
     this.init();
   }
 
   init() {
-    this.$button.on('click', this._handleButtonClick.bind(this));
+    this.$button.on(`click.button${this.index}`, this._handleButtonClick.bind(this));
   }
 
   _handleButtonClick(event) {

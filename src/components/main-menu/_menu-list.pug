@@ -3,4 +3,4 @@ mixin menuList(items)
     - item.link = item.link || "#"
 
     li.main-menu__item
-      a.main-menu__link(href=item.link)= item.name
+      a.main-menu__link.js-main-menu__link(href=item.link)= item.name

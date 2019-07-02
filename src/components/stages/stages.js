@@ -1,6 +1,7 @@
 class Stages {
   constructor(options) {
-    this.$stage = options.stages.children('li');
+    this.$stage = options.elem.children('li');
+    this.index = options.index;
     this.current = options.current;
     this.init();
   }
@@ -16,7 +17,7 @@ class Stages {
       }
     }
 
-    this.$stage.on('click', this._handleStageClick.bind(this));
+    this.$stage.on(`click.stage${this.index}`, this._handleStageClick.bind(this));
 
     if (this.current) {
       this.$stage.eq(this.current - 1).trigger('click');

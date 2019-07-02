@@ -2,7 +2,7 @@ import 'webpack-jquery-ui/slider';
 
 class Slider {
   constructor(options) {
-    this.$slider = options.slider;
+    this.$slider = options.elem;
     this.options = options.options;
     this.init();
   }
@@ -17,7 +17,7 @@ class Slider {
     };
     let options = {};
 
-    if (this.$slider.hasClass('slider--with-pointer')) {
+    if (this.$slider.hasClass('js-slider--with-pointer')) {
       options = $.extend(this.options, optionsSliderWithPointer);
     } else {
       options = $.extend(this.options, optionsSliderWithScale);
@@ -27,17 +27,17 @@ class Slider {
   }
 
   _createSliderWithPointer() {
-    const pointer = $(this).find('.slider__pointer');
+    const pointer = $(this).find('.js-slider__pointer');
     pointer.text($(this).slider('option', 'value') || $(this).slider('option', 'min'));
   }
 
   _slideSliderWithPointer(event, ui) {
-    const pointer = $(this).find('.slider__pointer');
+    const pointer = $(this).find('.js-slider__pointer');
     pointer.text(ui.value);
   }
 
   _createSliderWithScale() {
-    const ul = $(this).find('.slider__scale');
+    const ul = $(this).find('.js-slider__scale');
     const count = ($(this).slider('option', 'max') - $(this).slider('option', 'min')) / $(this).slider('option', 'step');
     const distance = 100 / count;
     let step = $(this).slider('option', 'min');

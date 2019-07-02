@@ -1,9 +1,12 @@
 import Form from './Form';
 
 $(() => {
-  const $form = $('.form');
+  const $form = $('.js-form');
 
   $form.each((index, elem) => {
-    new Form($(elem));
+    new Form({
+      index,
+      elem: $(elem),
+    });
   });
 });

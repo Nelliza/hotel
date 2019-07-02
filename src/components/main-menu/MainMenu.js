@@ -1,7 +1,8 @@
 class MainMenu {
-  constructor(menu) {
-    this.$btn = menu.find('.main-menu__btn');
-    this.$link = menu.find('.main-menu__link');
+  constructor(options) {
+    this.$btn = options.elem.find('.js-main-menu__btn');
+    this.$link = options.elem.find('.js-main-menu__link');
+    this.index = options.index;
     this.init();
   }
 
@@ -14,11 +15,11 @@ class MainMenu {
       }
     }
 
-    this.$btn.on('click', this._handleButtonClick.bind(this));
+    this.$btn.on(`click.btn${this.index}`, this._handleButtonClick.bind(this));
   }
 
   _handleButtonClick(event) {
-    $(event.currentTarget).closest('.main-menu').toggleClass('main-menu--open');
+    $(event.currentTarget).closest('.js-main-menu').toggleClass('main-menu--open');
   }
 }
 

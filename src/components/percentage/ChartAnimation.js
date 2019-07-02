@@ -1,12 +1,13 @@
 class ChartAnimation {
   constructor(options) {
-    this.$chart = options.chart;
+    this.$chart = options.elem;
+    this.index = options.index;
     this.className = options.className;
     this.init();
   }
 
   init() {
-    $(window).on('scroll', this._handleWindowScroll.bind(this));
+    $(window).on(`scroll.window${this.index}`, this._handleWindowScroll.bind(this));
   }
 
   _handleWindowScroll() {

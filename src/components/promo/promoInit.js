@@ -1,7 +1,7 @@
 import Promo from './Promo';
 
 $(() => {
-  const $carousel = $('.promo > .carousel');
+  const $carousel = $('.js-promo > .js-carousel');
 
   $carousel.each((index, elem) => {
     new Promo($(elem));

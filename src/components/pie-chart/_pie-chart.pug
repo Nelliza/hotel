@@ -10,7 +10,7 @@ mixin pie-chart(options={})
       each item in options.items
         - sumPercent += item.percent
       - for (var i = options.items.length - 1; i >= 0; i--)
-        circle.pie-chart__item(r="16", cx="16", cy="16", style="stroke: " + options.items[i].fill + "; stroke-dasharray: " + percent + " 100; z-index: " + (options.items.length - i))
+        circle.pie-chart__item.js-pie-chart__item(r="16", cx="16", cy="16", style="stroke: " + options.items[i].fill + "; stroke-dasharray: " + percent + " 100; z-index: " + (options.items.length - i))
         - percent = percent - (options.items[i].percent * 100 / sumPercent)
       circle.pie-chart__center(r="10", cx="16", cy="16")
 

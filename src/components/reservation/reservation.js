@@ -4,16 +4,17 @@ import Slider from '../slider/Slider';
 import Stages from '../stages/Stages';
 
 class Reservation {
-  constructor(reservation) {
-    this.$reservation = reservation;
+  constructor(options) {
+    this.$reservation = options.elem;
+    this.index = options.index;
     this.init();
   }
 
   init() {
-    const $carousel = this.$reservation.find('.carousel');
-    const $stages = this.$reservation.find('.stages');
-    const $datepicker = this.$reservation.find('.calendar');
-    const $slider = this.$reservation.find('.slider');
+    const $carousel = this.$reservation.find('.js-carousel');
+    const $stages = this.$reservation.find('.js-stages');
+    const $datepicker = this.$reservation.find('.js-calendar');
+    const $slider = this.$reservation.find('.js-slider');
 
     this._initCarousel($carousel);
     this._initStages($stages);
@@ -29,8 +30,8 @@ class Reservation {
       mouseDrag: false,
     });
 
-    const $stage = this.$reservation.find('.stages__item');
-    $stage.on('click', this._handleStageClick.bind(this, $carousel));
+    const $stage = this.$reservation.find('.js-stages__item');
+    $stage.on(`click.stage${this.index}`, this._handleStageClick.bind(this, $carousel));
   }
 
   _handleStageClick($carousel, event) {
@@ -40,7 +41,8 @@ class Reservation {
   _initStages($stages) {
     $stages.each((index, elem) => {
       new Stages({
-        stages: $(elem),
+        index,
+        elem: $(elem),
         current: 1,
       });
     });
@@ -55,14 +57,14 @@ class Reservation {
       firstDay: 1,
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
     })
-      .on('change', this._handleFromChange.bind(this, $to));
+      .on(`change.from${this.index}`, this._handleFromChange.bind(this, $to));
 
     $to.datepicker({
       defaultDate: '+1w',
       firstDay: 1,
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
     })
-      .on('change', this._handleToChange.bind(this, $from));
+      .on(`change.to${this.index}`, this._handleToChange.bind(this, $from));
   }
 
   _handleFromChange($to, event) {
@@ -87,12 +89,12 @@ class Reservation {
   }
 
   _initSlider($slider) {
-    const $sliderWithPointer = $slider.filter('.slider--with-pointer');
-    const $sliderWithScale = $slider.filter('.slider--with-scale');
+    const $sliderWithPointer = $slider.filter('.js-slider--with-pointer');
+    const $sliderWithScale = $slider.filter('.js-slider--with-scale');
 
     $sliderWithPointer.each((index, elem) => {
       new Slider({
-        slider: $(elem),
+        elem: $(elem),
         options: {
           min: 1,
           max: 10,
@@ -102,7 +104,7 @@ class Reservation {
 
     $sliderWithScale.each((index, elem) => {
       new Slider({
-        slider: $(elem),
+        elem: $(elem),
         options: {
           min: 1,
           max: 5,

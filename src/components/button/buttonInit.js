@@ -1,9 +1,12 @@
 import Button from './Button';
 
 $(() => {
-  const $elem = $('.button');
+  const $elem = $('.js-button');
 
   $elem.each((index, elem) => {
-    new Button($(elem));
+    new Button({
+      index,
+      elem: $(elem),
+    });
   });
 });

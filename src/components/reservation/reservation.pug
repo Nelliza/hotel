@@ -1,19 +1,19 @@
-section.reservation
+section.reservation.js-reservation
   .reservation__stages
     +stages({
       modifier: "primary",
       count: 3
     })
 
-  .carousel.owl-carousel
+  .carousel.js-carousel.owl-carousel
     form.reservation__slide.reservation__slide--checkin(action="./handler.php")
       h3.reservation__header Выберите планируемую дату отдыха
       .reservation__item.reservation__item--checkin
-        .calendar()
+        .calendar.js-calendar()
           .form__fieldset
             label.calendar__label(for="from") Дата заезда
               input(type="text", name="from")
-        .calendar()
+        .calendar.js-calendar()
           .form__fieldset
             label.calendar__label(for="to") Дата выезда
               input(type="text", name="to")

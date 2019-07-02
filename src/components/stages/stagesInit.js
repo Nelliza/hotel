@@ -1,11 +1,12 @@
 import Stages from './Stages';
 
 $(() => {
-  const $stages = $('.page__stages .stages');
+  const $stages = $('.js-page__stages .js-stages');
 
   $stages.each((index, elem) => {
     new Stages({
-      stages: $(elem),
+      index,
+      elem: $(elem),
       current: 3,
     });
   });

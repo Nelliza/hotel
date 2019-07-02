@@ -1,12 +1,13 @@
 import Callback from './Callback';
 
 $(() => {
-  const $callback = $('.callback');
-  const $overlay = $('.overlay');
+  const $callback = $('.js-callback');
+  const $overlay = $('.js-overlay');
 
   $callback.each((index, elem) => {
     new Callback({
-      callback: $(elem),
+      index,
+      elem: $(elem),
       overlay: $overlay,
     });
   });

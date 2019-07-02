@@ -1,9 +1,12 @@
 import Reservation from './Reservation';
 
 $(() => {
-  const $reservation = $('.reservation');
+  const $reservation = $('.js-reservation');
 
   $reservation.each((index, elem) => {
-    new Reservation($(elem));
+    new Reservation({
+      index,
+      elem: $(elem),
+    });
   });
 });
