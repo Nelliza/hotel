@@ -2,7 +2,7 @@ section.page__buttons
   .page__subtitle
     +subtitle("Standard buttons")
   .page__buttons-wrapper
-    - for (var i = 0; i < 3; i++)
+    - for (var i = 0; i < 3; i += 1)
       +button({
         modifier: ["primary", "small"],
         tag: "button"

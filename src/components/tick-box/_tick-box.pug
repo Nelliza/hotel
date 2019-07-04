@@ -1,8 +1,8 @@
 mixin tickBox(options={})
-  - options.modifier = options.modifier ? "tick-box__checkmark--" + options.modifier : false
-  - options.size = options.size || 24
-  - options.checked = options.checked || false
-  - options.text = options.text || ""
+  - options.modifier = options.modifier ? "tick-box__checkmark--" + options.modifier : false;
+  - options.size = options.size || 24;
+  - options.checked = options.checked || false;
+  - options.text = options.text || "";
 
   input.tick-box(type="checkbox", id="tick-box" + options.id, checked=options.checked)
   label.tick-box__label(for="tick-box" + options.id)

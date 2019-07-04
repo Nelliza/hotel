@@ -9,15 +9,14 @@ mixin form(options={})
         name: "email",
         placeholder: "Your Email"
       }
-    ]
-  -
-    options.inputs = options.inputs || defaultInputs
-  - options.textarea = options.textarea || {}
-  - options.textarea.name = options.textarea.name || "message"
-  - options.textarea.placeholder = options.textarea.placeholder || "Your Message"
-  - options.textarea.rows = options.textarea.rows || 4
-  - options.btnText = options.btnText || "Submit"
-  - options.btnStyle = options.btnStyle || "primary"
+    ];
+  - options.inputs = options.inputs || defaultInputs;
+  - options.textarea = options.textarea || {};
+  - options.textarea.name = options.textarea.name || "message";
+  - options.textarea.placeholder = options.textarea.placeholder || "Your Message";
+  - options.textarea.rows = options.textarea.rows || 4;
+  - options.btnText = options.btnText || "Submit";
+  - options.btnStyle = options.btnStyle || "primary";
 
   form.form.js-form(action="./handler.php")
     each input in options.inputs

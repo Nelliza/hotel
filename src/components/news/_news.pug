@@ -1,8 +1,8 @@
 mixin news(options={})
-  - options.modifier = options.modifier || false
-  - options.isCalendar = options.isCalendar || false
-  - var modifierDescr = options.modifier ? "news__description--" + options.modifier : false
-  - var modifierTitle = options.isCalendar ? "news__title--small" : false
+  - options.modifier = options.modifier || false;
+  - options.isCalendar = options.isCalendar || false;
+  - var modifierDescr = options.modifier ? "news__description--" + options.modifier : false;
+  - var modifierTitle = options.isCalendar ? "news__title--small" : false;
 
   .news
     img.news__preview(src=require("../components/news/" + options.image + ".jpg"), alt=options.title)

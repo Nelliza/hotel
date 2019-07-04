@@ -1,9 +1,9 @@
 mixin slider(options={})
   if options.type == "pointer"
-    - var handle = "slider__handle--with-pointer"
+    - var handle = "slider__handle--with-pointer";
   else if options.type == "scale"
-    - var handle = ""
-  - options.modifier = options.modifier ? "slider--" + options.modifier : false
+    - var handle = "";
+  - options.modifier = options.modifier ? "slider--" + options.modifier : false;
 
   div(class=["slider", "js-slider", "slider--with-" + options.type, "js-slider--with-" + options.type, options.modifier])
     div(class=["ui-slider-handle", "slider__handle", handle])

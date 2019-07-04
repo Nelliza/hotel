@@ -1,5 +1,5 @@
 mixin calendar(options={})
-  - options.modifier = options.modifier ? "calendar--" + options.modifier : false
+  - options.modifier = options.modifier ? "calendar--" + options.modifier : false;
 
   div(class=["calendar", "js-calendar", options.modifier], id="calendar")
     .calendar__day.js-calendar__day
