@@ -6,16 +6,16 @@ const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-  return templateFiles.map(item => {
+  return templateFiles.map((item) => {
     const parts = item.split('.');
     const name = parts[0];
     const extension = parts[1];
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-      inject: false
-    })
-  })
+      inject: false,
+    });
+  });
 }
 
 const htmlPlugins = generateHtmlPlugins('./src/pages');
@@ -51,7 +51,7 @@ module.exports = {
             loader: 'sass-loader',
             options: { sourceMap: true },
           },
-        ]
+        ],
       },
       {
         test: /\.css$/,
@@ -65,7 +65,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: { sourceMap: true, config: { path: './postcss.config.js' } },
           },
-        ]
+        ],
       },
       {
         test: /\.pug$/,
@@ -104,7 +104,7 @@ module.exports = {
               },
             },
           },
-        ]
+        ],
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
@@ -131,14 +131,14 @@ module.exports = {
             options: {
               plugins: [
                 { removeTitle: true },
-                { convertColors: { shorthex: false} },
+                { convertColors: { shorthex: false } },
                 { convertPathData: true },
-              ]
+              ],
             },
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
   devServer: {
     overlay: true,
@@ -152,5 +152,5 @@ module.exports = {
     }),
     new SpriteLoaderPlugin({}),
   ]
-  .concat(htmlPlugins)
-}
+    .concat(htmlPlugins),
+};
