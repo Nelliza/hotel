@@ -59,8 +59,12 @@ html {
     margin-bottom: 1.5rem;
   }
 
+  &__buttons {
+    @include subtitle-margins(2.6rem, 1.6rem);
+  }
+
   &__arrows {
-    @include subtitle-margins(2.6rem);
+    @include subtitle-margins(2.8rem);
   }
 
   &__percentages {
@@ -72,16 +76,19 @@ html {
   }
 
   &__stages {
-    @include subtitle-margins(2rem);
-    margin-bottom: 3.4rem;
+    @include subtitle-margins(1.9rem, 1.8rem);
   }
 
   &__form-elements {
-    @include subtitle-margins(false, 2rem);
+    @include subtitle-margins(3.1rem, 2rem);
   }
 
   &__toggles {
-    @include subtitle-margins(.5rem, 1.5rem);
+    @include subtitle-margins(1.8rem, 1.5rem);
+
+    @media screen and (min-width: 616px) {
+      @include subtitle-margins(.8rem);
+    }
   }
 
   &__tick-boxes {
@@ -90,21 +97,28 @@ html {
 
   &__search {
     @include subtitle-margins(false, 1.3rem);
+    
+    width: 18.1rem;
+
+    @media screen and (max-width: 615px) {
+      width: 100%;
+    }
   }
 
   &__news-list {
-    @include subtitle-margins(3.8rem, 2.1rem);
+    @include subtitle-margins(false, 2.1rem);
+    margin-top: 4rem;
   }
 
   &__location {
-    @include subtitle-margins(2.1rem, 2rem);
+    @include subtitle-margins(2.1rem, 1.8rem);
   }
 
   &__calendar,
   &__messaging {
     @include subtitle-margins(3rem);
 
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: 615px) {
       flex-grow: 1;
     }
   }
@@ -150,9 +164,13 @@ html {
 
     > .page__fieldset-wrapper {
       width: 18rem;
+      display: flex;
+      flex-direction: column;
 
-      @media screen and (max-width: 580px) {
+      @media screen and (max-width: 615px) {
         width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
       }
     }
   }
@@ -256,19 +274,39 @@ html {
   }
 
   &__slider {
+    width: 16.2rem;
     margin: 1.8rem 0;
+
+    @media screen and (max-width: 615px) {
+      width: 100%;
+    }
   }
 
   &__form {
+    width: 18rem;
     margin-top: .6rem;
+
+    @media screen and (max-width: 615px) {
+      width: 100%;
+    }
   }
+
 
   &__user-profile {
     margin-bottom: .7rem;
+
+    @media screen and (max-width: 615px) {
+      width: 100%;
+    }
   }
 
   &__news {
+    width: 18rem;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 615px) {
+      width: 100%;
+    }
   }
 }
 
@@ -276,7 +314,7 @@ html {
   margin-left: 6rem;
   margin-right: 6rem;
 
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 615px) {
     margin-left: 2rem;
     margin-right: 2rem;
   }

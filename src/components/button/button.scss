@@ -47,6 +47,10 @@
     }
   }
 
+  &--form {
+    margin-top: .3rem;
+  }
+
   &--news {
     @include size(auto);
     padding: 0 .6rem;

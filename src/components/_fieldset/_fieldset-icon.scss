@@ -2,7 +2,6 @@
 
 @mixin fieldset-icon($path) {
   @include size(2.1rem, 100%);
-  min-height: 1.75rem;
   position: absolute;
   top: 0;
   right: 0;

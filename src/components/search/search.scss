@@ -2,11 +2,6 @@
 
 .search {
   @include fieldset('input', 'submit', 'search-icon.svg');
-  width: 18.1rem;
-
-  @media screen and (max-width: 580px) {
-    width: 100%;
-  }
 
   &--notfound {
     > .search__input {

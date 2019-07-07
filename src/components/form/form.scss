@@ -5,14 +5,9 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 18rem;
-
-  @media screen and (max-width: 580px) {
-    width: 100%;
-  }
 
   &__fieldset {
-    margin: .45rem 0;
+    margin: .4rem 0;
     display: flex;
     align-items: center;
 
