@@ -1,8 +1,7 @@
 mixin aboutItems(items)
   each item in items
+    - var { percent, text } = item;
     .about__item
       .page__percentage
-        +percentage({
-          percent: item.percent
-        })
-      p.about__level= item.text
+        +percentage({ percent })
+      p.about__level= text

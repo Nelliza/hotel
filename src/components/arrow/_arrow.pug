@@ -1,7 +1,5 @@
-mixin arrow(options={})
-  - options.orientation = options.orientation ? "arrow--" + options.orientation : false;
-  - options.modifier = options.modifier ? "arrow--" + options.modifier : false;
-  - options.size = options.size || "3.2rem";
-  - options.disabled = options.disabled || false;
+mixin arrow({ orientation, modifier, size="3.2rem", disabled=false } = {})
+  - orientation = orientation ? "arrow--" + orientation : false;
+  - modifier = modifier ? "arrow--" + modifier : false;
 
-  button(class=["arrow", options.orientation, options.modifier], type="button", disabled=options.disabled, style="width: " + options.size + "; height: " + options.size)
+  button(class=["arrow", orientation, modifier], type="button", disabled=disabled, style="width: " + size + "; height: " + size)

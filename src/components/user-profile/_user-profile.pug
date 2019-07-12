@@ -1,9 +1,9 @@
 include _social-icon
 
-mixin userProfile(options={})
-  - options.modifier = options.modifier ? "user-profile__info--" + options.modifier : false;
+mixin userProfile({ modifier, social, photo, name, profession })
+  - modifier = modifier ? "user-profile__info--" + modifier : false;
   -
-    var social = options.social || [
+    social = social || [
       {
         name: 'facebook',
         link: 'https://facebook.com'
@@ -19,9 +19,9 @@ mixin userProfile(options={})
     ];
 
   .user-profile
-    img.user-profile__photo(src=require("../components/user-profile/" + options.photo + ".jpg"), alt=options.name)
-    div(class=["user-profile__info", options.modifier])
-      span.user-profile__name= options.name
-      span.user-profile__profession= options.profession
+    img.user-profile__photo(src=require("../components/user-profile/" + photo + ".jpg"), alt=name)
+    div(class=["user-profile__info", modifier])
+      span.user-profile__name= name
+      span.user-profile__profession= profession
       ul.user-profile__social
         +socialIcon(social)

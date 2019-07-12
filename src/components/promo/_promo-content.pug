@@ -1,15 +1,12 @@
-mixin promoContent(options={})
-  - options.header = options.header || "Добро пожаловать в наш отель!";
-  - options.text = options.text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.";
-  - options.btnColor = options.btnColor || "primary";
-  - options.btnText = options.btnText || "Подробнее";
-  - options.btnlink = options.btnlink || "./handler.php";
+mixin promoContent({ header, text, btnColor="primary", btnText="Подробнее", btnlink="./handler.php" } = {})
+  - header = header || "Добро пожаловать в наш отель!";
+  - text = text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.";
 
   .promo__content
-    h3.promo__header= options.header
-    p.promo__text= options.text
+    h3.promo__header= header
+    p.promo__text= text
     +button({
-      modifier: options.btnColor,
-      text: options.btnText,
-      link: options.btnlink
+      modifier: btnColor,
+      text: btnText,
+      link: btnlink
     })

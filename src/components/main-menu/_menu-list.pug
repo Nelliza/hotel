@@ -1,6 +1,6 @@
 mixin menuList(items)
   each item in items
-    - item.link = item.link || "#";
+    - var { name, link="#" } = item;
 
     li.main-menu__item
-      a.main-menu__link.js-main-menu__link(href=item.link)= item.name
+      a.main-menu__link.js-main-menu__link(href=link)= name

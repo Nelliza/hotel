@@ -1,6 +1,6 @@
-mixin form(options={})
+mixin form({ inputs, textarea={}, btnText="Submit", btnStyle="primary" } = {})
   -
-    var defaultInputs = [
+    inputs = inputs || [
       {
         name: "name",
         placeholder: "Your Name"
@@ -10,25 +10,20 @@ mixin form(options={})
         placeholder: "Your Email"
       }
     ];
-  - options.inputs = options.inputs || defaultInputs;
-  - options.textarea = options.textarea || {};
-  - options.textarea.name = options.textarea.name || "message";
-  - options.textarea.placeholder = options.textarea.placeholder || "Your Message";
-  - options.textarea.rows = options.textarea.rows || 4;
-  - options.btnText = options.btnText || "Submit";
-  - options.btnStyle = options.btnStyle || "primary";
+  - var { name: textareaName="message", placeholder: textareaPlaceholder="Your Message", rows: textareaRows=4 } = textarea;
 
   form.form.js-form(action="./handler.php")
-    each input in options.inputs
+    each input in inputs
+      - var { name: inputName, placeholder: inputPlaceholder } = input;
       .form__fieldset
-        input(type="text", name=input.name, placeholder=input.placeholder)
+        input(type="text", name=inputName, placeholder=inputPlaceholder)
         .form__val.js-form__val
     .form__fieldset
-      textarea(name=options.textarea.name, rows=options.textarea.rows, placeholder=options.textarea.placeholder)
+      textarea(name=textareaName, placeholder=textareaPlaceholder, rows=textareaRows)
     +button({
       wrapperModifier: "form",
-      modifier: [options.btnStyle, "form"],
-      text: options.btnText,
+      modifier: [btnStyle, "form"],
+      text: btnText,
       tag: "button",
       btnType: "submit"
     })

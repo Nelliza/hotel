@@ -1,21 +1,19 @@
-mixin news(options={})
-  - options.modifier = options.modifier || false;
-  - options.isCalendar = options.isCalendar || false;
-  - var modifierDescr = options.modifier ? "news__description--" + options.modifier : false;
-  - var modifierTitle = options.isCalendar ? "news__title--small" : false;
+mixin news({ image, title, date, text, modifier=false, isCalendar=false })
+  - var modifierDescr = modifier ? "news__description--" + modifier : false;
+  - var modifierTitle = isCalendar ? "news__title--small" : false;
 
   .news
-    img.news__preview(src=require("../components/news/" + options.image + ".jpg"), alt=options.title)
+    img.news__preview(src=require("../components/news/" + image + ".jpg"), alt=title)
     div(class=["news__description", modifierDescr])
-      if options.isCalendar
+      if isCalendar
         .news__short-date
-          span.news__day= options.date[0]
-          span.news__month= options.date[1]
-      h3(class=["news__title", modifierTitle])= options.title
-      if !options.isCalendar
-        p.news__date= options.date
-      p.news__text= options.text
-      if options.isCalendar
+          span.news__day= date[0]
+          span.news__month= date[1]
+      h3(class=["news__title", modifierTitle])= title
+      if !isCalendar
+        p.news__date= date
+      p.news__text= text
+      if isCalendar
         +button({
           modifier: ["primary", "news"],
           text: "Add to calendar",

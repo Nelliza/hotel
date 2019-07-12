@@ -1,6 +1,6 @@
-mixin calendar(options={})
-  - options.modifier = options.modifier ? "calendar--" + options.modifier : false;
+mixin calendar({ modifier } = {})
+  - modifier = modifier ? "calendar--" + modifier : false;
 
-  div(class=["calendar", "js-calendar", options.modifier], id="calendar")
+  div(class=["calendar", "js-calendar", modifier], id="calendar")
     .calendar__day.js-calendar__day
     .calendar__datepicker.js-calendar__datepicker

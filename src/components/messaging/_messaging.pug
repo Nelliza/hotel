@@ -1,8 +1,8 @@
-mixin messaging(options={})
+mixin messaging({ name, photo })
   section.messaging.js-messaging
     .messaging__header
-      .messaging__head= options.name
-      img.messaging__avatar(src=require("../components/user-profile/" + options.photo + ".jpg"), alt=options.name)
+      .messaging__head= name
+      img.messaging__avatar(src=require("../components/user-profile/" + photo + ".jpg"), alt=name)
 
     .messaging__main
       button.messaging__chat

@@ -1,9 +1,7 @@
-mixin dropdown(options={})
-  - options.modifier = options.modifier ? "dropdown__select--" + options.modifier : false;
-  - options.title = options.title || "Choose An Option";
-  - options.values = options.values || ["Option 1", "Option 2"];
+mixin dropdown({ modifier, title="Choose An Option", values=["Option 1", "Option 2"] } = {})
+  - modifier = modifier ? "dropdown__select--" + modifier : false;
 
-  select(class=["dropdown__select", "js-dropdown__select", options.modifier])
-    option(selected, disabled, style="display: none")= options.title
-    - for (var i = 0; i < options.values.length; i += 1)
-      option= options.values[i]
+  select(class=["dropdown__select", "js-dropdown__select", modifier])
+    option(selected, disabled, style="display: none")= title
+    - for (var i = 0; i < values.length; i += 1)
+      option= values[i]

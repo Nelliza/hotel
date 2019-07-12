@@ -1,13 +1,12 @@
-mixin slider(options={})
-  if options.type == "pointer"
-    - var handle = "slider__handle--with-pointer";
-  else if options.type == "scale"
-    - var handle = "";
-  - options.modifier = options.modifier ? "slider--" + options.modifier : false;
+mixin slider({ type, modifier })
+  - modifier = modifier ? "slider--" + modifier : false;
+  - var handle = "";
+  if type == "pointer"
+    - handle = "slider__handle--with-pointer";
 
-  div(class=["slider", "js-slider", "slider--with-" + options.type, "js-slider--with-" + options.type, options.modifier])
+  div(class=["slider", "js-slider", "slider--with-" + type, "js-slider--with-" + type, modifier])
     div(class=["ui-slider-handle", "slider__handle", handle])
-      if options.type == "pointer"
+      if type == "pointer"
         .slider__pointer.js-slider__pointer
-    if options.type == "scale"
+    if type == "scale"
       ul.slider__scale.js-slider__scale

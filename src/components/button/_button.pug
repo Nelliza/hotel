@@ -1,20 +1,15 @@
-mixin button(options={})
-  - options.modifier = options.modifier || "primary";
-  - options.wrapperModifier = options.wrapperModifier ? "page__button--" + options.wrapperModifier : false;
-  - options.text = options.text || "Button";
-  - options.tag = options.tag || "a";
-  - options.link = options.link || "#";
-  - options.btnType = options.btnType || "button";
+mixin button({ wrapperModifier, modifier="primary", text="Button", tag="a", link="#", btnType= "button" } = {})
+  - wrapperModifier = wrapperModifier ? "page__button--" + wrapperModifier : false;
   - var modifiers = [];
 
-  if Array.isArray(options.modifier)
-    each modifier in options.modifier
-      - modifiers.push("button--" + modifier);
+  if Array.isArray(modifier)
+    each item in modifier
+      - modifiers.push("button--" + item);
   else
-    - modifiers.push("button--" + options.modifier);
+    - modifiers.push("button--" + modifier);
 
-  div(class=["page__button", options.wrapperModifier])
-    if options.tag == "button"
-      button(class=["button", "js-button", modifiers], type=options.btnType)= options.text
+  div(class=["page__button", wrapperModifier])
+    if tag == "button"
+      button(class=["button", "js-button", modifiers], type=btnType)= text
     else
-      a(class=["button", "js-button", modifiers], href=options.link)= options.text
+      a(class=["button", "js-button", modifiers], href=link)= text
