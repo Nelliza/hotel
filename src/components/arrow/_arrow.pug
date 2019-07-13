@@ -1,5 +1,5 @@
 mixin arrow({ orientation, modifier, size="3.2rem", disabled=false } = {})
-  - orientation = orientation ? "arrow--" + orientation : false;
-  - modifier = modifier ? "arrow--" + modifier : false;
+  - orientation = orientation ? `arrow--${orientation}` : false;
+  - modifier = modifier ? `arrow--${modifier}` : false;
 
-  button(class=["arrow", orientation, modifier], type="button", disabled=disabled, style="width: " + size + "; height: " + size)
+  button(class=["arrow", orientation, modifier], type="button", disabled=disabled, style=`width: ${size}; height: ${size}`)

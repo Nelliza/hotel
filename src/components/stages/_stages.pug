@@ -1,5 +1,5 @@
 mixin stages({ modifier, count=5 } = {})
-  - modifier = modifier ? "stages--" + modifier : false;
+  - modifier = modifier ? `stages--${modifier}` : false;
 
   ul(class=["stages", "js-stages", modifier])
     - for (var i = 0; i < count; i += 1)

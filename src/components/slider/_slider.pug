@@ -1,10 +1,10 @@
 mixin slider({ type, modifier })
-  - modifier = modifier ? "slider--" + modifier : false;
+  - modifier = modifier ? `slider--${modifier}` : false;
   - var handle = "";
   if type == "pointer"
     - handle = "slider__handle--with-pointer";
 
-  div(class=["slider", "js-slider", "slider--with-" + type, "js-slider--with-" + type, modifier])
+  div(class=["slider", "js-slider", `slider--with-${type}`, `js-slider--with-${type}`, modifier])
     div(class=["ui-slider-handle", "slider__handle", handle])
       if type == "pointer"
         .slider__pointer.js-slider__pointer

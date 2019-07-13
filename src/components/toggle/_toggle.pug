@@ -1,10 +1,10 @@
 mixin toggle({ id, modifier, width="3.7rem", height="1.5rem", isChecked=false, text="" })
-  - modifier = modifier ? "toggle__background--" + modifier : false;
+  - modifier = modifier ? `toggle__background--${modifier}` : false;
 
   .toggle
-    label.toggle__label(for="toggle" + id)
+    label.toggle__label(for=`toggle${id}`)
       span= text
     .toggle__button(width=width, height=height)
-      input.toggle__checkbox(type="checkbox", id="toggle" + id, checked=isChecked)
+      input.toggle__checkbox(type="checkbox", id=`toggle${id}`, checked=isChecked)
       div(class=["toggle__background", modifier])
       span.toggle__round

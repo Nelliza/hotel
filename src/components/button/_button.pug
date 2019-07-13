@@ -1,12 +1,12 @@
 mixin button({ wrapperModifier, modifier="primary", text="Button", tag="a", link="#", btnType= "button" } = {})
-  - wrapperModifier = wrapperModifier ? "page__button--" + wrapperModifier : false;
+  - wrapperModifier = wrapperModifier ? `page__button--${wrapperModifier}` : false;
   - var modifiers = [];
 
   if Array.isArray(modifier)
     each item in modifier
-      - modifiers.push("button--" + item);
+      - modifiers.push(`button--${item}`);
   else
-    - modifiers.push("button--" + modifier);
+    - modifiers.push(`button--${modifier}`);
 
   div(class=["page__button", wrapperModifier])
     if tag == "button"

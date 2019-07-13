@@ -1,4 +1,4 @@
 mixin promoList(items)
   each item in items
     .carousel__item
-      .promo__img(style="background: url(" + require("../components/promo/" + item + ".jpg") + ") no-repeat")
+      .promo__img(style=`background: url(${require(`../components/promo/${item}.jpg`)}) no-repeat`)

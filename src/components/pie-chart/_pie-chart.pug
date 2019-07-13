@@ -1,5 +1,5 @@
 mixin pie-chart({ items, size="6rem", withLegend=false, legendUnit="%" })
-  .pie-chart(style="width: " + size + "; height: " + size)
+  .pie-chart(style=`width: ${size}; height: ${size}`)
     svg.pie-chart__svg(viewBox="0 0 32 32")
       - var percent = 100;
       - var sumPercent = 0;
@@ -7,7 +7,7 @@ mixin pie-chart({ items, size="6rem", withLegend=false, legendUnit="%" })
         - var { percent } = item;
         - sumPercent += percent;
       - for (var i = items.length - 1; i >= 0; i -= 1)
-        circle.pie-chart__item.js-pie-chart__item(r="16", cx="16", cy="16", style="stroke: " + items[i].fill + "; stroke-dasharray: " + percent + " 100; z-index: " + (items.length - i))
+        circle.pie-chart__item.js-pie-chart__item(r="16", cx="16", cy="16", style=`stroke: ${items[i].fill}; stroke-dasharray: ${percent} 100; z-index: ${(items.length - i)}`)
         - percent = percent - (items[i].percent * 100 / sumPercent);
       circle.pie-chart__center(r="10", cx="16", cy="16")
 
@@ -15,6 +15,6 @@ mixin pie-chart({ items, size="6rem", withLegend=false, legendUnit="%" })
     ul.pie-chart__legend
       each item in items
         - var { fill, name, percent } = item;
-        li.pie-chart__legend-item(style="border-left-color: " + fill)
+        li.pie-chart__legend-item(style=`border-left-color: ${fill}`)
           span.pie-chart__legend-name= name
           span.pie-chart__legend-percent= percent + legendUnit

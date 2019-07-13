@@ -1,5 +1,5 @@
 mixin percentage({ percent, size="6rem", strokeColor="#e75735" })
-  .percentage(data-percent=percent, style="width: " + size + "; height: " + size + "; font-size: " + size)
+  .percentage(data-percent=percent, style=`width: ${size}; height: ${size}; font-size: ${size}`)
     svg.percentage__svg(viewBox="0 0 32 32")
-      circle.percentage__item.js-percentage__item(r="16", cx="16", cy="16", style="stroke: " + strokeColor + "; stroke-dasharray: " + percent + " 100")
+      circle.percentage__item.js-percentage__item(r="16", cx="16", cy="16", style=`stroke: ${strokeColor}; stroke-dasharray: ${percent} 100`)
       circle.percentage__center(r="10", cx="16", cy="16")
