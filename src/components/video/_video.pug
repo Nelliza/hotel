@@ -1,3 +1,5 @@
-mixin video({ modifier, source })
-  div(class=["video", modifier])
+mixin video({ source, type })
+  - type = type ? `video_type_${type}` : false;
+
+  div(class=["video", type])
     iframe(width="100%", height="100%", src=`https://www.youtube.com/embed/${source}`, frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)

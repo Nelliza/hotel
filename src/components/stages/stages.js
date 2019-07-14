@@ -25,12 +25,12 @@ class Stages {
   }
 
   _handleStageClick(event) {
-    this.$stage.removeClass('stages__item--current stages__item--done');
-    $(event.currentTarget).addClass('stages__item--current');
+    this.$stage.removeClass('stages__item_state_current stages__item_state_done');
+    $(event.currentTarget).addClass('stages__item_state_current');
     const currentIndex = $(event.currentTarget).index();
 
     for (let i = 0; i < currentIndex; i += 1) {
-      this.$stage.eq(i).addClass('stages__item--done');
+      this.$stage.eq(i).addClass('stages__item_state_done');
     }
   }
 }

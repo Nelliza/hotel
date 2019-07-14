@@ -15,7 +15,7 @@
     @include fieldset-icon($path);
     cursor: pointer;
 
-    &--warning {
+    &_color_warning {
       background-color: $color-warning;
     }
   }

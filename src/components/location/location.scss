@@ -11,13 +11,13 @@
     margin: .4rem .8rem;
     color: #fff;
 
-    &--greeting {
+    &_type_greeting {
       font-size: 1.88rem;
       font-weight: 300;
       line-height: 1;
     }
 
-    &--address {
+    &_type_address {
       font-size: .78rem;
       font-weight: 900;
       line-height: 1.3;
@@ -45,11 +45,11 @@
       height: 100%;
     }
 
-    &--location > a {
+    &_type_location > a {
       background: url(../../assets/icons/location-icon.svg) no-repeat center;
     }
 
-    &--pin > a {
+    &_type_pin > a {
       background: url(../../assets/icons/pin-icon.svg) no-repeat center;
     }
   }

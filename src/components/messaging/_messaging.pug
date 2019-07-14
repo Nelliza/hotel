@@ -13,8 +13,7 @@ mixin messaging({ name, photo })
         div.messaging__block
           textarea.messaging__textarea(rows="3") Yeah that sounds great. See you then
           +button({
-            wrapperModifier: "messaging",
-            modifier: ["primary", "messaging"],
+            location: "messaging",
             text: "Reply",
             tag: "button"
           })

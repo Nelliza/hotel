@@ -13,7 +13,7 @@
   color: $bg-color;
 
   &:hover,
-  &.button--pressed {
+  &.button_state_pressed {
     background-color: $bg-color;
     color: #fff;
   }

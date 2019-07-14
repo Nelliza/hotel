@@ -32,6 +32,6 @@
   display: none;
 }
 
-.dropdown__select--warning + .ui-selectmenu-button > .ui-selectmenu-icon {
+.dropdown__select_color_warning + .ui-selectmenu-button > .ui-selectmenu-icon {
   background-color: $color-warning;
 }

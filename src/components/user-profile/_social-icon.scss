@@ -2,7 +2,7 @@
 
 @mixin social-icon($social...) {
   @each $val in $social {
-    &__social-icon--#{$val} {
+    &__social-icon_name_#{$val} {
       > a {
         @include size(1.6rem, 1.3rem);
         display: block;
@@ -14,8 +14,8 @@
       }
     }
 
-    &__info--primary {
-      .user-profile__social-icon--#{$val} {
+    &__info_type_primary {
+      .user-profile__social-icon_name_#{$val} {
         > a {
           background: url(../../assets/icons/#{$val}-white-icon.svg) no-repeat center;
 

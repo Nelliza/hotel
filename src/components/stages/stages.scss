@@ -8,11 +8,11 @@
   margin: 0;
   padding: 0;
 
-  &--primary {
+  &_color_primary {
     .stages__item {
-      &--done:before,
-      &--done:after,
-      &--current:before {
+      &_state_done:before,
+      &_state_done:after,
+      &_state_current:before {
         background-color: $color-primary;
       }
     }
@@ -50,9 +50,9 @@
       content: none;
     }
 
-    &--done:before,
-    &--done:after,
-    &--current:before {
+    &_state_done:before,
+    &_state_done:after,
+    &_state_current:before {
       background-color: $color-warning;
       color: #fff;
     }

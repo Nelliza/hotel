@@ -11,7 +11,7 @@ class MainMenu {
 
     for (let i = 0; i < this.$link.length; i += 1) {
       if (url === this.$link.get(i).href) {
-        this.$link.eq(i).addClass('main-menu__link--active');
+        this.$link.eq(i).addClass('main-menu__link_state_active');
       }
     }
 
@@ -19,7 +19,7 @@ class MainMenu {
   }
 
   _handleButtonClick(event) {
-    $(event.currentTarget).closest('.js-main-menu').toggleClass('main-menu--open');
+    $(event.currentTarget).closest('.js-main-menu').toggleClass('main-menu_state_open');
   }
 }
 

@@ -51,12 +51,12 @@
     outline: none;
     cursor: pointer;
 
-    &--with-pointer {
+    &_with-pointer {
       position: relative;
     }
   }
 
-  &.slider--warning {
+  &.slider_color_warning {
     .ui-slider-range,
     .slider__handle,
     .slider__pointer {

@@ -38,17 +38,17 @@
       @include triangle-tooltip();
     }
 
-    &--additional,
-    &--additional::before {
+    &_type_additional,
+    &_type_additional::before {
       background-color: $color-disabled;
     }
 
-    &--primary,
-    &--primary:before {
+    &_type_primary,
+    &_type_primary:before {
       background-color: $color-primary;
     }
 
-    &--primary {
+    &_type_primary {
       .user-profile__name,
       .user-profile__profession {
           color: #fff;

@@ -12,11 +12,11 @@ class Callback {
   }
 
   _handleCallbackClick(event) {
-    $(event.currentTarget).next('.js-messaging').toggleClass('messaging--visible');
+    $(event.currentTarget).next('.js-messaging').toggleClass('messaging_state_visible');
   }
 
   _handleOverlayClick(event) {
-    $(event.currentTarget).prev('.js-messaging').toggleClass('messaging--visible');
+    $(event.currentTarget).prev('.js-messaging').toggleClass('messaging_state_visible');
   }
 }
 

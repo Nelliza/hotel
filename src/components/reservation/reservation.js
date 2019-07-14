@@ -89,8 +89,8 @@ class Reservation {
   }
 
   _initSlider($slider) {
-    const $sliderWithPointer = $slider.filter('.js-slider--with-pointer');
-    const $sliderWithScale = $slider.filter('.js-slider--with-scale');
+    const $sliderWithPointer = $slider.filter('.js-slider_with-pointer');
+    const $sliderWithScale = $slider.filter('.js-slider_with-scale');
 
     $sliderWithPointer.each((index, elem) => {
       new Slider({

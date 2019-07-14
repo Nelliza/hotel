@@ -1,5 +1,5 @@
 mixin toggle({ id, modifier, width="3.7rem", height="1.5rem", isChecked=false, text="" })
-  - modifier = modifier ? `toggle__background--${modifier}` : false;
+  - modifier = modifier ? `toggle__background_color_${modifier}` : false;
 
   .toggle
     label.toggle__label(for=`toggle${id}`)

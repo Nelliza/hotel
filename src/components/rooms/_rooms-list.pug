@@ -1,4 +1,4 @@
-mixin roomsList({ items, btnColor="primary", btnText="Забронировать" })
+mixin roomsList({ items, btnColor, btnText="Забронировать" })
 
   each item in items
     - var { image, price, header, text, link="./handler.php" } = item;
@@ -12,7 +12,7 @@ mixin roomsList({ items, btnColor="primary", btnText="Забронировать
         p.rooms__text= text
       +button({
         link,
-        wrapperModifier: "rooms",
-        modifier: btnColor,
-        text: btnText
+        text: btnText,
+        location: "rooms",
+        color: btnColor || undefined
       })

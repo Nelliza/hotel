@@ -1,4 +1,4 @@
-mixin form({ inputs, textarea={}, btnText="Submit", btnStyle="primary" } = {})
+mixin form({ inputs, btnColor, btnSize, textarea={}, btnText="Submit" } = {})
   -
     inputs = inputs || [
       {
@@ -21,9 +21,10 @@ mixin form({ inputs, textarea={}, btnText="Submit", btnStyle="primary" } = {})
     .form__fieldset
       textarea(name=textareaName, placeholder=textareaPlaceholder, rows=textareaRows)
     +button({
-      wrapperModifier: "form",
-      modifier: [btnStyle, "form"],
+      location: "form",
       text: btnText,
       tag: "button",
-      btnType: "submit"
+      btnType: "submit",
+      color: btnColor || undefined,
+      size: btnSize || undefined
     })

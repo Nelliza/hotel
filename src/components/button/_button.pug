@@ -1,15 +1,11 @@
-mixin button({ wrapperModifier, modifier="primary", text="Button", tag="a", link="#", btnType= "button" } = {})
-  - wrapperModifier = wrapperModifier ? `page__button--${wrapperModifier}` : false;
-  - var modifiers = [];
-
-  if Array.isArray(modifier)
-    each item in modifier
-      - modifiers.push(`button--${item}`);
-  else
-    - modifiers.push(`button--${modifier}`);
+mixin button({ color, size, location, text="Button", tag="a", link="#", btnType= "button" } = {})
+  - var wrapperModifier = location ? `page__button_location_${location}` : false;
+  - color = color ? `button_color_${color}` : false;
+  - size = size ? `button_size_${size}` : false;
+  - location = location ? `button_location_${location}` : false;
 
   div(class=["page__button", wrapperModifier])
     if tag == "button"
-      button(class=["button", "js-button", modifiers], type=btnType)= text
+      button(class=["button", "js-button", color, size, location], type=btnType)= text
     else
-      a(class=["button", "js-button", modifiers], href=link)= text
+      a(class=["button", "js-button", color, size, location], href=link)= text

@@ -26,13 +26,13 @@
     background: url(../../assets/icons/arrow-next-icon.svg);
   }
 
-  &--prev {
+  &_orientation_prev {
     &:before {
       transform: rotate(180deg);
     }
   }
 
-  &--warning {
+  &_color_warning {
     border-color: $color-warning;
 
     &:hover {

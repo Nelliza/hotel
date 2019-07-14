@@ -15,7 +15,7 @@
       width: 80%;
     }
 
-    &--additional {
+    &_type_additional {
       display: flex;
       flex-direction: column;
       width: 40%;
@@ -39,7 +39,7 @@
   &__item {
     display: flex;
 
-    &--checkin {
+    &_type_checkin {
       justify-content: space-evenly;
       flex-wrap: wrap;
     }

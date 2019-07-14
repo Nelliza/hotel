@@ -17,7 +17,7 @@ class Slider {
     };
     let options = {};
 
-    if (this.$slider.hasClass('js-slider--with-pointer')) {
+    if (this.$slider.hasClass('js-slider_with-pointer')) {
       options = $.extend(this.options, optionsSliderWithPointer);
     } else {
       options = $.extend(this.options, optionsSliderWithScale);

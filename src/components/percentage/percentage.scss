@@ -25,7 +25,7 @@
     fill: rgba(0,0,0,0);
     stroke-width: 3;
 
-    &--animated {
+    &_state_animated {
       animation: donut-chart-fill 1s reverse ease-in;
     }
   }

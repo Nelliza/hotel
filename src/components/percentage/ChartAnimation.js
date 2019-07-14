@@ -12,7 +12,7 @@ class ChartAnimation {
 
   _handleWindowScroll() {
     if (this._isScrolledIntoView(this.$chart) === true) {
-      this.$chart.addClass(`${this.className}--animated`);
+      this.$chart.addClass(`${this.className}_state_animated`);
     }
   }
 

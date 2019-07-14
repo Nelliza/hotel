@@ -1,4 +1,4 @@
-mixin promoContent({ header, text, btnColor="primary", btnText="Подробнее", btnlink="./handler.php" } = {})
+mixin promoContent({ header, text, btnColor, btnText="Подробнее", btnlink="./handler.php" } = {})
   - header = header || "Добро пожаловать в наш отель!";
   - text = text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.";
 
@@ -6,7 +6,7 @@ mixin promoContent({ header, text, btnColor="primary", btnText="Подробне
     h3.promo__header= header
     p.promo__text= text
     +button({
-      modifier: btnColor,
       text: btnText,
-      link: btnlink
+      link: btnlink,
+      color: btnColor || undefined
     })

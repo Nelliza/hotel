@@ -1,5 +1,5 @@
 mixin dropdown({ modifier, title="Choose An Option", values=["Option 1", "Option 2"] } = {})
-  - modifier = modifier ? `dropdown__select--${modifier}` : false;
+  - modifier = modifier ? `dropdown__select_color_${modifier}` : false;
 
   select(class=["dropdown__select", "js-dropdown__select", modifier])
     option(selected, disabled, style="display: none")= title

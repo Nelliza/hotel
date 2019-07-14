@@ -1,5 +1,5 @@
 mixin socialIcon(items)
   each item in items
     - var { name, link } = item;
-    li(class=["user-profile__social-icon", `user-profile__social-icon--${name}`])
+    li(class=["user-profile__social-icon", `user-profile__social-icon_name_${name}`])
       a(href=link, target="_blank", rel="noopener noreferrer")

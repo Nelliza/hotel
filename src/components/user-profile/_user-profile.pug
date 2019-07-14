@@ -1,7 +1,7 @@
 include _social-icon
 
 mixin userProfile({ modifier, social, photo, name, profession })
-  - modifier = modifier ? `user-profile__info--${modifier}` : false;
+  - modifier = modifier ? `user-profile__info_type_${modifier}` : false;
   -
     social = social || [
       {

@@ -17,12 +17,12 @@ class Promo {
     });
 
     const $prevBtn = this.$carousel.find('.owl-prev');
-    $prevBtn.addClass('page__arrow--carousel page__arrow--prev');
-    $prevBtn.append('<div class="arrow arrow--prev">');
+    $prevBtn.addClass('page__arrow_location_carousel page__arrow_orientation_prev');
+    $prevBtn.append('<div class="arrow arrow_orientation_prev">');
 
     const $nextBtn = this.$carousel.find('.owl-next');
-    $nextBtn.addClass('page__arrow--carousel page__arrow--next');
-    $nextBtn.append('<div class="arrow arrow--next">');
+    $nextBtn.addClass('page__arrow_location_carousel page__arrow_orientation_next');
+    $nextBtn.append('<div class="arrow arrow_orientation_next">');
   }
 }
 

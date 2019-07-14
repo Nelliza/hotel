@@ -8,7 +8,7 @@
     .tick-box__checkmark {
       background: $color-primary;
 
-      &.tick-box__checkmark--warning {
+      &_color_warning {
         background: $color-warning;
       }
     }

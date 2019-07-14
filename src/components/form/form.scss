@@ -41,7 +41,7 @@
       @include triangle-tooltip(#fff, .3rem);
     }
 
-    &--correct {
+    &_type_correct {
       background-color: $color-primary;
 
       &:before {
@@ -49,7 +49,7 @@
       }
     }
 
-    &--error {
+    &_type_error {
       background-color: $color-warning;
 
       &:before {

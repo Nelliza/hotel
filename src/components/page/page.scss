@@ -32,7 +32,7 @@ html {
   margin: 0;
   padding: 2.5rem 3.4rem 5.6rem 3.25rem;
 
-  &--hotel {
+  &_type_hotel {
     width: auto;
     max-width: 1920px;
     margin: 0 auto;
@@ -128,6 +128,7 @@ html {
   }
 
   &__callback {
+    z-index: 10;
     position: fixed;
     bottom: 1rem;
     right: 1rem;
@@ -226,18 +227,18 @@ html {
     margin-bottom: .6rem;
     text-align: center;
 
-    &--form {
+    &_location_form {
       align-self: flex-end;
       margin-top: 0;
     }
 
-    &--messaging {
+    &_location_messaging {
       float: none;
       margin-top: .9rem;
       margin-bottom: .3rem;
     }
 
-    &--rooms {
+    &_location_rooms {
       position: relative;
       bottom: 1.5rem;
     }
@@ -246,17 +247,17 @@ html {
   &__arrow {
     margin: .6rem .72rem;
 
-    &--carousel {
+    &_location_carousel {
       position: absolute;
       top: 50%;
       width: 2rem;
     }
 
-    &--prev {
+    &_orientation_prev {
       left: 1%;
     }
 
-    &--next {
+    &_orientation_next {
       right: 1%;
     }
   }
@@ -268,7 +269,7 @@ html {
   &__pie-chart {
     margin: .5rem;
 
-    &--flex {
+    &_type_flex {
       display: flex;
     }
   }

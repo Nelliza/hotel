@@ -3,7 +3,7 @@
 .search {
   @include fieldset('input', 'submit', 'search-icon.svg');
 
-  &--notfound {
+  &_type_notfound {
     > .search__input {
       background-color: $color-warning;
     }
@@ -13,7 +13,7 @@
     }
   }
 
-  &--footer {
+  &_type_footer {
     width: 100%;
   }
 }

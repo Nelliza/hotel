@@ -2,6 +2,8 @@
 @import '../_size/_size.scss';
 
 .button {
+  @include btn-theme(primary, #28a290);
+  background-color: #fff;
   padding: .4rem 1.85rem;
   position: relative;
   font-size: .75rem;
@@ -10,13 +12,12 @@
   border: .06rem solid;
   border-bottom: .3rem solid;
   border-radius: .2rem;
-  background-color: #fff;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
 
   &:hover,
-  &.button--pressed {
+  &.button_state_pressed {
     padding: .45rem 1.85rem;
   }
 
@@ -24,34 +25,30 @@
     border-bottom-width: .2rem;
   }
 
-  &.button--pressed {
+  &.button_state_pressed {
     border-bottom-width: .06rem;
     outline: none;
   }
 
-  &--primary {
-    @include btn-theme(primary, #28a290);
-  }
-
-  &--warning {
+  &_color_warning {
     @include btn-theme(warning, #bf3e1f);
   }
 
-  &--small {
+  &_size_small {
     padding: .2rem .9rem;
     font-size: .62rem;
 
     &:hover,
-    &.button--pressed {
+    &.button_state_pressed {
       padding: .25rem .9rem;
     }
   }
 
-  &--form {
+  &_location_form {
     margin-top: .3rem;
   }
 
-  &--news {
+  &_location_news {
     @include size(auto);
     padding: 0 .6rem;
     display: inline-block;
@@ -62,12 +59,12 @@
     text-decoration: none;
 
     &:hover,
-    &.button--pressed {
+    &.button_state_pressed {
       padding: 0 .6rem;
     }
   }
 
-  &--messaging {
+  &_location_messaging {
     @include size(100%, 2.3rem);
   }
 

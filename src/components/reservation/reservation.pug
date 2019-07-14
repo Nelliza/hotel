@@ -9,14 +9,14 @@ section.reservation.js-reservation
     form.reservation__slide.reservation__slide--checkin(action="./handler.php")
       h3.reservation__header Выберите планируемую дату отдыха
       .reservation__item.reservation__item--checkin
-        .calendar.js-calendar()
-          .form__fieldset
-            label.calendar__label(for="from") Дата заезда
-              input(type="text", name="from")
-        .calendar.js-calendar()
-          .form__fieldset
-            label.calendar__label(for="to") Дата выезда
-              input(type="text", name="to")
+        +calendar({
+          inputName: "from",
+          inputLabel: "Дата заезда"
+        })
+        +calendar({
+          inputName: "to",
+          inputLabel: "Дата выезда"
+        })
     form.reservation__slide.reservation__slide--basic(action="./handler.php")
       h3.reservation__header Основная информация
       .reservation__item

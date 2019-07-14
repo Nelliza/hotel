@@ -1,6 +1,10 @@
-mixin calendar({ modifier } = {})
-  - modifier = modifier ? `calendar--${modifier}` : false;
+mixin calendar({ withScoreboard, inputName, inputLabel } = {})
+  div(class=["calendar", "js-calendar"], id="calendar")
+    if withScoreboard
+      .calendar__day.js-calendar__day
+      .calendar__datepicker.js-calendar__datepicker
 
-  div(class=["calendar", "js-calendar", modifier], id="calendar")
-    .calendar__day.js-calendar__day
-    .calendar__datepicker.js-calendar__datepicker
+    if inputName
+      .form__fieldset
+        label.calendar__label(for=inputName)= inputLabel
+          input(type="text", name=inputName)

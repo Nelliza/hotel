@@ -20,7 +20,7 @@
       padding: 0 .5rem;
     }
 
-    &--primary {
+    &_color_primary {
       text-align: center;
       background-color: $color-primary;
     }
@@ -33,7 +33,7 @@
     font-weight: 300;
     text-align: left;
 
-    &--small {
+    &_size_small {
       margin: 0 0 .2rem;
       font-size: .8rem;
       font-weight: 900;

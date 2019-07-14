@@ -4,19 +4,19 @@ section.page__buttons
   .page__buttons-wrapper
     - for (var i = 0; i < 3; i += 1)
       +button({
-        modifier: ["primary", "small"],
+        size: "small",
         tag: "button"
       })
       +button({
-        modifier: "primary",
         tag: "button"
       })
       +button({
-        modifier: "warning",
+        color: "warning",
         tag: "button"
       })
       +button({
-        modifier: ["warning", "small"],
+        color: "warning",
+        size: "small",
         tag: "button"
       })
 
@@ -207,7 +207,9 @@ section.page__location
   section.page__calendar
     .page__subtitle
       +subtitle("Calendar")
-    +calendar()
+    +calendar({
+      withScoreboard: true
+    })
 
   section.page__messaging
     .page__subtitle

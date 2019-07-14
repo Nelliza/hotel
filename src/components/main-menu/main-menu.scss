@@ -10,7 +10,7 @@
   box-shadow: 0 .5rem 3rem 1rem rgba(0,0,0,.2);
   border-bottom: 2px solid rgba(231,87,53,.3);
 
-  &--open {
+  &_state_open {
     .main-menu {
       &__btn span {
         &:first-child,
@@ -106,7 +106,7 @@
     text-decoration: none;
 
     &:hover,
-    &--active {
+    &_state_active {
       color: $color-warning;
     }
   }
