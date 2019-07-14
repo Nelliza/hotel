@@ -14,7 +14,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body class="page page--hotel">
+  <body class="page page_type_hotel">
     <div class="page__wrapper">
       <div class="page__content">
         <header class="header">
@@ -51,8 +51,8 @@
                     <div class="form__fieldset">
                       <textarea name="message" placeholder="Введите текст сообщения" rows="4"></textarea>
                     </div>
-                    <div class="page__button page__button--form">
-                      <button class="button js-button button--primary button--form" type="submit">Отправить</button>
+                    <div class="page__button page__button_location_form">
+                      <button class="button js-button button_location_form" type="submit">Отправить</button>
                     </div>
                   </form>
                 </div>
@@ -63,22 +63,22 @@
                 </div>
                 <div class="page__user-profile">
                   <div class="user-profile"><img class="user-profile__photo" src="img/john-smith.jpg" alt="Петров Петр">
-                    <div class="user-profile__info user-profile__info--primary"><span class="user-profile__name">Петров Петр</span><span class="user-profile__profession">менеджер по бронированию</span>
+                    <div class="user-profile__info user-profile__info_type_primary"><span class="user-profile__name">Петров Петр</span><span class="user-profile__profession">менеджер по бронированию</span>
                       <ul class="user-profile__social">
-                        <li class="user-profile__social-icon user-profile__social-icon--facebook"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
-                        <li class="user-profile__social-icon user-profile__social-icon--twitter"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
-                        <li class="user-profile__social-icon user-profile__social-icon--dribbble"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li class="user-profile__social-icon user-profile__social-icon_name_facebook"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li class="user-profile__social-icon user-profile__social-icon_name_twitter"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li class="user-profile__social-icon user-profile__social-icon_name_dribbble"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
                       </ul>
                     </div>
                   </div>
                 </div>
                 <div class="page__user-profile">
                   <div class="user-profile"><img class="user-profile__photo" src="img/sarah-brown.jpg" alt="Иванова Наталья">
-                    <div class="user-profile__info user-profile__info--additional"><span class="user-profile__name">Иванова Наталья</span><span class="user-profile__profession">менеджер по туризму</span>
+                    <div class="user-profile__info user-profile__info_type_additional"><span class="user-profile__name">Иванова Наталья</span><span class="user-profile__profession">менеджер по туризму</span>
                       <ul class="user-profile__social">
-                        <li class="user-profile__social-icon user-profile__social-icon--facebook"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
-                        <li class="user-profile__social-icon user-profile__social-icon--twitter"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
-                        <li class="user-profile__social-icon user-profile__social-icon--dribbble"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li class="user-profile__social-icon user-profile__social-icon_name_facebook"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li class="user-profile__social-icon user-profile__social-icon_name_twitter"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li class="user-profile__social-icon user-profile__social-icon_name_dribbble"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
                       </ul>
                     </div>
                   </div>
@@ -108,8 +108,8 @@
               <form class="messaging__form" action="./handler.php">
                 <div class="messaging__block">
                   <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
-                  <div class="page__button page__button--messaging">
-                    <button class="button js-button button--primary button--messaging" type="button">Reply</button>
+                  <div class="page__button page__button_location_messaging">
+                    <button class="button js-button button_location_messaging" type="button">Reply</button>
                   </div>
                 </div>
               </form>
@@ -125,8 +125,8 @@
               <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
             </div>
             <div class="footer__search">
-              <h3 class="page--hotel__subtitle">Поиск на сайте</h3>
-              <form class="search search--footer" action="./handler.php">
+              <h3 class="page_type_hotel__subtitle">Поиск на сайте</h3>
+              <form class="search search_type_footer" action="./handler.php">
                 <input class="search__input" type="text" placeholder="Search">
                 <button class="search__submit" type="submit"></button>
               </form>

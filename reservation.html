@@ -14,7 +14,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body class="page page--hotel">
+  <body class="page page_type_hotel">
     <div class="page__wrapper">
       <div class="page__content">
         <header class="header">
@@ -34,7 +34,7 @@
         <div class="page__item">
           <section class="reservation js-reservation">
             <div class="reservation__stages">
-              <ul class="stages js-stages stages--primary">
+              <ul class="stages js-stages stages_color_primary">
                 <li class="stages__item js-stages__item"></li>
                 <li class="stages__item js-stages__item"></li>
                 <li class="stages__item js-stages__item"></li>
@@ -44,14 +44,14 @@
               <form class="reservation__slide reservation__slide--checkin" action="./handler.php">
                 <h3 class="reservation__header">Выберите планируемую дату отдыха</h3>
                 <div class="reservation__item reservation__item--checkin">
-                  <div class="calendar js-calendar">
+                  <div class="calendar js-calendar" id="calendar">
                     <div class="form__fieldset">
                       <label class="calendar__label" for="from">Дата заезда
                         <input type="text" name="from">
                       </label>
                     </div>
                   </div>
-                  <div class="calendar js-calendar">
+                  <div class="calendar js-calendar" id="calendar">
                     <div class="form__fieldset">
                       <label class="calendar__label" for="to">Дата выезда
                         <input type="text" name="to">
@@ -65,8 +65,8 @@
                 <div class="reservation__item">
                   <p class="reservation__text">Количество взрослых</p>
                   <div class="page__slider">
-                    <div class="slider js-slider slider--with-pointer js-slider--with-pointer">
-                      <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
+                    <div class="slider js-slider slider_with-pointer js-slider_with-pointer">
+                      <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
                         <div class="slider__pointer js-slider__pointer"></div>
                       </div>
                     </div>
@@ -75,8 +75,8 @@
                 <div class="reservation__item">
                   <p class="reservation__text">Количество детей</p>
                   <div class="page__slider">
-                    <div class="slider js-slider slider--with-pointer js-slider--with-pointer">
-                      <div class="ui-slider-handle slider__handle slider__handle--with-pointer">
+                    <div class="slider js-slider slider_with-pointer js-slider_with-pointer">
+                      <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
                         <div class="slider__pointer js-slider__pointer"></div>
                       </div>
                     </div>
@@ -85,7 +85,7 @@
                 <div class="reservation__item">
                   <p class="reservation__text">Количество комнат</p>
                   <div class="page__slider">
-                    <div class="slider js-slider slider--with-scale js-slider--with-scale">
+                    <div class="slider js-slider slider_with-scale js-slider_with-scale">
                       <div class="ui-slider-handle slider__handle">
                       </div>
                       <ul class="slider__scale js-slider__scale"></ul>
@@ -145,7 +145,7 @@
                   </label>
                 </div>
                 <div class="page__button">
-                  <button class="button js-button button--primary" type="submit">Подобрать номер</button>
+                  <button class="button js-button" type="submit">Подобрать номер</button>
                 </div>
               </form>
             </div>
@@ -166,8 +166,8 @@
               <form class="messaging__form" action="./handler.php">
                 <div class="messaging__block">
                   <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
-                  <div class="page__button page__button--messaging">
-                    <button class="button js-button button--primary button--messaging" type="button">Reply</button>
+                  <div class="page__button page__button_location_messaging">
+                    <button class="button js-button button_location_messaging" type="button">Reply</button>
                   </div>
                 </div>
               </form>
@@ -183,8 +183,8 @@
               <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
             </div>
             <div class="footer__search">
-              <h3 class="page--hotel__subtitle">Поиск на сайте</h3>
-              <form class="search search--footer" action="./handler.php">
+              <h3 class="page_type_hotel__subtitle">Поиск на сайте</h3>
+              <form class="search search_type_footer" action="./handler.php">
                 <input class="search__input" type="text" placeholder="Search">
                 <button class="search__submit" type="submit"></button>
               </form>

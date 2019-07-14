@@ -14,7 +14,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body class="page page--hotel">
+  <body class="page page_type_hotel">
     <div class="page__wrapper">
       <div class="page__content">
         <header class="header">
@@ -45,18 +45,18 @@
                 </div>
               </div>
               <div class="news"><img class="news__preview" src="img/news-2.jpg" alt="This is the title">
-                <div class="news__description news__description--primary">
+                <div class="news__description news__description_color_primary">
                   <div class="news__short-date"><span class="news__day">24</span><span class="news__month">Aug</span></div>
-                  <h3 class="news__title news__title--small">This is the title</h3>
+                  <h3 class="news__title news__title_size_small">This is the title</h3>
                   <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <div class="page__button"><a class="button js-button button--primary button--news" href="#calendar">Add to calendar</a>
+                  <div class="page__button page__button_location_news"><a class="button js-button button_location_news" href="#calendar">Add to calendar</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="page__hotel-news-wrapper">
               <div class="news"><img class="news__preview" src="img/news-2.jpg" alt="News number 3">
-                <div class="news__description news__description--primary">
+                <div class="news__description news__description_color_primary">
                   <h3 class="news__title">News number 3</h3>
                   <p class="news__date">11 march 2014</p>
                   <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
@@ -72,12 +72,12 @@
             </div>
             <div class="page__hotel-news-wrapper">
               <div class="page__news-wrapper">
-                <div class="video video--news">
+                <div class="video video_type_news">
                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rPmGtZAUxNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="page__news-wrapper">
-                <div class="video video--news">
+                <div class="video video_type_news">
                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rPmGtZAUxNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
@@ -99,8 +99,8 @@
               <form class="messaging__form" action="./handler.php">
                 <div class="messaging__block">
                   <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
-                  <div class="page__button page__button--messaging">
-                    <button class="button js-button button--primary button--messaging" type="button">Reply</button>
+                  <div class="page__button page__button_location_messaging">
+                    <button class="button js-button button_location_messaging" type="button">Reply</button>
                   </div>
                 </div>
               </form>
@@ -116,8 +116,8 @@
               <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
             </div>
             <div class="footer__search">
-              <h3 class="page--hotel__subtitle">Поиск на сайте</h3>
-              <form class="search search--footer" action="./handler.php">
+              <h3 class="page_type_hotel__subtitle">Поиск на сайте</h3>
+              <form class="search search_type_footer" action="./handler.php">
                 <input class="search__input" type="text" placeholder="Search">
                 <button class="search__submit" type="submit"></button>
               </form>
