@@ -1,4 +1,5 @@
-@import '../_pseudo-elem/_pseudo-elem.scss';
+@import '../variables/colors';
+@import './pseudo-elem';
 
 @mixin triangle-tooltip($bg-color: transparent, $size: .5rem, $orientation: left) {
   @if $orientation == left {

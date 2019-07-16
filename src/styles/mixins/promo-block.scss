@@ -1,4 +1,4 @@
-@import '../_colors/_colors.scss';
+@import '../variables/colors';
 
 @mixin promo-block($padding: 1rem, $border-color: $color-primary) {
   position: absolute;

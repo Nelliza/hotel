@@ -1,4 +1,4 @@
-@import '../_size/_size.scss';
+@import './size';
 
 @mixin fieldset-icon($path) {
   @include size(2.1rem, 100%);

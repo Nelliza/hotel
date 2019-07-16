@@ -1,5 +1,5 @@
-@import '../arrow/_arrow-state.scss';
-@import '../_colors/_colors.scss';
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/arrow-state';
 
 .reservation {
   &__stages {

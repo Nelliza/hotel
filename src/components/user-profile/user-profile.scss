@@ -1,6 +1,6 @@
-@import './_social-icon.scss';
-@import '../_colors/_colors.scss';
-@import '../_triangle-tooltip/_triangle-tooltip.scss';
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/triangle-tooltip';
+@import '../../styles/mixins/social-icon';
 
 .user-profile {
   display: flex;

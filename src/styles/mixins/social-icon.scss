@@ -1,4 +1,4 @@
-@import '../_size/_size.scss';
+@import './size';
 
 @mixin social-icon($social...) {
   @each $val in $social {

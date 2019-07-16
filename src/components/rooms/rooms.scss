@@ -1,5 +1,5 @@
-@import '../_promo-block/_promo-block.scss';
-@import '../_colors/_colors.scss';
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/promo-block';
 
 .rooms {
   &__list {

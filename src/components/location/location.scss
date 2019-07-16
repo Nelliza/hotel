@@ -1,5 +1,5 @@
-@import '../_size/_size.scss';
-@import '../_colors/_colors.scss';
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/size';
 
 .location {
   @include size(100%, 17.1rem);

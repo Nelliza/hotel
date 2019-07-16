@@ -1,6 +1,6 @@
-@import '../_colors/_colors.scss';
-@import '../_size/_size.scss';
-@import '../_triangle-tooltip/_triangle-tooltip.scss';
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/size';
+@import '../../styles/mixins/triangle-tooltip';
 
 .slider {
   height: .3rem;

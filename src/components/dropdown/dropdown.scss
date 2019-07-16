@@ -1,5 +1,5 @@
-@import '../_fieldset/_fieldset.scss';
-@import '../_placeholder/_placeholder.scss';
+@import '../../styles/mixins/fieldset';
+@import '../../styles/mixins/placeholder';
 
 .dropdown {
   width: 18.1rem;

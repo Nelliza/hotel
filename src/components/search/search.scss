@@ -1,4 +1,4 @@
-@import '../_fieldset/_fieldset.scss';
+@import '../../styles/mixins/fieldset';
 
 .search {
   @include fieldset('input', 'submit', 'search-icon.svg');

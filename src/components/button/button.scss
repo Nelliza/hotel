@@ -1,5 +1,5 @@
-@import './_btn-theme.scss';
-@import '../_size/_size.scss';
+@import '../../styles/mixins/btn-theme';
+@import '../../styles/mixins/size';
 
 .button {
   @include btn-theme(primary, #28a290);

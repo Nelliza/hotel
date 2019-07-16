@@ -1,6 +1,6 @@
-@import './_arrow-state.scss';
-@import '../_colors/_colors.scss';
-@import '../_size/_size.scss';
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/arrow-state';
+@import '../../styles/mixins/size';
 
 .arrow {
   border: .2rem solid $color-primary;

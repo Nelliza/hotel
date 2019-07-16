@@ -1,4 +1,4 @@
-@import '../_colors/_colors.scss';
+@import '../variables/colors';
 
 @mixin btn-theme($theme, $bd-bottom-color) {
   $bg-color: '';
