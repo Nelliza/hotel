@@ -1,6 +1,7 @@
-include ../components/button/_button
-include ../components/search/_search
-include ../components/messaging/_messaging
+include ../components/header/header
+include ../components/callback/callback
+include ../components/footer/footer
+
 block include
 
 doctype html
@@ -28,15 +29,15 @@ html(lang="en")
     body.page.page_type_hotel
       .page__wrapper
         .page__content
-          include ../components/header/header
+          +header
 
           block page-content
 
           .page__callback
-            include ../components/callback/callback
+            +callback()
             .overlay.js-overlay
         .page__footer
-          include ../components/footer/footer
+          +footer
 
       script(src="./app.js")
       block scripts

@@ -1,0 +1,22 @@
+.about-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__percentage-wrapper {
+    margin: .5rem;
+  }
+
+  > .percentage {
+    flex-shrink: 0;
+  }
+
+  &__pie-chart-wrapper {
+    display: flex;
+    margin: .5rem;
+  }
+
+  &__level {
+    margin-left: 1rem;
+  }
+}

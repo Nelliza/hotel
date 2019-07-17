@@ -1,9 +1,10 @@
-include _social-icon
+include ../social-icon/social-icon
 
-mixin userProfile({ modifier, social, photo, name, profession })
+mixin user-profile({ photo, name, profession, modifier, iconItems })
+  - var iconModifier = modifier;
   - modifier = modifier ? `user-profile__info_type_${modifier}` : false;
   -
-    social = social || [
+    iconItems = iconItems || [
       {
         name: 'facebook',
         link: 'https://facebook.com'
@@ -24,4 +25,4 @@ mixin userProfile({ modifier, social, photo, name, profession })
       span.user-profile__name= name
       span.user-profile__profession= profession
       ul.user-profile__social
-        +socialIcon(social)
+        +social-icon({ iconItems, iconModifier })

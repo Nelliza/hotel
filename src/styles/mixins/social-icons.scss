@@ -1,8 +1,8 @@
 @import './size';
 
-@mixin social-icon($social...) {
+@mixin social-icons($social...) {
   @each $val in $social {
-    &__social-icon_name_#{$val} {
+    .social-icon_name_#{$val} {
       > a {
         @include size(1.6rem, 1.3rem);
         display: block;
@@ -12,10 +12,8 @@
           background: url(../../assets/icons/#{$val}-hover-icon.svg) no-repeat center;
         }
       }
-    }
 
-    &__info_type_primary {
-      .user-profile__social-icon_name_#{$val} {
+      &.social-icon_type_primary {
         > a {
           background: url(../../assets/icons/#{$val}-white-icon.svg) no-repeat center;
 

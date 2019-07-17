@@ -1,7 +1,7 @@
-class MainMenu {
+class Menu {
   constructor(options) {
-    this.$btn = options.elem.find('.js-main-menu__btn');
-    this.$link = options.elem.find('.js-main-menu__link');
+    this.$btn = options.elem.find('.js-menu__btn');
+    this.$link = options.elem.find('.js-menu-item__link');
     this.index = options.index;
     this.init();
   }
@@ -11,7 +11,7 @@ class MainMenu {
 
     for (let i = 0; i < this.$link.length; i += 1) {
       if (url === this.$link.get(i).href) {
-        this.$link.eq(i).addClass('main-menu__link_state_active');
+        this.$link.eq(i).addClass('menu-item__link_state_active');
       }
     }
 
@@ -19,8 +19,8 @@ class MainMenu {
   }
 
   _handleButtonClick(event) {
-    $(event.currentTarget).closest('.js-main-menu').toggleClass('main-menu_state_open');
+    $(event.currentTarget).closest('.js-menu').toggleClass('menu_state_open');
   }
 }
 
-export default MainMenu;
+export default Menu;

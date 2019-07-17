@@ -1,10 +1,10 @@
-import MainMenu from './MainMenu';
+import Menu from './Menu';
 
 $(() => {
-  const $menu = $('.js-main-menu');
+  const $menu = $('.js-menu');
 
   $menu.each((index, elem) => {
-    new MainMenu({
+    new Menu({
       index,
       elem: $(elem),
     });

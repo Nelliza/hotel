@@ -1,6 +1,6 @@
 import 'webpack-jquery-ui/selectmenu';
 
 $(() => {
-  const $dropdown = $('.js-dropdown__select');
+  const $dropdown = $('.js-dropdown');
   $dropdown.selectmenu();
 });

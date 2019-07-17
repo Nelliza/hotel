@@ -1,0 +1,8 @@
+@import '../../styles/mixins/social-icons';
+
+.social-icon {
+  display: inline-block;
+  margin: .35rem;
+}
+
+@include social-icons(facebook, twitter, dribbble);

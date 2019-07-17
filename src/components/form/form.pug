@@ -1,3 +1,5 @@
+include ../button/button
+
 mixin form({ inputs, btnColor, btnSize, textarea={}, btnText="Submit" } = {})
   -
     inputs = inputs || [
@@ -20,11 +22,12 @@ mixin form({ inputs, btnColor, btnSize, textarea={}, btnText="Submit" } = {})
         .form__val.js-form__val
     .form__fieldset
       textarea(name=textareaName, placeholder=textareaPlaceholder, rows=textareaRows)
-    +button({
-      location: "form",
-      text: btnText,
-      tag: "button",
-      btnType: "submit",
-      color: btnColor || undefined,
-      size: btnSize || undefined
-    })
+    .form__button-wrapper
+      +button({
+        location: "form",
+        text: btnText,
+        tag: "button",
+        btnType: "submit",
+        color: btnColor,
+        size: btnSize
+      })

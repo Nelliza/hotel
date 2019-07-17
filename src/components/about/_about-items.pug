@@ -1,7 +1,0 @@
-mixin aboutItems(items)
-  each item in items
-    - var { percent, text } = item;
-    .about__item
-      .page__percentage
-        +percentage({ percent })
-      p.about__level= text

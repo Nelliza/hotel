@@ -1,0 +1,44 @@
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/promo-block';
+
+.rooms-item {
+  flex-grow: 1;
+  position: relative;
+  min-height: 30rem;
+  margin: 3rem 1rem;
+  list-style: none;
+  text-align: center;
+
+  @media screen and (max-width: 720px) {
+    flex-basis: 100%;
+  }
+
+  &__img {
+    height: 100%;
+    background-size: cover;
+  }
+
+  &__price {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: .5rem;
+    background-color: #181818;
+    color: #fff;
+    border: .13rem solid $color-warning;
+  }
+
+  &__content {
+    @include promo-block(1rem 1rem .5rem, $color-warning) {
+      min-height: 14.7rem;
+    }
+  }
+
+  &__button-wrapper {
+    margin: .6rem;
+    position: relative;
+    bottom: 1.5rem;
+  }
+}

@@ -1,21 +1,7 @@
 extends ../templates/template
 
 block include
-  include ../components/subtitle/_subtitle
-  include ../components/arrow/_arrow
-  include ../components/percentage/_percentage
-  include ../components/pie-chart/_pie-chart
-  include ../components/slider/_slider
-  include ../components/stages/_stages
-  include ../components/form/_form
-  include ../components/toggle/_toggle
-  include ../components/tick-box/_tick-box
-  include ../components/dropdown/_dropdown
-  include ../components/user-profile/_user-profile
-  include ../components/news/_news
-  include ../components/location/_location
-  include ../components/calendar/_calendar
-  include ../components/video/_video
+  include ../components/page/page
 
 block description
   meta(name="description", content="UI-Kit for Web")
@@ -26,7 +12,7 @@ block title
 
 block body
   body.page
-    include ../components/page/page
+    +page
 
     script(src="./app.js")
     script(src="https://api-maps.yandex.ru/2.1/?apikey=aba3cd86-c704-4688-a291-3ec61529513e&lang=en_US", type="text/javascript")

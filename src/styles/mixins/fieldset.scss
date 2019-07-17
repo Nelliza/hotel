@@ -5,13 +5,13 @@
   position: relative;
   margin-bottom: 1rem;
 
-  &__#{$input} {
+  #{$input} {
     @include input;
     box-sizing: border-box;
     width: 100%;
   }
 
-  &__#{$btn} {
+  #{$btn} {
     @include fieldset-icon($path);
     cursor: pointer;
 

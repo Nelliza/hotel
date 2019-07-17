@@ -1,27 +1,29 @@
-include ./_rooms-list
+include ../subtitle/subtitle
+include ../rooms-item/rooms-item
 
-section.rooms
-  .page__subtitle
-    +subtitle("Выбор комнаты")
-  p.rooms__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam tempore asperiores consectetur officia facilis corrupti aut minima accusamus et porro numquam, nisi, reprehenderit natus, corporis voluptate mollitia quis deleniti tempora quo repellat non, ullam placeat! Id ea, quaerat harum sapiente provident autem quidem minima similique! Aperiam aut ratione in dolores.
-  ul.rooms__list
-    +roomsList({
-      items: [
-        {
-          image: "room-1",
-          price: "150",
-          header: "Номер Делюкс"
-        },
-        {
-          image: "room-2",
-          price: "150",
-          header: "2-местный Люкс"
-        },
-        {
-          image: "room-3",
-          price: "100",
-          header: "1-местный номер"
-        }
-      ],
-      btnColor: "warning"
-    })
+mixin rooms
+  section.rooms
+    .page__subtitle
+      +subtitle("Выбор комнаты")
+    p.rooms__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam tempore asperiores consectetur officia facilis corrupti aut minima accusamus et porro numquam, nisi, reprehenderit natus, corporis voluptate mollitia quis deleniti tempora quo repellat non, ullam placeat! Id ea, quaerat harum sapiente provident autem quidem minima similique! Aperiam aut ratione in dolores.
+    ul.rooms__list
+      +rooms-item({
+        items: [
+          {
+            img: "rooms-1",
+            price: "150",
+            header: "Номер Делюкс"
+          },
+          {
+            img: "rooms-2",
+            price: "150",
+            header: "2-местный Люкс"
+          },
+          {
+            img: "rooms-3",
+            price: "100",
+            header: "1-местный номер"
+          }
+        ],
+        btnColor: "warning"
+      })

@@ -5,6 +5,5 @@ mixin calendar({ withScoreboard, inputName, inputLabel } = {})
       .calendar__datepicker.js-calendar__datepicker
 
     if inputName
-      .form__fieldset
-        label.calendar__label(for=inputName)= inputLabel
-          input(type="text", name=inputName)
+      label.calendar__label(for=inputName)= inputLabel
+        input.calendar__input(type="text", name=inputName)

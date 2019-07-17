@@ -1,3 +1,5 @@
+include ../button/button
+
 mixin news({ image, title, date, text, modifier=false, isCalendar=false })
   - var modifierDescr = modifier ? `news__description_color_${modifier}` : false;
   - var modifierTitle = isCalendar ? "news__title_size_small" : false;
@@ -14,8 +16,9 @@ mixin news({ image, title, date, text, modifier=false, isCalendar=false })
         p.news__date= date
       p.news__text= text
       if isCalendar
-        +button({
-          location: "news",
-          text: "Add to calendar",
-          link: "#calendar"
-        })
+        .news__button-wrapper
+          +button({
+            location: "news",
+            text: "Add to calendar",
+            link: "#calendar"
+          })

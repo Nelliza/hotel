@@ -1,7 +1,7 @@
 @import '../../styles/mixins/fieldset';
 
 .search {
-  @include fieldset('input', 'submit', 'search-icon.svg');
+  @include fieldset('&__input', '&__submit', 'search-icon.svg');
 
   &_type_notfound {
     > .search__input {

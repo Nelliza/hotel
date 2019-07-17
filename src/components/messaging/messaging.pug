@@ -1,3 +1,5 @@
+include ../button/button
+
 mixin messaging({ name, photo })
   section.messaging.js-messaging
     .messaging__header
@@ -12,8 +14,9 @@ mixin messaging({ name, photo })
       form.messaging__form(action="./handler.php")
         div.messaging__block
           textarea.messaging__textarea(rows="3") Yeah that sounds great. See you then
-          +button({
-            location: "messaging",
-            text: "Reply",
-            tag: "button"
-          })
+          .messaging__button-wrapper
+            +button({
+              location: "messaging",
+              text: "Reply",
+              tag: "button"
+            })

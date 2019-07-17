@@ -1,19 +1,11 @@
 extends ../templates/template
 
 block include
-  include ../components/subtitle/_subtitle
-  include ../components/arrow/_arrow
-  include ../components/slider/_slider
-  include ../components/stages/_stages
-  include ../components/calendar/_calendar
-  include ../components/form/_form
-  include ../components/toggle/_toggle
-  include ../components/tick-box/_tick-box
-  include ../components/dropdown/_dropdown
+  include ../components/reservation/reservation
 
 block title
   title Подбор апартаментов
 
 block page-content
   .page__item
-    include ../components/reservation/reservation
+    +reservation

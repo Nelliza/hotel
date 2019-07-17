@@ -97,7 +97,7 @@ html {
 
   &__search {
     @include subtitle-margins(false, 1.3rem);
-    
+
     width: 18.1rem;
 
     @media screen and (max-width: 615px) {
@@ -144,7 +144,7 @@ html {
     @include flex() {
       align-items: flex-end;
     };
-    padding: 2.2rem 3.95rem 0 4.15rem;
+    padding: 2.2rem 4rem 0 4.15rem;
 
     @media screen and (max-width: 393px) {
       flex-direction: column;
@@ -222,26 +222,10 @@ html {
     }
   }
 
-  &__button {
+  &__button-wrapper {
     margin-top: .6rem;
     margin-bottom: .6rem;
     text-align: center;
-
-    &_location_form {
-      align-self: flex-end;
-      margin-top: 0;
-    }
-
-    &_location_messaging {
-      float: none;
-      margin-top: .9rem;
-      margin-bottom: .3rem;
-    }
-
-    &_location_rooms {
-      position: relative;
-      bottom: 1.5rem;
-    }
   }
 
   &__arrow {
@@ -262,16 +246,9 @@ html {
     }
   }
 
-  &__percentage {
-    margin: .5rem;
-  }
-
+  &__percentage,
   &__pie-chart {
     margin: .5rem;
-
-    &_type_flex {
-      display: flex;
-    }
   }
 
   &__slider {
@@ -291,7 +268,6 @@ html {
       width: 100%;
     }
   }
-
 
   &__user-profile {
     margin-bottom: .7rem;

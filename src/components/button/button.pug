@@ -1,0 +1,9 @@
+mixin button({ color, size, location, text="Button", tag="a", link="#", btnType= "button" } = {})
+  - color = color ? `button_color_${color}` : false;
+  - size = size ? `button_size_${size}` : false;
+  - location = location ? `button_location_${location}` : false;
+
+  if tag == "button"
+    button(class=["button", "js-button", color, size, location], type=btnType)= text
+  else
+    a(class=["button", "js-button", color, size, location], href=link)= text

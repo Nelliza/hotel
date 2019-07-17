@@ -1,2 +1,27 @@
-header.header
-  include ../main-menu/main-menu
+include ../menu/menu
+
+mixin header
+  header.header
+    .header__menu
+      +menu([
+        {
+          name: "Главная",
+          link: "./index.html"
+        },
+        {
+          name: "Снять номер",
+          link: "./reservation.html"
+        },
+        {
+          name: "Новости",
+          link: "./news.html"
+        },
+        {
+          name: "Контакты",
+          link: "./contacts.html"
+        },
+        {
+          name: "UI-Kit",
+          link: "./main.html"
+        }
+      ])

@@ -1,48 +1,51 @@
-include ./_about-items
-include ./_images-items
+include ../subtitle/subtitle
+include ../about-img/about-img
+include ../about-rating/about-rating
+include ../pie-chart/pie-chart
 
-section.about
-  .page__subtitle
-    +subtitle("Об отеле")
-  .about__wrapper
-    p.about__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
-    .about__images
-      +imagesItems(["about-1", "about-2", "about-3"])
-  h3.about__subtitle Отель в цифрах
-  .about__list
-    +aboutItems([
-      {
-        percent: 80,
-        text: "Оценка качества услуг постояльцами"
-      },
-      {
-        percent: 75,
-        text: "Порекомендуют наш отель своим друзьям"
-      },
-      {
-        percent: 57,
-        text: "Планируют вернуться сюда в будущем"
-      }
-    ])
-    .about__item
-      .page__pie-chart.page__pie-chart_type_flex
-        +pie-chart({
-          items: [
-            {
-              percent: 35,
-              fill: "#747474",
-              name: "Мужчины"
-            },
-            {
-              percent: 45,
-              fill: "#e75735",
-              name: "Женщины"
-            },
-            {
-              percent: 20,
-              fill: "#4eb7a8",
-              name: "Дети"
-            }
-          ],
-          withLegend: true
-        })
+mixin about
+  section.about
+    .page__subtitle
+      +subtitle("Об отеле")
+    .about__wrapper
+      p.about__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
+      .about__images
+        +about-img(["about-1", "about-2", "about-3"])
+    h3.about__subtitle Отель в цифрах
+    .about__rating-list
+      +about-rating([
+        {
+          percent: 80,
+          text: "Оценка качества услуг постояльцами"
+        },
+        {
+          percent: 75,
+          text: "Порекомендуют наш отель своим друзьям"
+        },
+        {
+          percent: 57,
+          text: "Планируют вернуться сюда в будущем"
+        }
+      ])
+      .about-rating
+        .about-rating__pie-chart-wrapper
+          +pie-chart({
+            items: [
+              {
+                percent: 35,
+                fill: "#747474",
+                name: "Мужчины"
+              },
+              {
+                percent: 45,
+                fill: "#e75735",
+                name: "Женщины"
+              },
+              {
+                percent: 20,
+                fill: "#4eb7a8",
+                name: "Дети"
+              }
+            ],
+            withLegend: true
+          })

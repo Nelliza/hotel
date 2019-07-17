@@ -1,17 +1,16 @@
 extends ../templates/template
 
 block include
-  include ../components/subtitle/_subtitle
-  include ../components/arrow/_arrow
-  include ../components/percentage/_percentage
-  include ../components/pie-chart/_pie-chart
+  include ../components/promo/promo
+  include ../components/about/about
+  include ../components/rooms/rooms
 
 block page-content
   .page__item
-    include ../components/promo/promo
+    +promo()
 
   .center-layer
     .page__item
-      include ../components/about/about
+      +about
     .page__item
-      include ../components/rooms/rooms
+      +rooms

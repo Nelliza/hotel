@@ -1,4 +1,4 @@
-mixin tickBox({ id, modifier, size="24", isChecked=false, text="" })
+mixin tick-box({ id, modifier, size="24", isChecked=false, text="" })
   - modifier = modifier ? `tick-box__checkmark_color_${modifier}` : false;
 
   input.tick-box(type="checkbox", id=`tick-box${id}`, checked=isChecked)

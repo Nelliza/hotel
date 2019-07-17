@@ -1,0 +1,9 @@
+include ../percentage/percentage
+
+mixin about-rating(items)
+  each item in items
+    - var { percent, text } = item;
+    .about-rating
+      .about-rating__percentage-wrapper
+        +percentage({ percent })
+      p.about-rating__level= text
