@@ -1,19 +1,19 @@
 include ../promo-img/promo-img
 include ../button/button
 
-mixin promo({ header, text, btnColor, btnText="Подробнее", btnlink="./handler.php" } = {})
+mixin promo({ imgItems, btnColor, header, text, btnText="Подробнее", btnlink="./handler.php" })
   - header = header || "Добро пожаловать в наш отель!";
   - text = text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.";
 
   section.promo.js-promo
     .carousel.js-carousel.owl-carousel
-      +promo-img(["promo-1", "promo-2", "promo-3"])
+      +promo-img(imgItems)
     .promo__content
       h3.promo__header= header
       p.promo__text= text
       .promo__button-wrapper
         +button({
+          color: btnColor,
           text: btnText,
-          link: btnlink,
-          color: btnColor
+          link: btnlink
         })

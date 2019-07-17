@@ -1,8 +1,5 @@
 include ../messaging/messaging
 
-mixin callback
+mixin callback({ messagingOptions })
   .callback.js-callback
-  +messaging({
-    name: "Sarah Brown",
-    photo: "sarah-brown"
-  })
+  +messaging(messagingOptions)

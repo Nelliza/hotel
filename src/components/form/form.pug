@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin form({ inputs, btnColor, btnSize, textarea={}, btnText="Submit" } = {})
+mixin form({ btnColor, btnSize, inputs, textarea={}, action="./handler.php", btnLocation="form", btnText="Submit", btnTag="button", btnType="submit" } = {})
   -
     inputs = inputs || [
       {
@@ -12,9 +12,9 @@ mixin form({ inputs, btnColor, btnSize, textarea={}, btnText="Submit" } = {})
         placeholder: "Your Email"
       }
     ];
-  - var { name: textareaName="message", placeholder: textareaPlaceholder="Your Message", rows: textareaRows=4 } = textarea;
+  - var { name: textareaName="message", placeholder: textareaPlaceholder="Your Message", rows: textareaRows="4" } = textarea;
 
-  form.form.js-form(action="./handler.php")
+  form.form.js-form(action=action)
     each input in inputs
       - var { name: inputName, placeholder: inputPlaceholder } = input;
       .form__fieldset
@@ -24,10 +24,10 @@ mixin form({ inputs, btnColor, btnSize, textarea={}, btnText="Submit" } = {})
       textarea(name=textareaName, placeholder=textareaPlaceholder, rows=textareaRows)
     .form__button-wrapper
       +button({
-        location: "form",
-        text: btnText,
-        tag: "button",
-        btnType: "submit",
         color: btnColor,
-        size: btnSize
+        size: btnSize,
+        location: btnLocation,
+        text: btnText,
+        tag: btnTag,
+        type: btnType
       })

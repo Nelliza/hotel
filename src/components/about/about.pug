@@ -3,49 +3,17 @@ include ../about-img/about-img
 include ../about-rating/about-rating
 include ../pie-chart/pie-chart
 
-mixin about
+mixin about({ imgItems, ratingItems, pieChartOptions, subtitle="Об отеле" })
   section.about
     .page__subtitle
-      +subtitle("Об отеле")
+      +subtitle(subtitle)
     .about__wrapper
       p.about__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
       .about__images
-        +about-img(["about-1", "about-2", "about-3"])
+        +about-img(imgItems)
     h3.about__subtitle Отель в цифрах
     .about__rating-list
-      +about-rating([
-        {
-          percent: 80,
-          text: "Оценка качества услуг постояльцами"
-        },
-        {
-          percent: 75,
-          text: "Порекомендуют наш отель своим друзьям"
-        },
-        {
-          percent: 57,
-          text: "Планируют вернуться сюда в будущем"
-        }
-      ])
+      +about-rating(ratingItems)
       .about-rating
         .about-rating__pie-chart-wrapper
-          +pie-chart({
-            items: [
-              {
-                percent: 35,
-                fill: "#747474",
-                name: "Мужчины"
-              },
-              {
-                percent: 45,
-                fill: "#e75735",
-                name: "Женщины"
-              },
-              {
-                percent: 20,
-                fill: "#4eb7a8",
-                name: "Дети"
-              }
-            ],
-            withLegend: true
-          })
+          +pie-chart(pieChartOptions)

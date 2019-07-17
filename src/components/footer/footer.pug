@@ -1,6 +1,8 @@
 include ../search/search
 
-mixin footer
+mixin footer({ searchOptions } = {})
+  - searchOptions = searchOptions || { modifier: "footer" };
+
   footer.footer
     .footer__wrapper
       .footer__description
@@ -8,8 +10,6 @@ mixin footer
         p.footer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
       .footer__search
         h3.page_type_hotel__subtitle Поиск на сайте
-        +search({
-          modifier: "footer"
-        })
+        +search(searchOptions)
     p.footer__copyright Copyright &copy; All rights reserved | This template is made with by 
       a(href="https://colorlib.com", target="_blank", rel="noopener noreferrer") Colorlib
