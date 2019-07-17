@@ -20,40 +20,40 @@
         <h2 class="subtitle">Standard buttons</h2>
       </div>
       <div class="page__buttons-wrapper">
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button button_size_small" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button button_color_warning" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button button_color_warning button_size_small" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button button_size_small" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button button_color_warning" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button button_color_warning button_size_small" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button button_size_small" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button button_color_warning" type="button">Button</button>
         </div>
-        <div class="page__button">
+        <div class="page__button-wrapper">
           <button class="button js-button button_color_warning button_size_small" type="button">Button</button>
         </div>
       </div>
@@ -184,7 +184,7 @@
             <div class="form__fieldset">
               <textarea name="message" placeholder="Your Message" rows="4"></textarea>
             </div>
-            <div class="page__button page__button_location_form">
+            <div class="form__button-wrapper">
               <button class="button js-button button_location_form" type="submit">Submit</button>
             </div>
           </form>
@@ -246,8 +246,8 @@
           <input class="search__input" type="text" placeholder="I've not found what I'm looking for...">
           <button class="search__submit search__submit_color_warning" type="submit"></button>
         </form>
-        <form class="dropdown" action="./handler.php">
-          <select class="dropdown__select js-dropdown__select">
+        <form class="page__dropdown-form" action="./handler.php">
+          <select class="dropdown js-dropdown">
             <option selected disabled style="display: none">Choose An Option</option>
             <option>Option 1</option>
             <option>Option 2</option>
@@ -262,9 +262,9 @@
           <div class="user-profile"><img class="user-profile__photo" src="img/john-smith.jpg" alt="John Smith">
             <div class="user-profile__info user-profile__info_type_additional"><span class="user-profile__name">John Smith</span><span class="user-profile__profession">UX Designer</span>
               <ul class="user-profile__social">
-                <li class="user-profile__social-icon user-profile__social-icon_name_facebook"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
-                <li class="user-profile__social-icon user-profile__social-icon_name_twitter"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
-                <li class="user-profile__social-icon user-profile__social-icon_name_dribbble"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
+                <li class="social-icon social-icon_name_facebook social-icon_type_additional"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
+                <li class="social-icon social-icon_name_twitter social-icon_type_additional"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
+                <li class="social-icon social-icon_name_dribbble social-icon_type_additional"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
               </ul>
             </div>
           </div>
@@ -273,9 +273,9 @@
           <div class="user-profile"><img class="user-profile__photo" src="img/sarah-brown.jpg" alt="Sarah Brown">
             <div class="user-profile__info user-profile__info_type_primary"><span class="user-profile__name">Sarah Brown</span><span class="user-profile__profession">Developer</span>
               <ul class="user-profile__social">
-                <li class="user-profile__social-icon user-profile__social-icon_name_facebook"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
-                <li class="user-profile__social-icon user-profile__social-icon_name_twitter"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
-                <li class="user-profile__social-icon user-profile__social-icon_name_dribbble"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
+                <li class="social-icon social-icon_name_facebook social-icon_type_primary"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
+                <li class="social-icon social-icon_name_twitter social-icon_type_primary"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
+                <li class="social-icon social-icon_name_dribbble social-icon_type_primary"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
               </ul>
             </div>
           </div>
@@ -302,7 +302,7 @@
               <div class="news__short-date"><span class="news__day">24</span><span class="news__month">Aug</span></div>
               <h3 class="news__title news__title_size_small">This is the title</h3>
               <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <div class="page__button page__button_location_news"><a class="button js-button button_location_news" href="#calendar">Add to calendar</a>
+              <div class="news__button-wrapper"><a class="button js-button button_location_news" href="#calendar">Add to calendar</a>
               </div>
             </div>
           </div>
@@ -342,7 +342,7 @@
             <form class="messaging__form" action="./handler.php">
               <div class="messaging__block">
                 <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
-                <div class="page__button page__button_location_messaging">
+                <div class="messaging__button-wrapper">
                   <button class="button js-button button_location_messaging" type="button">Reply</button>
                 </div>
               </div>

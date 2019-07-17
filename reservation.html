@@ -18,15 +18,15 @@
     <div class="page__wrapper">
       <div class="page__content">
         <header class="header">
-          <div class="header__main-menu">
-            <nav class="main-menu js-main-menu"><img class="logo" src="img/logo.png" alt="logo">
-              <div class="main-menu__btn js-main-menu__btn"><span></span><span></span><span></span><span></span></div>
-              <ul class="main-menu__list">
-                          <li class="main-menu__item"><a class="main-menu__link js-main-menu__link" href="./index.html">Главная</a></li>
-                          <li class="main-menu__item"><a class="main-menu__link js-main-menu__link" href="./reservation.html">Снять номер</a></li>
-                          <li class="main-menu__item"><a class="main-menu__link js-main-menu__link" href="./news.html">Новости</a></li>
-                          <li class="main-menu__item"><a class="main-menu__link js-main-menu__link" href="./contacts.html">Контакты</a></li>
-                          <li class="main-menu__item"><a class="main-menu__link js-main-menu__link" href="./main.html">UI-Kit</a></li>
+          <div class="header__menu">
+            <nav class="menu js-menu"><img class="logo" src="img/logo.png" alt="logo">
+              <div class="menu__btn js-menu__btn"><span></span><span></span><span></span><span></span></div>
+              <ul class="menu__list">
+                <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./index.html">Главная</a></li>
+                <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./reservation.html">Снять номер</a></li>
+                <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./news.html">Новости</a></li>
+                <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./contacts.html">Контакты</a></li>
+                <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./main.html">UI-Kit</a></li>
               </ul>
             </nav>
           </div>
@@ -41,26 +41,22 @@
               </ul>
             </div>
             <div class="carousel js-carousel owl-carousel">
-              <form class="reservation__slide reservation__slide--checkin" action="./handler.php">
+              <form class="reservation__slide" action="./handler.php">
                 <h3 class="reservation__header">Выберите планируемую дату отдыха</h3>
-                <div class="reservation__item reservation__item--checkin">
+                <div class="reservation__item reservation__item_type_checkin">
                   <div class="calendar js-calendar" id="calendar">
-                    <div class="form__fieldset">
-                      <label class="calendar__label" for="from">Дата заезда
-                        <input type="text" name="from">
-                      </label>
-                    </div>
+                    <label class="calendar__label" for="from">Дата заезда
+                      <input class="calendar__input" type="text" name="from">
+                    </label>
                   </div>
                   <div class="calendar js-calendar" id="calendar">
-                    <div class="form__fieldset">
-                      <label class="calendar__label" for="to">Дата выезда
-                        <input type="text" name="to">
-                      </label>
-                    </div>
+                    <label class="calendar__label" for="to">Дата выезда
+                      <input class="calendar__input" type="text" name="to">
+                    </label>
                   </div>
                 </div>
               </form>
-              <form class="reservation__slide reservation__slide--basic" action="./handler.php">
+              <form class="reservation__slide" action="./handler.php">
                 <h3 class="reservation__header">Основная информация</h3>
                 <div class="reservation__item">
                   <p class="reservation__text">Количество взрослых</p>
@@ -102,10 +98,10 @@
                   </div>
                 </div>
               </form>
-              <form class="reservation__slide reservation__slide--additional" action="./handler.php">
+              <form class="reservation__slide reservation__slide_type_additional" action="./handler.php">
                 <h3 class="reservation__header">Дополнительная информация</h3>
                 <div class="reservation__item">
-                  <select class="dropdown__select js-dropdown__select">
+                  <select class="dropdown js-dropdown">
                     <option selected disabled style="display: none">Питание</option>
                     <option>Только завтрак</option>
                     <option>Завтрак и ужин</option>
@@ -144,7 +140,7 @@
                     </svg><span>Первая береговая линия</span>
                   </label>
                 </div>
-                <div class="page__button">
+                <div class="reservation__button-wrapper">
                   <button class="button js-button" type="submit">Подобрать номер</button>
                 </div>
               </form>
@@ -166,7 +162,7 @@
               <form class="messaging__form" action="./handler.php">
                 <div class="messaging__block">
                   <textarea class="messaging__textarea" rows="3">Yeah that sounds great. See you then</textarea>
-                  <div class="page__button page__button_location_messaging">
+                  <div class="messaging__button-wrapper">
                     <button class="button js-button button_location_messaging" type="button">Reply</button>
                   </div>
                 </div>
