@@ -47,7 +47,7 @@ class Slider {
       ul.append($('<li>', {
         class: 'slider__step',
         text: step,
-        style: `left: ${(left - 1)}%`,
+        style: `left: calc(${left}% - 7px)`,
       }));
       step += $(this).slider('option', 'step');
       left += distance;
