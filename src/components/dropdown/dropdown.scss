@@ -19,8 +19,17 @@
 
 .ui-selectmenu-menu.ui-selectmenu-open {
   @include placeholder;
-  background-color: #fff;
-  color: #000;
+  background-color: $color-primary;
+  color: #fff;
+  border-radius: .2rem;
+
+  .ui-menu {
+    padding: .3rem 0;
+
+    .ui-menu-item-wrapper {
+      padding: .36rem .9rem;
+    }
+  }
 }
 
 .ui-state-disabled {

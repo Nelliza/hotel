@@ -1,5 +1,6 @@
-mixin dropdown({ modifier, title="Choose An Option", values=["Option 1", "Option 2"] } = {})
+mixin dropdown({ modifier, values, title="Choose An Option" } = {})
   - modifier = modifier ? `dropdown_color_${modifier}` : false;
+  - values = values || ["This is option 1", "This is option 2", "This is option 3", "This is option 4"];
 
   select(class=["dropdown", "js-dropdown", modifier])
     option(selected, disabled, style="display: none")= title
