@@ -95,7 +95,7 @@ html {
     @include subtitle-margins(1.8rem, 1.5rem);
   }
 
-  &__search {
+  &__search-forms {
     @include subtitle-margins(false, 1.3rem);
     width: 18.1rem;
 
@@ -264,6 +264,11 @@ html {
     @media screen and (max-width: 615px) {
       width: 100%;
     }
+  }
+
+  &__search,
+  &__dropdown {
+    margin-bottom: 1.1rem;
   }
 
   &__user-profile {

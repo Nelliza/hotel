@@ -169,18 +169,20 @@ mixin page
             })
 
   .page__two-sections-wrapper
-    section.page__search
+    section.page__search-forms
       .page__subtitle
         +subtitle("Search / Drop Down")
-      +search({
-        btnColor: "warning"
-      })
-      +search({
-        btnColor: "warning",
-        modifier: "notfound",
-        placeholder: "I've not found what I'm looking for..."
-      })
-      form.page__dropdown-form(action="./handler.php")
+      .page__search
+        +search({
+          btnColor: "warning"
+        })
+      .page__search
+        +search({
+          btnColor: "warning",
+          modifier: "notfound",
+          placeholder: "I've not found what I'm looking for..."
+        })
+      form.page__dropdown(action="./handler.php")
         +dropdown()
 
     section.page__user-profile
