@@ -29,13 +29,12 @@ html {
 .page {
   box-sizing: border-box;
   max-width: 700px;
-  margin: 0;
+  margin: 0 auto;
   padding: 2.5rem 3.4rem 5.6rem 3.25rem;
 
   &_type_hotel {
     width: auto;
     max-width: 1920px;
-    margin: 0 auto;
     padding: 5rem 0 0;
     font-size: 1.3rem;
   }
