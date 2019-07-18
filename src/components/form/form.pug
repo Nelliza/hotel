@@ -18,10 +18,10 @@ mixin form({ btnColor, btnSize, inputs, textarea={}, action="./handler.php", btn
     each input in inputs
       - var { name: inputName, placeholder: inputPlaceholder } = input;
       .form__fieldset
-        input(type="text", name=inputName, placeholder=inputPlaceholder)
+        input.form__input(type="text", name=inputName, placeholder=inputPlaceholder)
         .form__val.js-form__val
     .form__fieldset
-      textarea(name=textareaName, placeholder=textareaPlaceholder, rows=textareaRows)
+      textarea.form__textarea(name=textareaName, placeholder=textareaPlaceholder, rows=textareaRows)
     .form__button-wrapper
       +button({
         color: btnColor,

@@ -20,16 +20,13 @@
     outline: none;
   }
 
-  &:hover,
-  &.button_state_pressed {
-    padding: .45rem 2rem;
-  }
-
   &:hover {
+    padding: .45rem 2rem;
     border-bottom-width: .2rem;
   }
 
   &.button_state_pressed {
+    padding: .45rem 2rem;
     border-bottom-width: .06rem;
     outline: none;
   }
