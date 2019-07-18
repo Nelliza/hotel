@@ -116,7 +116,7 @@ html {
     @include subtitle-margins(3.2rem, 1.6rem);
 
     @media screen and (max-width: 615px) {
-      flex-grow: 1;
+      width: 100%;
     }
   }
 
@@ -158,7 +158,12 @@ html {
   }
 
   &__form-elements-wrapper {
+    @include flex($is-wrap: false);
     margin-bottom: .65rem;
+
+    @media screen and (max-width: 615px) {
+      flex-wrap: wrap;
+    }
 
     > .page__fieldset-wrapper {
       width: 18rem;
@@ -176,15 +181,27 @@ html {
   &__arrows-wrapper,
   &__toggles-wrapper,
   &__tick-boxes-wrapper {
-    $flex-map: (justify: center); 
-    @include flex($flex-map...);
+    @include flex($justify: center);
   }
 
-  &__sliders-wrapper,
-  &__form-elements-wrapper,
-  &__news-list-wrapper,
-  &__two-sections-wrapper {
+  &__sliders-wrapper {
     @include flex();
+  }
+
+  &__two-sections-wrapper {
+    @include flex($is-wrap: false);
+
+    @media screen and (max-width: 615px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__news-list-wrapper {
+    @include flex($is-wrap: false);
+
+    @media screen and (max-width: 700px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__video-wrapper {
@@ -282,7 +299,7 @@ html {
     width: 18rem;
     margin-bottom: 1rem;
 
-    @media screen and (max-width: 615px) {
+    @media screen and (max-width: 700px) {
       width: 100%;
     }
   }

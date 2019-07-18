@@ -4,7 +4,7 @@
 .messaging {
   width: 18rem;
 
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 615px) {
     width: 100%;
   }
 
@@ -107,7 +107,7 @@
 
   &__button-wrapper {
     margin-top: .7rem;
-    margin-bottom: .25rem;
+    margin-bottom: .2rem;
     float: none;
   }
 }
