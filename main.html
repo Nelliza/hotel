@@ -234,19 +234,23 @@
       </div>
     </section>
     <div class="page__two-sections-wrapper">
-      <section class="page__search">
+      <section class="page__search-forms">
         <div class="page__subtitle">
           <h2 class="subtitle">Search / Drop Down</h2>
         </div>
-        <form class="search" action="./handler.php">
-          <input class="search__input" type="text" placeholder="Search">
-          <button class="search__submit search__submit_color_warning" type="submit"></button>
-        </form>
-        <form class="search search_type_notfound" action="./handler.php">
-          <input class="search__input" type="text" placeholder="I've not found what I'm looking for...">
-          <button class="search__submit search__submit_color_warning" type="submit"></button>
-        </form>
-        <form class="page__dropdown-form" action="./handler.php">
+        <div class="page__search">
+          <form class="search" action="./handler.php">
+            <input class="search__input" type="text" placeholder="Search">
+            <button class="search__submit search__submit_color_warning" type="submit"></button>
+          </form>
+        </div>
+        <div class="page__search">
+          <form class="search search_type_notfound" action="./handler.php">
+            <input class="search__input" type="text" placeholder="I've not found what I'm looking for...">
+            <button class="search__submit search__submit_color_warning" type="submit"></button>
+          </form>
+        </div>
+        <form class="page__dropdown" action="./handler.php">
           <select class="dropdown js-dropdown">
             <option selected disabled style="display: none">Choose An Option</option>
             <option>Option 1</option>
