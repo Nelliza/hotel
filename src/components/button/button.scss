@@ -16,6 +16,10 @@
   text-align: center;
   text-decoration: none;
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover,
   &.button_state_pressed {
     padding: .45rem 2rem;

@@ -8,6 +8,10 @@
   background-color: #fff;
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover {
     @include arrow-state(hover);
   }
