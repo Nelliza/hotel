@@ -64,7 +64,7 @@ html {
   }
 
   &__arrows {
-    @include subtitle-margins(2.8rem);
+    @include subtitle-margins(2.5rem);
   }
 
   &__percentages {
@@ -80,7 +80,7 @@ html {
   }
 
   &__form-elements {
-    @include subtitle-margins(3.1rem, 2rem);
+    @include subtitle-margins(3.3rem, 2.1rem);
   }
 
   &__toggles {
@@ -97,7 +97,6 @@ html {
 
   &__search {
     @include subtitle-margins(false, 1.3rem);
-
     width: 18.1rem;
 
     @media screen and (max-width: 615px) {
@@ -106,17 +105,16 @@ html {
   }
 
   &__news-list {
-    @include subtitle-margins(false, 2.1rem);
-    margin-top: 4rem;
+    @include subtitle-margins(3.9rem, 2.1rem);
   }
 
   &__location {
-    @include subtitle-margins(2.1rem, 1.8rem);
+    @include subtitle-margins(2rem, 1.9rem);
   }
 
   &__calendar,
   &__messaging {
-    @include subtitle-margins(3rem);
+    @include subtitle-margins(3.2rem, 1.6rem);
 
     @media screen and (max-width: 615px) {
       flex-grow: 1;
@@ -144,7 +142,7 @@ html {
     @include flex() {
       align-items: flex-end;
     };
-    padding: 2.2rem 4rem 0 4.15rem;
+    padding: 2.2rem 3.3rem 0 3.5rem;
 
     @media screen and (max-width: 400px) {
       flex-direction: column;
@@ -223,8 +221,7 @@ html {
   }
 
   &__button-wrapper {
-    margin-top: .6rem;
-    margin-bottom: .6rem;
+    margin: .6rem .5rem;
     text-align: center;
   }
 

@@ -4,7 +4,7 @@
 .button {
   @include btn-theme(primary, #28a290);
   background-color: #fff;
-  padding: .4rem 1.95rem;
+  padding: .4rem 2rem;
   position: relative;
   font-size: .75rem;
   font-weight: 900;
@@ -18,7 +18,7 @@
 
   &:hover,
   &.button_state_pressed {
-    padding: .45rem 1.85rem;
+    padding: .45rem 2rem;
   }
 
   &:hover {
@@ -35,17 +35,13 @@
   }
 
   &_size_small {
-    padding: .2rem .9rem;
+    padding: .2rem 1.1rem;
     font-size: .62rem;
 
     &:hover,
     &.button_state_pressed {
-      padding: .25rem .9rem;
+      padding: .25rem 1.1rem;
     }
-  }
-
-  &_location_form {
-    margin-top: .3rem;
   }
 
   &_location_news {

@@ -5,7 +5,7 @@
   font-size: .69rem;
 
   &__preview {
-    width: 5.94rem;
+    flex-basis: 11rem;
     border-radius: .2rem 0 0 .2rem;
   }
 
@@ -75,6 +75,6 @@
   }
 
   &__button-wrapper {
-    margin: .6rem;
+    margin: 1rem 0;
   }
 }

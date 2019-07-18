@@ -12,7 +12,7 @@ mixin form({ btnColor, btnSize, inputs, textarea={}, action="./handler.php", btn
         placeholder: "Your Email"
       }
     ];
-  - var { name: textareaName="message", placeholder: textareaPlaceholder="Your Message", rows: textareaRows="4" } = textarea;
+  - var { name: textareaName="message", placeholder: textareaPlaceholder="Your Message", rows: textareaRows="3" } = textarea;
 
   form.form.js-form(action=action)
     each input in inputs
