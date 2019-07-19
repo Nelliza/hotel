@@ -4,9 +4,9 @@ mixin menu(menuItems)
   nav.menu.js-menu
     img.logo(src=require("../assets/logo/logo.png"), alt="logo")
     .menu__btn.js-menu__btn
-      span
-      span
-      span
-      span
+      span.menu__btn-span
+      span.menu__btn-span
+      span.menu__btn-span
+      span.menu__btn-span
     ul.menu__list
       +menu-item(menuItems)

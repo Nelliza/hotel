@@ -20,7 +20,7 @@
       flex-direction: column;
       width: 40%;
 
-      label {
+      .tick-box__label {
         flex-grow: 1;
       }
 
@@ -68,7 +68,7 @@
       width: 50%;
     }
 
-    > label {
+    > .tick-box__label {
       display: flex;
       align-items: center;
     }
@@ -91,8 +91,10 @@
   outline: none;
 }
 
-.owl-prev.disabled > .arrow,
-.owl-next.disabled > .arrow {
-  @include arrow-state(disabled);
-  cursor: default;
+.owl-prev.disabled,
+.owl-next.disabled {
+  & > .arrow {
+    @include arrow-state(disabled);
+    cursor: default;
+  }
 }

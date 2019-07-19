@@ -11,18 +11,20 @@
   border-bottom: 2px solid rgba(231, 87, 53, .3);
 
   &_state_open {
-    .menu__btn span {
-      &:first-child,
-      &:last-child {
-        opacity: 0;
-      }
+    .menu__btn {
+      &-span {
+        &:first-child,
+        &:last-child {
+          opacity: 0;
+        }
 
-      &:nth-child(2) {
-        transform: rotate(45deg);
-      }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
 
-      &:nth-child(3) {
-        transform: rotate(-45deg);
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
       }
     }
 
@@ -41,10 +43,10 @@
       display: inline-block;
     }
 
-    span {
+    &-span {
       @include size(100%, .2rem);
       position: absolute;
-      display: block;
+      display: inline-block;
       border-radius: .3rem;
       background-color: #fff;
       transform: rotate(0deg);

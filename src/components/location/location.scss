@@ -39,18 +39,22 @@
     margin: .6rem;
     display: inline-block;
 
-    > a {
+    &-link {
       display: block;
       width: 100%;
       height: 100%;
     }
 
-    &_type_location > a {
-      background: url(../../assets/icons/location-icon.svg) no-repeat center;
+    &_type_location {
+      > .location__mark-link {
+        background: url(../../assets/icons/location-icon.svg) no-repeat center;
+      }
     }
 
-    &_type_pin > a {
-      background: url(../../assets/icons/pin-icon.svg) no-repeat center;
+    &_type_pin {
+      > .location__mark-link {
+        background: url(../../assets/icons/pin-icon.svg) no-repeat center;
+      }
     }
   }
 }
