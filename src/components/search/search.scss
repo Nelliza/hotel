@@ -3,17 +3,19 @@
 .search {
   @include fieldset('&__input', '&__submit', 'search-icon.svg');
 
-  &_type_notfound {
-    > .search__input {
-      background-color: $color-warning;
+  &_type {
+    &_notfound {
+      > .search__input {
+        background-color: $color-warning;
+
+        &::placeholder {
+          color: #fff;
+        }
+      }
     }
 
-    > .search__input::placeholder {
-      color: #fff;
+    &_footer {
+      width: 100%;
     }
-  }
-
-  &_type_footer {
-    width: 100%;
   }
 }

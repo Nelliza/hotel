@@ -37,20 +37,22 @@
       @include triangle-tooltip();
     }
 
-    &_type_additional,
-    &_type_additional::before {
-      background-color: $color-disabled;
-    }
+    &_type {
+      &_additional,
+      &_additional:before {
+        background-color: $color-disabled;
+      }
 
-    &_type_primary,
-    &_type_primary:before {
-      background-color: $color-primary;
-    }
+      &_primary,
+      &_primary:before {
+        background-color: $color-primary;
+      }
 
-    &_type_primary {
-      .user-profile__name,
-      .user-profile__profession {
+      &_primary {
+        .user-profile__name,
+        .user-profile__profession {
           color: #fff;
+        }
       }
     }
   }

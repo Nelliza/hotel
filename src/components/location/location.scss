@@ -11,18 +11,20 @@
     margin: .4rem .8rem;
     color: #fff;
 
-    &_type_greeting {
-      font-size: 1.88rem;
-      font-weight: 300;
-      line-height: 1;
-    }
+    &_type {
+      &_greeting {
+        font-size: 1.88rem;
+        font-weight: 300;
+        line-height: 1;
+      }
 
-    &_type_address {
-      font-size: .78rem;
-      font-weight: 900;
-      line-height: 1.3;
-      text-transform: uppercase;
-      letter-spacing: .04rem;
+      &_address {
+        font-size: .78rem;
+        font-weight: 900;
+        line-height: 1.3;
+        text-transform: uppercase;
+        letter-spacing: .04rem;
+      }
     }
   }
 
@@ -45,15 +47,17 @@
       height: 100%;
     }
 
-    &_type_location {
-      > .location__mark-link {
-        background: url(../../assets/icons/location-icon.svg) no-repeat center;
+    &_type {
+      &_location {
+        > .location__mark-link {
+          background: url(../../assets/icons/location-icon.svg) no-repeat center;
+        }
       }
-    }
 
-    &_type_pin {
-      > .location__mark-link {
-        background: url(../../assets/icons/pin-icon.svg) no-repeat center;
+      &_pin {
+        > .location__mark-link {
+          background: url(../../assets/icons/pin-icon.svg) no-repeat center;
+        }
       }
     }
   }

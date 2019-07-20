@@ -45,24 +45,26 @@
     }
   }
 
-  &_location_news {
-    @include size(auto);
-    padding: 0 .6rem;
-    display: inline-block;
-    font-family: 'Lato', 'Arial', sans-serif;
-    font-size: .7rem;
-    line-height: 2;
-    letter-spacing: .02rem;
-    text-decoration: none;
-
-    &:hover,
-    &.button_state_pressed {
+  &_location {
+    &_news {
+      @include size(auto);
       padding: 0 .6rem;
-    }
-  }
+      display: inline-block;
+      font-family: 'Lato', 'Arial', sans-serif;
+      font-size: .7rem;
+      line-height: 2;
+      letter-spacing: .02rem;
+      text-decoration: none;
 
-  &_location_messaging {
-    @include size(100%, 2.3rem);
+      &:hover,
+      &.button_state_pressed {
+        padding: 0 .6rem;
+      }
+    }
+
+    &_messaging {
+      @include size(100%, 2.3rem);
+    }
   }
 
   &__ripple {

@@ -10,10 +10,12 @@
 
   &_color_primary {
     .stages__item {
-      &_state_done:before,
-      &_state_done:after,
-      &_state_current:before {
-        background-color: $color-primary;
+      &_state {
+        &_done:before,
+        &_done:after,
+        &_current:before {
+          background-color: $color-primary;
+        }
       }
     }
   }
@@ -50,11 +52,13 @@
       content: none;
     }
 
-    &_state_done:before,
-    &_state_done:after,
-    &_state_current:before {
-      background-color: $color-warning;
-      color: #fff;
+    &_state {
+      &_done:before,
+      &_done:after,
+      &_current:before {
+        background-color: $color-warning;
+        color: #fff;
+      }
     }
   }
 }
