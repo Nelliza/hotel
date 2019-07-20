@@ -26,10 +26,14 @@ html {
   }
 }
 
+body {
+  margin: 0;
+}
+
 .page {
   box-sizing: border-box;
   max-width: 700px;
-  margin: 0 auto;
+  margin: auto;
   padding: 2.5rem 3.4rem 5.6rem 3.25rem;
 
   &_type_hotel {

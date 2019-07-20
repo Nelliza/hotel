@@ -26,44 +26,45 @@ html(lang="en")
     meta(name="theme-color", content="#ffffff")
 
   block body
-    body.page.page_type_hotel
-      .page__wrapper
-        .page__content
-          +header([
-            {
-              name: "Главная",
-              link: "./index.html"
-            },
-            {
-              name: "Снять номер",
-              link: "./reservation.html"
-            },
-            {
-              name: "Новости",
-              link: "./news.html"
-            },
-            {
-              name: "Контакты",
-              link: "./contacts.html"
-            },
-            {
-              name: "UI-Kit",
-              link: "./main.html"
-            }
-          ])
-
-          block page-content
-
-          .page__callback
-            +callback({
-              messagingOptions: {
-                name: "Sarah Brown",
-                photo: "sarah-brown"
+    body
+      .page.page_type_hotel
+        .page__wrapper
+          .page__content
+            +header([
+              {
+                name: "Главная",
+                link: "./index.html"
+              },
+              {
+                name: "Снять номер",
+                link: "./reservation.html"
+              },
+              {
+                name: "Новости",
+                link: "./news.html"
+              },
+              {
+                name: "Контакты",
+                link: "./contacts.html"
+              },
+              {
+                name: "UI-Kit",
+                link: "./main.html"
               }
-            })
-            .overlay.js-overlay
-        .page__footer
-          +footer()
+            ])
+
+            block page-content
+
+            .page__callback
+              +callback({
+                messagingOptions: {
+                  name: "Sarah Brown",
+                  photo: "sarah-brown"
+                }
+              })
+              .overlay.js-overlay
+          .page__footer
+            +footer()
 
       script(src="./app.js")
       block scripts
