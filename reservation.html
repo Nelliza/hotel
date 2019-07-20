@@ -14,180 +14,182 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body class="page page_type_hotel">
-    <div class="page__wrapper">
-      <div class="page__content">
-        <header class="header">
-          <div class="header__menu">
-            <nav class="menu js-menu"><img class="logo" src="img/logo.png" alt="logo">
-              <div class="menu__btn js-menu__btn"><span class="menu__btn-span"></span><span class="menu__btn-span"></span><span class="menu__btn-span"></span><span class="menu__btn-span"></span></div>
-              <ul class="menu__list">
-                <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./index.html">Главная</a></li>
-                <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./reservation.html">Снять номер</a></li>
-                <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./news.html">Новости</a></li>
-                <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./contacts.html">Контакты</a></li>
-                <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./main.html">UI-Kit</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-        <div class="page__item">
-          <section class="reservation js-reservation">
-            <div class="reservation__stages">
-              <ul class="stages js-stages stages_color_primary">
-                <li class="stages__item js-stages__item"></li>
-                <li class="stages__item js-stages__item"></li>
-                <li class="stages__item js-stages__item"></li>
-              </ul>
+  <body>
+    <div class="page page_type_hotel">
+      <div class="page__wrapper">
+        <div class="page__content">
+          <header class="header">
+            <div class="header__menu">
+              <nav class="menu js-menu"><img class="logo" src="img/logo.png" alt="logo">
+                <div class="menu__btn js-menu__btn"><span class="menu__btn-span"></span><span class="menu__btn-span"></span><span class="menu__btn-span"></span><span class="menu__btn-span"></span></div>
+                <ul class="menu__list">
+                  <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./index.html">Главная</a></li>
+                  <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./reservation.html">Снять номер</a></li>
+                  <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./news.html">Новости</a></li>
+                  <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./contacts.html">Контакты</a></li>
+                  <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./main.html">UI-Kit</a></li>
+                </ul>
+              </nav>
             </div>
-            <div class="carousel js-carousel owl-carousel">
-              <form class="reservation__slide" action="./handler.php">
-                <h3 class="reservation__header">Выберите планируемую дату отдыха</h3>
-                <div class="reservation__item reservation__item_type_checkin">
-                  <div class="calendar js-calendar" id="calendar">
-                    <label class="calendar__label" for="from">Дата заезда
-                      <input class="calendar__input" type="text" name="from">
-                    </label>
-                  </div>
-                  <div class="calendar js-calendar" id="calendar">
-                    <label class="calendar__label" for="to">Дата выезда
-                      <input class="calendar__input" type="text" name="to">
-                    </label>
-                  </div>
-                </div>
-              </form>
-              <form class="reservation__slide" action="./handler.php">
-                <h3 class="reservation__header">Основная информация</h3>
-                <div class="reservation__item">
-                  <p class="reservation__text">Количество взрослых</p>
-                  <div class="page__slider">
-                    <div class="slider js-slider slider_with-pointer js-slider_with-pointer">
-                      <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
-                        <div class="slider__pointer js-slider__pointer"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="reservation__item">
-                  <p class="reservation__text">Количество детей</p>
-                  <div class="page__slider">
-                    <div class="slider js-slider slider_with-pointer js-slider_with-pointer">
-                      <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
-                        <div class="slider__pointer js-slider__pointer"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="reservation__item">
-                  <p class="reservation__text">Количество комнат</p>
-                  <div class="page__slider">
-                    <div class="slider js-slider slider_with-scale js-slider_with-scale">
-                      <div class="ui-slider-handle slider__handle">
-                      </div>
-                      <ul class="slider__scale js-slider__scale"></ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="reservation__item">
-                  <div class="toggle">
-                    <label class="toggle__label" for="toggle3"><span>Проживание с домашним питомцем</span></label>
-                    <div class="toggle__button" width="3.7rem" height="1.5rem">
-                      <input class="toggle__checkbox" type="checkbox" id="toggle3">
-                      <div class="toggle__background"></div><span class="toggle__round"></span>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <form class="reservation__slide reservation__slide_type_additional" action="./handler.php">
-                <h3 class="reservation__header">Дополнительная информация</h3>
-                <div class="reservation__item">
-                  <select class="dropdown js-dropdown">
-                    <option selected disabled style="display: none">Питание</option>
-                    <option>Только завтрак</option>
-                    <option>Завтрак и ужин</option>
-                    <option>Трехразовое питание</option>
-                  </select>
-                </div>
-                <div class="reservation__item">
-                  <input class="tick-box" type="checkbox" id="tick-box3">
-                  <label class="tick-box__label" for="tick-box3">
-                    <svg class="tick-box__checkmark" width="24" height="24">
-                      <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-                    </svg><span>Собственная ванная комната</span>
-                  </label>
-                </div>
-                <div class="reservation__item">
-                  <input class="tick-box" type="checkbox" id="tick-box4">
-                  <label class="tick-box__label" for="tick-box4">
-                    <svg class="tick-box__checkmark" width="24" height="24">
-                      <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-                    </svg><span>Наличие кухни в номере</span>
-                  </label>
-                </div>
-                <div class="reservation__item">
-                  <input class="tick-box" type="checkbox" id="tick-box5">
-                  <label class="tick-box__label" for="tick-box5">
-                    <svg class="tick-box__checkmark" width="24" height="24">
-                      <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-                    </svg><span>Наличие детской площадки</span>
-                  </label>
-                </div>
-                <div class="reservation__item">
-                  <input class="tick-box" type="checkbox" id="tick-box6">
-                  <label class="tick-box__label" for="tick-box6">
-                    <svg class="tick-box__checkmark" width="24" height="24">
-                      <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-                    </svg><span>Первая береговая линия</span>
-                  </label>
-                </div>
-                <div class="reservation__button-wrapper">
-                  <button class="button js-button" type="button">Подобрать номер</button>
-                </div>
-              </form>
-            </div>
-          </section>
-        </div>
-        <div class="page__callback">
-          <div class="callback js-callback"></div>
-          <section class="messaging js-messaging">
-            <div class="messaging__header">
-              <div class="messaging__head">Sarah Brown</div><img class="messaging__avatar" src="img/sarah-brown.jpg" alt="Sarah Brown">
-            </div>
-            <div class="messaging__main">
-              <button class="messaging__chat"></button>
-              <button class="messaging__camera"></button>
-              <div class="messaging__intro">
-                <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+          </header>
+          <div class="page__item">
+            <section class="reservation js-reservation">
+              <div class="reservation__stages">
+                <ul class="stages js-stages stages_color_primary">
+                  <li class="stages__item js-stages__item"></li>
+                  <li class="stages__item js-stages__item"></li>
+                  <li class="stages__item js-stages__item"></li>
+                </ul>
               </div>
-              <form class="messaging__form" action="./handler.php">
-                <div class="messaging__block">
-                  <textarea class="messaging__textarea" rows="2">Yeah that sounds great. See you then</textarea>
-                  <div class="messaging__button-wrapper">
-                    <button class="button js-button button_location_messaging" type="button">Reply</button>
+              <div class="carousel js-carousel owl-carousel">
+                <form class="reservation__slide" action="./handler.php">
+                  <h3 class="reservation__header">Выберите планируемую дату отдыха</h3>
+                  <div class="reservation__item reservation__item_type_checkin">
+                    <div class="calendar js-calendar" id="calendar">
+                      <label class="calendar__label" for="from">Дата заезда
+                        <input class="calendar__input" type="text" name="from">
+                      </label>
+                    </div>
+                    <div class="calendar js-calendar" id="calendar">
+                      <label class="calendar__label" for="to">Дата выезда
+                        <input class="calendar__input" type="text" name="to">
+                      </label>
+                    </div>
                   </div>
-                </div>
-              </form>
-            </div>
-          </section>
-          <div class="overlay js-overlay"></div>
-        </div>
-      </div>
-      <div class="page__footer">
-        <footer class="footer">
-          <div class="footer__wrapper">
-            <div class="footer__description"><img src="img/logo.png" alt="logo">
-              <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-            </div>
-            <div class="footer__search">
-              <h3 class="page_type_hotel__subtitle">Поиск на сайте</h3>
-              <form class="search search_type_footer" action="./handler.php">
-                <input class="search__input" type="text" placeholder="Search">
-                <button class="search__submit" type="submit"></button>
-              </form>
-            </div>
+                </form>
+                <form class="reservation__slide" action="./handler.php">
+                  <h3 class="reservation__header">Основная информация</h3>
+                  <div class="reservation__item">
+                    <p class="reservation__text">Количество взрослых</p>
+                    <div class="page__slider">
+                      <div class="slider js-slider slider_with-pointer js-slider_with-pointer">
+                        <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
+                          <div class="slider__pointer js-slider__pointer"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reservation__item">
+                    <p class="reservation__text">Количество детей</p>
+                    <div class="page__slider">
+                      <div class="slider js-slider slider_with-pointer js-slider_with-pointer">
+                        <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
+                          <div class="slider__pointer js-slider__pointer"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reservation__item">
+                    <p class="reservation__text">Количество комнат</p>
+                    <div class="page__slider">
+                      <div class="slider js-slider slider_with-scale js-slider_with-scale">
+                        <div class="ui-slider-handle slider__handle">
+                        </div>
+                        <ul class="slider__scale js-slider__scale"></ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reservation__item">
+                    <div class="toggle">
+                      <label class="toggle__label" for="toggle3"><span>Проживание с домашним питомцем</span></label>
+                      <div class="toggle__button" width="3.7rem" height="1.5rem">
+                        <input class="toggle__checkbox" type="checkbox" id="toggle3">
+                        <div class="toggle__background"></div><span class="toggle__round"></span>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form class="reservation__slide reservation__slide_type_additional" action="./handler.php">
+                  <h3 class="reservation__header">Дополнительная информация</h3>
+                  <div class="reservation__item">
+                    <select class="dropdown js-dropdown">
+                      <option selected disabled style="display: none">Питание</option>
+                      <option>Только завтрак</option>
+                      <option>Завтрак и ужин</option>
+                      <option>Трехразовое питание</option>
+                    </select>
+                  </div>
+                  <div class="reservation__item">
+                    <input class="tick-box" type="checkbox" id="tick-box3">
+                    <label class="tick-box__label" for="tick-box3">
+                      <svg class="tick-box__checkmark" width="24" height="24">
+                        <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                      </svg><span>Собственная ванная комната</span>
+                    </label>
+                  </div>
+                  <div class="reservation__item">
+                    <input class="tick-box" type="checkbox" id="tick-box4">
+                    <label class="tick-box__label" for="tick-box4">
+                      <svg class="tick-box__checkmark" width="24" height="24">
+                        <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                      </svg><span>Наличие кухни в номере</span>
+                    </label>
+                  </div>
+                  <div class="reservation__item">
+                    <input class="tick-box" type="checkbox" id="tick-box5">
+                    <label class="tick-box__label" for="tick-box5">
+                      <svg class="tick-box__checkmark" width="24" height="24">
+                        <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                      </svg><span>Наличие детской площадки</span>
+                    </label>
+                  </div>
+                  <div class="reservation__item">
+                    <input class="tick-box" type="checkbox" id="tick-box6">
+                    <label class="tick-box__label" for="tick-box6">
+                      <svg class="tick-box__checkmark" width="24" height="24">
+                        <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                      </svg><span>Первая береговая линия</span>
+                    </label>
+                  </div>
+                  <div class="reservation__button-wrapper">
+                    <button class="button js-button" type="button">Подобрать номер</button>
+                  </div>
+                </form>
+              </div>
+            </section>
           </div>
-          <p class="footer__copyright">Copyright &copy; All rights reserved | This template is made with by <a class="footer__copyright-link" href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a></p>
-        </footer>
+          <div class="page__callback">
+            <div class="callback js-callback"></div>
+            <section class="messaging js-messaging">
+              <div class="messaging__header">
+                <div class="messaging__head">Sarah Brown</div><img class="messaging__avatar" src="img/sarah-brown.jpg" alt="Sarah Brown">
+              </div>
+              <div class="messaging__main">
+                <button class="messaging__chat"></button>
+                <button class="messaging__camera"></button>
+                <div class="messaging__intro">
+                  <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+                </div>
+                <form class="messaging__form" action="./handler.php">
+                  <div class="messaging__block">
+                    <textarea class="messaging__textarea" rows="2">Yeah that sounds great. See you then</textarea>
+                    <div class="messaging__button-wrapper">
+                      <button class="button js-button button_location_messaging" type="button">Reply</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+            <div class="overlay js-overlay"></div>
+          </div>
+        </div>
+        <div class="page__footer">
+          <footer class="footer">
+            <div class="footer__wrapper">
+              <div class="footer__description"><img src="img/logo.png" alt="logo">
+                <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+              </div>
+              <div class="footer__search">
+                <h3 class="page_type_hotel__subtitle">Поиск на сайте</h3>
+                <form class="search search_type_footer" action="./handler.php">
+                  <input class="search__input" type="text" placeholder="Search">
+                  <button class="search__submit" type="submit"></button>
+                </form>
+              </div>
+            </div>
+            <p class="footer__copyright">Copyright &copy; All rights reserved | This template is made with by <a class="footer__copyright-link" href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a></p>
+          </footer>
+        </div>
       </div>
     </div>
     <script src="./app.js"></script>
