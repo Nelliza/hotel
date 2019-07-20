@@ -1,6 +1,7 @@
-mixin stages({ modifier, count=5 } = {})
+mixin stages({ modifier, count=5, current=1 } = {})
   - modifier = modifier ? `stages_color_${modifier}` : false;
+  - current = current <= count ? current : count;
 
-  ul(class=["stages", "js-stages", modifier])
+  ul(class=["stages", "js-stages", modifier], data-current=current)
     - for (var i = 0; i < count; i += 1)
       li.stages__item.js-stages__item

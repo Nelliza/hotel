@@ -2,7 +2,7 @@ class Stages {
   constructor(options) {
     this.$stage = options.elem.children('li');
     this.index = options.index;
-    this.current = options.current;
+    this.current = options.elem.data('current');
     this.init();
   }
 
