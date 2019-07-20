@@ -50,6 +50,16 @@
     border-radius: 0 0 .3rem .3rem;
   }
 
+  &__chat,
+  &__camera {
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   &__chat {
     @include pseudo-elem(false, 1.4rem);
     top: 1.4rem;
@@ -62,12 +72,6 @@
     top: 1.3rem;
     right: 1.5rem;
     background: url(../../assets/icons/camera-icon.svg) no-repeat center;
-  }
-
-  &__chat,
-  &__camera {
-    border: none;
-    cursor: pointer;
   }
 
   &__intro {
@@ -106,8 +110,8 @@
   }
 
   &__button-wrapper {
-    margin-top: .7rem;
-    margin-bottom: .2rem;
+    margin-top: .6rem;
+    margin-bottom: .3rem;
     float: none;
   }
 }
