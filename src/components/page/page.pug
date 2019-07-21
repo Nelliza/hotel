@@ -60,12 +60,12 @@ mixin page
         .page__arrow
           +arrow({
             orientation: "prev",
-            disabled: "disabled"
+            disabled: true
           })
         .page__arrow
           +arrow({
             orientation: "next",
-            disabled: "disabled"
+            disabled: true
           })
         .page__arrow
           +arrow({
@@ -156,7 +156,7 @@ mixin page
               })
               +toggle({
                 id: 2,
-                isChecked: true
+                checked: true
               })
           section.page__tick-boxes
             .page__subtitle
@@ -164,7 +164,7 @@ mixin page
             form.page__tick-boxes-wrapper(action="./handler.php")
               +tick-box({
                 id: 1,
-                isChecked: true
+                checked: true
               })
               +tick-box({
                 id: 2
