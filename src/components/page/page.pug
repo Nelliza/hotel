@@ -24,22 +24,27 @@ mixin page
         +subtitle("Standard buttons")
       .page__buttons-wrapper
         - for (var i = 0; i < 3; i += 1)
+          - let inverse = (i == 2) ? true : false;
           .page__button-wrapper
             +button({
+              inverse,
               size: "small",
               tag: "button"
             })
           .page__button-wrapper
             +button({
+              inverse,
               tag: "button"
             })
           .page__button-wrapper
             +button({
+              inverse,
               color: "warning",
               tag: "button"
             })
           .page__button-wrapper
             +button({
+              inverse,
               color: "warning",
               size: "small",
               tag: "button"

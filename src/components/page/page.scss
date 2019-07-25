@@ -66,10 +66,6 @@ body {
     @include subtitle-margins(2.6rem, 1.6rem);
   }
 
-  &__arrows {
-    @include subtitle-margins(2.5rem);
-  }
-
   &__percentages {
     @include subtitle-margins(2.4rem, 1rem);
   }
@@ -83,7 +79,7 @@ body {
   }
 
   &__form-elements {
-    @include subtitle-margins(3.3rem, 2.1rem);
+    @include subtitle-margins(3.3rem, 2rem);
   }
 
   &__toggles {
@@ -108,7 +104,7 @@ body {
   }
 
   &__news-list {
-    @include subtitle-margins(3.9rem, 2.1rem);
+    @include subtitle-margins(4rem, 2.1rem);
   }
 
   &__location {
@@ -117,7 +113,7 @@ body {
 
   &__calendar,
   &__messaging {
-    @include subtitle-margins(3.2rem, 1.6rem);
+    @include subtitle-margins(3.2rem, 1.5rem);
 
     @media screen and (max-width: 615px) {
       width: 100%;
@@ -125,7 +121,7 @@ body {
   }
 
   &__video {
-    @include subtitle-margins(3.2rem, .5rem);
+    @include subtitle-margins(3.3rem, .5rem);
   }
 
   &__callback {
@@ -145,7 +141,7 @@ body {
     @include flex() {
       align-items: flex-end;
     };
-    padding: 2.2rem 3.3rem 0 3.5rem;
+    padding: 2.2rem 3.5rem .2rem 3.5rem;
 
     @media screen and (max-width: 400px) {
       flex-direction: column;
@@ -279,7 +275,7 @@ body {
 
   &__form {
     width: 18rem;
-    margin-top: .6rem;
+    margin-top: .7rem;
 
     @media screen and (max-width: 615px) {
       width: 100%;
@@ -292,7 +288,7 @@ body {
   }
 
   &__user-profile {
-    margin-bottom: .7rem;
+    margin-bottom: .65rem;
 
     @media screen and (max-width: 615px) {
       width: 100%;

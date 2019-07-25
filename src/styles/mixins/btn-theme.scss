@@ -1,24 +1,62 @@
 @import '../variables/colors';
 
-@mixin btn-theme($theme, $bd-bottom-color) {
-  $bg-color: '';
+@mixin btn-theme($theme, $shadow, $inverse: false) {
+  $theme-color: '';
   @if $theme == primary {
-    $bg-color: $color-primary;
+    $theme-color: $color-primary;
   }
   @else if $theme == warning {
-    $bg-color: $color-warning;
+    $theme-color: $color-warning;
   }
 
-  border-color: $bg-color;
-  color: $bg-color;
+  $shadow-color: $theme-color;
+  $shadow-hover-color: $shadow;
+  @if $inverse {
+    $shadow-color: $shadow;
+    $shadow-hover-color: $theme-color;
+  }
 
-  &:hover,
-  &.button_state_pressed {
-    background-color: $bg-color;
-    color: #fff;
+  border-color: $theme-color;
+  box-shadow: 0 .2rem $shadow-color;
+
+  &.button_size_small {
+    box-shadow: 0 .15rem $shadow-color;
   }
 
   &:hover {
-    border-bottom-color: $bd-bottom-color;
+    box-shadow: 0 .2rem $shadow-hover-color;
+
+    &.button_size_small {
+      box-shadow: 0 .15rem $shadow-hover-color;
+    }
+  }
+
+  &.button_state_pressed,
+  &.button_state_pressed:hover {
+    box-shadow: none;
+  }
+
+  @if not $inverse {
+    color: $theme-color;
+
+    &:hover,
+    &.button_state_pressed {
+      background-color: $theme-color;
+      color: #fff;
+    }
+  }
+  @else {
+    color: #fff;
+    background-color: $theme-color;
+
+    &:hover,
+    &.button_state_pressed {
+      background-color: #fff;
+      color: $theme-color;
+    }
+
+    .button__ripple {
+      background-color: $theme-color;
+    }
   }
 }

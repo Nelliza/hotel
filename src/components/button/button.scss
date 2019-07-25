@@ -5,48 +5,43 @@
 .button {
   @include btn-theme(primary, #28a290);
   background-color: #fff;
-  padding: .4rem 2rem;
+  padding: .45rem 1.85rem;
   position: relative;
   font-size: .75rem;
   font-weight: 900;
   cursor: pointer;
   border: .06rem solid $color-primary;
-  border-bottom: .3rem solid;
   border-radius: .2rem;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
 
+  &_inverse {
+    @include btn-theme(primary, #28a290, true);
+  }
+
   &:focus {
-    outline: none;
-  }
-
-  &:hover {
-    padding: .45rem 2rem;
-    border-bottom-width: .2rem;
-  }
-
-  &.button_state_pressed {
-    padding: .45rem 2rem;
-    border-bottom-width: .06rem;
     outline: none;
   }
 
   &_color_warning {
     @include btn-theme(warning, #bf3e1f);
-  }
 
-  &_size_small {
-    padding: .2rem 1.1rem;
-    font-size: .62rem;
-
-    &:hover,
-    &.button_state_pressed {
-      padding: .25rem 1.1rem;
+    &.button_inverse {
+      @include btn-theme(warning, #bf3e1f, true);
     }
   }
 
+  &_size_small {
+    padding: .2rem 1rem;
+    font-size: .62rem;
+  }
+
   &_location {
+    &_form {
+      padding: .4rem 2rem;
+    }
+
     &_news {
       @include size(auto);
       padding: .1rem .8rem;
@@ -58,6 +53,7 @@
       text-decoration: none;
       border-bottom-width: 0;
       border-radius: .3rem;
+      box-shadow: 0 .2rem #379285;
 
       &:hover,
       &.button_state_pressed {
@@ -66,7 +62,9 @@
     }
 
     &_messaging {
-      @include size(100%, 2.3rem);
+      width: 100%;
+      padding-top: .45rem;
+      padding-bottom: .4rem;
     }
   }
 
@@ -76,6 +74,7 @@
     border-radius: 50%;
     background-color: #fff;
     animation: ripple-animation 1s;
+    box-shadow: none;
   }
 }
 

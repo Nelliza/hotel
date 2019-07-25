@@ -10,14 +10,14 @@
 
   &__header {
     z-index: 1;
-    min-height: 7.3rem;
+    min-height: 7.2rem;
     position: relative;
     background-color: #46ab9d;
     border-radius: .3rem .3rem 0 0;
   }
 
   &__head {
-    padding: 1.3rem;
+    padding: 1.15rem;
     font-family: 'Source Sans Pro', 'Arial', sans-serif;
     color: #fff;
     font-size: 2.13rem;
@@ -110,8 +110,8 @@
   }
 
   &__button-wrapper {
-    margin-top: .6rem;
-    margin-bottom: .3rem;
+    margin-top: .75rem;
+    margin-bottom: .5rem;
     float: none;
   }
 }

@@ -17,6 +17,7 @@ mixin messaging({ name, photo, btnLocation="messaging", btnText="Reply", btnTag=
           .messaging__button-wrapper
             +button({
               location: btnLocation,
+              inverse: true,
               text: btnText,
               tag: btnTag
             })

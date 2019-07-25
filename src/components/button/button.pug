@@ -1,9 +1,10 @@
-mixin button({ color, size, location, text="Button", tag="a", link="./handler.php", type= "button" } = {})
+mixin button({ color, size, location, inverse=false, text="Button", tag="a", link="./handler.php", type= "button" } = {})
   - color = color ? `button_color_${color}` : false;
   - size = size ? `button_size_${size}` : false;
   - location = location ? `button_location_${location}` : false;
+  - inverse = inverse ? "button_inverse" : false;
 
   if tag == "button"
-    button(class=["button", "js-button", color, size, location], type=type)= text
+    button(class=["button", "js-button", color, size, location, inverse], type=type)= text
   else
-    a(class=["button", "js-button", color, size, location], href=link)= text
+    a(class=["button", "js-button", color, size, location, inverse], href=link)= text
