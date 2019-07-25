@@ -46,8 +46,8 @@
     }
   }
   @else {
-    color: #fff;
     background-color: $theme-color;
+    color: #fff;
 
     &:hover,
     &.button_state_pressed {
