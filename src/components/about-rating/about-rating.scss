@@ -3,7 +3,7 @@
   justify-content: flex-start;
   align-items: center;
 
-  &__percentage-wrapper {
+  &__percentage {
     margin: .5rem;
   }
 
@@ -11,7 +11,7 @@
     flex-shrink: 0;
   }
 
-  &__pie-chart-wrapper {
+  &__pie-chart {
     display: flex;
     margin: .5rem;
   }

@@ -25,24 +25,24 @@ mixin page
       .page__buttons-wrapper
         - for (var i = 0; i < 3; i += 1)
           - let inverse = (i == 2) ? true : false;
-          .page__button-wrapper
+          .page__button
             +button({
               inverse,
               size: "small",
               isLink: false
             })
-          .page__button-wrapper
+          .page__button
             +button({
               inverse,
               isLink: false
             })
-          .page__button-wrapper
+          .page__button
             +button({
               inverse,
               color: "warning",
               isLink: false
             })
-          .page__button-wrapper
+          .page__button
             +button({
               inverse,
               color: "warning",
@@ -56,29 +56,29 @@ mixin page
       .page__arrows-wrapper
         .page__arrow
           +arrow({
-            orientation: "prev"
+            orientation: "left"
           })
         .page__arrow
           +arrow({
-            orientation: "next"
+            orientation: "right"
           })
         .page__arrow
           +arrow({
-            orientation: "prev",
+            orientation: "left",
             disabled: true
           })
         .page__arrow
           +arrow({
-            orientation: "next",
+            orientation: "right",
             disabled: true
           })
         .page__arrow
           +arrow({
-            orientation: "prev"
+            orientation: "left"
           })
         .page__arrow
           +arrow({
-            orientation: "next"
+            orientation: "right"
           })
 
     section.page__percentages
@@ -151,7 +151,7 @@ mixin page
       .page__form-elements-wrapper
         .page__form
           +form()
-        .page__fieldset-wrapper
+        .page__fieldset
           section.page__toggles
             .page__subtitle
               +subtitle("Toggles")
@@ -175,7 +175,7 @@ mixin page
                 id: 2
               })
 
-    .page__two-sections-wrapper
+    .page__two-sections
       section.page__search-forms
         .page__subtitle
           +subtitle("Search / Drop Down")
@@ -236,7 +236,7 @@ mixin page
         +subtitle("Location")
       +location
 
-    .page__two-sections-wrapper
+    .page__two-sections
       section.page__calendar
         .page__subtitle
           +subtitle("Calendar")

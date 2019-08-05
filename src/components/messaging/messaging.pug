@@ -14,7 +14,7 @@ mixin messaging({ name, photo, btnLocation="messaging", btnText="Reply", btnIsLi
       form.messaging__form(action="./handler.php")
         div.messaging__block
           textarea.messaging__textarea(rows="2") Yeah that sounds great. See you then
-          .messaging__button-wrapper
+          .messaging__button
             +button({
               location: btnLocation,
               inverse: true,

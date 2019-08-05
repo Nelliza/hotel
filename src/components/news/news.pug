@@ -16,7 +16,7 @@ mixin news({ image, title, date, text, modifier=false, isCalendar=false, btnLoca
         p.news__date= date
       p.news__text= text
       if isCalendar
-        .news__button-wrapper
+        .news__button
           +button({
             location: btnLocation,
             text: btnText,

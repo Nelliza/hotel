@@ -7,7 +7,7 @@ mixin about({ imgItems, ratingItems, pieChartOptions, subtitle="Об отеле"
   section.about
     .page__subtitle
       +subtitle(subtitle)
-    .about__wrapper
+    .about__description
       p.about__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
       .about__images
         +about-img(imgItems)
@@ -15,5 +15,5 @@ mixin about({ imgItems, ratingItems, pieChartOptions, subtitle="Об отеле"
     .about__rating-list
       +about-rating(ratingItems)
       .about-rating
-        .about-rating__pie-chart-wrapper
+        .about-rating__pie-chart
           +pie-chart(pieChartOptions)

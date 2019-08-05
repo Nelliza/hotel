@@ -73,14 +73,14 @@
       align-items: center;
     }
   }
-  
+
   &__text {
     @media screen and (max-width: 490px) {
       margin-right: 1rem;
     }
   }
 
-  &__button-wrapper {
+  &__button {
     margin: .6rem;
     text-align: center;
   }

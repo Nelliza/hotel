@@ -165,7 +165,7 @@ body {
       flex-wrap: wrap;
     }
 
-    > .page__fieldset-wrapper {
+    > .page__fieldset {
       width: 18rem;
       display: flex;
       flex-direction: column;
@@ -188,14 +188,6 @@ body {
     @include flex();
   }
 
-  &__two-sections-wrapper {
-    @include flex($is-wrap: false);
-
-    @media screen and (max-width: 615px) {
-      flex-wrap: wrap;
-    }
-  }
-
   &__news-list-wrapper {
     @include flex($is-wrap: false);
 
@@ -216,7 +208,7 @@ body {
   }
 
   &__hotel-news-wrapper {
-    $flex-map: (justify: space-evenly); 
+    $flex-map: (justify: space-evenly);
     @include flex($flex-map...);
 
     > .news,
@@ -236,7 +228,15 @@ body {
     }
   }
 
-  &__button-wrapper {
+  &__two-sections {
+    @include flex($is-wrap: false);
+
+    @media screen and (max-width: 615px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__button {
     margin: .6rem .5rem;
     text-align: center;
   }
@@ -250,11 +250,11 @@ body {
       width: 2rem;
     }
 
-    &_orientation_prev {
+    &_orientation_left {
       left: 1%;
     }
 
-    &_orientation_next {
+    &_orientation_right {
       right: 1%;
     }
   }

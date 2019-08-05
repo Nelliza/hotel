@@ -1,5 +1,5 @@
 .about {
-  &__wrapper {
+  &__description {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +11,7 @@
 
   &__text {
     flex-basis: 50%;
-    
+
     @media screen and (max-width: 580px) {
       flex-basis: auto;
     }
