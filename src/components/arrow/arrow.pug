@@ -1,5 +1,6 @@
-mixin arrow({ orientation, color, size="3.2rem", disabled=false } = {})
+mixin arrow({ orientation, color, size, disabled=false } = {})
   - orientation = orientation ? `arrow_orientation_${orientation}` : false;
   - color = color ? `arrow_color_${color}` : false;
+  - size = size ? `arrow_size_${size}` : false;
 
-  button(class=["arrow", orientation, color], type="button", disabled=disabled, style=`width: ${size}; height: ${size}`)
+  button(class=["arrow", orientation, color, size], type="button", disabled=disabled)

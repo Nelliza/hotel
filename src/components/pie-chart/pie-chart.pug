@@ -1,5 +1,5 @@
-mixin pie-chart({ items, size="6rem", withLegend=false, legendUnit="%" })
-  .pie-chart(style=`width: ${size}; height: ${size}`)
+mixin pie-chart({ items, withLegend=false, legendUnit="%" })
+  .pie-chart
     svg.pie-chart__svg(viewBox="0 0 32 32")
       - var percent = 100;
       - var sumPercent = 0;

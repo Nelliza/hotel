@@ -1,8 +1,9 @@
 @import '../../styles/variables/colors';
-@import '../../styles/mixins/arrow-state';
 @import '../../styles/mixins/size';
+@import '../../styles/mixins/arrow-state';
 
 .arrow {
+  @include size(3.2rem);
   border: .2rem solid $color-primary;
   border-radius: 50%;
   background-color: #fff;
@@ -42,5 +43,9 @@
     &:hover {
       @include arrow-state(hover, $color-warning);
     }
+  }
+
+  &_size_small {
+    @include size(auto);
   }
 }

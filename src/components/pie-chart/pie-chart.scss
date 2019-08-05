@@ -1,8 +1,10 @@
+@import '../../styles/mixins/size';
+
 .pie-chart {
+  @include size(6rem);
   position: relative;
 
   &__svg {
-    @size(100%);
     border-radius: 50%;
     transform: rotate(-90deg);
   }

@@ -1,6 +1,8 @@
 @import '../../styles/mixins/size';
 
 .percentage {
+  @include size(6rem);
+  font-size: 6rem;
   position: relative;
   display: flex;
   justify-content: center;
