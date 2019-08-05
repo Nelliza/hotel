@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin messaging({ name, photo, btnLocation="messaging", btnText="Reply", btnTag="button" })
+mixin messaging({ name, photo, btnLocation="messaging", btnText="Reply", btnIsLink=false, btnType="submit" })
   section.messaging.js-messaging
     .messaging__header
       .messaging__head= name
@@ -19,5 +19,6 @@ mixin messaging({ name, photo, btnLocation="messaging", btnText="Reply", btnTag=
               location: btnLocation,
               inverse: true,
               text: btnText,
-              tag: btnTag
+              isLink: btnIsLink,
+              type: btnType
             })
