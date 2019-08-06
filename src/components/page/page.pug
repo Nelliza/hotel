@@ -24,7 +24,7 @@ mixin page
         +subtitle("Standard buttons")
       .page__buttons-wrapper
         - for (var i = 0; i < 3; i += 1)
-          - let inverse = (i == 2) ? true : false;
+          - let inverse = i === 2;
           .page__button
             +button({
               inverse,

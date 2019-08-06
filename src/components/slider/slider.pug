@@ -1,12 +1,12 @@
 mixin slider({ type, modifier })
   - modifier = modifier ? `slider_color_${modifier}` : false;
   - var handle = "";
-  if type == "pointer"
+  if type === "pointer"
     - handle = "slider__handle_with-pointer";
 
   div(class=["slider", "js-slider", `slider_with-${type}`, `js-slider_with-${type}`, modifier])
     div(class=["ui-slider-handle", "slider__handle", handle])
-      if type == "pointer"
+      if type === "pointer"
         .slider__pointer.js-slider__pointer
-    if type == "scale"
+    if type === "scale"
       ul.slider__scale.js-slider__scale

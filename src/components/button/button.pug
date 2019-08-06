@@ -3,7 +3,7 @@ mixin button({ size, location, color="primary", inverse=false, text="Button", is
   - location = location ? `button_location_${location}` : false;
   - inverse = inverse ? "button_inverse" : false;
   - var tag = isLink ? "a" : "button";
-  - var btnLink = (tag == "a") ? link : false;
-  - var btnType = (tag == "button") ? type : false;
+  - var btnLink = (tag === "a") ? link : false;
+  - var btnType = (tag === "button") ? type : false;
 
   #{tag}(class=["button", "js-button", `button_color_${color}`, size, location, inverse], href=btnLink, type=btnType)= text
