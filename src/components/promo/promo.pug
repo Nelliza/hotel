@@ -5,8 +5,8 @@ mixin promo({ imgItems, btnColor, header, text, btnText="Подробнее", bt
   - header = header || "Добро пожаловать в наш отель!";
   - text = text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.";
 
-  section.promo.js-promo
-    .carousel.js-carousel.owl-carousel
+  section.promo
+    .promo__carousel.js-promo__carousel.owl-carousel
       +promo-img(imgItems)
     .promo__content
       h3.promo__header= header

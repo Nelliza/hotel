@@ -3,6 +3,14 @@
 .promo {
   position: relative;
 
+  &__carousel {
+    z-index: 0;
+
+    > .owl-stage-outer {
+      margin: 0 8px;
+    }
+  }
+
   &__content {
     @include promo-block(3rem);
   }
@@ -10,12 +18,4 @@
   &__button {
     margin: .6rem;
   }
-}
-
-.owl-carousel {
-  z-index: 0;
-}
-
-.owl-stage-outer {
-  margin: 0 8px;
 }

@@ -11,7 +11,7 @@ class Reservation {
   }
 
   init() {
-    const $carousel = this.$reservation.find('.js-carousel');
+    const $carousel = this.$reservation.find('.js-reservation__carousel');
     const $stages = this.$reservation.find('.js-stages');
     const $datepicker = this.$reservation.find('.js-calendar');
     const $slider = this.$reservation.find('.js-slider');

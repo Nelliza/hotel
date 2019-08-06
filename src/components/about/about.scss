@@ -1,4 +1,9 @@
 .about {
+  &__subtitle {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
   &__description {
     display: flex;
     justify-content: space-between;
@@ -38,7 +43,7 @@
     }
   }
 
-  &__subtitle {
+  &__subheading {
     margin: 2rem 0;
     text-align: center;
   }
