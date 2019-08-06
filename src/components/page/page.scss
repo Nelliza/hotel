@@ -71,7 +71,7 @@ body {
   }
 
   &__sliders {
-    @include subtitle-margins(1.6rem, 1.2rem);
+    @include subtitle-margins(1.5rem, 1.2rem);
   }
 
   &__stages {
@@ -104,7 +104,7 @@ body {
   }
 
   &__news-list {
-    @include subtitle-margins(4rem, 2.1rem);
+    @include subtitle-margins(4.1rem, 2.1rem);
   }
 
   &__location {
@@ -237,7 +237,7 @@ body {
   }
 
   &__button {
-    margin: .6rem .5rem;
+    margin: .7rem .5rem;
     text-align: center;
   }
 
@@ -259,9 +259,16 @@ body {
     }
   }
 
-  &__percentage,
+  &__percentage {
+    margin: .5rem .9rem .5rem .8rem;
+
+    &:first-child {
+      margin: .5rem 0;
+    }
+  }
+
   &__pie-chart {
-    margin: .5rem;
+    margin: .5rem .4rem .5rem .8rem;
   }
 
   &__slider {
