@@ -28,6 +28,7 @@
 
   &__val {
     @include size(3.4rem, 1.75rem);
+    display: none;
     position: relative;
     margin-left: .5rem;
     padding: 0 .5rem;
@@ -36,7 +37,7 @@
     text-align: center;
     text-transform: uppercase;
     line-height: 1.75rem;
-    color:  #fff;
+    color: #fff;
     border-radius: .2rem;
 
     &:before {
@@ -45,6 +46,7 @@
 
     &_type {
       &_correct {
+        display: block;
         background-color: $color-primary;
 
         &:before {
@@ -53,6 +55,7 @@
       }
 
       &_error {
+        display: block;
         background-color: $color-warning;
 
         &:before {
