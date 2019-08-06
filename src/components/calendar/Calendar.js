@@ -8,9 +8,9 @@ class Calendar {
   }
 
   init() {
-    $.datepicker._gotoToday = function (id) {
+    $.datepicker._gotoToday = function (ident) {
       let date;
-      const $target = $(id);
+      const $target = $(ident);
       const inst = this._getInst($target[0]);
 
       if (this._get(inst, 'gotoCurrent') && inst.currentDay) {
@@ -27,7 +27,7 @@ class Calendar {
         inst.drawYear = date.getFullYear();
         inst.selectedYear = inst.drawYear;
         this._setDateDatepicker($target, date);
-        this._selectDate(id, this._getDateDatepicker($target));
+        this._selectDate(ident, this._getDateDatepicker($target));
       }
 
       this._notifyChange(inst);

@@ -33,7 +33,7 @@ class Button {
 
     if (anchor) {
       $('html').animate({
-        scrollTop: $(anchor).offset().top,
+        scrollTop: $(`.${anchor.substr(1)}`).offset().top,
       }, 1000);
     }
   }
