@@ -1,5 +1,6 @@
 @import '../../styles/variables/colors';
 @import '../../styles/mixins/triangle-tooltip';
+@import '../../styles/mixins/social-icons';
 
 .user-profile {
   display: flex;
@@ -76,5 +77,12 @@
   &__social {
     margin: 0;
     padding: 0;
+  }
+
+  &__social-icon {
+    display: inline-block;
+    margin: .35rem;
+
+    @include social-icons(facebook, twitter, dribbble);
   }
 }

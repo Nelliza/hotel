@@ -1,4 +1,5 @@
-mixin button({ size, location, color="primary", inverse=false, text="Button", isLink=true, link="./handler.php", type="button" } = {})
+mixin button({ color, size, location, inverse=false, text="Button", isLink=true, link="./handler.php", type="button" } = {})
+  - color = color ? `button_color_${color}` : "button_color_primary";
   - size = size ? `button_size_${size}` : false;
   - location = location ? `button_location_${location}` : false;
   - inverse = inverse ? "button_inverse" : false;
@@ -6,4 +7,4 @@ mixin button({ size, location, color="primary", inverse=false, text="Button", is
   - var btnLink = (tag === "a") ? link : false;
   - var btnType = (tag === "button") ? type : false;
 
-  #{tag}(class=["button", "js-button", `button_color_${color}`, size, location, inverse], href=btnLink, type=btnType)= text
+  #{tag}(class=["button", "js-button", color, size, location, inverse], href=btnLink, type=btnType)= text

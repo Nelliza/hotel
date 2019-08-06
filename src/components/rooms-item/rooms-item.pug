@@ -1,8 +1,8 @@
 include ../button/button
 
-mixin rooms-item({ items, btnColor, btnLocation="rooms", btnText="Забронировать" })
-  each item in items
-    - var { img, price, header, text, btnLink="./handler.php" } = item;
+mixin rooms-item({ btnOptions, itemOptions })
+    - var { btnColor, btnLocation="rooms", btnText="Забронировать" } = btnOptions;
+    - var { img, price, header, text, btnLink="./handler.php" } = itemOptions;
     - text = text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.";
 
     li.rooms-item

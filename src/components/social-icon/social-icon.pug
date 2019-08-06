@@ -1,7 +1,0 @@
-mixin social-icon({ iconItems: items, iconModifier: modifier })
-  - modifier = modifier ? `social-icon_type_${modifier}` : false;
-
-  each item in items
-    - var { name, link } = item;
-    li(class=["social-icon", `social-icon_name_${name}`, modifier])
-      a(href=link, target="_blank", rel="noopener noreferrer")

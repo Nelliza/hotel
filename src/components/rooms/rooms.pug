@@ -1,10 +1,13 @@
 include ../subtitle/subtitle
 include ../rooms-item/rooms-item
 
-mixin rooms({ roomsItemOptions, subtitle="Выбор комнаты" })
+mixin rooms({ roomsOptions, subtitle="Выбор комнаты" })
+  - var { btnOptions, items } = roomsOptions;
   section.rooms
     .rooms__subtitle
       +subtitle(subtitle)
     p.rooms__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam tempore asperiores consectetur officia facilis corrupti aut minima accusamus et porro numquam, nisi, reprehenderit natus, corporis voluptate mollitia quis deleniti tempora quo repellat non, ullam placeat! Id ea, quaerat harum sapiente provident autem quidem minima similique! Aperiam aut ratione in dolores.
     ul.rooms__list
-      +rooms-item(roomsItemOptions)
+      each itemOptions in items
+        .rooms__item
+          +rooms-item({ btnOptions, itemOptions })
