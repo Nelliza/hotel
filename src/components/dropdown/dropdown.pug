@@ -4,5 +4,5 @@ mixin dropdown({ modifier, values, title="Choose An Option" } = {})
 
   select(class=["dropdown", "js-dropdown", modifier])
     option(selected, disabled, style="display: none")= title
-    - for (var i = 0; i < values.length; i += 1)
-      option= values[i]
+    each value in values
+      option= value

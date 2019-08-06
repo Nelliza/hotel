@@ -1,7 +1,7 @@
 class Menu {
   constructor(options) {
     this.$btn = options.elem.find('.js-menu__btn');
-    this.$link = options.elem.find('.js-menu-item__link');
+    this.$links = options.elem.find('.js-menu-item__link');
     this.index = options.index;
     this.init();
   }
@@ -9,11 +9,11 @@ class Menu {
   init() {
     const url = document.location.href;
 
-    for (let i = 0; i < this.$link.length; i += 1) {
-      if (url === this.$link.get(i).href) {
-        this.$link.eq(i).addClass('menu-item__link_state_active');
+    this.$links.each(function(index, element) {
+      if (url === element.href) {
+        $(element).addClass('menu-item__link_state_active');
       }
-    }
+    });
 
     this.$btn.on(`click.btn${this.index}`, this._handleButtonClick.bind(this));
   }
