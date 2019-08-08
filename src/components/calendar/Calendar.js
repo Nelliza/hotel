@@ -2,12 +2,13 @@ import 'webpack-jquery-ui/datepicker';
 
 class Calendar {
   constructor(elem) {
-    this.$calendar = elem.find('.js-calendar__datepicker');
-    this.$day = elem.find('.js-calendar__day');
-    this.init();
+    this.init(elem);
   }
 
-  init() {
+  init(elem) {
+    this.$calendar = elem.find('.js-calendar__datepicker');
+    this.$day = elem.find('.js-calendar__day');
+
     $.datepicker._gotoToday = function (ident) {
       let date;
       const $target = $(ident);
