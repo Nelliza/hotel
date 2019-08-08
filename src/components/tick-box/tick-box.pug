@@ -1,8 +1,8 @@
-mixin tick-box({ id, modifier, size="24", checked=false, text="" })
+mixin tick-box({ id, modifier, checked=false, text="" })
   - modifier = modifier ? `tick-box__checkmark_color_${modifier}` : false;
 
   input.tick-box(type="checkbox", id=`tick-box${id}`, checked=checked)
   label.tick-box__label(for=`tick-box${id}`)
-    svg(class=["tick-box__checkmark", modifier], width=size, height=size)
+    svg(class=["tick-box__checkmark", modifier])
       path.tick-box__check(d="M6.7 12 L10.7 16 L18 8", stroke="#c0c0c0", stroke-width="3", fill="none")
     span= text
