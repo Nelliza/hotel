@@ -1,8 +1,8 @@
 include ../button/button
 
-mixin rooms-item({ btnOptions, itemOptions })
-    - var { btnColor, btnLocation="rooms", btnText="Забронировать" } = btnOptions;
-    - var { img, price, header, text, btnLink="./handler.php" } = itemOptions;
+mixin rooms-item({ buttonOptions, itemOptions })
+    - var { buttonColor, buttonLocation="rooms", buttonText="Забронировать" } = buttonOptions;
+    - var { img, price, header, text, buttonLink="./handler.php" } = itemOptions;
     - text = text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.";
 
     li.rooms-item
@@ -13,8 +13,8 @@ mixin rooms-item({ btnOptions, itemOptions })
         p.rooms-item__text= text
       .rooms-item__button
         +button({
-          color: btnColor,
-          location: btnLocation,
-          text: btnText,
-          link: btnLink
+          color: buttonColor,
+          location: buttonLocation,
+          text: buttonText,
+          link: buttonLink
         })

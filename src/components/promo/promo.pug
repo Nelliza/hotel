@@ -1,7 +1,7 @@
 include ../promo-img/promo-img
 include ../button/button
 
-mixin promo({ imgItems, btnColor, header, text, btnText="Подробнее", btnlink="./handler.php" })
+mixin promo({ imgItems, buttonColor, header, text, buttonText="Подробнее", buttonLink="./handler.php" })
   - header = header || "Добро пожаловать в наш отель!";
   - text = text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.";
 
@@ -13,7 +13,7 @@ mixin promo({ imgItems, btnColor, header, text, btnText="Подробнее", bt
       p.promo__text= text
       .promo__button
         +button({
-          color: btnColor,
-          text: btnText,
-          link: btnlink
+          color: buttonColor,
+          text: buttonText,
+          link: buttonLink
         })

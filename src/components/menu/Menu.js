@@ -5,7 +5,7 @@ class Menu {
   }
 
   init(elem) {
-    const $btn = elem.find('.js-menu__btn');
+    const $button = elem.find('.js-menu__button');
     const $links = elem.find('.js-menu__item-link');
 
     const url = document.location.href;
@@ -16,7 +16,7 @@ class Menu {
       }
     });
 
-    $btn.on(`click.btn${this.index}`, this._handleButtonClick.bind(this));
+    $button.on(`click.button${this.index}`, this._handleButtonClick.bind(this));
   }
 
   _handleButtonClick(event) {

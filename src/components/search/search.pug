@@ -1,7 +1,7 @@
-mixin search({ modifier, btnColor, placeholder="Search" } = {})
+mixin search({ modifier, buttonColor, placeholder="Search" } = {})
   - modifier = modifier ? `search_type_${modifier}` : false;
-  - btnColor = btnColor ? `search__submit_color_${btnColor}` : false;
+  - buttonColor = buttonColor ? `search__submit_color_${buttonColor}` : false;
 
   form(class=["search", modifier], action="./handler.php")
     input.search__input(type="text", placeholder=placeholder)
-    button(class=["search__submit", btnColor], type="submit")
+    button(class=["search__submit", buttonColor], type="submit")

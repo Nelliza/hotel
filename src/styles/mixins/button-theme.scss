@@ -1,6 +1,6 @@
 @import '../variables/colors';
 
-@mixin btn-theme($theme, $shadow, $inverse: false) {
+@mixin button-theme($theme, $shadow, $inverse: false) {
   $theme-color: '';
   @if $theme == primary {
     $theme-color: $color-primary;

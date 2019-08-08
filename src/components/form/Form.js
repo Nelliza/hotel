@@ -18,21 +18,21 @@ class Form {
     const $formVal = this.$form.find('.js-form__val');
     $formVal.removeClass().text('');
 
-    const $login = this.$form.find('input[name="name"]');
-    if (!$login.val() || $login.val().length < 3) {
-      $login.next().addClass('form__val js-form__val form__val_type_error').text('Error');
+    const $loginField = this.$form.find('input[name="name"]');
+    if (!$loginField.val() || $loginField.val().length < 3) {
+      $loginField.next().addClass('form__val js-form__val form__val_type_error').text('Error');
     } else {
-      $login.next().addClass('form__val js-form__val form__val_type_correct').text('Thanks!');
+      $loginField.next().addClass('form__val js-form__val form__val_type_correct').text('Thanks!');
     }
 
-    const reg = /^\w+([\.-]?\w+)*@(((([a-z0-9]{2,})|([a-z0-9][-][a-z0-9]+))[\.][a-z0-9])|([a-z0-9]+[-]?))+[a-z0-9]+\.([a-z]{2}|(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum))$/i;
-    const email = this.$form.find('input[name="email"]');
-    const valEmail = !email.val() || !reg.test(email.val());
+    const regexp = /^\w+([\.-]?\w+)*@(((([a-z0-9]{2,})|([a-z0-9][-][a-z0-9]+))[\.][a-z0-9])|([a-z0-9]+[-]?))+[a-z0-9]+\.([a-z]{2}|(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum))$/i;
+    const emailField = this.$form.find('input[name="email"]');
+    const email = !emailField.val() || !regexp.test(emailField.val());
 
-    if (valEmail) {
-      email.next().addClass('form__val js-form__val form__val_type_error').text('Error');
+    if (email) {
+      emailField.next().addClass('form__val js-form__val form__val_type_error').text('Error');
     } else {
-      email.next().addClass('form__val js-form__val form__val_type_correct').text('Thanks!');
+      emailField.next().addClass('form__val js-form__val form__val_type_correct').text('Thanks!');
     }
   }
 }

@@ -2,7 +2,7 @@ include ../subtitle/subtitle
 include ../rooms-item/rooms-item
 
 mixin rooms({ roomsOptions, subtitle="Выбор комнаты" })
-  - var { btnOptions, items } = roomsOptions;
+  - var { buttonOptions, items } = roomsOptions;
   section.rooms
     .rooms__subtitle
       +subtitle(subtitle)
@@ -10,4 +10,4 @@ mixin rooms({ roomsOptions, subtitle="Выбор комнаты" })
     ul.rooms__list
       each itemOptions in items
         .rooms__item
-          +rooms-item({ btnOptions, itemOptions })
+          +rooms-item({ buttonOptions, itemOptions })

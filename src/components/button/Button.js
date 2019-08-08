@@ -10,22 +10,23 @@ class Button {
   }
 
   _handleButtonClick(event) {
-    const $div = $('<div>');
-    const btnOffset = $(event.currentTarget).offset();
-    const xPos = event.pageX - btnOffset.left;
-    const yPos = event.pageY - btnOffset.top;
+    const $ripple = $('<div>', { 
+      class: 'button__ripple',
+    });
+    const buttonOffset = $(event.currentTarget).offset();
+    const xPosition = event.pageX - buttonOffset.left;
+    const yPosition = event.pageY - buttonOffset.top;
 
     $(event.currentTarget).addClass('button_state_pressed');
-    $div.addClass('button__ripple');
 
-    $div.css({
-      top: yPos,
-      left: xPos,
+    $ripple.css({
+      top: yPosition,
+      left: xPosition,
     })
       .appendTo($(event.currentTarget));
 
     window.setTimeout(() => {
-      $div.remove();
+      $ripple.remove();
       this.$button.removeClass('button_state_pressed');
     }, 1000);
 

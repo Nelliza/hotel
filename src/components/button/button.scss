@@ -1,5 +1,5 @@
 @import '../../styles/variables/colors';
-@import '../../styles/mixins/btn-theme';
+@import '../../styles/mixins/button-theme';
 @import '../../styles/mixins/size';
 
 .button {
@@ -17,18 +17,18 @@
   border: .06rem solid;
 
   &_color_primary {
-    @include btn-theme(primary, #28a290);
+    @include button-theme(primary, #28a290);
 
     &.button_inverse {
-      @include btn-theme(primary, #28a290, true);
+      @include button-theme(primary, #28a290, true);
     }
   }
 
   &_color_warning {
-    @include btn-theme(warning, #bf3e1f);
+    @include button-theme(warning, #bf3e1f);
 
     &.button_inverse {
-      @include btn-theme(warning, #bf3e1f, true);
+      @include button-theme(warning, #bf3e1f, true);
     }
   }
 

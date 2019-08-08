@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin form({ btnColor, btnSize, inputs, textarea={}, action="./handler.php", btnLocation="form", btnText="Submit", btnIsLink=false, btnType="submit" } = {})
+mixin form({ buttonColor, buttonSize, inputs, textarea={}, action="./handler.php", buttonLocation="form", buttonText="Submit", buttonIsLink=false, buttonType="submit" } = {})
   -
     inputs = inputs || [
       {
@@ -24,11 +24,11 @@ mixin form({ btnColor, btnSize, inputs, textarea={}, action="./handler.php", btn
       textarea.form__textarea(name=textareaName, placeholder=textareaPlaceholder, rows=textareaRows)
     .form__button
       +button({
-        color: btnColor,
-        size: btnSize,
-        location: btnLocation,
+        color: buttonColor,
+        size: buttonSize,
+        location: buttonLocation,
         inverse: true,
-        text: btnText,
-        isLink: btnIsLink,
-        type: btnType
+        text: buttonText,
+        isLink: buttonIsLink,
+        type: buttonType
       })

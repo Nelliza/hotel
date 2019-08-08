@@ -1,7 +1,7 @@
 @import './input';
 @import './fieldset-icon';
 
-@mixin fieldset($input, $btn, $path) {
+@mixin fieldset($input, $button, $path) {
   position: relative;
 
   #{$input} {
@@ -10,7 +10,7 @@
     width: 100%;
   }
 
-  #{$btn} {
+  #{$button} {
     @include fieldset-icon($path);
     cursor: pointer;
 

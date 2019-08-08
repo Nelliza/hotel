@@ -16,13 +16,13 @@ class Promo {
       autoplay: true,
     });
 
-    const $prevBtn = this.$carousel.find('.owl-prev');
-    $prevBtn.addClass('page__arrow_location_carousel page__arrow_orientation_left');
-    $prevBtn.append('<div class="arrow arrow_orientation_left arrow_size_small">');
+    const $prevButton = this.$carousel.find('.owl-prev');
+    $prevButton.addClass('page__arrow_location_carousel page__arrow_orientation_left');
+    $prevButton.append('<div class="arrow arrow_orientation_left arrow_size_small">');
 
-    const $nextBtn = this.$carousel.find('.owl-next');
-    $nextBtn.addClass('page__arrow_location_carousel page__arrow_orientation_right');
-    $nextBtn.append('<div class="arrow arrow_orientation_right arrow_size_small">');
+    const $nextButton = this.$carousel.find('.owl-next');
+    $nextButton.addClass('page__arrow_location_carousel page__arrow_orientation_right');
+    $nextButton.append('<div class="arrow arrow_orientation_right arrow_size_small">');
   }
 }
 

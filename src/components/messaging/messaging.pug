@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin messaging({ name, photo, btnLocation="messaging", btnText="Reply", btnIsLink=false, btnType="submit" })
+mixin messaging({ name, photo, buttonLocation="messaging", buttonText="Reply", buttonIsLink=false, buttonType="submit" })
   section.messaging.js-messaging
     .messaging__header
       .messaging__head= name
@@ -16,9 +16,9 @@ mixin messaging({ name, photo, btnLocation="messaging", btnText="Reply", btnIsLi
           textarea.messaging__textarea(rows="2") Yeah that sounds great. See you then
           .messaging__button
             +button({
-              location: btnLocation,
+              location: buttonLocation,
               inverse: true,
-              text: btnText,
-              isLink: btnIsLink,
-              type: btnType
+              text: buttonText,
+              isLink: buttonIsLink,
+              type: buttonType
             })
