@@ -4,6 +4,9 @@ $(() => {
   const $elem = $('.js-calendar');
 
   $elem.each((index, elem) => {
-    new Calendar($(elem));
+    new Calendar({
+      index,
+      elem: $(elem),
+    });
   });
 });

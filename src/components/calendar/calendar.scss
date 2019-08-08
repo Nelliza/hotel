@@ -31,24 +31,19 @@
     justify-content: center;
   }
 
-  &__datepicker {
-    .ui-datepicker {
-      button.ui-datepicker-current {
-        width: 100%;
-        margin: 0;
-        padding: .7rem 1.3rem;
-        font-size: .8rem;
-        font-weight: 700;
-        text-align: left;
-        text-transform: uppercase;
-        line-height: 2.2;
-        letter-spacing: .08rem;
-        border: none;
-        border-radius: 0 0 .3rem .3rem;
-        background-color: #e5e5e5;
-        color: #868686;
-      }
-    }
+  &__today {
+    width: 100%;
+    padding: 1rem 1.3rem;
+    font-size: .8rem;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: .08rem;
+    border: none;
+    border-radius: 0 0 .3rem .3rem;
+    background-color: #e5e5e5;
+    color: #868686;
+    cursor: pointer;
   }
 }
 
@@ -124,12 +119,6 @@
       > tbody {
         font-family: 'Source Sans Pro', 'Arial', sans-serif;
       }
-    }
-
-    &-buttonpane {
-      width: 100%;
-      margin: 0;
-      padding: 0;
     }
   }
 

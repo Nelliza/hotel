@@ -3,6 +3,7 @@ mixin calendar({ withScoreboard, inputName, inputLabel } = {})
     if withScoreboard
       .calendar__day.js-calendar__day
       .calendar__datepicker.js-calendar__datepicker
+      button.calendar__today today
 
     if inputName
       label.calendar__label(for=inputName)= inputLabel
