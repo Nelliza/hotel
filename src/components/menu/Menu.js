@@ -1,7 +1,7 @@
 class Menu {
   constructor(options) {
     this.$btn = options.elem.find('.js-menu__btn');
-    this.$links = options.elem.find('.js-menu-item__link');
+    this.$links = options.elem.find('.js-menu__item-link');
     this.index = options.index;
     this.init();
   }
@@ -11,7 +11,7 @@ class Menu {
 
     this.$links.each(function(index, element) {
       if (url === element.href) {
-        $(element).addClass('menu-item__link_state_active');
+        $(element).addClass('menu__item-link_state_active');
       }
     });
 

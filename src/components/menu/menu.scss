@@ -31,6 +31,10 @@
     .menu__list {
       display: flex;
     }
+
+    .menu__item {
+      padding: .7rem 0;
+    }
   }
 
   &__btn {
@@ -86,6 +90,24 @@
       margin-top: 3rem;
       background-color: $color-primary;
       overflow: auto;
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      text-align: center;
+      border-top: .1rem solid rgba(0, 0, 0, .1);
+    }
+  }
+
+  &__item-link {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover,
+    &_state_active {
+      color: $color-warning;
     }
   }
 }

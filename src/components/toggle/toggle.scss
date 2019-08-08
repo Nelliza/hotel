@@ -3,6 +3,9 @@
 @import '../../styles/mixins/pseudo-elem';
 
 .toggle {
+  display: flex;
+  align-items: center;
+
   &__button {
     @include size(3.7rem, 1.5rem);
     margin: .4rem;
@@ -45,6 +48,7 @@
 
   &__background {
     @include pseudo-elem(false);
+    width: 3.7rem;
     background-color: $color-disabled;
     transition: background-color .40s ease-in-out;
     z-index: -1;

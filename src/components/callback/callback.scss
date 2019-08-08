@@ -1,40 +1,42 @@
 @import '../../styles/mixins/size';
 
 .callback {
-  @include size(4rem);
-  display: block;
-  background: url(../../assets/icons/call-icon.svg) #fff;
-  border: .15rem solid #4eb7a8;
-  border-radius: 50%;
-  cursor: pointer;
+  &__button {
+    @include size(4rem);
+    display: block;
+    background: url(../../assets/icons/call-icon.svg) #fff;
+    border: .15rem solid #4eb7a8;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
-  + .messaging {
+  &__messaging {
     z-index: 20;
     visibility: hidden;
     position: fixed;
     width: 18rem !important;
     bottom: 1rem;
     left: calc(50%-9rem);
+    
+    &_state_visible {
+      visibility: visible;
+    }
   }
 
-  + .messaging_state_visible {
-    visibility: visible;
+  &__overlay {
+    @include size(100%);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(30, 30, 30, .8);
+    transition: .3s;
 
-    + .overlay {
+    &_state_visible {
       visibility: visible;
       opacity: 1;
     }
   }
-}
-
-.overlay {
-  @include size(100%);
-  z-index: 10;
-  position: fixed;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
-  background: rgba(30, 30, 30, .8);
-  transition: .3s;
 }

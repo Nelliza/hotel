@@ -1,5 +1,8 @@
 include ../messaging/messaging
 
 mixin callback({ messagingOptions })
-  .callback.js-callback
-  +messaging(messagingOptions)
+  .callback
+    .callback__button.js-callback__button
+    .callback__messaging.js-callback__messaging
+      +messaging(messagingOptions)
+    .callback__overlay.js-callback__overlay

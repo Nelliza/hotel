@@ -26,6 +26,11 @@
     stroke-dashoffset: 50;
   }
 
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
   &__checkmark {
     width: 24px;
     height: 24px;

@@ -18,17 +18,7 @@
     &_type_additional {
       display: flex;
       flex-direction: column;
-      width: 40%;
-
-      .tick-box__label {
-        flex-grow: 1;
-      }
-
-      > .button {
-        margin-top: 2rem;
-        margin-left: 50%;
-        transform: translateX(-50%);
-      }
+      width: 50%;
     }
   }
 
@@ -39,62 +29,48 @@
   &__item {
     display: flex;
 
-    &_type_checkin {
+    @media screen and (max-width: 490px) {
+      flex-wrap: wrap;
+    }
+
+    &_type_calendar {
       justify-content: space-evenly;
       flex-wrap: wrap;
     }
 
-    .reservation__text,
-    .toggle__label {
-      width: 50%;
-    }
-
-    .ui-selectmenu-button {
-      margin-bottom: .5rem;
-    }
-
-    .toggle {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-top: 1rem;
-
-      &__button {
-        margin-left: 0;
-      }
-    }
-
-    > .slider {
-      width: 50%;
-    }
-
-    > .tick-box__label {
-      display: flex;
-      align-items: center;
+    &_type_dropdown {
+      margin-bottom: 0.5rem;
     }
   }
 
-  &__text {
+  &__label {
+    width: 50%;
+    margin-right: 1rem;
+
     @media screen and (max-width: 490px) {
-      margin-right: 1rem;
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    width: 50%;
+    margin: 1.8rem 0;
+
+    @media screen and (max-width: 490px) {
+      width: 100%;
+    }
+  }
+
+  &__toggle {
+    margin-top: 1rem;
+
+    &__button {
+      margin-left: 0;
     }
   }
 
   &__button {
     margin: .6rem;
     text-align: center;
-  }
-}
-
-.owl-prev.disabled,
-.owl-next.disabled {
-  outline: none;
-}
-
-.owl-prev.disabled,
-.owl-next.disabled {
-  & > .arrow {
-    @include arrow-state(disabled);
-    cursor: default;
   }
 }

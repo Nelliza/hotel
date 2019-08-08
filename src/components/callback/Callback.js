@@ -8,15 +8,12 @@ class Callback {
 
   init() {
     this.$callback.on(`click.callback${this.index}`, this._handleCallbackClick.bind(this));
-    this.$overlay.on(`click.overlay${this.index}`, this._handleOverlayClick.bind(this));
+    this.$overlay.on(`click.overlay${this.index}`, this._handleCallbackClick.bind(this));
   }
 
   _handleCallbackClick(event) {
-    $(event.currentTarget).next('.js-messaging').toggleClass('messaging_state_visible');
-  }
-
-  _handleOverlayClick(event) {
-    $(event.currentTarget).prev('.js-messaging').toggleClass('messaging_state_visible');
+    $('.js-callback__messaging').toggleClass('callback__messaging_state_visible');
+    $('.js-callback__overlay').toggleClass('callback__overlay_state_visible');
   }
 }
 

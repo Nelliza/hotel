@@ -1,34 +1,5 @@
-@import '../../styles/mixins/font-face';
 @import '../../styles/mixins/subtitle-margins';
 @import '../../styles/mixins/flex';
-@import '../../styles/mixins/placeholder';
-
-@each $type in black, light, bold, italic, regular {
-  @include font-face('Lato', 'lato', $type);
-}
-@each $type in light, bold, italic, regular {
-  @include font-face('Source Sans Pro', 'sourcesanspro', $type);
-}
-
-html,
-body {
-  height: 100%;
-}
-
-html {
-  font-family: 'Lato', 'Arial', sans-serif;
-  font-size: 16px;
-  color: #000;
-  background-color: #fff;
-
-  @media screen and (max-width: 650px) {
-    font-size: 14px;
-  }
-}
-
-body {
-  margin: 0;
-}
 
 .page {
   box-sizing: border-box;
@@ -83,7 +54,7 @@ body {
   }
 
   &__toggles {
-    @include subtitle-margins(1.8rem, 1.5rem);
+    @include subtitle-margins(2rem, 1.5rem);
 
     @media screen and (min-width: 616px) {
       @include subtitle-margins(.8rem);
@@ -91,16 +62,20 @@ body {
   }
 
   &__tick-boxes {
-    @include subtitle-margins(1.8rem, 1.5rem);
+    @include subtitle-margins(2rem, 1.5rem);
   }
 
   &__search-forms {
-    @include subtitle-margins(false, 1.3rem);
+    @include subtitle-margins(2.9rem, 1.3rem);
     width: 18.1rem;
 
     @media screen and (max-width: 615px) {
       width: 100%;
     }
+  }
+
+  &__user-profile {
+    @include subtitle-margins(2.9rem);
   }
 
   &__news-list {
@@ -164,17 +139,17 @@ body {
     @media screen and (max-width: 615px) {
       flex-wrap: wrap;
     }
+  }
 
-    > .page__fieldset {
-      width: 18rem;
-      display: flex;
-      flex-direction: column;
+  &__form-elements-group {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
 
-      @media screen and (max-width: 615px) {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-      }
+    @media screen and (max-width: 615px) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-evenly;
     }
   }
 
@@ -199,33 +174,6 @@ body {
   &__video-wrapper {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-  }
-
-  &__news-wrapper {
-    width: 22rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  &__hotel-news-wrapper {
-    $flex-map: (justify: space-evenly);
-    @include flex($flex-map...);
-
-    > .news,
-    > .video {
-      width: 22rem;
-      margin: 1rem;
-    }
-  }
-
-  &__contact-us-wrapper {
-    $flex-map: (justify: space-evenly);
-    @include flex($flex-map...);
-
-    > section {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
   }
 
   &__two-sections {
@@ -310,23 +258,31 @@ body {
       width: 100%;
     }
   }
-}
 
-.center-layer {
-  margin-left: 6rem;
-  margin-right: 6rem;
-
-  @media screen and (max-width: 615px) {
-    margin-left: 2rem;
-    margin-right: 2rem;
+  &__hotel-news-wrapper {
+    $flex-map: (justify: space-evenly);
+    @include flex($flex-map...);
   }
 
-  @media screen and (max-width: 390px) {
+  &__hotel-news {
+    width: 22rem;
+    margin: 1rem;
+  }
+
+  &__hotel-video {
+    width: 22rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__contact-us-wrapper {
+    $flex-map: (justify: space-evenly);
+    @include flex($flex-map...);
+  }
+
+  &__contact-us,
+  &__team {
     margin-left: 1rem;
     margin-right: 1rem;
   }
-}
-
-::placeholder {
-  @include placeholder;
 }

@@ -14,41 +14,45 @@ block page-content
       .page__subtitle
         +subtitle("Новости отеля")
       .page__hotel-news-wrapper
-        +news({
-          title: "It's all going downhill",
-          date: "24 august 2013",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
-          image: "news-1"
-        })
-        +news({
-          title: "This is the title",
-          date: [24, "Aug"],
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          image: "news-2",
-          modifier: "primary",
-          isCalendar: true
-        })
+        .page__hotel-news
+          +news({
+            title: "It's all going downhill",
+            date: "24 august 2013",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
+            image: "news-1"
+          })
+        .page__hotel-news
+          +news({
+            title: "This is the title",
+            date: [24, "Aug"],
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            image: "news-2",
+            modifier: "primary",
+            isCalendar: true
+          })
       .page__hotel-news-wrapper
-        +news({
-          title: "News number 3",
-          date: "11 march 2014",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
-          image: "news-2",
-          modifier: "primary"
-        })
-        +news({
-          title: "It's all going downhill",
-          date: "24 march 2014",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
-          image: "news-1"
-        })
+        .page__hotel-news
+          +news({
+            title: "News number 3",
+            date: "11 march 2014",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
+            image: "news-2",
+            modifier: "primary"
+          })
+        .page__hotel-news
+          +news({
+            title: "It's all going downhill",
+            date: "24 march 2014",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
+            image: "news-1"
+          })
       .page__hotel-news-wrapper
-        .page__news-wrapper
+        .page__hotel-video
           +video({
             type: "news",
             source: "rPmGtZAUxNs"
           })
-        .page__news-wrapper
+        .page__hotel-video
           +video({
             type: "news",
             source: "rPmGtZAUxNs"

@@ -17,7 +17,7 @@ mixin reservation
     .reservation__carousel.js-reservation__carousel.owl-carousel
       form.reservation__slide(action="./handler.php")
         h3.reservation__header Выберите планируемую дату отдыха
-        .reservation__item.reservation__item_type_checkin
+        .reservation__item.reservation__item_type_calendar
           +calendar({
             inputName: "from",
             inputLabel: "Дата заезда"
@@ -29,31 +29,32 @@ mixin reservation
       form.reservation__slide(action="./handler.php")
         h3.reservation__header Основная информация
         .reservation__item
-          p.reservation__text Количество взрослых
-          .page__slider
+          p.reservation__label Количество взрослых
+          .reservation__slider
             +slider({
               type: "pointer"
             })
         .reservation__item
-          p.reservation__text Количество детей
-          .page__slider
+          p.reservation__label Количество детей
+          .reservation__slider
             +slider({
               type: "pointer"
             })
         .reservation__item
-          p.reservation__text Количество комнат
-          .page__slider
+          p.reservation__label Количество комнат
+          .reservation__slider
             +slider({
               type: "scale"
             })
         .reservation__item
-          +toggle({
-            id: 3,
-            text: "Проживание с домашним питомцем"
-          })
+          .reservation__toggle
+            +toggle({
+              id: 3,
+              text: "Проживание с домашним питомцем"
+            })
       form.reservation__slide.reservation__slide_type_additional(action="./handler.php")
         h3.reservation__header Дополнительная информация
-        .reservation__item
+        .reservation__item.reservation__item_type_dropdown
           +dropdown({
             title: "Питание",
             values: ["Только завтрак", "Завтрак и ужин", "Трехразовое питание"]

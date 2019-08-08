@@ -1,5 +1,3 @@
-include ../menu-item/menu-item
-
 mixin menu(menuItems)
   nav.menu.js-menu
     img.menu__logo(src=require("../assets/logo/logo.png"), alt="logo")
@@ -9,4 +7,7 @@ mixin menu(menuItems)
       span.menu__btn-span
       span.menu__btn-span
     ul.menu__list
-      +menu-item(menuItems)
+      each item in menuItems
+        - var { name, link } = item;
+        li.menu__item
+          a.menu__item-link.js-menu__item-link(href=link)= name
