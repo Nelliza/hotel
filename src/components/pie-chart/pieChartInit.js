@@ -1,4 +1,4 @@
-import ChartAnimation from '../percentage/ChartAnimation';
+import ChartAnimation from '../../vendor/ChartAnimation';
 
 $(() => {
   const className = 'pie-chart__item';

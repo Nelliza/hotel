@@ -1,4 +1,4 @@
-import ChartAnimation from './ChartAnimation';
+import ChartAnimation from '../../vendor/ChartAnimation';
 
 $(() => {
   const className = 'percentage__item';
