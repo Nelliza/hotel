@@ -42,7 +42,7 @@
   }
 
   &__sliders {
-    @include subtitle-margins(1.5rem, 1.2rem);
+    @include subtitle-margins(1.4rem, 1.1rem);
   }
 
   &__stages {
@@ -96,7 +96,7 @@
   }
 
   &__video {
-    @include subtitle-margins(3.3rem, .5rem);
+    @include subtitle-margins(3.2rem, .5rem);
   }
 
   &__callback {
