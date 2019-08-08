@@ -190,7 +190,7 @@
               </div>
             </form>
           </div>
-          <div class="page__fieldset">
+          <div class="page__form-elements-group">
             <section class="page__toggles">
               <div class="page__subtitle">
                 <h2 class="subtitle">Toggles</h2>
@@ -198,14 +198,14 @@
               <form class="page__toggles-wrapper" action="./handler.php">
                 <div class="toggle">
                   <label class="toggle__label" for="toggle1"><span></span></label>
-                  <div class="toggle__button" width="3.7rem" height="1.5rem">
+                  <div class="toggle__button">
                     <input class="toggle__checkbox" type="checkbox" id="toggle1">
                     <div class="toggle__background"></div><span class="toggle__round"></span>
                   </div>
                 </div>
                 <div class="toggle">
                   <label class="toggle__label" for="toggle2"><span></span></label>
-                  <div class="toggle__button" width="3.7rem" height="1.5rem">
+                  <div class="toggle__button">
                     <input class="toggle__checkbox" type="checkbox" id="toggle2" checked>
                     <div class="toggle__background"></div><span class="toggle__round"></span>
                   </div>
@@ -219,13 +219,13 @@
               <form class="page__tick-boxes-wrapper" action="./handler.php">
                 <input class="tick-box" type="checkbox" id="tick-box1" checked>
                 <label class="tick-box__label" for="tick-box1">
-                  <svg class="tick-box__checkmark" width="24" height="24">
+                  <svg class="tick-box__checkmark">
                     <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
                   </svg><span></span>
                 </label>
                 <input class="tick-box" type="checkbox" id="tick-box2">
                 <label class="tick-box__label" for="tick-box2">
-                  <svg class="tick-box__checkmark" width="24" height="24">
+                  <svg class="tick-box__checkmark">
                     <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
                   </svg><span></span>
                 </label>
@@ -269,9 +269,9 @@
             <div class="user-profile"><img class="user-profile__photo" src="img/john-smith.jpg" alt="John Smith">
               <div class="user-profile__info user-profile__info_type_additional"><span class="user-profile__name">John Smith</span><span class="user-profile__profession">UX Designer</span>
                 <ul class="user-profile__social">
-                  <li class="social-icon social-icon_name_facebook social-icon_type_additional"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
-                  <li class="social-icon social-icon_name_twitter social-icon_type_additional"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
-                  <li class="social-icon social-icon_name_dribbble social-icon_type_additional"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
+                  <li class="user-profile__social-icon user-profile__social-icon_name_facebook user-profile__social-icon_type_additional"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
+                  <li class="user-profile__social-icon user-profile__social-icon_name_twitter user-profile__social-icon_type_additional"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
+                  <li class="user-profile__social-icon user-profile__social-icon_name_dribbble user-profile__social-icon_type_additional"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
                 </ul>
               </div>
             </div>
@@ -280,9 +280,9 @@
             <div class="user-profile"><img class="user-profile__photo" src="img/sarah-brown.jpg" alt="Sarah Brown">
               <div class="user-profile__info user-profile__info_type_primary"><span class="user-profile__name">Sarah Brown</span><span class="user-profile__profession">Developer</span>
                 <ul class="user-profile__social">
-                  <li class="social-icon social-icon_name_facebook social-icon_type_primary"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
-                  <li class="social-icon social-icon_name_twitter social-icon_type_primary"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
-                  <li class="social-icon social-icon_name_dribbble social-icon_type_primary"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
+                  <li class="user-profile__social-icon user-profile__social-icon_name_facebook user-profile__social-icon_type_primary"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a></li>
+                  <li class="user-profile__social-icon user-profile__social-icon_name_twitter user-profile__social-icon_type_primary"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a></li>
+                  <li class="user-profile__social-icon user-profile__social-icon_name_dribbble user-profile__social-icon_type_primary"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"></a></li>
                 </ul>
               </div>
             </div>
@@ -328,7 +328,7 @@
           <div class="page__subtitle">
             <h2 class="subtitle">Calendar</h2>
           </div>
-          <div class="calendar js-calendar" id="calendar">
+          <div class="calendar js-calendar">
             <div class="calendar__day js-calendar__day"></div>
             <div class="calendar__datepicker js-calendar__datepicker"></div>
           </div>

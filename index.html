@@ -20,21 +20,21 @@
         <div class="page__content">
           <header class="header">
             <div class="header__menu">
-              <nav class="menu js-menu"><img class="logo" src="img/logo.png" alt="logo">
+              <nav class="menu js-menu"><img class="menu__logo" src="img/logo.png" alt="logo">
                 <div class="menu__btn js-menu__btn"><span class="menu__btn-span"></span><span class="menu__btn-span"></span><span class="menu__btn-span"></span><span class="menu__btn-span"></span></div>
                 <ul class="menu__list">
-                  <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./index.html">Главная</a></li>
-                  <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./reservation.html">Снять номер</a></li>
-                  <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./news.html">Новости</a></li>
-                  <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./contacts.html">Контакты</a></li>
-                  <li class="menu-item"><a class="menu-item__link js-menu-item__link" href="./main.html">UI-Kit</a></li>
+                  <li class="menu__item"><a class="menu__item-link js-menu__item-link" href="./index.html">Главная</a></li>
+                  <li class="menu__item"><a class="menu__item-link js-menu__item-link" href="./reservation.html">Снять номер</a></li>
+                  <li class="menu__item"><a class="menu__item-link js-menu__item-link" href="./news.html">Новости</a></li>
+                  <li class="menu__item"><a class="menu__item-link js-menu__item-link" href="./contacts.html">Контакты</a></li>
+                  <li class="menu__item"><a class="menu__item-link js-menu__item-link" href="./main.html">UI-Kit</a></li>
                 </ul>
               </nav>
             </div>
           </header>
           <div class="page__item">
-            <section class="promo js-promo">
-              <div class="carousel js-carousel owl-carousel">
+            <section class="promo">
+              <div class="promo__carousel js-promo__carousel owl-carousel">
                 <div class="promo-img">
                   <div class="promo-img__item" style="background: url(img/promo-1.jpg) no-repeat"></div>
                 </div>
@@ -57,7 +57,7 @@
           <div class="center-layer">
             <div class="page__item">
               <section class="about">
-                <div class="page__subtitle">
+                <div class="about__subtitle">
                   <h2 class="subtitle">Об отеле</h2>
                 </div>
                 <div class="about__description">
@@ -65,7 +65,7 @@
                   <div class="about__images"><img class="about-img" src="img/about-1.jpg" alt="about-1"><img class="about-img" src="img/about-2.jpg" alt="about-2"><img class="about-img" src="img/about-3.jpg" alt="about-3">
                   </div>
                 </div>
-                <h3 class="about__subtitle">Отель в цифрах</h3>
+                <h3 class="about__subheading">Отель в цифрах</h3>
                 <div class="about__rating-list">
                   <div class="about-rating">
                     <div class="about-rating__percentage">
@@ -122,68 +122,78 @@
             </div>
             <div class="page__item">
               <section class="rooms">
-                <div class="page__subtitle">
+                <div class="rooms__subtitle">
                   <h2 class="subtitle">Выбор комнаты</h2>
                 </div>
                 <p class="rooms__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam tempore asperiores consectetur officia facilis corrupti aut minima accusamus et porro numquam, nisi, reprehenderit natus, corporis voluptate mollitia quis deleniti tempora quo repellat non, ullam placeat! Id ea, quaerat harum sapiente provident autem quidem minima similique! Aperiam aut ratione in dolores.</p>
                 <ul class="rooms__list">
-                  <li class="rooms-item">
-                    <div class="rooms-item__img" style="background: url(img/rooms-1.jpg) no-repeat center"></div><span class="rooms-item__price">От $150/сутки</span>
-                    <div class="rooms-item__content">
-                      <h3 class="rooms-item__header">Номер Делюкс</h3>
-                      <p class="rooms-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
-                    </div>
-                    <div class="rooms-item__button">
-                      <a class="button js-button button_color_warning button_location_rooms" href="./handler.php">Забронировать</a>
-                    </div>
-                  </li>
-                  <li class="rooms-item">
-                    <div class="rooms-item__img" style="background: url(img/rooms-2.jpg) no-repeat center"></div><span class="rooms-item__price">От $150/сутки</span>
-                    <div class="rooms-item__content">
-                      <h3 class="rooms-item__header">2-местный Люкс</h3>
-                      <p class="rooms-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
-                    </div>
-                    <div class="rooms-item__button">
-                      <a class="button js-button button_color_warning button_location_rooms" href="./handler.php">Забронировать</a>
-                    </div>
-                  </li>
-                  <li class="rooms-item">
-                    <div class="rooms-item__img" style="background: url(img/rooms-3.jpg) no-repeat center"></div><span class="rooms-item__price">От $100/сутки</span>
-                    <div class="rooms-item__content">
-                      <h3 class="rooms-item__header">1-местный номер</h3>
-                      <p class="rooms-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
-                    </div>
-                    <div class="rooms-item__button">
-                      <a class="button js-button button_color_warning button_location_rooms" href="./handler.php">Забронировать</a>
-                    </div>
-                  </li>
+                  <div class="rooms__item">
+                    <li class="rooms-item">
+                      <div class="rooms-item__img" style="background: url(img/rooms-1.jpg) no-repeat center"></div><span class="rooms-item__price">От $150/сутки</span>
+                      <div class="rooms-item__content">
+                        <h3 class="rooms-item__header">Номер Делюкс</h3>
+                        <p class="rooms-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
+                      </div>
+                      <div class="rooms-item__button">
+                        <a class="button js-button button_color_warning button_location_rooms" href="./handler.php">Забронировать</a>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="rooms__item">
+                    <li class="rooms-item">
+                      <div class="rooms-item__img" style="background: url(img/rooms-2.jpg) no-repeat center"></div><span class="rooms-item__price">От $150/сутки</span>
+                      <div class="rooms-item__content">
+                        <h3 class="rooms-item__header">2-местный Люкс</h3>
+                        <p class="rooms-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
+                      </div>
+                      <div class="rooms-item__button">
+                        <a class="button js-button button_color_warning button_location_rooms" href="./handler.php">Забронировать</a>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="rooms__item">
+                    <li class="rooms-item">
+                      <div class="rooms-item__img" style="background: url(img/rooms-3.jpg) no-repeat center"></div><span class="rooms-item__price">От $100/сутки</span>
+                      <div class="rooms-item__content">
+                        <h3 class="rooms-item__header">1-местный номер</h3>
+                        <p class="rooms-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
+                      </div>
+                      <div class="rooms-item__button">
+                        <a class="button js-button button_color_warning button_location_rooms" href="./handler.php">Забронировать</a>
+                      </div>
+                    </li>
+                  </div>
                 </ul>
               </section>
             </div>
           </div>
           <div class="page__callback">
-            <div class="callback js-callback"></div>
-            <section class="messaging js-messaging">
-              <div class="messaging__header">
-                <div class="messaging__head">Sarah Brown</div><img class="messaging__avatar" src="img/sarah-brown.jpg" alt="Sarah Brown">
-              </div>
-              <div class="messaging__main">
-                <button class="messaging__chat"></button>
-                <button class="messaging__camera"></button>
-                <div class="messaging__intro">
-                  <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
-                </div>
-                <form class="messaging__form" action="./handler.php">
-                  <div class="messaging__block">
-                    <textarea class="messaging__textarea" rows="2">Yeah that sounds great. See you then</textarea>
-                    <div class="messaging__button">
-                      <button class="button js-button button_color_primary button_location_messaging button_inverse" type="submit">Reply</button>
-                    </div>
+            <div class="callback">
+              <div class="callback__button js-callback__button"></div>
+              <div class="callback__messaging js-callback__messaging">
+                <section class="messaging js-messaging">
+                  <div class="messaging__header">
+                    <div class="messaging__head">Sarah Brown</div><img class="messaging__avatar" src="img/sarah-brown.jpg" alt="Sarah Brown">
                   </div>
-                </form>
+                  <div class="messaging__main">
+                    <button class="messaging__chat"></button>
+                    <button class="messaging__camera"></button>
+                    <div class="messaging__intro">
+                      <p class="messaging__text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+                    </div>
+                    <form class="messaging__form" action="./handler.php">
+                      <div class="messaging__block">
+                        <textarea class="messaging__textarea" rows="2">Yeah that sounds great. See you then</textarea>
+                        <div class="messaging__button">
+                          <button class="button js-button button_color_primary button_location_messaging button_inverse" type="submit">Reply</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </section>
               </div>
-            </section>
-            <div class="overlay js-overlay"></div>
+              <div class="callback__overlay js-callback__overlay"></div>
+            </div>
           </div>
         </div>
         <div class="page__footer">
@@ -193,7 +203,7 @@
                 <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
               </div>
               <div class="footer__search">
-                <h3 class="page_type_hotel__subtitle">Поиск на сайте</h3>
+                <h3 class="footer__subtitle">Поиск на сайте</h3>
                 <form class="search search_type_footer" action="./handler.php">
                   <input class="search__input" type="text" placeholder="Search">
                   <button class="search__submit" type="submit"></button>
