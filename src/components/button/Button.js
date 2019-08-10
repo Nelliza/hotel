@@ -10,7 +10,7 @@ class Button {
   }
 
   _handleButtonClick(event) {
-    const $ripple = $('<div>', { 
+    const $ripple = $('<div>', {
       class: 'button__ripple',
     });
     const buttonOffset = $(event.currentTarget).offset();

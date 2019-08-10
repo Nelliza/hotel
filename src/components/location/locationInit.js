@@ -8,7 +8,7 @@ const init = () => {
     searchControlProvider: 'yandex#search',
   });
 
-  const map = new Location(myMap);
+  new Location(myMap);
 };
 
 window.initMap = init;

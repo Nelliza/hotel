@@ -7,10 +7,9 @@ class Stages {
   init(elem) {
     this.$stages = elem.children('li');
     const current = elem.data('current');
-
     const countStages = this.$stages.length;
 
-    this.$stages.each(function(index, element) {
+    this.$stages.each((index, element) => {
       if (index === countStages - 1) {
         $(element).css('width', 0);
       } else {
@@ -30,7 +29,7 @@ class Stages {
     $(event.currentTarget).addClass('stages__item_state_current');
     const currentIndex = $(event.currentTarget).index();
 
-    this.$stages.each(function(index, element) {
+    this.$stages.each((index, element) => {
       if (index === currentIndex) {
         return false;
       }

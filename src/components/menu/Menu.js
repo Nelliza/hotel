@@ -7,10 +7,9 @@ class Menu {
   init(elem) {
     const $button = elem.find('.js-menu__button');
     const $links = elem.find('.js-menu__item-link');
-
     const url = document.location.href;
 
-    $links.each(function(index, element) {
+    $links.each((index, element) => {
       if (url === element.href) {
         $(element).addClass('menu__item-link_state_active');
       }

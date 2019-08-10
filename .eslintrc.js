@@ -2,6 +2,7 @@ module.exports = {
   'env': {
     'browser': true,
     'es6': true,
+    'jquery': true,
   },
   'extends': 'airbnb',
   'globals': {
@@ -18,5 +19,7 @@ module.exports = {
   'rules': {
     'linebreak-style': 0,
     'no-underscore-dangle': 0,
+    'no-new': 0,
+    'class-methods-use-this': 0,
   },
 };
