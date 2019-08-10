@@ -8,6 +8,13 @@
     width: 100%;
   }
 
+  &_with-range {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
   &__day {
     padding: .8rem 0 .5rem;
     box-sizing: border-box;
@@ -19,16 +26,17 @@
     border-radius: .3rem .3rem 0 0;
   }
 
-  &__input {
-    @include input;
-    margin: .5rem .5rem 2rem;
-    flex-grow: 1;
-  }
-
   &__label {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 1rem 0;
+  }
+
+  &__input-datepicker {
+    @include input;
+    margin: 0 .5rem;
+    flex-grow: 1;
   }
 
   &__today {

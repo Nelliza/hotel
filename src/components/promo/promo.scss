@@ -18,4 +18,19 @@
   &__button {
     margin: .6rem;
   }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    margin: .6rem;
+    width: 2rem;
+
+    &_orientation_left {
+      left: 1%;
+    }
+
+    &_orientation_right {
+      right: 1%;
+    }
+  }
 }

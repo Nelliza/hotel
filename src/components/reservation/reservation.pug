@@ -17,14 +17,9 @@ mixin reservation
     .reservation__carousel.js-reservation__carousel.owl-carousel
       form.reservation__slide(action="./handler.php")
         h3.reservation__header Выберите планируемую дату отдыха
-        .reservation__item.reservation__item_type_calendar
+        .reservation__item
           +calendar({
-            inputName: "from",
-            inputLabel: "Дата заезда"
-          })
-          +calendar({
-            inputName: "to",
-            inputLabel: "Дата выезда"
+            withRange: true
           })
       form.reservation__slide(action="./handler.php")
         h3.reservation__header Основная информация
@@ -32,18 +27,26 @@ mixin reservation
           p.reservation__label Количество взрослых
           .reservation__slider
             +slider({
+              min: 1,
+              max: 10,
               type: "pointer"
             })
         .reservation__item
           p.reservation__label Количество детей
           .reservation__slider
             +slider({
+              min: 1,
+              max: 10,
               type: "pointer"
             })
         .reservation__item
           p.reservation__label Количество комнат
           .reservation__slider
             +slider({
+              min: 1,
+              max: 5,
+              step: 1,
+              range: "min",
               type: "scale"
             })
         .reservation__item

@@ -1,10 +1,10 @@
-mixin slider({ type, modifier })
+mixin slider({ min=false, max=false, value=false, step=false, range=false, type, modifier })
   - modifier = modifier ? `slider_color_${modifier}` : false;
   - var handle = "";
   if type === "pointer"
     - handle = "slider__handle_with-pointer";
 
-  div(class=["slider", "js-slider", `slider_with-${type}`, `js-slider_with-${type}`, modifier])
+  div(class=["slider", "js-slider", `slider_with-${type}`, `js-slider_with-${type}`, modifier], data-min=min, data-max=max, data-value=value, data-step=step, data-range=range)
     div(class=["ui-slider-handle", "slider__handle", handle])
       if type === "pointer"
         .slider__pointer.js-slider__pointer

@@ -1,26 +1,17 @@
 import Slider from './Slider';
 
 $(() => {
-  const $slider = $('.js-page__sliders .js-slider');
-  const $sliderWithPointer = $slider.filter('.js-slider_with-pointer');
-  const $sliderWithScale = $slider.filter('.js-slider_with-scale');
+  const $slider = $('.js-slider');
 
-  $sliderWithPointer.each((index, elem) => {
+  $slider.each((index, elem) => {
     new Slider({
       elem: $(elem),
       options: {
-        value: 40,
-      },
-    });
-  });
-
-  $sliderWithScale.each((index, elem) => {
-    new Slider({
-      elem: $(elem),
-      options: {
-        value: 75,
-        step: 25,
-        range: 'min',
+        min: $(elem).data('min'),
+        max: $(elem).data('max'),
+        value: $(elem).data('value'),
+        step: $(elem).data('step'),
+        range: $(elem).data('range'),
       },
     });
   });

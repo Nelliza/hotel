@@ -129,11 +129,15 @@ mixin page
       .page__sliders-wrapper
         .page__slider
           +slider({
+            value: 40,
             modifier: "warning",
             type: "pointer"
           })
         .page__slider
           +slider({
+            value: 75,
+            step: 25,
+            range: "min",
             type: "scale"
           })
 
@@ -239,9 +243,7 @@ mixin page
       section.page__calendar
         .page__subtitle
           +subtitle("Calendar")
-        +calendar({
-          withScoreboard: true
-        })
+        +calendar()
 
       section.page__messaging
         .page__subtitle

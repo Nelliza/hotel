@@ -19,10 +19,11 @@ class Form {
     $formVal.removeClass().text('');
 
     const $loginField = this.$form.find('input[name="name"]');
-    if (!$loginField.val() || $loginField.val().length < 3) {
-      $loginField.next().addClass('form__val js-form__val form__val_type_error').text('Error');
-    } else {
+
+    if (this._checkLoginEntry($loginField.val())) {
       $loginField.next().addClass('form__val js-form__val form__val_type_correct').text('Thanks!');
+    } else {
+      $loginField.next().addClass('form__val js-form__val form__val_type_error').text('Error');
     }
 
     const regexp = /^\w+([\.-]?\w+)*@(((([a-z0-9]{2,})|([a-z0-9][-][a-z0-9]+))[\.][a-z0-9])|([a-z0-9]+[-]?))+[a-z0-9]+\.([a-z]{2}|(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum))$/i;
@@ -34,6 +35,10 @@ class Form {
     } else {
       emailField.next().addClass('form__val js-form__val form__val_type_correct').text('Thanks!');
     }
+  }
+
+  _checkLoginEntry(value) {
+    return (value.indexOf(' ') === -1) && (value.length >= 3);
   }
 }
 
