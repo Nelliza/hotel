@@ -44,15 +44,13 @@
               <div class="reservation__carousel js-reservation__carousel owl-carousel">
                 <form class="reservation__slide" action="./handler.php">
                   <h3 class="reservation__header">Выберите планируемую дату отдыха</h3>
-                  <div class="reservation__item reservation__item_type_calendar">
-                    <div class="calendar js-calendar">
+                  <div class="reservation__item">
+                    <div class="calendar js-calendar calendar_with-range js-calendar_with-range">
                       <label class="calendar__label" for="from">Дата заезда
-                        <input class="calendar__input" type="text" name="from">
+                        <input class="calendar__input-datepicker js-calendar__input-datepicker" name="from" type="text">
                       </label>
-                    </div>
-                    <div class="calendar js-calendar">
                       <label class="calendar__label" for="to">Дата выезда
-                        <input class="calendar__input" type="text" name="to">
+                        <input class="calendar__input-datepicker js-calendar__input-datepicker" name="to" type="text">
                       </label>
                     </div>
                   </div>
@@ -62,7 +60,7 @@
                   <div class="reservation__item">
                     <p class="reservation__label">Количество взрослых</p>
                     <div class="reservation__slider">
-                      <div class="slider js-slider slider_with-pointer js-slider_with-pointer">
+                      <div class="slider js-slider slider_with-pointer js-slider_with-pointer" data-min="1" data-max="10">
                         <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
                           <div class="slider__pointer js-slider__pointer"></div>
                         </div>
@@ -72,7 +70,7 @@
                   <div class="reservation__item">
                     <p class="reservation__label">Количество детей</p>
                     <div class="reservation__slider">
-                      <div class="slider js-slider slider_with-pointer js-slider_with-pointer">
+                      <div class="slider js-slider slider_with-pointer js-slider_with-pointer" data-min="1" data-max="10">
                         <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
                           <div class="slider__pointer js-slider__pointer"></div>
                         </div>
@@ -82,7 +80,7 @@
                   <div class="reservation__item">
                     <p class="reservation__label">Количество комнат</p>
                     <div class="reservation__slider">
-                      <div class="slider js-slider slider_with-scale js-slider_with-scale">
+                      <div class="slider js-slider slider_with-scale js-slider_with-scale" data-min="1" data-max="5" data-step="1" data-range="min">
                         <div class="ui-slider-handle slider__handle">
                         </div>
                         <ul class="slider__scale js-slider__scale"></ul>
