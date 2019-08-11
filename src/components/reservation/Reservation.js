@@ -5,19 +5,22 @@ class Reservation {
   constructor(options) {
     this.$reservation = options.elem;
     this.index = options.index;
-    this.init();
+    this.init({
+      dotsContainer: options.dotsContainer,
+      stageContainer: options.stageContainer,
+    });
   }
 
-  init() {
+  init({ dotsContainer, stageContainer }) {
     const $carousel = this.$reservation.find('.js-reservation__carousel');
     $carousel.owlCarousel({
+      dotsContainer,
       items: 1,
       dots: true,
-      dotsContainer: '.reservation__stages > .stages',
       mouseDrag: false,
     });
 
-    const $stage = this.$reservation.find('.js-stages__item');
+    const $stage = this.$reservation.find(stageContainer);
     $stage.on(`click.stage${this.index}`, this._handleStageClick.bind(this, $carousel));
   }
 
