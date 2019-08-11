@@ -4,7 +4,7 @@ mixin messaging({ name, photo, buttonLocation="messaging", buttonText="Reply", b
   section.messaging.js-messaging
     .messaging__header
       .messaging__head= name
-      img.messaging__avatar(src=require(`../components/user-profile/${photo}.jpg`), alt=name)
+      img.messaging__avatar(src=require(`../assets/images/${photo}.jpg`), alt=name)
 
     .messaging__main
       button.messaging__chat

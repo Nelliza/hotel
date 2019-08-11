@@ -6,7 +6,7 @@ mixin rooms-item({ buttonOptions, itemOptions })
     - text = text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.";
 
     li.rooms-item
-      .rooms-item__img(style=`background: url(${require(`../components/rooms-item/${img}.jpg`)}) no-repeat center`)
+      .rooms-item__img(style=`background: url(${require(`../assets/images/${img}.jpg`)}) no-repeat center`)
       span.rooms-item__price От $#{price}/сутки
       .rooms-item__content
         h3.rooms-item__header= header

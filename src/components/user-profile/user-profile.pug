@@ -18,7 +18,7 @@ mixin user-profile({ photo, name, profession, modifier, iconItems })
     ];
 
   .user-profile
-    img.user-profile__photo(src=require(`../components/user-profile/${photo}.jpg`), alt=name)
+    img.user-profile__photo(src=require(`../assets/images/${photo}.jpg`), alt=name)
     div(class=["user-profile__info", modifier])
       span.user-profile__name= name
       span.user-profile__profession= profession
