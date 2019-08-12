@@ -26,10 +26,10 @@ class Form {
       regexp = /^\w+([\.-]?\w+)*@(((([a-z0-9]{2,})|([a-z0-9][-][a-z0-9]+))[\.][a-z0-9])|([a-z0-9]+[-]?))+[a-z0-9]+\.([a-z]{2}|(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum))$/i;
     }
 
-    this._checkField($checkedField, regexp);
+    this._checkField({ $checkedField, regexp });
   }
 
-  _checkField($checkedField, regexp) {
+  _checkField({ $checkedField, regexp }) {
     if (regexp.test($checkedField.val())) {
       $checkedField.next().attr('class', 'form__tooltip js-form__tooltip form__tooltip_type_correct').text('Thanks!');
     } else {
