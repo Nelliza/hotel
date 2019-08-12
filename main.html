@@ -175,12 +175,12 @@
           <div class="page__form">
             <form class="form js-form" action="./handler.php">
               <div class="form__fieldset">
-                <input class="form__input" type="text" name="name" placeholder="Your Name">
-                <div class="form__val js-form__val"></div>
+                <input class="form__input js-form__input" type="text" name="login" placeholder="Your Name">
+                <div class="form__tooltip js-form__tooltip"></div>
               </div>
               <div class="form__fieldset">
-                <input class="form__input" type="text" name="email" placeholder="Your Email">
-                <div class="form__val js-form__val"></div>
+                <input class="form__input js-form__input" type="email" name="email" placeholder="Your Email">
+                <div class="form__tooltip js-form__tooltip"></div>
               </div>
               <div class="form__fieldset">
                 <textarea class="form__textarea" name="message" placeholder="Your Message" rows="3"></textarea>
@@ -241,13 +241,13 @@
           </div>
           <div class="page__search">
             <form class="search" action="./handler.php">
-              <input class="search__input" type="text" placeholder="Search">
+              <input class="search__input" type="search" placeholder="Search">
               <button class="search__submit search__submit_color_warning" type="submit"></button>
             </form>
           </div>
           <div class="page__search">
             <form class="search search_type_notfound" action="./handler.php">
-              <input class="search__input" type="text" placeholder="I've not found what I'm looking for...">
+              <input class="search__input" type="search" placeholder="I've not found what I'm looking for...">
               <button class="search__submit search__submit_color_warning" type="submit"></button>
             </form>
           </div>
