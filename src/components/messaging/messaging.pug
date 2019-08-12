@@ -1,6 +1,9 @@
 include ../button/button
 
-mixin messaging({ name, photo, buttonLocation="messaging", buttonText="Reply", buttonIsLink=false, buttonType="submit" })
+mixin messaging({ name, photo, greeting, message, buttonLocation="messaging", buttonText="Reply", buttonIsLink=false, buttonType="submit" })
+  - greeting = greeting || "Hey! So are we cool to meet at the art gallery? Say 8pm";
+  - message = message || "Yeah that sounds great. See you then";
+
   section.messaging.js-messaging
     .messaging__header
       .messaging__head= name
@@ -10,10 +13,10 @@ mixin messaging({ name, photo, buttonLocation="messaging", buttonText="Reply", b
       button.messaging__chat
       button.messaging__camera
       .messaging__intro
-        p.messaging__text Hey! So are we cool to meet at the art gallery? Say 8pm
+        p.messaging__greeting= greeting
       form.messaging__form(action="./handler.php")
         div.messaging__block
-          textarea.messaging__textarea(rows="2") Yeah that sounds great. See you then
+          textarea.messaging__message(rows="2")= message
           .messaging__button
             +button({
               location: buttonLocation,

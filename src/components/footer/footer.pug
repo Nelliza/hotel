@@ -1,13 +1,13 @@
 include ../search/search
 
-mixin footer({ searchOptions } = {})
-  - searchOptions = searchOptions || { modifier: "footer" };
+mixin footer({ text, searchOptions={ modifier: "footer" } } = {})
+  - text = text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.";
 
   footer.footer
     .footer__flex-container
       .footer__description
         img(src=require("../assets/logo/logo.png"), alt="logo")
-        p.footer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
+        p.footer__text= text
       .footer__search
         h3.footer__subtitle Поиск на сайте
         +search(searchOptions)
