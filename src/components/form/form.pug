@@ -4,10 +4,11 @@ mixin form({ buttonColor, buttonSize, inputs, textarea={}, action="./handler.php
   -
     inputs = inputs || [
       {
-        name: "name",
+        name: "login",
         placeholder: "Your Name"
       },
       {
+        type: "email",
         name: "email",
         placeholder: "Your Email"
       }
@@ -16,10 +17,10 @@ mixin form({ buttonColor, buttonSize, inputs, textarea={}, action="./handler.php
 
   form.form.js-form(action=action)
     each input in inputs
-      - var { name: inputName, placeholder: inputPlaceholder } = input;
+      - var { type: inputType="text", name: inputName, placeholder: inputPlaceholder } = input;
       .form__fieldset
-        input.form__input(type="text", name=inputName, placeholder=inputPlaceholder)
-        .form__val.js-form__val
+        input.form__input.js-form__input(type=inputType, name=inputName, placeholder=inputPlaceholder)
+        .form__tooltip.js-form__tooltip
     .form__fieldset
       textarea.form__textarea(name=textareaName, placeholder=textareaPlaceholder, rows=textareaRows)
     .form__button
