@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin messaging({ name, photo, greeting, message, buttonLocation="messaging", buttonText="Reply", buttonIsLink=false, buttonType="submit" })
+mixin messaging({ name, photo, greeting, message, buttonModifier="wide", buttonText="Reply", buttonIsLink=false, buttonType="submit" })
   - greeting = greeting || "Hey! So are we cool to meet at the art gallery? Say 8pm";
   - message = message || "Yeah that sounds great. See you then";
 
@@ -19,7 +19,7 @@ mixin messaging({ name, photo, greeting, message, buttonLocation="messaging", bu
           textarea.messaging__message(rows="2")= message
           .messaging__button
             +button({
-              location: buttonLocation,
+              modifier: buttonModifier,
               inverse: true,
               text: buttonText,
               isLink: buttonIsLink,

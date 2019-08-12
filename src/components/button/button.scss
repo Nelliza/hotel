@@ -37,12 +37,12 @@
     font-size: .62rem;
   }
 
-  &_location {
-    &_form {
+  &_type {
+    &_low {
       padding: .4rem 2rem;
     }
 
-    &_news {
+    &_rounded {
       @include size(auto);
       padding: .1rem .8rem;
       display: inline-block;
@@ -56,7 +56,7 @@
       box-shadow: 0 .2rem #379285;
     }
 
-    &_messaging {
+    &_wide {
       width: 100%;
       padding-top: .45rem;
       padding-bottom: .4rem;

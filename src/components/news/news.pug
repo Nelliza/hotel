@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin news({ image, title, date, text, modifier=false, isCalendar=false, buttonLocation="news", buttonText="Add to calendar", buttonLink="#calendar" })
+mixin news({ image, title, date, text, modifier=false, isCalendar=false, buttonModifier="rounded", buttonText="Add to calendar", buttonLink="#calendar" })
   - var modifierDescr = modifier ? `news__description_color_${modifier}` : false;
   - var modifierTitle = isCalendar ? "news__title_size_small" : false;
 
@@ -18,7 +18,7 @@ mixin news({ image, title, date, text, modifier=false, isCalendar=false, buttonL
       if isCalendar
         .news__button
           +button({
-            location: buttonLocation,
+            modifier: buttonModifier,
             text: buttonText,
             link: buttonLink
           })
