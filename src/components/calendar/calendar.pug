@@ -1,4 +1,4 @@
-mixin calendar({ withRange, inputLabels=["Дата заезда", "Дата выезда"] } = {})
+mixin calendar({ withRange, captions=["Дата заезда", "Дата выезда"] } = {})
   - var modifier = withRange ? "calendar_with-range js-calendar_with-range" : false;
 
   div(class=["calendar", "js-calendar", modifier])
@@ -7,7 +7,7 @@ mixin calendar({ withRange, inputLabels=["Дата заезда", "Дата вы
       .calendar__datepicker.js-calendar__datepicker
       button.calendar__today.js-calendar__today today
     else
-      label.calendar__label(for="from")= inputLabels[0]
-        input.calendar__input-datepicker.js-calendar__input-datepicker(name="from", type="text")
-      label.calendar__label(for="to")= inputLabels[1]
-        input.calendar__input-datepicker.js-calendar__input-datepicker(name="to", type="text")
+      label.calendar__caption(for="from")= captions[0]
+        input.calendar__datepicker.js-calendar__datepicker(name="from", type="text")
+      label.calendar__caption(for="to")= captions[1]
+        input.calendar__datepicker.js-calendar__datepicker(name="to", type="text")

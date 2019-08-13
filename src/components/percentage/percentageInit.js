@@ -1,7 +1,7 @@
 import ChartAnimation from '../../vendor/ChartAnimation';
 
 $(() => {
-  const className = 'percentage__item';
+  const className = 'percentage__border';
   const $chart = $(`.js-${className}`);
 
   $chart.each((index, elem) => {

@@ -6,7 +6,7 @@ class Form {
   }
 
   init() {
-    this.$field = this.$form.find('.js-form__input');
+    this.$field = this.$form.find('.js-form__field');
     this.$field.on(`focusout.field${this.index}`, this._handleFieldFocusout.bind(this));
     this.$form.on(`submit.form${this.index}`, this._handleFormSubmit.bind(this));
   }

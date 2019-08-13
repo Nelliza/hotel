@@ -11,20 +11,18 @@
   border-bottom: 2px solid rgba(231, 87, 53, .3);
 
   &_state_open {
-    .menu__button {
-      &-span {
-        &:first-child,
-        &:last-child {
-          opacity: 0;
-        }
+    .menu__button-strip {
+      &:first-child,
+      &:last-child {
+        opacity: 0;
+      }
 
-        &:nth-child(2) {
-          transform: rotate(45deg);
-        }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
 
-        &:nth-child(3) {
-          transform: rotate(-45deg);
-        }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
       }
     }
 
@@ -46,28 +44,28 @@
     @media screen and (max-width: 600px) {
       display: inline-block;
     }
+  }
 
-    &-span {
-      @include size(100%, .2rem);
-      position: absolute;
-      display: inline-block;
-      border-radius: .3rem;
-      background-color: #fff;
-      transform: rotate(0deg);
-      transition: .25s ease-in-out;
+  &__button-strip {
+    @include size(100%, .2rem);
+    position: absolute;
+    display: inline-block;
+    border-radius: .3rem;
+    background-color: #fff;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
 
-      &:first-child {
-        top: 0;
-      }
+    &:first-child {
+      top: 0;
+    }
 
-      &:nth-child(2),
-      &:nth-child(3) {
-        top: calc(50% - .1rem);
-      }
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: calc(50% - .1rem);
+    }
 
-      &:last-child {
-        bottom: 0;
-      }
+    &:last-child {
+      bottom: 0;
     }
   }
 

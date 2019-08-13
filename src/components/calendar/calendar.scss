@@ -26,14 +26,15 @@
     border-radius: .3rem .3rem 0 0;
   }
 
-  &__label {
+  &__caption {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 1rem 0;
   }
 
-  &__input-datepicker {
+  &__datepicker[name='from'],
+  &__datepicker[name='to'] {
     @include input;
     margin: 0 .5rem;
     flex-grow: 1;

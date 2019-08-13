@@ -2,11 +2,11 @@ include ../button/button
 
 mixin rooms-item({ buttonOptions, itemOptions })
     - var { buttonColor, buttonText="Забронировать" } = buttonOptions;
-    - var { img, price, header, text, buttonLink="./handler.php" } = itemOptions;
+    - var { image, price, header, text, buttonLink="./handler.php" } = itemOptions;
     - text = text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.";
 
     li.rooms-item
-      .rooms-item__img(style=`background: url(${require(`../assets/images/${img}.jpg`)}) no-repeat center`)
+      .rooms-item__image(style=`background: url(${require(`../assets/images/${image}.jpg`)}) no-repeat center`)
       span.rooms-item__price От $#{price}/сутки
       .rooms-item__content
         h3.rooms-item__header= header

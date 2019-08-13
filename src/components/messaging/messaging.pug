@@ -15,13 +15,12 @@ mixin messaging({ name, photo, greeting, message, buttonModifier="wide", buttonT
       .messaging__intro
         p.messaging__greeting= greeting
       form.messaging__form(action="./handler.php")
-        div.messaging__block
-          textarea.messaging__message(rows="2")= message
-          .messaging__button
-            +button({
-              modifier: buttonModifier,
-              inverse: true,
-              text: buttonText,
-              isLink: buttonIsLink,
-              type: buttonType
-            })
+        textarea.messaging__message(rows="2")= message
+        .messaging__button
+          +button({
+            modifier: buttonModifier,
+            inverse: true,
+            text: buttonText,
+            isLink: buttonIsLink,
+            type: buttonType
+          })

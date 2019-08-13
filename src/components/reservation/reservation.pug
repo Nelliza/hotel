@@ -14,14 +14,14 @@ mixin reservation
         count: 3
       })
 
-    .reservation__carousel.js-reservation__carousel.owl-carousel
-      form.reservation__slide(action="./handler.php")
+    form.reservation__carousel.js-reservation__carousel.owl-carousel
+      .reservation__slide(action="./handler.php")
         h3.reservation__header Выберите планируемую дату отдыха
         .reservation__item
           +calendar({
             withRange: true
           })
-      form.reservation__slide(action="./handler.php")
+      .reservation__slide(action="./handler.php")
         h3.reservation__header Основная информация
         .reservation__item
           p.reservation__label Количество взрослых
@@ -55,7 +55,7 @@ mixin reservation
               id: 3,
               text: "Проживание с домашним питомцем"
             })
-      form.reservation__slide.reservation__slide_type_additional(action="./handler.php")
+      .reservation__slide.reservation__slide_type_additional(action="./handler.php")
         h3.reservation__header Дополнительная информация
         .reservation__item.reservation__item_type_dropdown
           +dropdown({

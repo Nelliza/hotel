@@ -3,5 +3,5 @@ mixin search({ modifier, buttonColor, placeholder="Search" } = {})
   - buttonColor = buttonColor ? `search__submit_color_${buttonColor}` : false;
 
   form(class=["search", modifier], action="./handler.php")
-    input.search__input(type="search", placeholder=placeholder)
+    input.search__field(type="search", placeholder=placeholder)
     button(class=["search__submit", buttonColor], type="submit")

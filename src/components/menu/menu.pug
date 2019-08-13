@@ -2,10 +2,10 @@ mixin menu(menuItems)
   nav.menu.js-menu
     img.menu__logo(src=require("../assets/logo/logo.png"), alt="logo")
     .menu__button.js-menu__button
-      span.menu__button-span
-      span.menu__button-span
-      span.menu__button-span
-      span.menu__button-span
+      span.menu__button-strip
+      span.menu__button-strip
+      span.menu__button-strip
+      span.menu__button-strip
     ul.menu__list
       each item in menuItems
         - var { name, link } = item;

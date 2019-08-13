@@ -1,0 +1,4 @@
+mixin promo-image(items)
+  each item in items
+    .promo-image
+      .promo-image__item(style=`background: url(${require(`../components/promo-image/images/${item}.jpg`)}) no-repeat`)

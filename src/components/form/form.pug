@@ -19,10 +19,10 @@ mixin form({ buttonColor, buttonSize, inputs, textarea={}, action="./handler.php
     each input in inputs
       - var { type: inputType="text", name: inputName, placeholder: inputPlaceholder } = input;
       .form__fieldset
-        input.form__input.js-form__input(type=inputType, name=inputName, placeholder=inputPlaceholder)
+        input.form__field.js-form__field(type=inputType, name=inputName, placeholder=inputPlaceholder)
         .form__tooltip.js-form__tooltip
     .form__fieldset
-      textarea.form__textarea(name=textareaName, placeholder=textareaPlaceholder, rows=textareaRows)
+      textarea.form__message(name=textareaName, placeholder=textareaPlaceholder, rows=textareaRows)
     .form__button
       +button({
         color: buttonColor,

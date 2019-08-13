@@ -1,9 +1,9 @@
 include ../subtitle/subtitle
-include ../about-img/about-img
+include ../about-image/about-image
 include ../about-rating/about-rating
 include ../pie-chart/pie-chart
 
-mixin about({ imgItems, ratingItems, pieChartOptions, description, subtitle="Об отеле" })
+mixin about({ imageItems, ratingItems, pieChartOptions, description, subtitle="Об отеле" })
   - description = description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.";
 
   section.about
@@ -12,7 +12,7 @@ mixin about({ imgItems, ratingItems, pieChartOptions, description, subtitle="О�
     .about__description
       p.about__text= description
       .about__images
-        +about-img(imgItems)
+        +about-image(imageItems)
     h3.about__subheading Отель в цифрах
     .about__rating-list
       +about-rating(ratingItems)

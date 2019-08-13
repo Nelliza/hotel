@@ -17,7 +17,7 @@ class Calendar {
   }
 
   _initSimpleCalendar() {
-    const $calendar = this.$elem.find('.js-calendar__datepicker');
+    const $calendar = this.$elem.find('div.js-calendar__datepicker');
     $calendar.datepicker({
       firstDay: 1,
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
@@ -36,8 +36,8 @@ class Calendar {
   }
 
   _initRangeCalendar() {
-    const $from = this.$elem.find('.js-calendar__input-datepicker[name="from"]');
-    const $to = this.$elem.find('.js-calendar__input-datepicker[name="to"]');
+    const $from = this.$elem.find('input.js-calendar__datepicker[name="from"]');
+    const $to = this.$elem.find('input.js-calendar__datepicker[name="to"]');
     const rangeOptions = {
       firstDay: 1,
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],

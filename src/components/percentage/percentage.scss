@@ -17,13 +17,13 @@
     color: #9d9d9d;
   }
 
-  &__svg {
+  &__figure {
     @include size(100%);
     border-radius: 50%;
     transform: rotate(-90deg);
   }
 
-  &__item {
+  &__border {
     fill: rgba(0, 0, 0, 0);
     stroke-width: 3;
 

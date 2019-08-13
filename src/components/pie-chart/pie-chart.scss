@@ -4,12 +4,12 @@
   @include size(6rem);
   position: relative;
 
-  &__svg {
+  &__figure {
     border-radius: 50%;
     transform: rotate(-90deg);
   }
 
-  &__item {
+  &__border {
     fill: rgba(0, 0, 0, 0);
     stroke-width: 12;
 

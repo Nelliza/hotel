@@ -1,11 +1,11 @@
 @import '../../styles/mixins/fieldset';
 
 .search {
-  @include fieldset('&__input', '&__submit', 'search-icon.svg');
+  @include fieldset('&__field', '&__submit', 'search-icon.svg');
 
   &_type {
     &_notfound {
-      > .search__input {
+      > .search__field {
         background-color: $color-warning;
 
         &::placeholder {
@@ -14,7 +14,7 @@
       }
     }
 
-    &_footer {
+    &_wide {
       width: 100%;
     }
   }

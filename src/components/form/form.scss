@@ -12,12 +12,12 @@
     align-items: center;
   }
 
-  &__input {
+  &__field {
     @include input;
     flex-grow: 1;
   }
 
-  &__textarea {
+  &__message {
     @include input;
     width: 100%;
     min-height: 5.5rem;
