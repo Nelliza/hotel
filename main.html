@@ -91,43 +91,43 @@
         <div class="page__percentages-wrapper">
           <div class="page__percentage">
             <div class="percentage" data-percent="0">
-              <svg class="percentage__svg" viewBox="0 0 32 32">
-                <circle class="percentage__item js-percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 0 100"></circle>
+              <svg class="percentage__figure" viewBox="0 0 32 32">
+                <circle class="percentage__border js-percentage__border" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 0 100"></circle>
                 <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
               </svg>
             </div>
           </div>
           <div class="page__percentage">
             <div class="percentage" data-percent="38">
-              <svg class="percentage__svg" viewBox="0 0 32 32">
-                <circle class="percentage__item js-percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 38 100"></circle>
+              <svg class="percentage__figure" viewBox="0 0 32 32">
+                <circle class="percentage__border js-percentage__border" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 38 100"></circle>
                 <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
               </svg>
             </div>
           </div>
           <div class="page__percentage">
             <div class="percentage" data-percent="62">
-              <svg class="percentage__svg" viewBox="0 0 32 32">
-                <circle class="percentage__item js-percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 62 100"></circle>
+              <svg class="percentage__figure" viewBox="0 0 32 32">
+                <circle class="percentage__border js-percentage__border" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 62 100"></circle>
                 <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
               </svg>
             </div>
           </div>
           <div class="page__percentage">
             <div class="percentage" data-percent="89">
-              <svg class="percentage__svg" viewBox="0 0 32 32">
-                <circle class="percentage__item js-percentage__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 89 100"></circle>
+              <svg class="percentage__figure" viewBox="0 0 32 32">
+                <circle class="percentage__border js-percentage__border" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 89 100"></circle>
                 <circle class="percentage__center" r="10" cx="16" cy="16"></circle>
               </svg>
             </div>
           </div>
           <div class="page__pie-chart">
             <div class="pie-chart">
-              <svg class="pie-chart__svg" viewBox="0 0 32 32">
-                <circle class="pie-chart__item js-pie-chart__item" r="16" cx="16" cy="16" style="stroke: #e5e5e5; stroke-dasharray: 100 100; z-index: 1"></circle>
-                <circle class="pie-chart__item js-pie-chart__item" r="16" cx="16" cy="16" style="stroke: #4eb7a8; stroke-dasharray: 65 100; z-index: 2"></circle>
-                <circle class="pie-chart__item js-pie-chart__item" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 35 100; z-index: 3"></circle>
-                <circle class="pie-chart__item js-pie-chart__item" r="16" cx="16" cy="16" style="stroke: #747474; stroke-dasharray: 10 100; z-index: 4"></circle>
+              <svg class="pie-chart__figure" viewBox="0 0 32 32">
+                <circle class="pie-chart__border js-pie-chart__border" r="16" cx="16" cy="16" style="stroke: #e5e5e5; stroke-dasharray: 100 100; z-index: 1"></circle>
+                <circle class="pie-chart__border js-pie-chart__border" r="16" cx="16" cy="16" style="stroke: #4eb7a8; stroke-dasharray: 65 100; z-index: 2"></circle>
+                <circle class="pie-chart__border js-pie-chart__border" r="16" cx="16" cy="16" style="stroke: #e75735; stroke-dasharray: 35 100; z-index: 3"></circle>
+                <circle class="pie-chart__border js-pie-chart__border" r="16" cx="16" cy="16" style="stroke: #747474; stroke-dasharray: 10 100; z-index: 4"></circle>
                 <circle class="pie-chart__center" r="10" cx="16" cy="16"></circle>
               </svg>
             </div>
@@ -175,15 +175,15 @@
           <div class="page__form">
             <form class="form js-form" action="./handler.php">
               <div class="form__fieldset">
-                <input class="form__input js-form__input" type="text" name="login" placeholder="Your Name">
+                <input class="form__field js-form__field" type="text" name="login" placeholder="Your Name">
                 <div class="form__tooltip js-form__tooltip"></div>
               </div>
               <div class="form__fieldset">
-                <input class="form__input js-form__input" type="email" name="email" placeholder="Your Email">
+                <input class="form__field js-form__field" type="email" name="email" placeholder="Your Email">
                 <div class="form__tooltip js-form__tooltip"></div>
               </div>
               <div class="form__fieldset">
-                <textarea class="form__textarea" name="message" placeholder="Your Message" rows="3"></textarea>
+                <textarea class="form__message" name="message" placeholder="Your Message" rows="3"></textarea>
               </div>
               <div class="form__button">
                 <button class="button js-button button_color_primary button_type_low button_inverse" type="submit">Submit</button>
@@ -241,13 +241,13 @@
           </div>
           <div class="page__search">
             <form class="search" action="./handler.php">
-              <input class="search__input" type="search" placeholder="Search">
+              <input class="search__field" type="search" placeholder="Search">
               <button class="search__submit search__submit_color_warning" type="submit"></button>
             </form>
           </div>
           <div class="page__search">
             <form class="search search_type_notfound" action="./handler.php">
-              <input class="search__input" type="search" placeholder="I've not found what I'm looking for...">
+              <input class="search__field" type="search" placeholder="I've not found what I'm looking for...">
               <button class="search__submit search__submit_color_warning" type="submit"></button>
             </form>
           </div>
@@ -349,11 +349,9 @@
                 <p class="messaging__greeting">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
               </div>
               <form class="messaging__form" action="./handler.php">
-                <div class="messaging__block">
-                  <textarea class="messaging__message" rows="2">Yeah that sounds great. See you then</textarea>
-                  <div class="messaging__button">
-                    <button class="button js-button button_color_primary button_type_wide button_inverse" type="submit">Reply</button>
-                  </div>
+                <textarea class="messaging__message" rows="2">Yeah that sounds great. See you then</textarea>
+                <div class="messaging__button">
+                  <button class="button js-button button_color_primary button_type_wide button_inverse" type="submit">Reply</button>
                 </div>
               </form>
             </div>
