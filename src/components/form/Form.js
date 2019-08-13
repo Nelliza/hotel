@@ -38,6 +38,10 @@ class Form {
   }
 
   _handleFormSubmit(event) {
+    this.$field.each((index, elem) => {
+      this._validateField($(elem));
+    });
+
     const $tooltip = this.$form.find('.js-form__tooltip');
 
     if ($tooltip.hasClass('form__tooltip_type_error')) {
