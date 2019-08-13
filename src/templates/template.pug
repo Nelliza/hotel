@@ -1,6 +1,4 @@
-include ../components/header/header
-include ../components/callback/callback
-include ../components/footer/footer
+include ../components/page/page
 
 block include
 
@@ -27,43 +25,8 @@ html(lang="en")
 
   block body
     body
-      .page.page_type_hotel
-        .page__wrapper
-          .page__content
-            +header([
-              {
-                name: "Главная",
-                link: "./index.html"
-              },
-              {
-                name: "Снять номер",
-                link: "./reservation.html"
-              },
-              {
-                name: "Новости",
-                link: "./news.html"
-              },
-              {
-                name: "Контакты",
-                link: "./contacts.html"
-              },
-              {
-                name: "UI-Kit",
-                link: "./main.html"
-              }
-            ])
-
-            block page-content
-
-            .page__callback
-              +callback({
-                messagingOptions: {
-                  name: "Sarah Brown",
-                  photo: "sarah-brown"
-                }
-              })
-          .page__footer
-            +footer()
-
+      +page({
+        type: "hotel"
+      })
       script(src="./app.js")
       block scripts

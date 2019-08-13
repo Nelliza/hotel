@@ -16,247 +16,290 @@ include ../location/location
 include ../calendar/calendar
 include ../messaging/messaging
 include ../video/video
+include ../header/header
+include ../callback/callback
+include ../footer/footer
 
-mixin page
-  .page
-    section.page__buttons
-      .page__subtitle
-        +subtitle("Standard buttons")
-      .page__buttons-wrapper
-        - for (var i = 0; i < 3; i += 1)
-          - let inverse = i === 2;
-          .page__button
-            +button({
-              inverse,
-              size: "small",
-              isLink: false
-            })
-          .page__button
-            +button({
-              inverse,
-              isLink: false
-            })
-          .page__button
-            +button({
-              inverse,
-              color: "warning",
-              isLink: false
-            })
-          .page__button
-            +button({
-              inverse,
-              color: "warning",
-              size: "small",
-              isLink: false
-            })
-
-    section.page__arrows
-      .page__subtitle
-        +subtitle("Arrow buttons")
-      .page__arrows-wrapper
-        .page__arrow
-          +arrow({
-            orientation: "left"
-          })
-        .page__arrow
-          +arrow({
-            orientation: "right"
-          })
-        .page__arrow
-          +arrow({
-            orientation: "left",
-            disabled: true
-          })
-        .page__arrow
-          +arrow({
-            orientation: "right",
-            disabled: true
-          })
-        .page__arrow
-          +arrow({
-            orientation: "left"
-          })
-        .page__arrow
-          +arrow({
-            orientation: "right"
-          })
-
-    section.page__percentages
-      .page__subtitle
-        +subtitle("Percentages / Pie chart")
-      .page__percentages-wrapper
-        .page__percentage
-          +percentage({
-            percent: 0
-          })
-        .page__percentage
-          +percentage({
-            percent: 38
-          })
-        .page__percentage
-          +percentage({
-            percent: 62
-          })
-        .page__percentage
-          +percentage({
-            percent: 89
-          })
-        .page__pie-chart
-          +pie-chart({
-            items: [
-              {
-                percent: 10,
-                fill: "#747474"
-              },
-              {
-                percent: 25,
-                fill: "#e75735"
-              },
-              {
-                percent: 30,
-                fill: "#4eb7a8"
-              },
-              {
-                percent: 35,
-                fill: "#e5e5e5"
-              }
-            ]
-          })
-
-    section.page__sliders.js-page__sliders
-      .page__subtitle
-        +subtitle("Sliders")
-      .page__sliders-wrapper
-        .page__slider
-          +slider({
-            value: 40,
-            modifier: "warning",
-            type: "pointer"
-          })
-        .page__slider
-          +slider({
-            value: 75,
-            step: 25,
-            range: "min",
-            type: "scale"
-          })
-
-    section.page__stages.js-page__stages
-      .page__subtitle
-        +subtitle("Stages")
-      +stages({
-        current: 3
-      })
-
-    section.page__form-elements
-      .page__subtitle
-        +subtitle("Form Elements")
-      .page__form-elements-wrapper
-        .page__form
-          +form()
-        .page__form-elements-group
-          section.page__toggles
-            .page__subtitle
-              +subtitle("Toggles")
-            form.page__toggles-wrapper(action="./handler.php")
-              +toggle({
-                id: 1
-              })
-              +toggle({
-                id: 2,
-                checked: true
-              })
-          section.page__tick-boxes
-            .page__subtitle
-              +subtitle("Tick Boxes")
-            form.page__tick-boxes-wrapper(action="./handler.php")
-              +tick-box({
-                id: 1,
-                checked: true
-              })
-              +tick-box({
-                id: 2
-              })
-
-    .page__two-sections
-      section.page__search-forms
+mixin page({ type="ui-kit" } = {})
+  if type === "ui-kit"
+    .page
+      section.page__buttons
         .page__subtitle
-          +subtitle("Search / Drop Down")
-        .page__search
-          +search({
-            buttonColor: "warning"
-          })
-        .page__search
-          +search({
-            buttonColor: "warning",
-            modifier: "notfound",
-            placeholder: "I've not found what I'm looking for..."
-          })
-        form.page__dropdown(action="./handler.php")
-          +dropdown()
+          +subtitle("Standard buttons")
+        .page__buttons-wrapper
+          - for (var i = 0; i < 3; i += 1)
+            - let inverse = i === 2;
+            .page__button
+              +button({
+                inverse,
+                size: "small",
+                isLink: false
+              })
+            .page__button
+              +button({
+                inverse,
+                isLink: false
+              })
+            .page__button
+              +button({
+                inverse,
+                color: "warning",
+                isLink: false
+              })
+            .page__button
+              +button({
+                inverse,
+                color: "warning",
+                size: "small",
+                isLink: false
+              })
 
-      section.page__user-profile
+      section.page__arrows
         .page__subtitle
-          +subtitle("User Profile")
-        .page__user-profile
-          +user-profile({
-            name: "John Smith",
-            photo: "john-smith",
-            profession: "UX Designer",
-            modifier: "additional"
-          })
-        .page__user-profile
-          +user-profile({
+          +subtitle("Arrow buttons")
+        .page__arrows-wrapper
+          .page__arrow
+            +arrow({
+              orientation: "left"
+            })
+          .page__arrow
+            +arrow({
+              orientation: "right"
+            })
+          .page__arrow
+            +arrow({
+              orientation: "left",
+              disabled: true
+            })
+          .page__arrow
+            +arrow({
+              orientation: "right",
+              disabled: true
+            })
+          .page__arrow
+            +arrow({
+              orientation: "left"
+            })
+          .page__arrow
+            +arrow({
+              orientation: "right"
+            })
+
+      section.page__percentages
+        .page__subtitle
+          +subtitle("Percentages / Pie chart")
+        .page__percentages-wrapper
+          .page__percentage
+            +percentage({
+              percent: 0
+            })
+          .page__percentage
+            +percentage({
+              percent: 38
+            })
+          .page__percentage
+            +percentage({
+              percent: 62
+            })
+          .page__percentage
+            +percentage({
+              percent: 89
+            })
+          .page__pie-chart
+            +pie-chart({
+              items: [
+                {
+                  percent: 10,
+                  fill: "#747474"
+                },
+                {
+                  percent: 25,
+                  fill: "#e75735"
+                },
+                {
+                  percent: 30,
+                  fill: "#4eb7a8"
+                },
+                {
+                  percent: 35,
+                  fill: "#e5e5e5"
+                }
+              ]
+            })
+
+      section.page__sliders.js-page__sliders
+        .page__subtitle
+          +subtitle("Sliders")
+        .page__sliders-wrapper
+          .page__slider
+            +slider({
+              value: 40,
+              modifier: "warning",
+              type: "pointer"
+            })
+          .page__slider
+            +slider({
+              value: 75,
+              step: 25,
+              range: "min",
+              type: "scale"
+            })
+
+      section.page__stages.js-page__stages
+        .page__subtitle
+          +subtitle("Stages")
+        +stages({
+          current: 3
+        })
+
+      section.page__form-elements
+        .page__subtitle
+          +subtitle("Form Elements")
+        .page__form-elements-wrapper
+          .page__form
+            +form()
+          .page__form-elements-group
+            section.page__toggles
+              .page__subtitle
+                +subtitle("Toggles")
+              form.page__toggles-wrapper(action="./handler.php")
+                +toggle({
+                  id: 1
+                })
+                +toggle({
+                  id: 2,
+                  checked: true
+                })
+            section.page__tick-boxes
+              .page__subtitle
+                +subtitle("Tick Boxes")
+              form.page__tick-boxes-wrapper(action="./handler.php")
+                +tick-box({
+                  id: 1,
+                  checked: true
+                })
+                +tick-box({
+                  id: 2
+                })
+
+      .page__two-sections
+        section.page__search-forms
+          .page__subtitle
+            +subtitle("Search / Drop Down")
+          .page__search
+            +search({
+              buttonColor: "warning"
+            })
+          .page__search
+            +search({
+              buttonColor: "warning",
+              modifier: "notfound",
+              placeholder: "I've not found what I'm looking for..."
+            })
+          form.page__dropdown(action="./handler.php")
+            +dropdown()
+
+        section.page__user-profile
+          .page__subtitle
+            +subtitle("User Profile")
+          .page__user-profile
+            +user-profile({
+              name: "John Smith",
+              photo: "john-smith",
+              profession: "UX Designer",
+              modifier: "additional"
+            })
+          .page__user-profile
+            +user-profile({
+              name: "Sarah Brown",
+              photo: "sarah-brown",
+              profession: "Developer",
+              modifier: "primary"
+            })
+
+      section.page__news-list
+        .page__subtitle
+          +subtitle("News & Events")
+        .page__news-list-wrapper
+          .page__news
+            +news({
+              title: "It's all going downhill",
+              date: "24 august 2013",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
+              image: "news-1"
+            })
+          .page__news
+            +news({
+              title: "This is the title",
+              date: [24, "Aug"],
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              image: "news-2",
+              modifier: "primary",
+              isCalendar: true
+            })
+
+      section.page__location
+        .page__subtitle
+          +subtitle("Location")
+        +location
+
+      .page__two-sections
+        section.page__calendar
+          .page__subtitle
+            +subtitle("Calendar")
+          +calendar()
+
+        section.page__messaging
+          .page__subtitle
+            +subtitle("Messaging")
+          +messaging({
             name: "Sarah Brown",
-            photo: "sarah-brown",
-            profession: "Developer",
-            modifier: "primary"
+            photo: "sarah-brown"
           })
 
-    section.page__news-list
-      .page__subtitle
-        +subtitle("News & Events")
-      .page__news-list-wrapper
-        .page__news
-          +news({
-            title: "It's all going downhill",
-            date: "24 august 2013",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.",
-            image: "news-1"
-          })
-        .page__news
-          +news({
-            title: "This is the title",
-            date: [24, "Aug"],
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            image: "news-2",
-            modifier: "primary",
-            isCalendar: true
-          })
-
-    section.page__location
-      .page__subtitle
-        +subtitle("Location")
-      +location
-
-    .page__two-sections
-      section.page__calendar
+      section.page__video
         .page__subtitle
-          +subtitle("Calendar")
-        +calendar()
+          +subtitle("Video")
+        .page__video-wrapper
+          +video({
+            source: "rPmGtZAUxNs"
+          })
 
-      section.page__messaging
-        .page__subtitle
-          +subtitle("Messaging")
-        +messaging({
-          name: "Sarah Brown",
-          photo: "sarah-brown"
-        })
+  else if type === "hotel"
+    .page.page_type_hotel
+        .page__wrapper
+          .page__content
+            +header([
+              {
+                name: "Главная",
+                link: "./index.html"
+              },
+              {
+                name: "Снять номер",
+                link: "./reservation.html"
+              },
+              {
+                name: "Новости",
+                link: "./news.html"
+              },
+              {
+                name: "Контакты",
+                link: "./contacts.html"
+              },
+              {
+                name: "UI-Kit",
+                link: "./main.html"
+              }
+            ])
 
-    section.page__video
-      .page__subtitle
-        +subtitle("Video")
-      .page__video-wrapper
-        +video({
-          source: "rPmGtZAUxNs"
-        })
+            block content
+
+            .page__callback
+              +callback({
+                messagingOptions: {
+                  name: "Sarah Brown",
+                  photo: "sarah-brown"
+                }
+              })
+          .page__footer
+            +footer()
