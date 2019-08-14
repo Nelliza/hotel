@@ -1,0 +1,29 @@
+@import '../../styles/mixins/flex';
+
+.contacts {
+  &__wrapper {
+    @include flex($justify: space-evenly);
+  }
+
+  &__content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__form {
+    width: 18rem;
+    margin-top: .7rem;
+
+    @media screen and (max-width: 615px) {
+      width: 100%;
+    }
+  }
+
+  &__user-profile {
+    margin-bottom: .65rem;
+
+    @media screen and (max-width: 615px) {
+      width: 100%;
+    }
+  }
+}

@@ -1,65 +1,13 @@
 extends ../templates/template
 
 block include
-  include ../components/subtitle/subtitle
-  include ../components/form/form
-  include ../components/user-profile/user-profile
-  include ../components/location/location
+  include ../components/contacts/contacts
 
 block title
   title Контакты
 
 block content
-  .center-layer
-    .page__item
-      .page__contact-us-wrapper
-        .page__contact-us
-          section.contact-us
-            .page__subtitle
-              +subtitle("Связаться с нами")
-            .page__form
-              +form({
-                id: 2,
-                inputs: [
-                  {
-                    name: "login",
-                    placeholder: "Ваше имя"
-                  },
-                  {
-                    type: "email",
-                    name: "email",
-                    placeholder: "Ваш email"
-                  }
-                ],
-                textarea: {
-                  name: "message",
-                  placeholder: "Введите текст сообщения"
-                },
-                buttonText: "Отправить"
-              })
-        .page__team
-          section.team
-            .page__subtitle
-              +subtitle("Наши специалисты")
-            .page__user-profile
-              +user-profile({
-                name: "Петров Петр",
-                photo: "john-smith",
-                profession: "менеджер по бронированию",
-                modifier: "primary"
-              })
-            .page__user-profile
-              +user-profile({
-                name: "Иванова Наталья",
-                photo: "sarah-brown",
-                profession: "менеджер по туризму",
-                modifier: "additional"
-              })
-
-    section.page__item
-      .page__subtitle
-        +subtitle("Как нас найти")
-      +location
+  +contacts
 
 block scripts
   script(src="https://api-maps.yandex.ru/2.1/?apikey=aba3cd86-c704-4688-a291-3ec61529513e&lang=en_US", type="text/javascript")

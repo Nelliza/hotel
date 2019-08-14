@@ -7,32 +7,6 @@
   margin: auto;
   padding: 2.5rem 3.4rem 5.6rem 3.25rem;
 
-  &_type_hotel {
-    width: auto;
-    max-width: 1920px;
-    padding: 5rem 0 0;
-    font-size: 1.3rem;
-  }
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  &__content {
-    flex: 1 0 auto;
-  }
-
-  &__item {
-    margin-bottom: 4rem;
-  }
-
-  &__subtitle {
-    margin-top: 2.8rem;
-    margin-bottom: 1.5rem;
-  }
-
   &__buttons {
     @include subtitle-margins(2.6rem, 1.6rem);
   }
@@ -76,6 +50,11 @@
 
   &__user-profile {
     @include subtitle-margins(2.9rem);
+    margin-bottom: .65rem;
+
+    @media screen and (max-width: 615px) {
+      width: 100%;
+    }
   }
 
   &__news-list {
@@ -97,19 +76,6 @@
 
   &__video {
     @include subtitle-margins(3.2rem, .5rem);
-  }
-
-  &__callback {
-    z-index: 10;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-  }
-
-  &__footer {
-    padding: 4rem;
-    flex: 0 0 auto;
-    background-color: #363636;
   }
 
   &__buttons-wrapper {
@@ -228,14 +194,6 @@
     margin-bottom: 1.1rem;
   }
 
-  &__user-profile {
-    margin-bottom: .65rem;
-
-    @media screen and (max-width: 615px) {
-      width: 100%;
-    }
-  }
-
   &__news {
     width: 18rem;
     margin-bottom: 1rem;
@@ -243,32 +201,5 @@
     @media screen and (max-width: 700px) {
       width: 100%;
     }
-  }
-
-  &__hotel-news-wrapper {
-    $flex-map: (justify: space-evenly);
-    @include flex($flex-map...);
-  }
-
-  &__hotel-news {
-    width: 22rem;
-    margin: 1rem;
-  }
-
-  &__hotel-video {
-    width: 22rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  &__contact-us-wrapper {
-    $flex-map: (justify: space-evenly);
-    @include flex($flex-map...);
-  }
-
-  &__contact-us,
-  &__team {
-    margin-left: 1rem;
-    margin-right: 1rem;
   }
 }

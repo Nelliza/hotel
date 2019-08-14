@@ -6,13 +6,13 @@ block include
   include ../components/rooms/rooms
 
 block content
-  .page__item
+  .page-item
     +promo({
       imageItems: ["promo-1", "promo-2", "promo-3"]
     })
 
-  .center-layer
-    .page__item
+  .page-centering
+    .page-item
       +about({
         imageItems: ["about-1", "about-2", "about-3"],
         ratingItems: [
@@ -50,7 +50,7 @@ block content
           withLegend: true
         }
       })
-    .page__item
+    .page-item
       +rooms({
         roomsOptions: {
           buttonOptions: {

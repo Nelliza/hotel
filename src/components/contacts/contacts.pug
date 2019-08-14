@@ -1,0 +1,57 @@
+include ../subtitle/subtitle
+include ../form/form
+include ../user-profile/user-profile
+include ../location/location
+
+mixin contacts
+  .contacts
+    .page-centering
+      .page-item
+        .contacts__wrapper
+          .contacts__content
+            section.contacts__section
+              .page-subtitle
+                +subtitle("Связаться с нами")
+              .page__form
+                +form({
+                  id: 2,
+                  inputs: [
+                    {
+                      name: "login",
+                      placeholder: "Ваше имя"
+                    },
+                    {
+                      type: "email",
+                      name: "email",
+                      placeholder: "Ваш email"
+                    }
+                  ],
+                  textarea: {
+                    name: "message",
+                    placeholder: "Введите текст сообщения"
+                  },
+                  buttonText: "Отправить"
+                })
+          .contacts__content
+            section.contacts__section
+              .page-subtitle
+                +subtitle("Наши специалисты")
+              .page__user-profile
+                +user-profile({
+                  name: "Петров Петр",
+                  photo: "john-smith",
+                  profession: "менеджер по бронированию",
+                  modifier: "primary"
+                })
+              .page__user-profile
+                +user-profile({
+                  name: "Иванова Наталья",
+                  photo: "sarah-brown",
+                  profession: "менеджер по туризму",
+                  modifier: "additional"
+                })
+
+      section.page-item
+        .page-subtitle
+          +subtitle("Как нас найти")
+        +location

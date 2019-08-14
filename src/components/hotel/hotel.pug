@@ -1,0 +1,42 @@
+include ../header/header
+include ../callback/callback
+include ../footer/footer
+
+mixin hotel
+  .hotel
+    .hotel__wrapper
+      .hotel__content
+        +header([
+          {
+            name: "Главная",
+            link: "./index.html"
+          },
+          {
+            name: "Снять номер",
+            link: "./reservation.html"
+          },
+          {
+            name: "Новости",
+            link: "./tidings.html"
+          },
+          {
+            name: "Контакты",
+            link: "./contacts.html"
+          },
+          {
+            name: "UI-Kit",
+            link: "./main.html"
+          }
+        ])
+
+        block content
+
+        .hotel__callback
+          +callback({
+            messagingOptions: {
+              name: "Sarah Brown",
+              photo: "sarah-brown"
+            }
+          })
+      .hotel__footer
+        +footer()

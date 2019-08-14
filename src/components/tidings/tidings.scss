@@ -1,0 +1,18 @@
+@import '../../styles/mixins/flex';
+
+.tidings {
+  &__wrapper {
+    @include flex($justify: space-evenly);
+  }
+
+  &__news {
+    width: 22rem;
+    margin: 1rem;
+  }
+
+  &__video {
+    width: 22rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}

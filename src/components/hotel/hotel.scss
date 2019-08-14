@@ -1,0 +1,29 @@
+.hotel {
+  width: auto;
+  max-width: 1920px;
+  padding: 5rem 0 0;
+  font-size: 1.3rem;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__content {
+    flex: 1 0 auto;
+  }
+
+  &__callback {
+    z-index: 10;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  &__footer {
+    padding: 4rem;
+    flex: 0 0 auto;
+    background-color: #363636;
+  }
+}
