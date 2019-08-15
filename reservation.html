@@ -32,120 +32,122 @@
               </nav>
             </div>
           </header>
-          <div class="page-item">
+          <div class="hotel__centering">
             <section class="reservation js-reservation">
-              <div class="reservation__stages">
-                <ul class="stages js-stages stages_color_primary" data-current="1">
-                  <li class="stages__item js-stages__item"></li>
-                  <li class="stages__item js-stages__item"></li>
-                  <li class="stages__item js-stages__item"></li>
-                </ul>
+              <div class="reservation__wrapper">
+                <div class="reservation__stages">
+                  <ul class="stages js-stages stages_color_primary" data-current="1">
+                    <li class="stages__item js-stages__item"></li>
+                    <li class="stages__item js-stages__item"></li>
+                    <li class="stages__item js-stages__item"></li>
+                  </ul>
+                </div>
+                <form class="reservation__carousel js-reservation__carousel owl-carousel">
+                  <div class="reservation__slide" action="./handler.php">
+                    <h3 class="reservation__header">Выберите планируемую дату отдыха</h3>
+                    <div class="reservation__item">
+                      <div class="calendar js-calendar calendar_with-range js-calendar_with-range">
+                        <label class="calendar__caption" for="from">Дата заезда
+                          <input class="calendar__datepicker js-calendar__datepicker" name="from" type="text">
+                        </label>
+                        <label class="calendar__caption" for="to">Дата выезда
+                          <input class="calendar__datepicker js-calendar__datepicker" name="to" type="text">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reservation__slide" action="./handler.php">
+                    <h3 class="reservation__header">Основная информация</h3>
+                    <div class="reservation__item">
+                      <p class="reservation__label">Количество взрослых</p>
+                      <div class="reservation__slider">
+                        <div class="slider js-slider slider_with-pointer js-slider_with-pointer" data-min="1" data-max="10">
+                          <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
+                            <div class="slider__pointer js-slider__pointer"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reservation__item">
+                      <p class="reservation__label">Количество детей</p>
+                      <div class="reservation__slider">
+                        <div class="slider js-slider slider_with-pointer js-slider_with-pointer" data-min="1" data-max="10">
+                          <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
+                            <div class="slider__pointer js-slider__pointer"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reservation__item">
+                      <p class="reservation__label">Количество комнат</p>
+                      <div class="reservation__slider">
+                        <div class="slider js-slider slider_with-scale js-slider_with-scale" data-min="1" data-max="5" data-step="1" data-range="min">
+                          <div class="ui-slider-handle slider__handle">
+                          </div>
+                          <ul class="slider__scale js-slider__scale"></ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reservation__item">
+                      <div class="reservation__toggle">
+                        <div class="toggle">
+                          <label class="toggle__label" for="toggle3"><span>Проживание с домашним питомцем</span></label>
+                          <div class="toggle__button">
+                            <input class="toggle__checkbox" type="checkbox" id="toggle3">
+                            <div class="toggle__background"></div><span class="toggle__round"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reservation__slide reservation__slide_type_additional" action="./handler.php">
+                    <h3 class="reservation__header">Дополнительная информация</h3>
+                    <div class="reservation__item reservation__item_type_dropdown">
+                      <select class="dropdown js-dropdown">
+                        <option selected disabled style="display: none">Питание</option>
+                        <option>Только завтрак</option>
+                        <option>Завтрак и ужин</option>
+                        <option>Трехразовое питание</option>
+                      </select>
+                    </div>
+                    <div class="reservation__item">
+                      <input class="tick-box" type="checkbox" id="tick-box3">
+                      <label class="tick-box__label" for="tick-box3">
+                        <svg class="tick-box__checkmark">
+                          <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                        </svg><span>Собственная ванная комната</span>
+                      </label>
+                    </div>
+                    <div class="reservation__item">
+                      <input class="tick-box" type="checkbox" id="tick-box4">
+                      <label class="tick-box__label" for="tick-box4">
+                        <svg class="tick-box__checkmark">
+                          <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                        </svg><span>Наличие кухни в номере</span>
+                      </label>
+                    </div>
+                    <div class="reservation__item">
+                      <input class="tick-box" type="checkbox" id="tick-box5">
+                      <label class="tick-box__label" for="tick-box5">
+                        <svg class="tick-box__checkmark">
+                          <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                        </svg><span>Наличие детской площадки</span>
+                      </label>
+                    </div>
+                    <div class="reservation__item">
+                      <input class="tick-box" type="checkbox" id="tick-box6">
+                      <label class="tick-box__label" for="tick-box6">
+                        <svg class="tick-box__checkmark">
+                          <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
+                        </svg><span>Первая береговая линия</span>
+                      </label>
+                    </div>
+                    <div class="reservation__button">
+                      <button class="button js-button button_color_primary" type="submit">Подобрать номер</button>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <form class="reservation__carousel js-reservation__carousel owl-carousel">
-                <div class="reservation__slide" action="./handler.php">
-                  <h3 class="reservation__header">Выберите планируемую дату отдыха</h3>
-                  <div class="reservation__item">
-                    <div class="calendar js-calendar calendar_with-range js-calendar_with-range">
-                      <label class="calendar__caption" for="from">Дата заезда
-                        <input class="calendar__datepicker js-calendar__datepicker" name="from" type="text">
-                      </label>
-                      <label class="calendar__caption" for="to">Дата выезда
-                        <input class="calendar__datepicker js-calendar__datepicker" name="to" type="text">
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="reservation__slide" action="./handler.php">
-                  <h3 class="reservation__header">Основная информация</h3>
-                  <div class="reservation__item">
-                    <p class="reservation__label">Количество взрослых</p>
-                    <div class="reservation__slider">
-                      <div class="slider js-slider slider_with-pointer js-slider_with-pointer" data-min="1" data-max="10">
-                        <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
-                          <div class="slider__pointer js-slider__pointer"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="reservation__item">
-                    <p class="reservation__label">Количество детей</p>
-                    <div class="reservation__slider">
-                      <div class="slider js-slider slider_with-pointer js-slider_with-pointer" data-min="1" data-max="10">
-                        <div class="ui-slider-handle slider__handle slider__handle_with-pointer">
-                          <div class="slider__pointer js-slider__pointer"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="reservation__item">
-                    <p class="reservation__label">Количество комнат</p>
-                    <div class="reservation__slider">
-                      <div class="slider js-slider slider_with-scale js-slider_with-scale" data-min="1" data-max="5" data-step="1" data-range="min">
-                        <div class="ui-slider-handle slider__handle">
-                        </div>
-                        <ul class="slider__scale js-slider__scale"></ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="reservation__item">
-                    <div class="reservation__toggle">
-                      <div class="toggle">
-                        <label class="toggle__label" for="toggle3"><span>Проживание с домашним питомцем</span></label>
-                        <div class="toggle__button">
-                          <input class="toggle__checkbox" type="checkbox" id="toggle3">
-                          <div class="toggle__background"></div><span class="toggle__round"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="reservation__slide reservation__slide_type_additional" action="./handler.php">
-                  <h3 class="reservation__header">Дополнительная информация</h3>
-                  <div class="reservation__item reservation__item_type_dropdown">
-                    <select class="dropdown js-dropdown">
-                      <option selected disabled style="display: none">Питание</option>
-                      <option>Только завтрак</option>
-                      <option>Завтрак и ужин</option>
-                      <option>Трехразовое питание</option>
-                    </select>
-                  </div>
-                  <div class="reservation__item">
-                    <input class="tick-box" type="checkbox" id="tick-box3">
-                    <label class="tick-box__label" for="tick-box3">
-                      <svg class="tick-box__checkmark">
-                        <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-                      </svg><span>Собственная ванная комната</span>
-                    </label>
-                  </div>
-                  <div class="reservation__item">
-                    <input class="tick-box" type="checkbox" id="tick-box4">
-                    <label class="tick-box__label" for="tick-box4">
-                      <svg class="tick-box__checkmark">
-                        <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-                      </svg><span>Наличие кухни в номере</span>
-                    </label>
-                  </div>
-                  <div class="reservation__item">
-                    <input class="tick-box" type="checkbox" id="tick-box5">
-                    <label class="tick-box__label" for="tick-box5">
-                      <svg class="tick-box__checkmark">
-                        <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-                      </svg><span>Наличие детской площадки</span>
-                    </label>
-                  </div>
-                  <div class="reservation__item">
-                    <input class="tick-box" type="checkbox" id="tick-box6">
-                    <label class="tick-box__label" for="tick-box6">
-                      <svg class="tick-box__checkmark">
-                        <path class="tick-box__check" d="M6.7 12 L10.7 16 L18 8" stroke="#c0c0c0" stroke-width="3" fill="none"></path>
-                      </svg><span>Первая береговая линия</span>
-                    </label>
-                  </div>
-                  <div class="reservation__button">
-                    <button class="button js-button button_color_primary" type="submit">Подобрать номер</button>
-                  </div>
-                </div>
-              </form>
             </section>
           </div>
           <div class="hotel__callback">
