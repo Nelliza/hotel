@@ -8,83 +8,84 @@ include ../button/button
 
 mixin reservation
   section.reservation.js-reservation
-    .reservation__stages
-      +stages({
-        modifier: "primary",
-        count: 3
-      })
+    .reservation__wrapper
+      .reservation__stages
+        +stages({
+          modifier: "primary",
+          count: 3
+        })
 
-    form.reservation__carousel.js-reservation__carousel.owl-carousel
-      .reservation__slide(action="./handler.php")
-        h3.reservation__header Выберите планируемую дату отдыха
-        .reservation__item
-          +calendar({
-            withRange: true
-          })
-      .reservation__slide(action="./handler.php")
-        h3.reservation__header Основная информация
-        .reservation__item
-          p.reservation__label Количество взрослых
-          .reservation__slider
-            +slider({
-              min: 1,
-              max: 10,
-              type: "pointer"
+      form.reservation__carousel.js-reservation__carousel.owl-carousel
+        .reservation__slide(action="./handler.php")
+          h3.reservation__header Выберите планируемую дату отдыха
+          .reservation__item
+            +calendar({
+              withRange: true
             })
-        .reservation__item
-          p.reservation__label Количество детей
-          .reservation__slider
-            +slider({
-              min: 1,
-              max: 10,
-              type: "pointer"
+        .reservation__slide(action="./handler.php")
+          h3.reservation__header Основная информация
+          .reservation__item
+            p.reservation__label Количество взрослых
+            .reservation__slider
+              +slider({
+                min: 1,
+                max: 10,
+                type: "pointer"
+              })
+          .reservation__item
+            p.reservation__label Количество детей
+            .reservation__slider
+              +slider({
+                min: 1,
+                max: 10,
+                type: "pointer"
+              })
+          .reservation__item
+            p.reservation__label Количество комнат
+            .reservation__slider
+              +slider({
+                min: 1,
+                max: 5,
+                step: 1,
+                range: "min",
+                type: "scale"
+              })
+          .reservation__item
+            .reservation__toggle
+              +toggle({
+                id: 3,
+                text: "Проживание с домашним питомцем"
+              })
+        .reservation__slide.reservation__slide_type_additional(action="./handler.php")
+          h3.reservation__header Дополнительная информация
+          .reservation__item.reservation__item_type_dropdown
+            +dropdown({
+              title: "Питание",
+              values: ["Только завтрак", "Завтрак и ужин", "Трехразовое питание"]
             })
-        .reservation__item
-          p.reservation__label Количество комнат
-          .reservation__slider
-            +slider({
-              min: 1,
-              max: 5,
-              step: 1,
-              range: "min",
-              type: "scale"
-            })
-        .reservation__item
-          .reservation__toggle
-            +toggle({
+          .reservation__item
+            +tick-box({
               id: 3,
-              text: "Проживание с домашним питомцем"
+              text: "Собственная ванная комната"
             })
-      .reservation__slide.reservation__slide_type_additional(action="./handler.php")
-        h3.reservation__header Дополнительная информация
-        .reservation__item.reservation__item_type_dropdown
-          +dropdown({
-            title: "Питание",
-            values: ["Только завтрак", "Завтрак и ужин", "Трехразовое питание"]
-          })
-        .reservation__item
-          +tick-box({
-            id: 3,
-            text: "Собственная ванная комната"
-          })
-        .reservation__item
-          +tick-box({
-            id: 4,
-            text: "Наличие кухни в номере"
-          })
-        .reservation__item
-          +tick-box({
-            id: 5,
-            text: "Наличие детской площадки"
-          })
-        .reservation__item
-          +tick-box({
-            id: 6,
-            text: "Первая береговая линия"
-          })
-        .reservation__button
-          +button({
-            text: "Подобрать номер",
-            isLink: false,
-            type: "submit"
-          })
+          .reservation__item
+            +tick-box({
+              id: 4,
+              text: "Наличие кухни в номере"
+            })
+          .reservation__item
+            +tick-box({
+              id: 5,
+              text: "Наличие детской площадки"
+            })
+          .reservation__item
+            +tick-box({
+              id: 6,
+              text: "Первая береговая линия"
+            })
+          .reservation__button
+            +button({
+              text: "Подобрать номер",
+              isLink: false,
+              type: "submit"
+            })

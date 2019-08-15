@@ -1,0 +1,74 @@
+include ../promo/promo
+include ../about/about
+include ../rooms/rooms
+
+mixin index
+  .index
+    .index__item
+      +promo({
+        imageItems: ["promo-1", "promo-2", "promo-3"]
+      })
+
+    .index__item
+      +about({
+        imageItems: ["about-1", "about-2", "about-3"],
+        ratingItems: [
+          {
+            percent: 80,
+            text: "Оценка качества услуг постояльцами"
+          },
+          {
+            percent: 75,
+            text: "Порекомендуют наш отель своим друзьям"
+          },
+          {
+            percent: 57,
+            text: "Планируют вернуться сюда в будущем"
+          }
+        ],
+        pieChartOptions: {
+          items: [
+            {
+              percent: 35,
+              fill: "#747474",
+              name: "Мужчины"
+            },
+            {
+              percent: 45,
+              fill: "#e75735",
+              name: "Женщины"
+            },
+            {
+              percent: 20,
+              fill: "#4eb7a8",
+              name: "Дети"
+            }
+          ],
+          withLegend: true
+        }
+      })
+    .index__item
+      +rooms({
+        roomsOptions: {
+          buttonOptions: {
+            buttonColor: "warning"
+          },
+          items: [
+            {
+              image: "rooms-1",
+              price: "150",
+              header: "Номер Делюкс"
+            },
+            {
+              image: "rooms-2",
+              price: "150",
+              header: "2-местный Люкс"
+            },
+            {
+              image: "rooms-3",
+              price: "100",
+              header: "1-местный номер"
+            }
+          ]
+        }
+      })

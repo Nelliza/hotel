@@ -5,7 +5,15 @@
   box-sizing: border-box;
   max-width: 700px;
   margin: auto;
-  padding: 2.5rem 3.4rem 5.6rem 3.25rem;
+
+  &__wrapper {
+    padding: 2.5rem 3.4rem 5.6rem 3.25rem;
+  }
+
+  &__subtitle {
+    margin-top: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
 
   &__buttons {
     @include subtitle-margins(2.6rem, 1.6rem);

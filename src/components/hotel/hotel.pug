@@ -29,7 +29,8 @@ mixin hotel
           }
         ])
 
-        block content
+        .hotel__centering
+          block content
 
         .hotel__callback
           +callback({
@@ -38,5 +39,6 @@ mixin hotel
               photo: "sarah-brown"
             }
           })
+
       .hotel__footer
         +footer()

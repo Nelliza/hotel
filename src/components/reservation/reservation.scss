@@ -2,6 +2,11 @@
 @import '../../styles/mixins/arrow-state';
 
 .reservation {
+  &__wrapper {
+    margin-left: -6rem;
+    margin-right: -6rem;
+  }
+
   &__stages {
     width: 60%;
     margin: auto;

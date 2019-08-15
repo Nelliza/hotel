@@ -1,11 +1,15 @@
 @import '../../styles/mixins/flex';
 
 .contacts {
+  &__item {
+    margin-bottom: 5rem;
+  }
+
   &__wrapper {
     @include flex($justify: space-evenly);
   }
 
-  &__content {
+  &__centering {
     margin-left: 1rem;
     margin-right: 1rem;
   }
