@@ -6,7 +6,7 @@ $(() => {
   $elem.each((index, elem) => {
     new Calendar({
       index,
-      elem: $(elem),
+      $elem: $(elem),
     });
   });
 });

@@ -6,7 +6,7 @@ $(() => {
   $menu.each((index, elem) => {
     new Menu({
       index,
-      elem: $(elem),
+      $elem: $(elem),
     });
   });
 });

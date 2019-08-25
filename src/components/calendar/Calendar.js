@@ -2,9 +2,8 @@ import 'webpack-jquery-ui/datepicker';
 
 class Calendar {
   constructor(options) {
-    this.$elem = options.elem;
+    this.$elem = options.$elem;
     this.index = options.index;
-    this.$calendar = null;
     this.init();
   }
 
@@ -17,22 +16,22 @@ class Calendar {
   }
 
   _initSimpleCalendar() {
-    const $calendar = this.$elem.find('div.js-calendar__datepicker');
-    $calendar.datepicker({
+    this.$calendar = this.$elem.find('div.js-calendar__datepicker');
+    this.$calendar.datepicker({
       firstDay: 1,
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
       prevText: '',
       nextText: '',
       showOtherMonths: true,
-      onSelect: this._displayCurrentDay.bind(this, $calendar),
+      onSelect: this._displayCurrentDay.bind(this),
     });
 
     const $today = this.$elem.find('.js-calendar__today');
     if ($today.length > 0) {
-      $today.on(`click.todayButton${this.index}`, this._handleTodayClick.bind(this, $calendar));
+      $today.on(`click.todayButton${this.index}`, this._handleTodayClick.bind(this));
     }
 
-    this._displayCurrentDay($calendar);
+    this._displayCurrentDay();
   }
 
   _initRangeCalendar() {
@@ -51,18 +50,18 @@ class Calendar {
     $to.datepicker('option', 'onSelect', this._handleRangeChange.bind(this, $to, $from, 'maxDate'));
   }
 
-  _displayCurrentDay($calendar) {
+  _displayCurrentDay() {
     const $day = this.$elem.find('.js-calendar__day');
     if ($day.length > 0) {
-      const currentDay = $calendar.datepicker('getDate').getDate();
+      const currentDay = this.$calendar.datepicker('getDate').getDate();
       $day.text(currentDay);
     }
   }
 
-  _handleTodayClick($calendar) {
+  _handleTodayClick() {
     const todayDate = new Date();
-    $calendar.datepicker('setDate', todayDate);
-    this._displayCurrentDay($calendar);
+    this.$calendar.datepicker('setDate', todayDate);
+    this._displayCurrentDay();
   }
 
   _handleRangeChange($currentElem, $oppositeElem, option) {

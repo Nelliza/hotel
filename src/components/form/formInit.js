@@ -6,7 +6,7 @@ $(() => {
   $form.each((index, elem) => {
     new Form({
       index,
-      elem: $(elem),
+      $elem: $(elem),
     });
   });
 });

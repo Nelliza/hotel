@@ -6,7 +6,7 @@ $(() => {
   $elem.each((index, elem) => {
     new Button({
       index,
-      elem: $(elem),
+      $elem: $(elem),
     });
   });
 });

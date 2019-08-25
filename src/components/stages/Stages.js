@@ -1,12 +1,12 @@
 class Stages {
   constructor(options) {
     this.index = options.index;
-    this.init(options.elem);
+    this.init(options.$elem);
   }
 
-  init(elem) {
-    this.$stages = elem.children('li');
-    const current = elem.data('current');
+  init($elem) {
+    this.$stages = $elem.children('li');
+    const current = $elem.data('current');
     const countStages = this.$stages.length;
 
     this.$stages.each((index, element) => {

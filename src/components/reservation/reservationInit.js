@@ -6,7 +6,7 @@ $(() => {
   $reservation.each((index, elem) => {
     new Reservation({
       index,
-      elem: $(elem),
+      $elem: $(elem),
       dotsContainer: '.reservation__stages > .stages',
       stageContainer: '.js-stages__item',
     });

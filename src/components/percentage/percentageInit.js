@@ -8,7 +8,7 @@ $(() => {
     new ChartAnimation({
       className,
       index,
-      elem: $(elem),
+      $elem: $(elem),
     });
   });
 });

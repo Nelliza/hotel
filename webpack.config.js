@@ -152,5 +152,5 @@ module.exports = {
     }),
     new SpriteLoaderPlugin({}),
   ]
-    .concat(htmlPlugins),
+  .concat(htmlPlugins),
 };

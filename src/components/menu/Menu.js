@@ -1,12 +1,12 @@
 class Menu {
   constructor(options) {
     this.index = options.index;
-    this.init(options.elem);
+    this.init(options.$elem);
   }
 
-  init(elem) {
-    const $button = elem.find('.js-menu__button');
-    const $links = elem.find('.js-menu__item-link');
+  init($elem) {
+    const $button = $elem.find('.js-menu__button');
+    const $links = $elem.find('.js-menu__item-link');
     const url = document.location.href;
 
     $links.each((index, element) => {

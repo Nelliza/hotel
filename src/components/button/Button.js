@@ -1,6 +1,6 @@
 class Button {
   constructor(options) {
-    this.$button = options.elem;
+    this.$button = options.$elem;
     this.index = options.index;
     this.init();
   }

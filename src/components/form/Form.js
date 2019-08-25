@@ -1,6 +1,6 @@
 class Form {
   constructor(options) {
-    this.$form = options.elem;
+    this.$form = options.$elem;
     this.index = options.index;
     this.init();
   }
