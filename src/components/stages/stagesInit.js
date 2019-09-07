@@ -3,10 +3,10 @@ import Stages from './Stages';
 $(() => {
   const $stages = $('.js-stages');
 
-  $stages.each((index, elem) => {
+  $stages.each((index, item) => {
     new Stages({
       index,
-      $elem: $(elem),
+      $element: $(item),
     });
   });
 });

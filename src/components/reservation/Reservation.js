@@ -3,7 +3,7 @@ import 'owl.carousel';
 
 class Reservation {
   constructor(options) {
-    this.$reservation = options.$elem;
+    this.$reservation = options.$element;
     this.index = options.index;
     this.init({
       dotsContainer: options.dotsContainer,

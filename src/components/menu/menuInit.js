@@ -3,10 +3,10 @@ import Menu from './Menu';
 $(() => {
   const $menu = $('.js-menu');
 
-  $menu.each((index, elem) => {
+  $menu.each((index, item) => {
     new Menu({
       index,
-      $elem: $(elem),
+      $element: $(item),
     });
   });
 });

@@ -1,19 +1,19 @@
 class Stages {
   constructor(options) {
     this.index = options.index;
-    this.init(options.$elem);
+    this.init(options.$element);
   }
 
-  init($elem) {
-    this.$stages = $elem.children('li');
-    const current = $elem.data('current');
+  init($element) {
+    this.$stages = $element.children('li');
+    const current = $element.data('current');
     const countStages = this.$stages.length;
 
-    this.$stages.each((index, element) => {
+    this.$stages.each((index, item) => {
       if (index === countStages - 1) {
-        $(element).css('width', 0);
+        $(item).css('width', 0);
       } else {
-        $(element).css('width', `${(100 / (countStages - 1) - 1)}%`);
+        $(item).css('width', `${(100 / (countStages - 1) - 1)}%`);
       }
     });
 
@@ -29,12 +29,12 @@ class Stages {
     $(event.currentTarget).addClass('stages__item_state_current');
     const currentIndex = $(event.currentTarget).index();
 
-    this.$stages.each((index, element) => {
+    this.$stages.each((index, item) => {
       if (index === currentIndex) {
         return false;
       }
 
-      $(element).addClass('stages__item_state_done');
+      $(item).addClass('stages__item_state_done');
     });
   }
 }

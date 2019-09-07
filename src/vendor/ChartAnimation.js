@@ -1,6 +1,6 @@
 class ChartAnimation {
   constructor(options) {
-    this.$chart = options.$elem;
+    this.$chart = options.$element;
     this.index = options.index;
     this.className = options.className;
     this.init();
@@ -16,11 +16,11 @@ class ChartAnimation {
     }
   }
 
-  _isScrolledIntoView($elem) {
+  _isScrolledIntoView($element) {
     const TopViewPort = $(window).scrollTop();
     const BottomViewPort = TopViewPort + $(window).height();
-    const TopOfElement = $elem.offset().top;
-    const BottomOfElement = TopOfElement + $elem.height();
+    const TopOfElement = $element.offset().top;
+    const BottomOfElement = TopOfElement + $element.height();
     return ((BottomOfElement <= BottomViewPort) && (TopOfElement >= TopViewPort));
   }
 }

@@ -1,6 +1,6 @@
 class Callback {
   constructor(options) {
-    this.$callback = options.$elem;
+    this.$callback = options.$element;
     this.$overlay = options.overlay;
     this.index = options.index;
     this.init();

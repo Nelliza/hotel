@@ -2,8 +2,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
 class Promo {
-  constructor($elem) {
-    this.$carousel = $elem;
+  constructor($element) {
+    this.$carousel = $element;
     this.init();
   }
 

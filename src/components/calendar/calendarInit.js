@@ -1,12 +1,12 @@
 import Calendar from './Calendar';
 
 $(() => {
-  const $elem = $('.js-calendar');
+  const $element = $('.js-calendar');
 
-  $elem.each((index, elem) => {
+  $element.each((index, item) => {
     new Calendar({
       index,
-      $elem: $(elem),
+      $element: $(item),
     });
   });
 });

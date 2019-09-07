@@ -3,10 +3,10 @@ import Form from './Form';
 $(() => {
   const $form = $('.js-form');
 
-  $form.each((index, elem) => {
+  $form.each((index, item) => {
     new Form({
       index,
-      $elem: $(elem),
+      $element: $(item),
     });
   });
 });

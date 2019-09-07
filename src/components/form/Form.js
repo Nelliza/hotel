@@ -1,6 +1,6 @@
 class Form {
   constructor(options) {
-    this.$form = options.$elem;
+    this.$form = options.$element;
     this.index = options.index;
     this.init();
   }
@@ -38,8 +38,8 @@ class Form {
   }
 
   _handleFormSubmit(event) {
-    this.$field.each((index, elem) => {
-      this._validateField($(elem));
+    this.$field.each((index, item) => {
+      this._validateField($(item));
     });
 
     const $tooltip = this.$form.find('.js-form__tooltip');

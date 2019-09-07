@@ -2,13 +2,13 @@ import 'webpack-jquery-ui/datepicker';
 
 class Calendar {
   constructor(options) {
-    this.$elem = options.$elem;
+    this.$element = options.$element;
     this.index = options.index;
     this.init();
   }
 
   init() {
-    if (!this.$elem.hasClass('js-calendar_with-range')) {
+    if (!this.$element.hasClass('js-calendar_with-range')) {
       this._initSimpleCalendar();
     } else {
       this._initRangeCalendar();
@@ -16,7 +16,7 @@ class Calendar {
   }
 
   _initSimpleCalendar() {
-    this.$calendar = this.$elem.find('div.js-calendar__datepicker');
+    this.$calendar = this.$element.find('div.js-calendar__datepicker');
     this.$calendar.datepicker({
       firstDay: 1,
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
@@ -26,7 +26,7 @@ class Calendar {
       onSelect: this._displayCurrentDay.bind(this),
     });
 
-    const $today = this.$elem.find('.js-calendar__today');
+    const $today = this.$element.find('.js-calendar__today');
     if ($today.length > 0) {
       $today.on(`click.todayButton${this.index}`, this._handleTodayClick.bind(this));
     }
@@ -35,8 +35,8 @@ class Calendar {
   }
 
   _initRangeCalendar() {
-    const $from = this.$elem.find('input.js-calendar__datepicker[name="from"]');
-    const $to = this.$elem.find('input.js-calendar__datepicker[name="to"]');
+    const $from = this.$element.find('input.js-calendar__datepicker[name="from"]');
+    const $to = this.$element.find('input.js-calendar__datepicker[name="to"]');
     const rangeOptions = {
       firstDay: 1,
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
@@ -51,7 +51,7 @@ class Calendar {
   }
 
   _displayCurrentDay() {
-    const $day = this.$elem.find('.js-calendar__day');
+    const $day = this.$element.find('.js-calendar__day');
     if ($day.length > 0) {
       const currentDay = this.$calendar.datepicker('getDate').getDate();
       $day.text(currentDay);
@@ -64,16 +64,16 @@ class Calendar {
     this._displayCurrentDay();
   }
 
-  _handleRangeChange($currentElem, $oppositeElem, option) {
-    $oppositeElem.datepicker('option', option, this._getDate($currentElem));
+  _handleRangeChange($currentElement, $oppositeElement, option) {
+    $oppositeElement.datepicker('option', option, this._getDate($currentElement));
   }
 
-  _getDate(elem) {
+  _getDate(element) {
     const dateFormat = 'mm/dd/yy';
     let date;
 
     try {
-      date = $.datepicker.parseDate(dateFormat, elem.val());
+      date = $.datepicker.parseDate(dateFormat, element.val());
     } catch (error) {
       date = null;
     }

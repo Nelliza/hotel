@@ -4,11 +4,11 @@ $(() => {
   const className = 'pie-chart__border';
   const $chart = $(`.js-${className}`);
 
-  $chart.each((index, elem) => {
+  $chart.each((index, item) => {
     new ChartAnimation({
       className,
       index,
-      $elem: $(elem),
+      $element: $(item),
     });
   });
 });

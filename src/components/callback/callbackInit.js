@@ -4,10 +4,10 @@ $(() => {
   const $callback = $('.js-callback__button');
   const $overlay = $('.js-callback__overlay');
 
-  $callback.each((index, elem) => {
+  $callback.each((index, item) => {
     new Callback({
       index,
-      $elem: $(elem),
+      $element: $(item),
       overlay: $overlay,
     });
   });
