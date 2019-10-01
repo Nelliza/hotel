@@ -13,19 +13,7 @@
   }
 
   &:hover {
-    border-color: transparent;
     background-color: $color-primary;
-
-    &:before {
-      background: url(../../assets/icons/arrow-next-white-icon.svg);
-    }
-  }
-
-  &:disabled,
-  &.disabled {
-    border-color: transparent;
-    background-color: $color-disabled;
-    cursor: default;
 
     &:before {
       background: url(../../assets/icons/arrow-next-white-icon.svg);
@@ -50,12 +38,18 @@
     border-color: $color-warning;
 
     &:hover {
-      border-color: transparent;
       background-color: $color-warning;
-    
-      &:before {
-        background: url(../../assets/icons/arrow-next-white-icon.svg);
-      }
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    border-color: transparent;
+    background-color: $color-disabled;
+    cursor: default;
+
+    &:before {
+      background: url(../../assets/icons/arrow-next-white-icon.svg);
     }
   }
 
