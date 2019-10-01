@@ -1,5 +1,5 @@
 mixin user-profile({ photo, name, profession, modifier, iconItems })
-  - var iconModifier = modifier ? `user-profile__social-icon_type_${modifier}` : false;
+  - var linkModifier = modifier ? `user-profile__social-link_type_${modifier}` : false;
   - modifier = modifier ? `user-profile__info_type_${modifier}` : false;
   -
     iconItems = iconItems || [
@@ -25,5 +25,5 @@ mixin user-profile({ photo, name, profession, modifier, iconItems })
       ul.user-profile__social
         each item in iconItems
           - var { name, link } = item;
-          li(class=["user-profile__social-icon", `user-profile__social-icon_name_${name}`, iconModifier])
-            a(href=link, target="_blank", rel="noopener noreferrer")
+          li.user-profile__social-icon
+            a(class=["user-profile__social-link", `user-profile__social-link_name_${name}`, linkModifier], href=link, target="_blank", rel="noopener noreferrer")

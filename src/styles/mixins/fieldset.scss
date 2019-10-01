@@ -1,5 +1,5 @@
+@import './size';
 @import './input';
-@import './fieldset-icon';
 
 @mixin fieldset($input, $button, $path) {
   position: relative;
@@ -11,7 +11,14 @@
   }
 
   #{$button} {
-    @include fieldset-icon($path);
+    @include size(2.1rem, 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    border-radius: 0 .2rem .2rem 0;
+    background: url(../../assets/icons/#{$path}) $color-primary center no-repeat;
+    background-size: 50%;
     cursor: pointer;
 
     &_color_warning {

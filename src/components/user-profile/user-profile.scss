@@ -1,6 +1,6 @@
 @import '../../styles/variables/colors';
+@import '../../styles/mixins/size';
 @import '../../styles/mixins/triangle-tooltip';
-@import '../../styles/mixins/social-icons';
 
 .user-profile {
   display: flex;
@@ -82,7 +82,48 @@
   &__social-icon {
     display: inline-block;
     margin: .35rem;
+  }
 
-    @include social-icons(facebook, twitter, dribbble);
+  &__social-link {
+    @include size(1.6rem, 1.3rem);
+    display: block;
+
+    &_name {
+      &_facebook {
+        background: url(../../assets/icons/facebook-icon.svg) no-repeat center;
+
+        &.user-profile__social-link_type_primary {
+          background: url(../../assets/icons/facebook-white-icon.svg) no-repeat center;
+        }
+
+        &:hover {
+          background: url(../../assets/icons/facebook-hover-icon.svg) no-repeat center;
+        }
+      }
+
+      &_twitter {
+        background: url(../../assets/icons/twitter-icon.svg) no-repeat center;
+
+        &.user-profile__social-link_type_primary {
+          background: url(../../assets/icons/twitter-white-icon.svg) no-repeat center;
+        }
+
+        &:hover {
+          background: url(../../assets/icons/twitter-hover-icon.svg) no-repeat center;
+        }
+      }
+
+      &_dribbble {
+        background: url(../../assets/icons/dribbble-icon.svg) no-repeat center;
+
+        &.user-profile__social-link_type_primary {
+          background: url(../../assets/icons/dribbble-white-icon.svg) no-repeat center;
+        }
+
+        &:hover {
+          background: url(../../assets/icons/dribbble-hover-icon.svg) no-repeat center;
+        }
+      }
+    }
   }
 }

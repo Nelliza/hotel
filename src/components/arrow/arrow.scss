@@ -1,6 +1,5 @@
 @import '../../styles/variables/colors';
 @import '../../styles/mixins/size';
-@import '../../styles/mixins/arrow-state';
 
 .arrow {
   @include size(3.2rem);
@@ -14,13 +13,23 @@
   }
 
   &:hover {
-    @include arrow-state(hover);
+    border-color: transparent;
+    background-color: $color-primary;
+
+    &:before {
+      background: url(../../assets/icons/arrow-next-white-icon.svg);
+    }
   }
 
   &:disabled,
   &.disabled {
-    @include arrow-state(disabled);
+    border-color: transparent;
+    background-color: $color-disabled;
     cursor: default;
+
+    &:before {
+      background: url(../../assets/icons/arrow-next-white-icon.svg);
+    }
   }
 
   &:before {
@@ -41,7 +50,12 @@
     border-color: $color-warning;
 
     &:hover {
-      @include arrow-state(hover, $color-warning);
+      border-color: transparent;
+      background-color: $color-warning;
+    
+      &:before {
+        background: url(../../assets/icons/arrow-next-white-icon.svg);
+      }
     }
   }
 

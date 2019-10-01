@@ -1,5 +1,4 @@
 @import '../../styles/variables/colors';
-@import '../../styles/mixins/tick-box-animate';
 
 .tick-box {
   display: none;
@@ -42,9 +41,13 @@
 }
 
 @-webkit-keyframes checked {
-  @include tick-box-animate;
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes checked {
-  @include tick-box-animate;
+  to {
+    stroke-dashoffset: 0;
+  }
 }
