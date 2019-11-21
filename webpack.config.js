@@ -107,7 +107,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.(eot|ttf|woff|woff2)$/,
+        test: /\.(ttf|woff|woff2|svg)$/,
+        include: path.resolve(__dirname, './src/assets/fonts'),
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',

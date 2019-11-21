@@ -2,23 +2,25 @@
   $weight: 400;
   $style: normal;
 
-  @if $type == light {
+  @if $type == 'light' {
     $weight: 300;
   }
-  @else if $type == bold {
+  @else if $type == 'bold' {
     $weight: 700;
   }
-  @else if $type == black {
+  @else if $type == 'black' {
     $weight: 900;
   }
-  @else if $type == italic {
+  @else if $type == 'italic' {
     $style: italic;
   }
 
   @font-face {
     font-family: $font-family;
-    src: url(../assets/fonts/#{$font}-#{$type}-webfont.woff2) format('woff2'),
-         url(../assets/fonts/#{$font}-#{$type}-webfont.woff) format('woff');
+    src: url(../assets/fonts/#{$font}-#{$type}.woff2) format('woff2'),
+         url(../assets/fonts/#{$font}-#{$type}.woff) format('woff'),
+         url(../assets/fonts/#{$font}-#{$type}.ttf) format('ttf'),
+         url(../assets/fonts/#{$font}-#{$type}.svg) format('svg');
     font-weight: $weight;
     font-style: $style;
   }
